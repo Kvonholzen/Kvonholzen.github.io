@@ -1,0 +1,114 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Akademische Rätin"
+address: "Lehrstuhl Linguistik des Deutschen, Technische Universität Dortmund"
+www: katiemvonholzen.wixsite.com/katievonholzen
+email: "katie.m.vonholzen@gmail.com"
+github: Kvonholzen
+date: "`r format(Sys.time(), '%B %Y')`"
+profilepic: katie_pic.jpg
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+library(vitae)
+library(scholar)
+library(papaja)
+```
+
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Dr. rer. nat. Psychology", "2013", "Georg-August-Universität Göttingen", "Göttingen, Germany",
+    "B.S. Psychology, summa cum laude", "2009", "University of Wisconsin - Green Bay", "Green Bay, WI, USA"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+
+# Employment
+
+```{r}
+library(tibble)
+tribble(
+  ~ Position, ~ Year, ~ Institution, ~ Supervisor,
+    "Akademische Rätin (Senior Postdoctoral Researcher)", "2019-present", "Technische Universität Dortmund, Germany", "Supervisor: Prof. Dr. Sarah Schimke",
+    "Postdoctoral Researcher", "2017-2019", "University of Maryland, USA", "Supervisor: Prof. Rochelle Newman",
+    "Postdoctoral Researcher", "2014-2017", "Université Paris Descartes, France", "Supervisor: Dr. Thierry Nazzi",
+    "Scientific Staff", "2010-2013", "Georg-August-Universität Göttingen", "Supervisor: Prof. Dr. Nivedita Mani",
+  "Summer Research Intern", "2009", "Dartmouth College, USA", "Supervisor: Prof. Todd Heatherton"
+) %>% 
+  detailed_entries(Position, Year, Institution, Supervisor)
+```
+
+
+# Research Areas
+
+ * Language acquisition (bilingual and monolingual)
+ * Developmental language outcomes
+ * Event-Related Potentials (ERPs)
+ * Word/wordform recognition
+ * Speech segmentation
+ * Phono-lexical processing
+ * Foreign speech processing
+ * Bilingual lexical access
+ * Mispronunciation sensitivity
+ * Consonant bias in lexical processing
+
+# Publications
+
+```{r}
+bibliography_entries("Publications.bib")
+```
+
+# Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("Proceedings.bib")
+```
+
+# Open Data
+
+```{r}
+bibliography_entries("Open_Data.bib")
+```
+
+# Manuscripts in Preparation
+
+```{r}
+bibliography_entries("Unpublished.bib")
+```
+
+# Grants
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2017, "Comparative and Evolutionary Biology of Hearing NIH Postdoctoral Training Grant", "5T32DC00046 – 23",
+  2009, "Psi Chi Association of Psychological Science Summer Research Grant ", "$5,000"
+) %>% 
+  brief_entries(Type, Year, Desc)
+```
+
+# Awards
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2019, "Society for Improvement of Psychological Science Mission Award", "For improving psychological science in the face of challenge, as contributor to the ManyBabies1 Collaboration",
+  2018, "Berkeley Initiative for Transparency in the Social Sciences (BITSS) Meta-Analysis Challenge Winner", "Shared with co-author Christina Bergmann, $1,000",
+  2014, "Summer School Travel Grant: GDR Neurosciences Cognitives du Développement bourses de mobilité à des doctorants", "For the Potsdam Summer School, “Infant Studies on Language Development in Europe (ISOLDE)”",
+  2013, "Universitätsbund Göttingen Travel Grant", "For the International Workshop on Bilingualism and Cognitive Control in Krakow, Poland",
+  2011, "Paula Menyuk Travel Award", "For BUCLD 2011, $300",
+  2010, "Phi Eta Sigma National Honor Society Graduate Scholarship", "$7,000",
+  2009, "2nd place Margaret Bernauer Psychology Research Award", "Awarded for Poster Presentation at the Wisconsin Psychological Association Conference, $200"
+) %>% 
+  brief_entries(Type, Year, Desc)
+```
+

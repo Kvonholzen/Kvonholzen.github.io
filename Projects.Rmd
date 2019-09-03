@@ -1,0 +1,9 @@
+---
+title: "Projects"
+bibliography: cv/Publications.bib
+output: html_document
+---
+
+---
+nocite: '@*'
+...

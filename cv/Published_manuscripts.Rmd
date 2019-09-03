@@ -1,0 +1,29 @@
+---
+title: "Published Manuscripts"
+bibliography: cv/Publications.bib
+output: html_document
+---
+
+@VonHolzen2018
+
+---
+nocite: | 
+  @VonHolzen2019, @item2
+...
+
+
+```{r create_r-references}
+# library(papaja)
+# r_refs(file = "Publications.bib")
+
+
+
+# ---
+# nocite: |
+#   '@*'
+# ...
+
+
+```
+
+# References

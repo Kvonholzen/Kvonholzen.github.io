@@ -1,0 +1,24 @@
+---
+title: "Curriculum Vitae"
+---
+
+----
+
+Download my [Curriculum Vitae](cv/K_Von_Holzen_CV.pdf) here
+
+----
+
+
+```{r setup_cv, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+library(vitae)
+library(scholar)
+library(papaja)
+```
+
+# Education
+
+```{r cv-education, child = 'cv/Education.Rmd'}
+```
+
+
