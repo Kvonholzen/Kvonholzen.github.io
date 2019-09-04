@@ -1,6 +1,6 @@
-name: "R Markdown Websites Tutorial"
+name: "Katie Von Holzen's Website"
 navbar:
-  title: "HOME"
+  title: "Home"
   left:
     - text: "About Me"
       href: About_Me.html
