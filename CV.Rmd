@@ -4,11 +4,6 @@ title: "Curriculum Vitae"
 
 ----
 
-Download my [Curriculum Vitae](cv/K_Von_Holzen_CV.pdf) here
-
-----
-
-
 ```{r setup_cv, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
 library(vitae)
@@ -16,9 +11,93 @@ library(scholar)
 library(papaja)
 ```
 
+
 # Education
+ 
+<div class = "row">
+  
+<div class = "col-sm-2">
+<br>2013
+<br>
+<br>2009
+</div>
+  
+<div class = "col-lg-6">
+<br>Dr. rer. nat. Psychology, magna cum laude
+<br>Georg-August-Universität Göttingen, Germany
+<br>B.S. Psychology, summa cum laude
+<br>University of Wisconsin - Green Bay, USA
+</div>
+</div> 
+ 
+ 
+ 
+# Employment
+ 
+<div class = "row">
+  
+<div class = "col-sm-2">
+<br>2019-present
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>2017-2019
+<br>
+<br>
+<br>
+<br>
+<br>2014-2017
+<br>
+<br>
+<br>
+<br>
+<br>2010-2013
+<br>
+<br>
+<br>
+<br>
+<br>2009
+<br>
+<br>
+<br>
+<br>
+</div>
+  
+<div class = "col-lg-6">
+<br>Akademische Rätin (Senior Postdoc)
+<br>Lehrstuhl Linguistik des Deutschen,
+<br>Schwerpunkt Deutsch als Fremdsprache/Deutsch als Zweitsprache
+<br>Technische Universität Dortmund, Germany
+<br>Supervisor: Prof. Dr. Sarah Schimke
+<br>
+<br>Postdoctoral Researcher
+<br>Department of Hearing and Speech Sciences
+<br>University of Maryland, USA
+<br>Mentor: Dr. Rochelle Newman
+<br>
+<br>Postdoctoral Researcher
+<br>Speech Group, Laboratorire Psychologie de la Perception
+<br>Université Paris Descartes, France
+<br>Mentor: Dr. Thierry Nazzi
+<br>
+<br>Scientific Staff
+<br>Junior Research Group "Language Acquisition"
+<br>Georg-August-Universität Göttingen, Germany
+<br>Supervisor: Prof. Dr. Nivedita Mani
+<br>
+<br>Summer Research Intern
+<br>Kellerton Laboratory
+<br>Dartmouth College, USA
+<br>Supervisor: Dr. Todd Heatherton
+<br>
+</div>
+</div>  
 
-```{r cv-education, child = 'cv/Education.Rmd'}
-```
 
+----
 
+Download my [Curriculum Vitae](cv/K_Von_Holzen_CV.pdf) here
+
+----

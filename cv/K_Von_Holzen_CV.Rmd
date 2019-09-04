@@ -111,4 +111,3 @@ tribble(
 ) %>% 
   brief_entries(Type, Year, Desc)
 ```
-
