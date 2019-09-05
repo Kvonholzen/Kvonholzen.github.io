@@ -2,6 +2,15 @@
 title: "Media"
 ---
 
-List the different articles that have been written about me
-And the blog articles that I've written
+----
+
+# Blogs I've contributed to
+
+[Cogtales](https://cogtales.wordpress.com/), is "a blog by young female cognitive scientists" that I've contributed to, writing a guide for [writing effective introductory emails](https://cogtales.wordpress.com/2017/01/13/how-to-write-effective-introductory-emails/)
+
+# Media Articles
+
+- My alma mater, the University of Wisconsin - Green Bay, has written a few articles about me, both [generally](https://news.uwgb.edu/featured/alumni/05/30/alumni-rising-research-sparks-international-career-for-von-holzen/) and in the [Psychology Department](https://blog.uwgb.edu/uwgbpsych/featured-alumnus-katie-von-holzen/).
+- In 2010, I won a [Graduate Scholarship from the Phi Eta Sigma National Honor Society](https://news.uwgb.edu/log-news/releases/05/11/graduate-scholarship-1081/) to support my graduate studies in Göttingen, Germany.
+- In 2009, I won a [Summer Research Grant from the Psi Chi Honor Society](https://www.psychologicalscience.org/observer/apspsi-chi-summer-research-grant-winners#.WNqK42-GOUk) to work at Dartmouth College.
 

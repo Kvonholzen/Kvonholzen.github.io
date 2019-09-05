@@ -7,7 +7,7 @@ www: Kvonholzen.github.io
 email: katie.m.vonholzen@gmail.com
 github: Kvonholzen
 date: "`r format(Sys.time(), '%B %Y')`"
-profilepic: katie_pic.jpg
+profilepic: katie_small.png
 output: vitae::hyndman
 ---
 
@@ -77,6 +77,15 @@ bibliography_entries("Publications.bib") %>%
 ```{r}
 bibliography_entries("Publications.bib") %>%
   filter(bibtype %in% "PhdThesis") %>%
+  arrange(desc(year), surnames)
+
+```
+
+## Chapters in Books
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "InBook") %>%
   arrange(desc(year), surnames)
 
 ```
@@ -250,34 +259,32 @@ tribble(
 |        Sofia Carrion, Internship, 2017
 |        Elisa Moulin, Internship, 2015-2016
 |        Jeanne Charoy, Internship, 2015
-|        Marion Lafargue, Internship, 2014-2015
+|        Marion Lafargue, Internship, 2014-2015 
 
 
 
 *Emergence of the C-bias during the first year of life: New evidence from own name recognition*
 
 |        Safyya Larinouna, Internship, 2016
-|        Henry Cheng, International Visiting Internship, 2014
+|        Henry Cheng, International Visiting Internship, 2014 
 
 
 
 ### Georg-August-Universität Göttingen
-Bachelor Thesis, Fabienne Kremer, 2013
 
-|        *Associating a language with a speaker: Bilingual production is influenced by speaker language*
+*Associating a language with a speaker: Bilingual production is influenced by speaker language*
 
-
-
-Master Thesis, Deborah Wolff, 2012
-
-|        *Segmentierungsfähigkeit von infant- und adult-directed speech bei 11-13 Monate alten Kindern. Eine ERP-Studie.* (Segmentation abilities in infant- and adult directed speech in 11-13 month old children: An ERP study)
+|        Bachelor Thesis, Fabienne Kremer, 2013
 
 
+*Segmentierungsfähigkeit von infant- und adult-directed speech bei 11-13 Monate alten Kindern. Eine ERP-Studie.* (Segmentation abilities in infant- and adult directed speech in 11-13 month old children: An ERP study)
 
-Masters Internship, Agniezska Leszczynska, 2012
+|        Master Thesis, Deborah Wolff, 2012
 
-|        *Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*
 
+*Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*
+
+|        Masters Internship, Agniezska Leszczynska, 2012
 
 
 # Skills

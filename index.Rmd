@@ -8,4 +8,20 @@ output:
 
 ----
 
-This is where I'll put a tiny bit of information about myself, and then guide the reader to the different tabs.
+<div class = "row">
+  
+<div class = "col-md-4">
+<center><img src="images/katie_small.png" width="300px"></center>
+</div>
+  
+<div class = "col-lg-6">
+I'm a researcher in developmental psycholinguistics, currently working in Dortmund, Germany. I've bounced all over the world since I started my PhD in Göttingen, Germany in 2010. You can read a brief summary of what I've worked on along the way under the [About Me](About_Me.html) tab. For a quick summary of my curriculum vitae, go to [CV](CV.html). You can find more about my current and past projects under the [Projects](Projects.html) tab. I've taught several different classes in Psychology and Linguistics, you can check out some of my approaches under the [Teaching](Teaching.html) tab. I've also put together different tutorials and datasets, including a [meta-analysis](https://psyarxiv.com/dze29/) with [Christina Bergmann](https://sites.google.com/site/chbergma/). You can find out more under the [Resources](Resources.html) tab. Finally, I've been covered in the media a few times and written a few blog posts, which you can read under the [Media](Medial.html) tab.
+</div>
+</div> 
+ 
+
+----
+
+Download my full [Curriculum Vitae](cv/K_Von_Holzen_CV.pdf) here
+
+----

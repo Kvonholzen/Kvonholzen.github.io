@@ -2,6 +2,8 @@
 title: "Projects"
 ---
 
+----
+
 # Best Practices in Language Acquisition Research
 
 I am committed to ensuring that best practices are used in the field of language acquisition and have demonstrated this commitment through several different avenues, including pioneering a new analysis of time course data, a meta-analysis, and participation in a large-scale collaboration of language acquisition laboratories. 

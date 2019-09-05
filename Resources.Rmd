@@ -2,12 +2,17 @@
 title: "Resources"
 ---
 
+----
+
 # Tutorials
 
-Describe the tutorials I've given
+I've given several tutorials focusing on EEG/ERP and eye-tracking analysis. My hope is to someday write these out as fully autonomous guides, but for now, here are a few less comprehensive files.
 
+- [Guide](files/eeglab steps_speech.pdf) for loading and analyzing EEG data using EEGlab. This document is adapted from the original, created by [Simmy Poonian](https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au).
+
+- A short [tutorial](files/RLadies_Permutation_Clusters.R) I gave for the [RLadies Paris](https://github.com/rladies-paris) Meetup.
 
 # PaBaLa
 
-point towards PaBaLa website
+Together with [Christina Bergmann](https://sites.google.com/site/chbergma/), we founded a regular meeting of the Parisian Babylabs every. Christina and I have both left Paris, but PaBaLa still meets every 2-3 months, discussing topics such as how to improve baby recruitment, best practices for planning and analyzing experiments, and tips for keeping babies happy and not fussy.  Check out the [website](https://sites.google.com/site/lscplpp/) to learn more!
 
