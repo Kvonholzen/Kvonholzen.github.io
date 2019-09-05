@@ -19,12 +19,15 @@ library(papaja)
 <div class = "col-sm-2">
 <br>2013
 <br>
+<br>
 <br>2009
+<br>
 </div>
   
 <div class = "col-lg-6">
 <br>Dr. rer. nat. Psychology, magna cum laude
 <br>Georg-August-Universität Göttingen, Germany
+<br>
 <br>B.S. Psychology, summa cum laude
 <br>University of Wisconsin - Green Bay, USA
 </div>

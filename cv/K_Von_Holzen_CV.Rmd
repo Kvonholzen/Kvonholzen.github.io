@@ -1,10 +1,10 @@
 ---
 name: Katie
 surname: Von Holzen
-position: "Akademische Rätin"
-address: "Lehrstuhl Linguistik des Deutschen, Technische Universität Dortmund"
-www: katiemvonholzen.wixsite.com/katievonholzen
-email: "katie.m.vonholzen@gmail.com"
+position: Akademische Rätin
+address: Lehrstuhl Linguistik des Deutschen, Technische Universität Dortmund
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
 github: Kvonholzen
 date: "`r format(Sys.time(), '%B %Y')`"
 profilepic: katie_pic.jpg
@@ -16,21 +16,21 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALS
 library(vitae)
 library(scholar)
 library(papaja)
+library(tibble)
+library(stringr)
 ```
 
 
 # Education
 
 ```{r}
-library(tibble)
 tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Dr. rer. nat. Psychology", "2013", "Georg-August-Universität Göttingen", "Göttingen, Germany",
-    "B.S. Psychology, summa cum laude", "2009", "University of Wisconsin - Green Bay", "Green Bay, WI, USA"
+  ~Year, ~Degree, ~blank1, ~Institution,
+  2013, "Dr. rer. nat. Psychology, magna cum laude", "", "Georg-August-Universität Göttingen, Germany",
+  2009, "B.S. Psychology, summa cum laude", "", "University of Wisconsin - Green Bay, USA"
 ) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+  detailed_entries(Degree, Year, blank1, Institution)
 ```
-
 
 # Employment
 
@@ -39,12 +39,12 @@ library(tibble)
 tribble(
   ~ Position, ~ Year, ~ Institution, ~ Supervisor,
     "Akademische Rätin (Senior Postdoctoral Researcher)", "2019-present", "Technische Universität Dortmund, Germany", "Supervisor: Prof. Dr. Sarah Schimke",
-    "Postdoctoral Researcher", "2017-2019", "University of Maryland, USA", "Supervisor: Prof. Rochelle Newman",
+    "Postdoctoral Researcher", "2017-2019", "University of Maryland, USA", "Mentor: Prof. Rochelle Newman",
     "Postdoctoral Researcher", "2014-2017", "Université Paris Descartes, France", "Supervisor: Dr. Thierry Nazzi",
     "Scientific Staff", "2010-2013", "Georg-August-Universität Göttingen", "Supervisor: Prof. Dr. Nivedita Mani",
   "Summer Research Intern", "2009", "Dartmouth College, USA", "Supervisor: Prof. Todd Heatherton"
 ) %>% 
-  detailed_entries(Position, Year, Institution, Supervisor)
+  detailed_entries(Position, Year, Supervisor, Institution)
 ```
 
 
@@ -63,26 +63,46 @@ tribble(
 
 # Publications
 
+## Published Manuscripts
+
 ```{r}
-bibliography_entries("Publications.bib")
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "Article") %>%
+  arrange(desc(year), surnames)
+
 ```
 
-# Peer-Reviewed Conference Proceedings
+## PhD Thesis
 
 ```{r}
-bibliography_entries("Proceedings.bib")
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "PhdThesis") %>%
+  arrange(desc(year), surnames)
+
 ```
 
-# Open Data
+## Peer-Reviewed Conference Proceedings
 
 ```{r}
-bibliography_entries("Open_Data.bib")
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "InProceedings") %>%
+  arrange(desc(year), surnames)
 ```
 
-# Manuscripts in Preparation
+## Open Data
 
 ```{r}
-bibliography_entries("Unpublished.bib")
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "Misc") %>%
+  arrange(desc(year), surnames)
+```
+
+## Manuscripts under revision or review
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "Unpublished") %>%
+  arrange(desc(year), surnames)
 ```
 
 # Grants
@@ -111,3 +131,301 @@ tribble(
 ) %>% 
   brief_entries(Type, Year, Desc)
 ```
+
+# Invited Talks
+
+```{r}
+
+bibliography_entries("Presentations.bib") %>%
+  filter(bibtype == "Booklet") %>%
+  filter(str_detect(key, "^i"))%>%
+  arrange(desc(year), surnames)
+
+```
+
+# Conference Activity
+
+## Talks Presented
+
+```{r}
+bibliography_entries("Presentations.bib") %>%
+  filter(bibtype == "Booklet") %>%
+  filter(str_detect(key, "^t"))%>%
+  arrange(desc(year), surnames)
+```
+
+## Posters Presented
+
+```{r}
+bibliography_entries("Presentations.bib") %>%
+  filter(bibtype == "Booklet") %>%
+  filter(str_detect(key, "^p"))%>%
+  arrange(desc(year), surnames)
+```
+
+# Teaching and Mentorship
+
+## Courses Taught
+
+### Lecture-based Courses
+
+```{r}
+
+tribble(
+  ~Year, ~Course, ~blank1, ~blank2, ~Desc,
+  2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "Bachelor students",
+    2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "Department of Hearing and Speech Sciences",
+    2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "University of Maryland",
+    2011, "Experimental Methods for Testing Language Comprehension", "", "", "Bachelor students", 
+      2011, "Experimental Methods for Testing Language Comprehension", "", "", "German Department", 
+      2011, "Experimental Methods for Testing Language Comprehension", "", "", "Georg-August-Universität Göttingen"
+) %>% 
+  detailed_entries(Course, Year, blank1, blank2, Desc)
+
+```
+
+### Seminars
+
+```{r}
+
+tribble(
+  ~Year, ~Course, ~blank1, ~blank2, ~Desc,
+  2012, "Language Acquisition and Processing", "", "", "Bachelor students",
+    2012, "Language Acquisition and Processing", "", "", "German Department",
+    2012, "Language Acquisition and Processing", "", "", "Georg-August-Universität Göttingen"
+) %>% 
+  detailed_entries(Course, Year, blank1, blank2, Desc)
+
+```
+
+### Tutorials
+
+```{r}
+
+tribble(
+  ~Year, ~Course, ~blank1, ~blank2, ~Desc,
+  2017, "Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R", "", "", "Doctoral students, postdoctoral researchers, and faculty",
+    2017, "Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R", "", "", "Université Paris Descartes",
+    2017, "Time Course Analysis in R", "", "", "Doctoral students, Research Training Group 2070",
+    2017, "Time Course Analysis in R", "", "", "Georg-August-Universität Göttingen",
+    2016, "EEG Pre-processing and Analysis Using EEGLAB and ERPLAB", "", "", "Doctoral students, postdoctoral researchers, and faculty",
+    2016, "EEG Pre-processing and Analysis Using EEGLAB and ERPLAB", "", "", "Université Paris Descartes"
+) %>% 
+  detailed_entries(Course, Year, blank1, blank2, Desc)
+
+```
+
+## Students Mentored
+
+### University of Maryland
+*A fast note about slow rate in IDS: Maternal speech rate to preverbal infants facilitates early language development*, 2018-2019  
+
+|        Sara Cusick, Assistantship
+|        Mary Murphy, Assistantship
+|        Kayla Whitlock, Assistantship
+|        Jennifer Zuhl, Assistantship
+|        Julia Grable, Assistantship
+|        Alexia Proctor, Assistantship
+
+
+*Utterance alignment of a large, longitudinal corpus in CLAN/CHAT*, 2018-2019
+
+|        Heather Wibberley, Assistantship 
+|        Taylor Trent, Assistantship 
+|        Jillian Doherty, Assistantship 
+|        Maggie Roman, Assistantship 
+|        Dominique Jenkins, Assistantship 
+|        Jessica Mooney, Assistantship 
+
+
+### Université Paris Descartes
+*French-learning infants' adaptation to a novel accent: The role of consonant/vowel asymmetry*
+
+|        Rosalie Delille, Internship, 2017 
+
+
+
+*Consonant and vowel processing in word form segmentation: An infant ERP study*
+
+|        Sofia Carrion, Internship, 2017
+|        Elisa Moulin, Internship, 2015-2016
+|        Jeanne Charoy, Internship, 2015
+|        Marion Lafargue, Internship, 2014-2015
+
+
+
+*Emergence of the C-bias during the first year of life: New evidence from own name recognition*
+
+|        Safyya Larinouna, Internship, 2016
+|        Henry Cheng, International Visiting Internship, 2014
+
+
+
+### Georg-August-Universität Göttingen
+Bachelor Thesis, Fabienne Kremer, 2013
+
+|        *Associating a language with a speaker: Bilingual production is influenced by speaker language*
+
+
+
+Master Thesis, Deborah Wolff, 2012
+
+|        *Segmentierungsfähigkeit von infant- und adult-directed speech bei 11-13 Monate alten Kindern. Eine ERP-Studie.* (Segmentation abilities in infant- and adult directed speech in 11-13 month old children: An ERP study)
+
+
+
+Masters Internship, Agniezska Leszczynska, 2012
+
+|        *Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*
+
+
+
+# Skills
+
+## Experiment Programming Experience
+
+### Open Sesame/Python
+
+- Intermediate expertise
+- Designing experiments, including lexical decision (adults), visual world paradigm (with and without an eye-tracker) and preferential listening (infants)
+- Experience advising colleagues on experimental design
+- Conducting tutorials with colleagues and students
+- Used to promote Open Science practices
+
+### Presentation (Neurobehavioral Systems)
+
+- Intermediate expertise
+- Designing experiments, including EEG experiments
+
+### EPrime (Psychology Software Tools, Inc.)
+
+- Beginner expertise
+- Designing experiments, including EEG experiments
+
+## Statistical/Data Analysis Experience
+
+### R
+
+- Proficient expertise
+- Advising colleagues on statistical analysis, data wrangling
+- Conducting tutorials on eye-tracking data
+- Growth growth curve modeling (lmer package)
+- Mixed effects models (lmer package)
+- ANOVA analyses (ez package)
+- Producing beautiful graphics (ggplot2 package)
+- Analyzing vocabulary data corpora (wordbankr package)
+- Power analysis (pwr package)
+- Creating RMarkdown files to promote collaboration and accuracy
+- Used to promote Open Science practices
+
+### Praat
+
+- Intermediate expertise
+- Scripting to automatically analyze sounds (pitch, duration, intensity)
+- Stimuli creation
+- Interfacing with CLAN output to analyze corpora
+- Interfacing with a forced aligner (Easy Align)
+- Used to promote Open Science practices
+
+### CHAT/CLAN
+
+- Intermediate expertise
+- Analyzing length of utterance
+- Time-locking transcripts to audio recordings
+- Interfacing with Praat
+
+### EEG/ERPlab
+
+- Intermediate expertise
+- Preprocessing EEG data
+- Conducting tutorials
+- Related MATLAB scripting to automatically analyze EEG/ERP data
+
+### SPSS
+
+- Intermediate expertise
+- ANOVA analyses
+
+# Service
+
+## Institutional Service
+
+### University of Maryland
+
+```{r}
+library(tibble)
+tribble(
+  ~ Position, ~ Year,
+    "Member of the Cultural and Linguistic Diversity Committee", 2019,
+   "Panel judge for Graduate Research Appreciation Day", 2018
+) %>% 
+  detailed_entries(Position, Year)
+```
+
+### Université Paris Descartes
+
+```{r}
+library(tibble)
+tribble(
+  ~ Position, ~ Year,
+    "Co-founder and organizer, Parisian BabyLab Meetings (PaBaLa)", "2014-2017",
+   "Co-Chair, Student and Post-doc Talks (SPOT)", "2014-2016"
+) %>% 
+  detailed_entries(Position, Year)
+```
+
+## Professional Service
+
+### Ad-hoc Review
+
+- Journal of Experimental Child Psychology
+- Developmental Science
+- Language and Speech
+- Infancy
+- Bilingualism: Language and Cognition
+- Developmental Cognitive Neuroscience
+- Child Development
+- Journal of Cognitive Psychology
+- Journal of Memory and Language
+
+### Conference Review
+
+- CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
+- International Workshop on Bilingualism and Cognitive Control (2013). Jagiellonian University, Krakow, Poland
+- International Workshop: “Bilingual and Multilingual Interaction” ESRC Centre for Research on Bilingualism (2012), Bangor, Wales
+
+# Professional Memberships
+
+```{r}
+library(tibble)
+tribble(
+  ~ Position, ~ Year,
+    "Member of the Deutscher Hochschulverband", "2019-",
+   "Member of the International Congress on Infant Studies", "2018-",
+  "Member of Women in Cognitive Science (WICS)", "2012-"
+) %>% 
+  detailed_entries(Position, Year)
+```
+
+
+# Languages
+
+- English, native
+- German, fluent (C1)
+- French, beginner (A2)
+
+
+# Community Involvement/Outreach
+
+```{r}
+library(tibble)
+tribble(
+  ~ Place, ~ Year, ~blank1, ~Position,
+    "Rosa Parks Elementary School, Hyattsville Education Advisory Committee’s Summer Reading Program", "2018, 2019","", "Volunteer",
+   "Winneconne Elementary School, “Being a scientist and living in a foreign country", 2014,"", "Presenter",
+  "Preschool Immersion Event, “Bilingual Language Development
+at ASC Kinderbewegungshaus”", 2012, "", "Presenter"
+) %>% 
+  detailed_entries(Place, Year, blank1, Position)
+```
+
