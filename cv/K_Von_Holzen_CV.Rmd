@@ -395,6 +395,9 @@ tribble(
 - Journal of Cognitive Psychology
 - Journal of Memory and Language
 
+
+- View my [Publons Peer Review Profile](https://publons.com/researcher/1230020/katie-von-holzen/peer-review/)
+
 ### Conference Review
 
 - CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
@@ -409,6 +412,7 @@ tribble(
   ~ Position, ~ Year,
     "Member of the Deutscher Hochschulverband", "2019-",
    "Member of the International Congress on Infant Studies", "2018-",
+  "Member of the National Postdoctoral Association (USA)", "2017-",
   "Member of Women in Cognitive Science (WICS)", "2012-"
 ) %>% 
   detailed_entries(Position, Year)
