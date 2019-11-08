@@ -4,7 +4,7 @@ surname: Von Holzen
 position: Akademische Rätin
 address: Lehrstuhl Linguistik des Deutschen, Technische Universität Dortmund
 www: Kvonholzen.github.io
-email: katie.m.vonholzen@gmail.com
+email: katie.vonholzen@tu-dortmund.de
 github: Kvonholzen
 date: "`r format(Sys.time(), '%B %Y')`"
 profilepic: katie_small.png
@@ -67,7 +67,7 @@ tribble(
 
 ```{r}
 bibliography_entries("Publications.bib") %>%
-  filter(bibtype %in% "Article") %>%
+  filter(bibtype %in% "Article" & !(year %in% "accepted")) %>%
   arrange(desc(year), surnames)
 
 ```
@@ -103,6 +103,14 @@ bibliography_entries("Publications.bib") %>%
 ```{r}
 bibliography_entries("Publications.bib") %>%
   filter(bibtype %in% "Misc") %>%
+  arrange(desc(year), surnames)
+```
+
+## Manuscripts accepted for publication
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "Article" & year %in% "accepted") %>%
   arrange(desc(year), surnames)
 ```
 
