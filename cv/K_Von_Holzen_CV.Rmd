@@ -85,7 +85,7 @@ bibliography_entries("Publications.bib") %>%
 
 ```{r}
 bibliography_entries("Publications.bib") %>%
-  filter(bibtype %in% "InBook") %>%
+  filter(bibtype %in% "InCollection") %>%
   arrange(desc(year), surnames)
 
 ```
@@ -393,6 +393,8 @@ tribble(
 
 ### Ad-hoc Review
 
+View my [Publons Peer Review Profile](https://publons.com/researcher/1230020/katie-von-holzen/peer-review/)
+
 - Journal of Experimental Child Psychology
 - Developmental Science
 - Language and Speech
@@ -404,10 +406,9 @@ tribble(
 - Journal of Memory and Language
 
 
-- View my [Publons Peer Review Profile](https://publons.com/researcher/1230020/katie-von-holzen/peer-review/)
-
 ### Conference Review
 
+- International Association for the Study of Child Language (IASCL) Conference (2020), Philadelphia, PA, USA
 - CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
 - International Workshop on Bilingualism and Cognitive Control (2013). Jagiellonian University, Krakow, Poland
 - International Workshop: “Bilingual and Multilingual Interaction” ESRC Centre for Research on Bilingualism (2012), Bangor, Wales
