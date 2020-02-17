@@ -207,7 +207,13 @@ tribble(
 
 tribble(
   ~Year, ~Course, ~blank1, ~blank2, ~Desc,
-  2012, "Language Acquisition and Processing", "", "", "Bachelor students",
+  2019, "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Master students",
+    2019, "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "German Department",
+    2019, "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Technische Universität Dortmund",
+    2019, "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Bachelor students",
+    2019, "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "German Department",
+    2019, "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Technische Universität Dortmund",
+    2012, "Language Acquisition and Processing", "", "", "Bachelor students",
     2012, "Language Acquisition and Processing", "", "", "German Department",
     2012, "Language Acquisition and Processing", "", "", "Georg-August-Universität Göttingen"
 ) %>% 
@@ -408,6 +414,7 @@ View my [Publons Peer Review Profile](https://publons.com/researcher/1230020/kat
 
 ### Conference Review
 
+- International Congress of Infant Studies (ICIS) Conference (2020), Glasgow, UK
 - International Association for the Study of Child Language (IASCL) Conference (2020), Philadelphia, PA, USA
 - CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
 - International Workshop on Bilingualism and Cognitive Control (2013). Jagiellonian University, Krakow, Poland
