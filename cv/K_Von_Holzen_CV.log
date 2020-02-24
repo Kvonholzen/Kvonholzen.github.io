@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.19)  24 FEB 2020 09:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.19)  24 FEB 2020 09:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,7 +788,7 @@ somesymbols-generic.tex)
 somesymbols-pdftex.tex))
 \@quotelevel=\count427
 \@quotereset=\count428
-(./K_Von_Holzen_CV.aux)
+No file K_Von_Holzen_CV.aux.
 \openout1 = `K_Von_Holzen_CV.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 254.
@@ -831,153 +831,22 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 254.
 LaTeX Info: Redefining \pageref on input line 254.
 LaTeX Info: Redefining \nameref on input line 254.
-(./K_Von_Holzen_CV.out) (./K_Von_Holzen_CV.out)
-\@outlinefile=\write4
-\openout4 = `K_Von_Holzen_CV.out'.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(49.79231pt, 497.92325pt, 49.79231pt)
-* v-part:(T,H,B)=(62.59596pt, 725.54538pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=497.92325pt
-* \textheight=725.54538pt
-* \oddsidemargin=-22.47768pt
-* \evensidemargin=-22.47768pt
-* \topmargin=-46.67403pt
-* \headheight=15.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/biblatex/lbx/englis
-h.lbx
-File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout3 = `K_Von_Holzen_CV.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'K_Von_Holzen_CV.bbl' found.
-(./K_Von_Holzen_CV.bbl)
-Package biblatex Info: Reference section=0 on input line 254.
-Package biblatex Info: Reference segment=0 on input line 254.
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 254.
-
-(c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fmtcount/fc-english
-.def
-File: fc-english.def 2016/01/12
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 255.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 255.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 255.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 255.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 255.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 255.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 255.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 255.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 255.
-LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 255.
-
-(c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/ufontaw
-esometwo.fd
-File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
-)
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 255--256
-[][][][] 
- []
-
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 259.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 261.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 309.
-[1
-
-{c:/Users/user/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex
-.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
-[]\T1/Carlito-TLF/b/n/10 Summer School Travel Grant: GDR Neu-ro-sciences Cog-ni
--tives du Développe-ment bourses de mo-bil-ité à
- []
-
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 497--497
-[]\T1/Carlito-TLF/b/n/10 Zwei Sprachen, ein Gehirn: Bilin-gual-is-mus und desse
-n Kon-se-quen-zen (Two Lan-guages, One Mind:
- []
-
-[4] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 786.
-[7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 786.
-(./K_Von_Holzen_CV.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 786.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 786.
-Package rerunfilecheck Info: File `K_Von_Holzen_CV.out' has not changed.
-(rerunfilecheck)             Checksum: 94D510E6B85D7D51522B1B8892B7B9EB;7205.
-Package logreq Info: Writing requests to 'K_Von_Holzen_CV.run.xml'.
-\openout1 = `K_Von_Holzen_CV.run.xml'.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 786.
- ) 
+(./K_Von_Holzen_CV.out) (./K_Von_Holzen_CV.out
+! I can't write on file `K_Von_Holzen_CV.pdf'.
+(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
+Please type another file name for output
+! Emergency stop.
+\Hy@OutlineName ...utline goto name{#2}count#3{#4}
+                                                  
+l.1 ...\000d\000u\000c\000a\000t\000i\000o\000n}{}
+                                                  % 1 
 Here is how much of TeX's memory you used:
- 20941 strings out of 483183
- 355682 string characters out of 5964668
- 1004012 words of memory out of 5000000
- 35519 multiletter control sequences out of 15000+600000
- 601828 words of font info for 50 fonts, out of 8000000 for 9000
+ 19316 strings out of 483183
+ 320229 string characters out of 5964668
+ 735769 words of memory out of 5000000
+ 34093 multiletter control sequences out of 15000+600000
+ 540104 words of font info for 27 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,19n,59p,1936b,1354s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/carlito/crl
-t_z7vml3.enc}{c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/
-fontawesome/fontawesometwo.enc}<c:/Users/user/AppData/Roaming/TinyTeX/texmf-dis
-t/fonts/type1/typoland/carlito/Carlito-Bold.pfb><c:/Users/user/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb><c:/Users/us
-er/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb>
-<c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fontawesom
-e/FontAwesome.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
-/urw/zapfding/uzdr.pfb>
-Output written on K_Von_Holzen_CV.pdf (7 pages, 120548 bytes).
-PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
- 159 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41i,0n,59p,1140b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+!  ==> Fatal error occurred, no output PDF file produced!
