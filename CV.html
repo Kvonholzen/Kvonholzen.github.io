@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -69,9 +70,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -85,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -95,6 +93,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -110,7 +111,6 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
-
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -130,6 +130,43 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -151,19 +188,73 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -255,23 +346,38 @@ $(document).ready(function () {
 <li>Consonant bias in lexical processing</li>
 </ul>
 </div>
-<div id="publications" class="section level1 unnumbered">
-<h1>Publications</h1>
+<div id="peer-reviewed-papers" class="section level1 unnumbered">
+<h1>Peer-reviewed papers</h1>
 <div id="refs" class="references">
+<div id="ref-Basque">
+<p>Bobb, S. C., Von Holzen, K., Mayor, J., Mani, N., &amp; Carreiras, M. (2020). Brain and Language Co-activation of the L2 during L1 auditory processing : An ERP cross-modal priming study. <em>Brain and Language</em>, <em>203</em>(December 2019), 104739. <a href="https://doi.org/10.1016/j.bandl.2019.104739">https://doi.org/10.1016/j.bandl.2019.104739</a></p>
+</div>
 <div id="ref-VonHolzen2019">
-<p>Von Holzen, K., Fennell, C. T., &amp; Mani, N. (2019). The impact of cross-language phonological overlap on bilingual and monolingual toddlers’ word recognition. <em>Bilingualism: Language and Cognition</em>. <a href="https://doi.org/10.1017/S1366728918000597" class="uri">https://doi.org/10.1017/S1366728918000597</a></p>
+<p>Von Holzen, K., Fennell, C. T., &amp; Mani, N. (2019). The impact of cross-language phonological overlap on bilingual and monolingual toddlers’ word recognition. <em>Bilingualism: Language and Cognition</em>. <a href="https://doi.org/10.1017/S1366728918000597">https://doi.org/10.1017/S1366728918000597</a></p>
 </div>
 <div id="ref-VonHolzen2018">
-<p>Von Holzen, K., Nishibayashi, L.-L., &amp; Nazzi, T. (2018). Consonant and vowel processing in word form segmentation: An infant ERP study. <em>Brain Sciences</em>, <em>8</em>(24), 1–15. <a href="https://doi.org/10.3390/brainsci8020024" class="uri">https://doi.org/10.3390/brainsci8020024</a></p>
+<p>Von Holzen, K., Nishibayashi, L.-L., &amp; Nazzi, T. (2018). Consonant and vowel processing in word form segmentation: An infant ERP study. <em>Brain Sciences</em>, <em>8</em>(24), 1–15. <a href="https://doi.org/10.3390/brainsci8020024">https://doi.org/10.3390/brainsci8020024</a></p>
 </div>
 <div id="ref-Nazzi2016">
-<p>Nazzi, T., Poltrock, S., &amp; Von Holzen, K. (2016). The developmental origins of the consonant bias in lexical processing. <em>Current Directions in Psychological Science</em>, <em>25</em>(4), 291–296. <a href="https://doi.org/10.1177/0963721416655786" class="uri">https://doi.org/10.1177/0963721416655786</a></p>
+<p>Nazzi, T., Poltrock, S., &amp; Von Holzen, K. (2016). The developmental origins of the consonant bias in lexical processing. <em>Current Directions in Psychological Science</em>, <em>25</em>(4), 291–296. <a href="https://doi.org/10.1177/0963721416655786">https://doi.org/10.1177/0963721416655786</a></p>
 </div>
 <div id="ref-VonHolzen2014">
-<p>Von Holzen, K., &amp; Mani, N. (2014). Bilinguals implicitly name objects in both their languages: An ERP study. <em>Frontiers in Psychology</em>, <em>5</em>(DEC), 1–12. <a href="https://doi.org/10.3389/fpsyg.2014.01415" class="uri">https://doi.org/10.3389/fpsyg.2014.01415</a></p>
+<p>Von Holzen, K., &amp; Mani, N. (2014). Bilinguals implicitly name objects in both their languages: An ERP study. <em>Frontiers in Psychology</em>, <em>5</em>(DEC), 1–12. <a href="https://doi.org/10.3389/fpsyg.2014.01415">https://doi.org/10.3389/fpsyg.2014.01415</a></p>
 </div>
 <div id="ref-VonHolzen2012">
-<p>Von Holzen, K., &amp; Mani, N. (2012). Language nonselective lexical access in bilingual toddlers. <em>Journal of Experimental Child Psychology</em>, <em>113</em>, 569–586. <a href="https://doi.org/10.1016/j.jecp.2011.02.002" class="uri">https://doi.org/10.1016/j.jecp.2011.02.002</a></p>
+<p>Von Holzen, K., &amp; Mani, N. (2012). Language nonselective lexical access in bilingual toddlers. <em>Journal of Experimental Child Psychology</em>, <em>113</em>, 569–586. <a href="https://doi.org/10.1016/j.jecp.2011.02.002">https://doi.org/10.1016/j.jecp.2011.02.002</a></p>
+</div>
+<div id="ref-ManyBabies">
+<p>ManyBabies Consortium. (n.d.). Quantifying sources of variability in infancy research using the infant-directed speech preference. <em>Advances in Methods and Practices in Psychological Science</em>. Retrieved from <a href="https://psyarxiv.com/s98ab">https://psyarxiv.com/s98ab</a></p>
+</div>
+<div id="ref-Storybook">
+<p>O’Fallon, M. K., Von Holzen, K., &amp; Newman, R. S. (n.d.). Preschoolers? word-learning during shared storybook reading interactions. <em>Journal of Speech, Language, and Hearing Research</em>.</p>
+</div>
+<div id="ref-speechrate">
+<p>Raneri, D., Von Holzen, K., Newman, R., &amp; Bernstein Ratner, N. (n.d.). Change in maternal speech rate to preverbal infants over the first two years of life. <em>Journal of Child Language</em>.</p>
+</div>
+<div id="ref-Naming">
+<p>Von Holzen, K., &amp; Nazzi, T. (n.d.). <em>Emergence of a consonant bias during the first year of life: New evidence from own-name recognition</em>.</p>
 </div>
 </div>
 </div>
@@ -293,6 +399,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

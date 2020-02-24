@@ -119,7 +119,7 @@ library(stringr)
  * Mispronunciation sensitivity
  * Consonant bias in lexical processing
 
-# Publications
+# Peer-reviewed papers
 
 ```{r}
 
@@ -128,10 +128,14 @@ pubs <- bibliography_entries("cv/Publications.bib") %>%
   filter(bibtype %in% "Article") %>%
   arrange(desc(year), surnames)
 
+accepted <- bibliography_entries("cv/Publications.bib") %>%
+  filter(bibtype %in% "Article" & year %in% "accepted") %>%
+  arrange(desc(year), surnames)
+
+
 ```
 
 ---
 nocite: |
-  @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
+  @Naming, @speechrate, @Storybook, @ManyBabies, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
 ...
-

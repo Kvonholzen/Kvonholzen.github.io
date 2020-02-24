@@ -63,20 +63,11 @@ tribble(
 
 # Publications
 
-## Published Manuscripts
+## Published peer-reviewed papers
 
 ```{r}
 bibliography_entries("Publications.bib") %>%
   filter(bibtype %in% "Article" & !(year %in% "accepted")) %>%
-  arrange(desc(year), surnames)
-
-```
-
-## PhD Thesis
-
-```{r}
-bibliography_entries("Publications.bib") %>%
-  filter(bibtype %in% "PhdThesis") %>%
   arrange(desc(year), surnames)
 
 ```
@@ -106,12 +97,23 @@ bibliography_entries("Publications.bib") %>%
   arrange(desc(year), surnames)
 ```
 
+## PhD Thesis
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(bibtype %in% "PhdThesis") %>%
+  arrange(desc(year), surnames)
+
+```
+
+
 ## Manuscripts accepted for publication
 
 ```{r}
 bibliography_entries("Publications.bib") %>%
   filter(bibtype %in% "Article" & year %in% "accepted") %>%
   arrange(desc(year), surnames)
+
 ```
 
 ## Manuscripts under revision or review
