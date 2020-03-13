@@ -17,23 +17,51 @@ Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht 
 
 <br>Dienstag, 7. April
 <br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/Y1Vo3XyCpKm2AgNR)
 
 <br>Dienstag, 14. April
 <br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/fJLryNJUgOhaRQOh)
 
 <br>Dienstag, 21 April
 <br>BLS Prüfungswoche
 <br>ausnamsweise von 13-14 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTX)
 
 <br>Dienstag, 28. April
 <br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/exULFlmigF5NsYs8)
+
+```{r admin_March_31, include=FALSE}
+
+#https://terminplaner4.dfn.de/sINkmdDnXdhZ3VHpfoXY41Tf/admin
+
+```
 
 
-```{r setup_cv, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
-library(vitae)
-library(scholar)
-library(papaja)
-library(tibble)
-library(stringr)
+
+```{r admin_April_7, include=FALSE}
+
+#https://terminplaner4.dfn.de/Y1Vo3XyCpKm2AgNRqmodgu21/admin
+
+```
+
+```{r admin_April_14, include=FALSE}
+
+#https://terminplaner4.dfn.de/fJLryNJUgOhaRQOhCAu8YdL1/admin
+
+```
+
+
+```{r admin_April_21, include=FALSE}
+
+#https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTXDsJ64EVV/admin
+
+```
+
+
+```{r admin_April_28, include=FALSE}
+
+#https://terminplaner4.dfn.de/exULFlmigF5NsYs8ZyiTIDks/admin
+
 ```
