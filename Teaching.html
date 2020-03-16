@@ -20,6 +20,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -248,6 +251,63 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -255,6 +315,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -307,19 +377,78 @@ $(document).ready(function () {
 
 
 <hr />
-<div id="sprechstunden-office-hours" class="section level1">
-<h1>Sprechstunden (Office Hours)</h1>
+<div id="sprechstunden-office-hours" class="section level2">
+<h2>Sprechstunden (Office Hours)</h2>
 <p>Während der Vorlesungszeit sind meine Sprechstunden normalerweise : Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden.</p>
 <p><em>Bitte tragen Sie Ihren Namen, Email und Anliegen ein.</em></p>
-<p><br>Dienstag, 31. März <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/sINkmdDnXdhZ3VHp">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 7. April <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/Y1Vo3XyCpKm2AgNR">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 14. April <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/fJLryNJUgOhaRQOh">Melden Sie sich hier an</a></p>
+<p>KEINE SPRECHSTUNDEN BIS 21 APRIL.</p>
 <p><br>Dienstag, 21 April <br>BLS Prüfungswoche <br>ausnamsweise von 13-14 Uhr <br> <a href="https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTX">Melden Sie sich hier an</a></p>
 <p><br>Dienstag, 28. April <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/exULFlmigF5NsYs8">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 5. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxS">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 12. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/WFfMnelU3BIGbg2w">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 19. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 26. Mai <br>BLS Prüfungswoche <br>ausnamsweise von 9-10 Uhr <br> <a href="https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F">Melden Sie sich hier an</a></p>
+<hr />
+</div>
+<div id="resources-and-materials" class="section level2">
+<h2>Resources and Materials</h2>
+<div id="qalmri-framework" class="section level3">
+<h3>QALMRI Framework</h3>
+<p>Starting with the course “Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain &amp; Behavior Research”, which I taught as an <a href="https://gened.umd.edu/i-series/iseries.html">I-Series course</a> to incoming freshman at the University of Maryland (and which was conceptualized by <a href="https://hesp.umd.edu/facultyprofile/novick/jared">Jared Novick</a>), I began using the QALMRI Framework to guide students through reading primary, scientific articles (<a href="https://pdfs.semanticscholar.org/3bed/03eae99d886c3c7967419d3d3cfcb132b1ee.pdf">Brosowsky &amp; Parshina, 2017</a>). The QALMRI Framework stands for:</p>
+<ul>
+<li>Q: Question</li>
+<li>A: Alternatives</li>
+<li>L: Logic</li>
+<li>M: Methods</li>
+<li>R: Results</li>
+<li>I: Inferences</li>
+</ul>
+<p>and teaches students how to identify the questions being asked in the scientific article as well as how those questions are answered and the consequences of those answers. I’ve although used this approach in a seminar class on bilingualism taught at the Master level at the TU Dortmund. In this class, I found it particularly helpful in preparing students to summarize existing research and create an approach to answering their own research questions (Forschungskonzept).</p>
+<hr />
+</div>
+</div>
+<div id="teaching-experience" class="section level2">
+<h2>Teaching Experience</h2>
+<div id="lecture-based-courses" class="section level3">
+<h3>Lecture-based Courses</h3>
+<div class="row">
+<div class="col-sm-2">
+<p><br>2018 <br> <br> <br> <br> <br>2011 <br> <br> <br> <br></p>
+</div>
+<div class="col-lg-6">
+<p><br><strong>Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain &amp; Behavior Research</strong> <br>Bachelor students <br>Department of Hearing and Speech Sciences <br>University of Maryland <br> <br><strong>Experimental Methods for Testing Language Comprehension</strong> <br>Bachelor students <br>German Department <br>Georg-August-Universität Göttingen <br></p>
+</div>
+</div>
+</div>
+<div id="seminars" class="section level3">
+<h3>Seminars</h3>
+<div class="row">
+<div class="col-sm-2">
+<p><br>2019 <br> <br> <br> <br> <br>2019 <br> <br> <br> <br> <br>2012 <br> <br> <br> <br></p>
+</div>
+<div class="col-lg-6">
+<p><br><strong>Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)</strong> <br>Master students <br>German Department <br>Technische Universität Dortmund <br> <br><strong>Einführung in die Sprachwissenschaft (Introduction to Linguistics)</strong> <br>Bachelor students <br>German Department <br>Technische Universität Dortmund <br> <br><strong>Language Acquisition and Processing</strong> <br>Bachelor students <br>German Department <br>Georg-August-Universität Göttingen <br></p>
+</div>
+</div>
+</div>
+<div id="tutorials" class="section level3">
+<h3>Tutorials</h3>
+<p>Some resources from these tutorials can be found under the <a href="https://kvonholzen.github.io/Resources.html">Resources</a> tab.</p>
+<div class="row">
+<div class="col-sm-2">
+<p><br>2017 <br> <br> <br> <br>2017 <br> <br> <br> <br>2016 <br> <br> <br></p>
+</div>
+<div class="col-lg-6">
+<p><br><strong>Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R</strong> <br>Doctoral students, postdoctoral researchers, and faculty <br>Université Paris Descartes <br> <br><strong>Time Course Analysis in R</strong> <br>Doctoral students, Research Training Group 2070 <br>Georg-August-Universität Göttingen <br> <br><strong>EEG Pre-processing and Analysis Using EEGLAB and ERPLAB</strong> <br>Doctoral students, postdoctoral researchers, and faculty <br>Université Paris Descartes <br></p>
+</div>
+</div>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -352,6 +481,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
