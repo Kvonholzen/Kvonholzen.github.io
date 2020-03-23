@@ -1,0 +1,33 @@
+---
+title: "Research"
+bibliography: References.bib
+csl: apa-6th-edition.csl
+---
+
+----
+
+# Initial Foreign Speech Processing
+
+Primary school-aged children in Germany are required to learn English, but the age at which instruction should start remains a topic of debate. Although research with immigrants who arrived as children suggests an advantage for an earlier start, children receiving only classroom English instruction often benefit more from starting later in primary school [@Jaekel2017]. I'm interested in the underlying mechanisms driving this developmental difference in foreign language learning by studying the child learner’s readiness to process and learn from foreign speech before they have received instruction in that language. This research focuses on German-learning pre-school and school-aged children. In one set of experiments, the initial ability to segment or extract words from English foreign speech will be examined; speech segmentation is an essential ability for learning words and building a vocabulary in a foreign language. These experiments will focus on two specific aspects of prior language knowledge, phonotactics and top-down lexical knowledge. Knowledge of majority-language phonotactics, which describe the sequence of sounds permitted by a particular language, may interfere with segmentation of foreign speech with word boundaries that conflict with phonotactic cues from the majority-language [@Weber2006]. In contrast, if children are familiar with words present in the foreign speech, such as cognate words (i.e. English: baby /beɪbi/; German: Baby /be:bi/), this top-down lexical knowledge should highlight the word boundary and facilitate segmentation of cognate words as well as words adjacent to cognate words [@Carroll2012; @Bortfeld2005]. The goal of this research is to better understand the capacities and constraints that the learner possesses when they are first exposed to a foreign language.
+
+
+# The Nature of Bilingual Lexical Processing Across the Lifespan
+
+Bilinguals must often navigate a linguistic environment that requires them to use only one of their languages. Yet, evidence of connections between the bilingual’s two languages suggest that lexical entries from the other language are active and ready to be accessed, even when the language itself is not currently being used. My dissertation work extended previous findings with evidence that even when completing a task in their first language (L1), bilingual adults activate the labels for objects in both of their languages [@VonHolzen2014]. I also demonstrated that young bilingual toddlers also activate both languages simultaneously, providing the first evidence of this phenomenon in bilingual children this young [@VonHolzen2012]. These bilingual toddlers are also sensitive to the phonological overlap between their two languages, which impacts their word recognition [@VonHolzen2019]. The results suggest that connections between a bilingual’s two languages are evident across the lifespan. Moreover, these findings have generated considerable scientific interest: groups in several other countries are currently working to replicate and extend them. 
+
+# Best Practices in Language Acquisition Research
+
+I am committed to ensuring that best practices are used in the field of language acquisition and have demonstrated this commitment through several different avenues, including pioneering a new analysis of time course data, a meta-analysis, and participation in a large-scale collaboration of language acquisition laboratories. 
+
+My study investigating simultaneous acitvation in bilingual toddlers [@VonHolzen2012] was the first to apply a non-parametic permutation clusters analysis in the language acquisition field, where my role was adapting the analysis to my own data and subsequently promoting this analysis with other language acquisition researchers. This analysis captures important differences in the timing of effects across a time course while controlling for the false-alarm rate. 
+
+In completing the meta-analysis of mispronunciation sensitivity development, my role was tabulating over two decades of research and analyzing the results with meta-analytic models. This provides an essential integration of research on mispronunciation sensitivity in early language acquisition and gives future researchers the tools to plan their own mispronunciation sensitivity studies. My co-author, Christina Bergmann, and I have already produced a conference proceedings paper based on this meta-analysis [@VonHolzen2018b]. The preprint for the full manuscript can be found [here](https://psyarxiv.com/dze29/).
+
+Finally, I participated in the Many Babies 1 project, which is the first-ever large-scale collaboration of language acquisition laboratories around the world, with the goal of assessing the robustness of the methods used to examine different phenomenon in language acquisition [@MB1]. My role in the Many Babies 1 project was adapting and testing the collaborative experiment in our lab.
+
+# The Role of Consonants and Vowels in Lexical Processing
+
+During lexical processing, more weight is often given to consonants than vowels. This pattern has been found in adult speakers of all languages tested thus far, leading to the proposal that humans have a bias for consonants during lexical prosessing (C-bias). Cross-linguistic and developmental evidence suggests that this C-bias may be acquired through early linguistic experience [@Nazzi2016]. My postdoctoral work focused on the acoustic/phonetic and lexical factors that drive this emergence during early language acquisition in French-learning infants. Our findings favor an interpretation of C-bias emergence guided by acoustic/phonetic factors, but show that early sensitivity to both consonants and vowels is related to general lexical development over the first two years of life. Although some of the research from this project is already published [@VonHolzen2018] or accepted [@Naming], the remaining studies should be submitted for publication over the coming year.
+
+
+# References

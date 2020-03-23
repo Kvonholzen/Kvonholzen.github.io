@@ -128,6 +128,8 @@ pubs <- bibliography_entries("cv/Publications.bib") %>%
   filter(bibtype %in% "Article") %>%
   arrange(desc(year), surnames)
 
+#unique(pubs$key)
+
 accepted <- bibliography_entries("cv/Publications.bib") %>%
   filter(bibtype %in% "Article" & year %in% "accepted") %>%
   arrange(desc(year), surnames)
@@ -137,5 +139,5 @@ accepted <- bibliography_entries("cv/Publications.bib") %>%
 
 ---
 nocite: |
-  @Naming, @speechrate, @Storybook, @ManyBabies, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
+  @Naming, @Raneri2020, @OFallon2020, @ManyBabies, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
 ...

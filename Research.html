@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Research</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="About_Me.html">About Me</a>
+</li>
+<li>
+  <a href="CV.html">CV</a>
+</li>
+<li>
+  <a href="Research.html">Research</a>
+</li>
+<li>
+  <a href="Teaching.html">Teaching</a>
+</li>
+<li>
+  <a href="Tutorials.html">Tutorials</a>
+</li>
+<li>
+  <a href="Media.html">Media</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Research</h1>
+
+</div>
+
+
+<hr />
+<div id="initial-foreign-speech-processing" class="section level1">
+<h1>Initial Foreign Speech Processing</h1>
+<p>Primary school-aged children in Germany are required to learn English, but the age at which instruction should start remains a topic of debate. Although research with immigrants who arrived as children suggests an advantage for an earlier start, children receiving only classroom English instruction often benefit more from starting later in primary school <span class="citation">(Jaekel, Schurig, Florian, &amp; Ritter, 2017)</span>. I’m interested in the underlying mechanisms driving this developmental difference in foreign language learning by studying the child learner’s readiness to process and learn from foreign speech before they have received instruction in that language. This research focuses on German-learning pre-school and school-aged children. In one set of experiments, the initial ability to segment or extract words from English foreign speech will be examined; speech segmentation is an essential ability for learning words and building a vocabulary in a foreign language. These experiments will focus on two specific aspects of prior language knowledge, phonotactics and top-down lexical knowledge. Knowledge of majority-language phonotactics, which describe the sequence of sounds permitted by a particular language, may interfere with segmentation of foreign speech with word boundaries that conflict with phonotactic cues from the majority-language <span class="citation">(Weber &amp; Cutler, 2006)</span>. In contrast, if children are familiar with words present in the foreign speech, such as cognate words (i.e. English: baby /beɪbi/; German: Baby /be:bi/), this top-down lexical knowledge should highlight the word boundary and facilitate segmentation of cognate words as well as words adjacent to cognate words <span class="citation">(Bortfeld, Morgan, Golinkoff, &amp; Rathbun, 2005; Carroll, 2012)</span>. The goal of this research is to better understand the capacities and constraints that the learner possesses when they are first exposed to a foreign language.</p>
+</div>
+<div id="the-nature-of-bilingual-lexical-processing-across-the-lifespan" class="section level1">
+<h1>The Nature of Bilingual Lexical Processing Across the Lifespan</h1>
+<p>Bilinguals must often navigate a linguistic environment that requires them to use only one of their languages. Yet, evidence of connections between the bilingual’s two languages suggest that lexical entries from the other language are active and ready to be accessed, even when the language itself is not currently being used. My dissertation work extended previous findings with evidence that even when completing a task in their first language (L1), bilingual adults activate the labels for objects in both of their languages <span class="citation">(Von Holzen &amp; Mani, 2014)</span>. I also demonstrated that young bilingual toddlers also activate both languages simultaneously, providing the first evidence of this phenomenon in bilingual children this young <span class="citation">(Von Holzen &amp; Mani, 2012)</span>. These bilingual toddlers are also sensitive to the phonological overlap between their two languages, which impacts their word recognition <span class="citation">(Von Holzen, Fennell, &amp; Mani, 2019)</span>. The results suggest that connections between a bilingual’s two languages are evident across the lifespan. Moreover, these findings have generated considerable scientific interest: groups in several other countries are currently working to replicate and extend them.</p>
+</div>
+<div id="best-practices-in-language-acquisition-research" class="section level1">
+<h1>Best Practices in Language Acquisition Research</h1>
+<p>I am committed to ensuring that best practices are used in the field of language acquisition and have demonstrated this commitment through several different avenues, including pioneering a new analysis of time course data, a meta-analysis, and participation in a large-scale collaboration of language acquisition laboratories.</p>
+<p>My study investigating simultaneous acitvation in bilingual toddlers <span class="citation">(Von Holzen &amp; Mani, 2012)</span> was the first to apply a non-parametic permutation clusters analysis in the language acquisition field, where my role was adapting the analysis to my own data and subsequently promoting this analysis with other language acquisition researchers. This analysis captures important differences in the timing of effects across a time course while controlling for the false-alarm rate.</p>
+<p>In completing the meta-analysis of mispronunciation sensitivity development, my role was tabulating over two decades of research and analyzing the results with meta-analytic models. This provides an essential integration of research on mispronunciation sensitivity in early language acquisition and gives future researchers the tools to plan their own mispronunciation sensitivity studies. My co-author, Christina Bergmann, and I have already produced a conference proceedings paper based on this meta-analysis <span class="citation">(Von Holzen &amp; Bergmann, 2018)</span>. The preprint for the full manuscript can be found <a href="https://psyarxiv.com/dze29/">here</a>.</p>
+<p>Finally, I participated in the Many Babies 1 project, which is the first-ever large-scale collaboration of language acquisition laboratories around the world, with the goal of assessing the robustness of the methods used to examine different phenomenon in language acquisition <span class="citation">(ManyBabiesConsortium, 2020)</span>. My role in the Many Babies 1 project was adapting and testing the collaborative experiment in our lab.</p>
+</div>
+<div id="the-role-of-consonants-and-vowels-in-lexical-processing" class="section level1">
+<h1>The Role of Consonants and Vowels in Lexical Processing</h1>
+<p>During lexical processing, more weight is often given to consonants than vowels. This pattern has been found in adult speakers of all languages tested thus far, leading to the proposal that humans have a bias for consonants during lexical prosessing (C-bias). Cross-linguistic and developmental evidence suggests that this C-bias may be acquired through early linguistic experience <span class="citation">(Nazzi, Poltrock, &amp; Von Holzen, 2016)</span>. My postdoctoral work focused on the acoustic/phonetic and lexical factors that drive this emergence during early language acquisition in French-learning infants. Our findings favor an interpretation of C-bias emergence guided by acoustic/phonetic factors, but show that early sensitivity to both consonants and vowels is related to general lexical development over the first two years of life. Although some of the research from this project is already published <span class="citation">(Von Holzen et al., 2018)</span> or accepted <span class="citation">(Von Holzen &amp; Nazzi, n.d.)</span>, the remaining studies should be submitted for publication over the coming year.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Bortfeld2005">
+<p>Bortfeld, H., Morgan, J. L., Golinkoff, R. M., &amp; Rathbun, K. (2005). Mommy and me: Familiar names help launch babies into speech-stream segmentation. <em>Psychological Science</em>, <em>16</em>(4), 298–305. <a href="https://doi.org/10.1111/j.0956-7976.2005.01531.x">https://doi.org/10.1111/j.0956-7976.2005.01531.x</a></p>
+</div>
+<div id="ref-Carroll2012">
+<p>Carroll, S. E. (2012). First exposure learners make use of top-down lexical knowledge when learning words. In K. Braunmüller, C. Gabriel, &amp; B. Hänel-Faulhaber (Eds.), <em>Multilingual individuals and multilingual societies</em> (pp. 23–45). Amsterdam: Benjamins.</p>
+</div>
+<div id="ref-Jaekel2017">
+<p>Jaekel, N., Schurig, M., Florian, M., &amp; Ritter, M. (2017). From Early Starters to Late Finishers? A Longitudinal Study of Early Foreign Language Learning in School. <em>Language Learning</em>, <em>67</em>(3), 631–664. <a href="https://doi.org/10.1111/lang.12242">https://doi.org/10.1111/lang.12242</a></p>
+</div>
+<div id="ref-MB1">
+<p>ManyBabiesConsortium. (2020). Quantifying sources of variability in infancy research using the infant-directed speech preference. <em>Advances in Methods and Practices in Psychological Science</em>. <a href="https://doi.org/10.1177/2515245919900809">https://doi.org/10.1177/2515245919900809</a></p>
+</div>
+<div id="ref-Nazzi2016">
+<p>Nazzi, T., Poltrock, S., &amp; Von Holzen, K. (2016). The developmental origins of the consonant bias in lexical processing. <em>Current Directions in Psychological Science</em>, <em>25</em>(4), 291–296. <a href="https://doi.org/10.1177/0963721416655786">https://doi.org/10.1177/0963721416655786</a></p>
+</div>
+<div id="ref-VonHolzen2018b">
+<p>Von Holzen, K., &amp; Bergmann, C. (2018). A meta-analysis of infants’ mispronunciation sensitivity development. In T. T. Rogers, M. Rau, X. Zhu, &amp; C. W. Kalish (Eds.), <em>Proceedings of the 40th annual conference of the cognitive science societyscience society</em> (pp. 1157–1162). Austin, TX: Cognitive Science Society, Inc.</p>
+</div>
+<div id="ref-VonHolzen2019">
+<p>Von Holzen, K., Fennell, C. T., &amp; Mani, N. (2019). The impact of cross-language phonological overlap on bilingual and monolingual toddlers’ word recognition. <em>Bilingualism: Language and Cognition</em>. <a href="https://doi.org/10.1017/S1366728918000597">https://doi.org/10.1017/S1366728918000597</a></p>
+</div>
+<div id="ref-VonHolzen2012">
+<p>Von Holzen, K., &amp; Mani, N. (2012). Language nonselective lexical access in bilingual toddlers. <em>Journal of Experimental Child Psychology</em>, <em>113</em>, 569–586. <a href="https://doi.org/10.1016/j.jecp.2011.02.002">https://doi.org/10.1016/j.jecp.2011.02.002</a></p>
+</div>
+<div id="ref-VonHolzen2014">
+<p>Von Holzen, K., &amp; Mani, N. (2014). Bilinguals implicitly name objects in both their languages: An ERP study. <em>Frontiers in Psychology</em>, <em>5</em>(DEC), 1–12. <a href="https://doi.org/10.3389/fpsyg.2014.01415">https://doi.org/10.3389/fpsyg.2014.01415</a></p>
+</div>
+<div id="ref-Naming">
+<p>Von Holzen, K., &amp; Nazzi, T. (n.d.). Emergence of a consonant bias during the first year of life: New evidence from own-name recognition. <em>Infancy</em>.</p>
+</div>
+<div id="ref-VonHolzen2018">
+<p>Von Holzen, K., Nishibayashi, L.-L., &amp; Nazzi, T. (2018). Consonant and vowel processing in word form segmentation: An infant ERP study. <em>Brain Sciences</em>, <em>8</em>(24), 1–15. <a href="https://doi.org/10.3390/brainsci8020024">https://doi.org/10.3390/brainsci8020024</a></p>
+</div>
+<div id="ref-Weber2006">
+<p>Weber, A., &amp; Cutler, A. (2006). First-language phonotactics in second-language listening. <em>Journal of the Acoustical Society of America</em>, (January), 597–607. <a href="https://doi.org/10.1121/1.2141003">https://doi.org/10.1121/1.2141003</a></p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

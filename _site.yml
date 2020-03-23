@@ -6,12 +6,12 @@ navbar:
       href: About_Me.html
     - text: "CV"
       href: CV.html
-    - text: "Projects"
-      href: Projects.html
+    - text: "Research"
+      href: Research.html
     - text: "Teaching"
       href: Teaching.html
-    - text: "Resources"
-      href: Resources.html
+    - text: "Tutorials"
+      href: Tutorials.html
     - text: "Media"
       href: Media.html      
 output_dir: "."
