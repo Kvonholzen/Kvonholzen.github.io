@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Word Spotting in Open Sesame</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="About_Me.html">About Me</a>
+</li>
+<li>
+  <a href="CV.html">CV</a>
+</li>
+<li>
+  <a href="Research.html">Research</a>
+</li>
+<li>
+  <a href="Teaching.html">Teaching</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Open Sesame</li>
+    <li>
+      <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
+    </li>
+    <li class="dropdown-header">Eye-tracking</li>
+    <li>
+      <a href="Tutorials_eye_tracking_Cluster_RLadies.html">RLadies Nonparametric Permutation Clusters</a>
+    </li>
+    <li class="dropdown-header">EEG and ERPs</li>
+    <li>
+      <a href="Tutorials_eeg_erp_EEGlab_guide.html">Analyzing EEG data using EEGlab</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Media.html">Media</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Word Spotting in Open Sesame</h1>
+
+</div>
+
+
+<p><em>In this tutorial, we will create a word spotting study from scratch(-ish). James McQueen gives a brief overview of word spotting studies in his article on Word spotting <span class="citation">(McQueen, 1996)</span>. In our experiment, participants will hear a nonsense word that either has a real, English word embedded in it (word) or not (pseduoword). The participants are instructed to press a button as soon as they recognize a real word and then to say the word they heard out loud. The stimuli used in this tutorial are pseduowords taken from the The Massive Auditory Lexical Decision (MALD) database <span class="citation">(Tucker et al., 2019)</span>. The stimuli I consider to have real words embedded are determined by me alone, and are used here for convenience with no strict criteria.</em></p>
+<p><strong>Overview of the Experiment</strong></p>
+<p>Independent variable</p>
+<ul>
+<li>Category (word/nonword)
+<ul>
+<li>This is a <strong>within-subjects</strong> manipulation, as all participants respond to word and nonword items</li>
+</ul></li>
+</ul>
+<p>Dependent variable(s)</p>
+<ul>
+<li>Reaction time of keypress (in milliseconds)</li>
+<li>Accuracy of keypress (correct, incorrect)</li>
+<li>Accuracy of spoken word</li>
+</ul>
+<div id="step-1-copy-and-open-the-word-spotting-tutorial-folder" class="section level1">
+<h1>Step 1: Copy and open the Word Spotting Tutorial folder</h1>
+<p><a href="Tutorials/Word_Spotting/Word_Spotting_Tutorial.zip">Download the Word Spotting Tutorial folder</a></p>
+<p>If you are on a lab laptop, save this tutorial folder in a new folder called "[YOURNAME_Word_Spotting_Tutorial].</p>
+<p>Inside, you should see the following items:</p>
+<ul>
+<li>test_words.csv: This is a .csv file listing all of the information needed to eventually create a block loop for our experiment.</li>
+<li><strong>pool</strong> folder: This folder contains our auditory stimuli. In Open Sesame, if your experiment is in a folder that contains another folder labeled “<strong>pool</strong>”, Open Sesame will automatically look in this folder for stimuli, no need to load it. For more information on stimuli pools, <a href="https://osdoc.cogsci.nl/3.2/manual/python/pool/">read this</a></li>
+<li>“completed” folder: This folder contains two finished versions of the experiment. The first “wordspotting_study_1st_test_run” is the intermediate version of the experiment at Step 9 of this Tutorial. The second “wordspotting_study_finished” is the final version of this experiment after completing this Tutorial. These example experiments are provided for you to check in case you run into a problem.</li>
+</ul>
+</div>
+<div id="step-2-start-open-sesame" class="section level1">
+<h1>Step 2: Start Open Sesame</h1>
+<p>Start your Open Sesame program. On the “Get Started!” page, you’ll be given the option to open different templates or recent experiments. Click on the “Extended Template”, which will give you an Open Sesame experiment that already has some structure. Save this experiment as “wordspotting_study”.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/extended_template.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-3-choose-the-general-properties-of-your-experiment-remove-unneeded-sections" class="section level1">
+<h1>Step 3: Choose the general properties of your experiment, remove unneeded sections</h1>
+<p>In the “General tab” that opens (also found when clicking Extended template on the Overview), you can change different properties of your experiment. We want to give our experiment a name, change the backend, change the resolution, and change the font size. Do the following:</p>
+<ul>
+<li>Change the name of the experiment from “Extended template” to “Word Spotting”</li>
+<li>Change the back-end to “psycho”.</li>
+<li>Set the resolution to that of the monitor you’re using.</li>
+<li>Change the font size to 32 px.</li>
+</ul>
+<p><img src="Tutorials/Word_Spotting/pictures/general_properties.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Delete the “practice_loop” loop and the “end_of_practice” sketchpad. If you want an extra challenge, you can add these back in later. They will still be available in your “Unused items”. Also, delete the feedback and reset_feedback items. Your Overview should look like this:</p>
+<p><img src="Tutorials/Word_Spotting/pictures/overview_bare.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-4-add-a-sampler-item-to-play-an-audio-file" class="section level1">
+<h1>Step 4: Add a sampler item to play an audio file</h1>
+<p>Drag a new sampler item into the experiment Overview, placing it into the “trial_sequence” as the first item. Using the “Browse” button, select the .wav file “aamaxflowshaxl.wav” from our file pool (folder “pool”). Change the Duration from “sound” to 0, so that Open Sesame does not wait until the end of the audio file to move on to the next item.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/new_sampler.png" width="75%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-5-change-the-keyboard_response-timeout" class="section level1">
+<h1>Step 5: Change the keyboard_response timeout</h1>
+<p>Right now, they “keyboard_response” will wait until a button is pressed. But, not all trials require a button press (this is a go/no go expeirment). So, we want to wait on each trial an appropriate amount of time (let’s say 4 seconds) before we move on to the next trial. Open the “keyboard_response” and in Timeout, type “4000”.</p>
+</div>
+<div id="step-6-add-a-sound_recording-item" class="section level1">
+<h1>Step 6: Add a sound_recording item</h1>
+<p>We want to be able to have a recording of what the participant says when they think a trial contains a real word. In order to do that, we need to add “sound_start_recording” and a “sound_end_recording” items. If you’re working on the lab laptop, they are already installed and you can find them in the commonly used plugins under the category “Response collection”. Don’t forget to press the arrow button at the bottom to expand the commonly used plugins :)</p>
+<p><img src="Tutorials/Word_Spotting/pictures/new_plugins.png" width="25%" style="display: block; margin: auto;" /></p>
+<p>Add a sound_start_recording and a sound_stop_recording item after the keyboard_response.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/add_recording.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>IMPORTANT: If you’re working on your personal computer, you’ll have to download the “sound_recording” plugin. You can find more information about this plugin <a href="https://osdoc.cogsci.nl/3.2/manual/response/soundrecording/">here</a>. Download the appropriate version of the sound_recorder plugin <a href="https://github.com/dschreij/opensesame_soundrecorder_plugins/tags">here</a>. For example, click on “v0.15”, select “opensesame-plugins-soundrecorder_0.15-win32-py27.zip”, and save the .zip file.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/soundrecorder_download.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Unzip this file, and open the folder. Inside, there should be two folders: sound_start_recording and sound_stop_recording. Move these files to your Open Sesame plugins folder, which should be located at “C:\Program Files (x86)\OpenSesame\share\opensesame_plugins” or the Mac equivalent. Restart Open Sesame, and then open the experiment again. You should now have the two sound recording plugins under “Response collection”.</p>
+</div>
+<div id="step-7-configure-the-length-of-the-recording-for-the-sound_recording-items" class="section level1">
+<h1>Step 7: Configure the length of the recording for the sound_recording items</h1>
+<p>The way sound_recording is currently set up, however, the recording won’t last long enough to cover what the participant actually says! Let’s make sure that the recording will last long enough to cover what the participant actually says. In the plugins list, move an “advanced_delay” item between the “new_sound_start_recording” and “new_sound_end_recording” items. Set the duration to 5000 ms. Now, once the recording starts, it will record for 5 seconds until it stops recording.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/advanced_delay.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-8-set-recording-to-be-conditional-on-keyboard-press" class="section level1">
+<h1>Step 8: Set recording to be conditional on keyboard press</h1>
+<p>Now, we want to set up the recording to only take place if the participant pressed a button. To do so, we need to add a new sequence item. Drag one over and position it right after the “keyboard_response” item. Now, drag “new_sound_start_recording”, “new_advanced_delay”, and “new_sound_stop_recording” into this new sequence item. If a dialog appears, you want to inset <em>into</em> the sequence.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/new_sequence.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>We only want this sequence to run if a button has been pressed. So, open up trial sequence and in the Run if column for our new sequence item, type [response_keyboard_response] = ‘space’. Now, when the participant presses the space bar while listening to the wav file, it will start recording.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/runif_button_press.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Finally, let’s tell our participant to produce what they just heard. Add a sketchpad item to your new sequence item, before “sound_start_recording”. Add the text “What word did you just hear?” and center it on the sketchpad. Set the Duration to 0, so that Open Sesame moves onto the next item, but this image stays on the screen.</p>
+</div>
+<div id="step-9-make-a-test-run-of-the-experiment" class="section level1">
+<h1>Step 9: Make a test-run of the experiment</h1>
+<p>We now have a very simple, one trial, but working experiment! Run yourself in the experiment. You’ll probably hear a real word in our wav file “aamaxflowshaxl”. Make sure you press the space bar and then say into your microphone the word that you heard. Then, when the experiment is finished, open the folder that “wordspotting_study” is saved in. There, you should see “default.wav”. Open this file, and it should be a recording of you producing the word you heard.</p>
+</div>
+<div id="step-10-load-and-edit-the-stimuli-list" class="section level1">
+<h1>Step 10: Load and edit the stimuli list</h1>
+<p>When we started, we inspected the file “test_words.csv” that was included in our tutorial folder. Now, let’s load that into Open Sesame using an inline script and convert it into a DataMatrix file. Drag an inline script into the beginning of the experiment. It is very important that you edit this code to contain the folder that your Open Sesame experiment is located in! Type in the following in the Run tab:</p>
+<pre class="python"><code>
+
+
+# Comment out the following line until we&#39;re ready to run the experiment. This line takes the typed in subject number and converts it to a &quot;var.&quot; variable to be used in the Open Sesame environment. We don&#39;t want to use that yet, because we won&#39;t be able to run our code!
+#sub_num = str(var.subject_nr)
+sub_num = 999
+
+# load the os module
+import os
+
+# determine what folder the current experiment is in, call it &quot;path&quot;
+# IMPORTANT! UPDATE THIS TO YOUR TUTORIAL FOLDER, OR WHEREVER FOLDER YOUR EXPERIMENT IS IN
+
+path = &quot;C:\\Users\\user\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&quot;
+
+stimuli_file = path + &quot;test_words.csv&quot; 
+
+# load the pandas module
+import pandas
+from datamatrix import DataMatrix, convert
+
+# load the stimuli list
+data = pandas.read_csv(stimuli_file, sep=&quot;,&quot;)
+
+# convert the pandas object to a DataMatrix object
+dm = convert.from_pandas(data)
+
+print(dm)</code></pre>
+<pre><code>## +----+----------+-----------------------+
+## | #  | category |        wav_file       |
+## +----+----------+-----------------------+
+## | 0  |   word   |     aamaxflowshaxl    |
+## | 1  |   word   |  ihmpchaxmuwnseyshaxl |
+## | 2  |   word   |   ihnbayraxnlihngks   |
+## | 3  |   word   |    sihslaestihdliy    |
+## | 4  |   word   | wihndaxmehntaxshaefts |
+## | 5  | nonword  |     aedaxlihzihks     |
+## | 6  | nonword  |   baxmaayhaxbeyshaxl  |
+## | 7  | nonword  |   dihkaxnstehchihks   |
+## | 8  | nonword  |   hhaykwowkeyzmaxnz   |
+## | 9  | nonword  |     ihmstraashaxnz    |
+## | 10 | nonword  |    kaengaxwaxrzniyz   |
+## | 11 | nonword  |   kowihnsaxbehrslaxn  |
+## | 12 | nonword  |  mehshpiyfaxsihntliy  |
+## | 13 | nonword  |    saxdvihfihzaxns    |
+## | 14 | nonword  |   stihmayshaxnaaniy   |
+## +----+----------+-----------------------+</code></pre>
+<p>We have two columns, category (word/nonword) and wav_file. Let’s make a new column that we’ll use to name recordings that participants may make during the experiment (they can’t all be called default!).</p>
+<pre class="python"><code>
+dm.recording = dm.wav_file</code></pre>
+<p>Also, we need to tell Open Sesame that our wav_file column contains files with a .wav extension.</p>
+<pre class="python"><code>
+dm.wav_file = dm.wav_file + &quot;.wav&quot;
+
+print(dm)</code></pre>
+<pre><code>## +----+----------+-----------------------+---------------------------+
+## | #  | category |       recording       |          wav_file         |
+## +----+----------+-----------------------+---------------------------+
+## | 0  |   word   |     aamaxflowshaxl    |     aamaxflowshaxl.wav    |
+## | 1  |   word   |  ihmpchaxmuwnseyshaxl |  ihmpchaxmuwnseyshaxl.wav |
+## | 2  |   word   |   ihnbayraxnlihngks   |   ihnbayraxnlihngks.wav   |
+## | 3  |   word   |    sihslaestihdliy    |    sihslaestihdliy.wav    |
+## | 4  |   word   | wihndaxmehntaxshaefts | wihndaxmehntaxshaefts.wav |
+## | 5  | nonword  |     aedaxlihzihks     |     aedaxlihzihks.wav     |
+## | 6  | nonword  |   baxmaayhaxbeyshaxl  |   baxmaayhaxbeyshaxl.wav  |
+## | 7  | nonword  |   dihkaxnstehchihks   |   dihkaxnstehchihks.wav   |
+## | 8  | nonword  |   hhaykwowkeyzmaxnz   |   hhaykwowkeyzmaxnz.wav   |
+## | 9  | nonword  |     ihmstraashaxnz    |     ihmstraashaxnz.wav    |
+## | 10 | nonword  |    kaengaxwaxrzniyz   |    kaengaxwaxrzniyz.wav   |
+## | 11 | nonword  |   kowihnsaxbehrslaxn  |   kowihnsaxbehrslaxn.wav  |
+## | 12 | nonword  |  mehshpiyfaxsihntliy  |  mehshpiyfaxsihntliy.wav  |
+## | 13 | nonword  |    saxdvihfihzaxns    |    saxdvihfihzaxns.wav    |
+## | 14 | nonword  |   stihmayshaxnaaniy   |   stihmayshaxnaaniy.wav   |
+## +----+----------+-----------------------+---------------------------+</code></pre>
+<p>IMPORTANT: If you haven’t installed the pandas module, you will need to do so in order to load the csv file. For more information about downloading modules in Open Sesame, <a href="https://osdoc.cogsci.nl/3.2/manual/environment/">read this</a> The easiest method is to run the following code to install pandas:</p>
+<pre class="python"><code>import pip
+
+pip.main([&#39;install&#39;, &#39;pandas&#39;])</code></pre>
+<p>If you get an “Access denied” error, make sure you are running Open Sesame as an administrator.</p>
+</div>
+<div id="step-11-automatically-create-a-new-folder-for-recordings-for-each-participant" class="section level1">
+<h1>Step 11: Automatically create a new folder for recordings for each participant</h1>
+<p>For each participant that takes part in our experiment, we want to have a folder of their recordings afterwards, so that we can analyze them. In order to do that, we need to write some code to create a new folder every time a new participant is run. Type the following:</p>
+<pre class="python"><code>
+
+# this is the current path (wherever you have the experiment saved)
+path
+
+
+
+# now, we want to create a new folder for this subject within the current folder</code></pre>
+<pre><code>## &#39;C:\\Users\\user\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&#39;</code></pre>
+<pre class="python"><code>sub_path = path + &quot;\subject_&quot; + str(sub_num)
+
+# create the folder if it doesn&#39;t exist
+
+if not os.path.exists(sub_path):
+    os.makedirs(sub_path)
+</code></pre>
+</div>
+<div id="step-13-pseudorandomize-and-set-up-the-experimental-variables" class="section level1">
+<h1>Step 13: Pseudorandomize and set up the experimental variables</h1>
+<p>In a previous tutorial (Lexical decision), you learned how to pseudorandomize the order of a DataMatrix object and then rename the variables in a loop to read the values of the DataMatrix. Now, its your turn to apply what you learned here. Refer back to the previous tutorial and complete the following:</p>
+<p><strong>Pseudorandomize the order of trials</strong> Set a constraint that a particular category (word/nonword) can’t be repeated more than 3 times.</p>
+<p><strong>Set our DataMatrix object variables for the experimental “block_loop_1”</strong> This is the for loop with r_ticker and the exp.set() functions. Remember to change the code to reflect the names of variables we are using in this experiment (category, wav_file, recording).</p>
+<p><strong>Rename variables in “block_loop_1” to the environmental variables defined in our inline script</strong> Again, remember to change the names of the variables. Remember to set the Order to “sequential” so that Open Sesame doesn’t step in and randomize our nice order.</p>
+</div>
+<div id="step-13-set-location-and-name-of-sound_start_recording-item" class="section level1">
+<h1>Step 13: Set location and name of “sound_start_recording” item</h1>
+<p>Use the label of your recording column (I call it “exp_recording” in my block loop) as a variable for the Output Folder/File for your “sound_start_recording” item.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/exp_variable_name.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Combine this variable with your “sub_path” variable, with a slash in between to indicate that these files should be saved inside the subject recording folder. For example, I typed in “[sub_path]/[exp_recording]”.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/recording_output_folder.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-14-set-name-of-wav-file-for-sampler-item" class="section level1">
+<h1>Step 14: Set name of wav file for “sampler” item</h1>
+<p>Use the label of your recording column (I call it “exp_wav_fiile” in my block loop) as a variable for the Sound file for your “sampler” item.</p>
+<p><img src="Tutorials/Word_Spotting/pictures/sampler_variable.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-15-change-back-to-environment-variables" class="section level1">
+<h1>Step 15: Change back to environment variables</h1>
+<p>Now that we have a working experiment, we can change our variables to be environmental variables. Do this for subject number and the location of our participant recording folder:</p>
+<pre class="python"><code># Now that we&#39;re ready to run this experiment, commenting out #sub_num = 999
+sub_num = str(var.subject_nr)
+#sub_num = 999
+
+
+var.sub_path = sub_path</code></pre>
+</div>
+<div id="step-16-finishing-touches" class="section level1">
+<h1>Step 16: Finishing touches</h1>
+<p>Is there anything else you’d like to add to your experiment? A practice block? An instructions screen explaining the task to the participant? Remember, participants need to press the space bar in order to activate the recording sequence, so we should probably inform them of that!</p>
+</div>
+<div id="step-17-run-the-experiment" class="section level1">
+<h1>Step 17: Run the experiment!</h1>
+<p>Just as in the Beginner Tutorial and the previous running of this experiment, remember to use subject number “999” to get in the habit of not writing over important participant data files!</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-McQueen1996">
+<p>McQueen, J. (1996). Word spotting. <em>Language and Cognitive Processes</em>, <em>11</em>(6), 695–699. <a href="https://doi.org/10.1080/016909696387114">https://doi.org/10.1080/016909696387114</a></p>
+</div>
+<div id="ref-Tucker2019">
+<p>Tucker, B. V., Brenner, D., Danielson, D. K., Kelley, M. C., Nenadić, F., &amp; Sims, M. (2019). The Massive Auditory Lexical Decision (MALD) database. <em>Behavior Research Methods</em>, <em>51</em>(3), 1187–1204. <a href="https://doi.org/10.3758/s13428-018-1056-1">https://doi.org/10.3758/s13428-018-1056-1</a></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

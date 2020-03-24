@@ -9,10 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Akademische Rätin in German Linguistics at the Technical University of Dortmund" />
 
 
-<title>Dr. Katie Von Holzen</title>
+<title>Getting Started with Open Sesame</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -249,6 +251,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -256,6 +321,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -326,33 +401,41 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Dr. Katie Von Holzen</h1>
-<h4 class="author">Akademische Rätin in German Linguistics at the Technical University of Dortmund</h4>
+<h1 class="title toc-ignore">Getting Started with Open Sesame</h1>
 
 </div>
 
 
-<hr />
-<div class="row">
-<div class="col-md-4">
-<center>
-<img src="images/katie_small.png" width="300px">
-</center>
+<p><em>In this section, we will open Open Sesame and create our first experiment following the online beginner tutorial.</em></p>
+<div id="step-1-download-open-sesame" class="section level1">
+<h1>Step 1: Download Open Sesame</h1>
+<p><a href="https://osdoc.cogsci.nl/3.2/download/">Download the latest version of Open Sesame</a></p>
+<ul>
+<li>If you are working on a laboratory laptop, Open Sesame should already be installed</li>
+<li>If you are working on your personal computer, you can work on this tutorial while at home. You can also create your experiment on your own person computer. When you are ready and would like to test participants, you can then put your experiment on a laboratory laptop.</li>
+</ul>
 </div>
-<div class="col-lg-6">
-<p>I’m a researcher in developmental psycholinguistics, currently working at the Technical University of Dortmund in Germany. I’ve bounced all over the world since I started my PhD in Göttingen, Germany in 2010. You can read a brief summary of what I’ve worked on along the way under the <a href="About_Me.html">About Me</a> tab. For a quick summary of my curriculum vitae, go to <a href="CV.html">CV</a>. You can find more about my current and past research projects under the <a href="Research.html">Research</a> tab. I’ve taught several different classes in Psychology and Linguistics, you can check out some of my approaches under the <a href="Teaching.html">Teaching</a> tab. I’ve also been covered in the media a few times and written a few blog posts, which you can read under the <a href="Medial.html">Media</a> tab.</p>
-<p>I’ve put together severl tutorials for creating experiments in Open Sesame and for analyzing Eye-tracking and EEG data. You’ll find these tutorials under the Tutorials drop-down menu.</p>
-<p>Together with <a href="https://sites.google.com/site/chbergma/">Christina Bergmann</a>, we founded a regular meeting of the Parisian Babylabs every. Christina and I have both left Paris, but PaBaLa still meets every 2-3 months, discussing topics such as how to improve baby recruitment, best practices for planning and analyzing experiments, and tips for keeping babies happy and not fussy. Check out the <a href="https://sites.google.com/site/lscplpp/">website</a> to learn more!</p>
+<div id="step-2-complete-the-beginner-tutorial" class="section level1">
+<h1>Step 2: Complete the Beginner Tutorial</h1>
+<p>To get yourself familiar with the Open Sesame program, complete the <a href="https://osdoc.cogsci.nl/3.2/tutorials/beginner/">Beginner Tutorial</a></p>
+<ul>
+<li>When you have finished creating your first Open Sesame experiment, run yourself as a participant. Give yourself the subject number “999”.</li>
+<li>When you are finished with the experiment, the corresponding log file should be saved in the same folder as where your Open Sesame Experiment is saved. If you gave your subject number as “99”, this log file should be called “subject-999”.</li>
+<li>If you are one of Dr. Von Holzen’s students and have been instructed to complete these tutorials, please email this log file to her: <a href="mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks">katie.vonholzen@tu-dortmund.de</a></li>
+</ul>
 </div>
+<div id="step-3-what-to-do-when-you-get-stuck" class="section level1">
+<h1>Step 3: What to do when you get stuck</h1>
+<p>Although these tutorials will hopefully answer a lot of your questions, new questions are certain to arise. The Open Sesame website has a lot of good resources that may help. I’ve tried to link to many of them in my explanations. You can get a quick overview by clicking on the dropdown menu “Manual” on the <a href="https://osdoc.cogsci.nl/3.2/">Open Sesame Website</a>.</p>
+<p>If you’re having a hard time figuring out the answer to your question, try typing in keywords to the <a href="https://forum.cogsci.nl/categories/opensesame">Open Sesame Forum</a>. Often, someone else has had your problem previously and the way to solve it has been documented.</p>
+<p>Sometimes, though, you won’t be able to find the answer to your question in the Open Sesame Forum. If it concerns the inline script, you may be able to try your luck by searching for python solutions. Search for “python” + “[your question keywords]” and potential solutions will come up. Finding a solution may be frustrating at first, but try reformulating [your question keywords]. I promise, you’ll get better at this with time, but it does take practice.</p>
+<p>If you find a mistake or issue in one of my tutorials, or have a suggestion, feel free to email me at <a href="mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks">katie.vonholzen@tu-dortmund.de</a>.</p>
 </div>
-<hr />
-<p>Download my full <a href="cv/K_Von_Holzen_CV.pdf">Curriculum Vitae</a> here</p>
-<hr />
-<p>Check out my <a href="https://publons.com/researcher/1230020/katie-von-holzen/peer-review/">Publons Reviewer Profile</a>.</p>
-<hr />
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -385,6 +468,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

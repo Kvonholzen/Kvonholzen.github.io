@@ -1,0 +1,12 @@
+---
+title: "Nonparametric Permutation Clusters Analysis for RLadies"
+---
+
+----
+
+
+A short [tutorial](files/RLadies_Permutation_Clusters.R) I gave for the [RLadies Paris](https://github.com/rladies-paris) Meetup.
+
+
+
+*My hope is to someday write this out as fully autonomous guide*

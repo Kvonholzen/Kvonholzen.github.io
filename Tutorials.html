@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -232,6 +231,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -283,8 +283,32 @@ $(document).ready(function () {
 <li>
   <a href="Teaching.html">Teaching</a>
 </li>
-<li>
-  <a href="Tutorials.html">Tutorials</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Open Sesame</li>
+    <li>
+      <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
+    </li>
+    <li class="dropdown-header">Eye-tracking</li>
+    <li>
+      <a href="Tutorials_eye_tracking_Cluster_RLadies.html">RLadies Nonparametric Permutation Clusters</a>
+    </li>
+    <li class="dropdown-header">EEG and ERPs</li>
+    <li>
+      <a href="Tutorials_eeg_erp_EEGlab_guide.html">Analyzing EEG data using EEGlab</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="Media.html">Media</a>

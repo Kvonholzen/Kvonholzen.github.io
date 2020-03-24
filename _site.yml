@@ -12,6 +12,20 @@ navbar:
       href: Teaching.html
     - text: "Tutorials"
       href: Tutorials.html
+      menu:
+        - text: "Open Sesame"
+        - text: "Getting Started with Open Sesame"
+          href: Tutorials_Open_Sesame_start.html
+        - text: "Lexical Decision Task"
+          href: Tutorials_Open_Sesame_Lexical_decision.html 
+        - text: "Word Spotting Task"
+          href: Tutorials_Open_Sesame_Word_Spotting.html 
+        - text: "Eye-tracking"
+        - text: "RLadies Nonparametric Permutation Clusters"
+          href: Tutorials_eye_tracking_Cluster_RLadies.html
+        - text: "EEG and ERPs"
+        - text: "Analyzing EEG data using EEGlab"
+          href: Tutorials_eeg_erp_EEGlab_guide.html 
     - text: "Media"
       href: Media.html      
 output_dir: "."
@@ -21,3 +35,10 @@ output:
     highlight: textmate
 #    include:
 #      after_body: _footer.html
+
+# website tutorial
+# https://jules32.github.io/rmarkdown-website-tutorial/index.html
+
+# for drop-down navigation
+# https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html#site-navigation
+

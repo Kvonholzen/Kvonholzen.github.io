@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -235,6 +234,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -263,6 +263,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -348,13 +354,37 @@ div.tocify {
   <a href="CV.html">CV</a>
 </li>
 <li>
-  <a href="Projects.html">Projects</a>
+  <a href="Research.html">Research</a>
 </li>
 <li>
   <a href="Teaching.html">Teaching</a>
 </li>
-<li>
-  <a href="Resources.html">Resources</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Open Sesame</li>
+    <li>
+      <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
+    </li>
+    <li class="dropdown-header">Eye-tracking</li>
+    <li>
+      <a href="Tutorials_eye_tracking_Cluster_RLadies.html">RLadies Nonparametric Permutation Clusters</a>
+    </li>
+    <li class="dropdown-header">EEG and ERPs</li>
+    <li>
+      <a href="Tutorials_eeg_erp_EEGlab_guide.html">Analyzing EEG data using EEGlab</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="Media.html">Media</a>
@@ -377,19 +407,6 @@ div.tocify {
 
 
 <hr />
-<div id="sprechstunden-office-hours" class="section level2">
-<h2>Sprechstunden (Office Hours)</h2>
-<p>Während der Vorlesungszeit sind meine Sprechstunden normalerweise : Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden.</p>
-<p><em>Bitte tragen Sie Ihren Namen, Email und Anliegen ein.</em></p>
-<p>KEINE SPRECHSTUNDEN BIS 21 APRIL.</p>
-<p><br>Dienstag, 21 April <br>BLS Prüfungswoche <br>ausnamsweise von 13-14 Uhr <br> <a href="https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTX">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 28. April <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/exULFlmigF5NsYs8">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 5. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxS">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 12. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/WFfMnelU3BIGbg2w">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 19. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 26. Mai <br>BLS Prüfungswoche <br>ausnamsweise von 9-10 Uhr <br> <a href="https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F">Melden Sie sich hier an</a></p>
-<hr />
-</div>
 <div id="resources-and-materials" class="section level2">
 <h2>Resources and Materials</h2>
 <div id="qalmri-framework" class="section level3">
@@ -442,7 +459,20 @@ div.tocify {
 <p><br><strong>Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R</strong> <br>Doctoral students, postdoctoral researchers, and faculty <br>Université Paris Descartes <br> <br><strong>Time Course Analysis in R</strong> <br>Doctoral students, Research Training Group 2070 <br>Georg-August-Universität Göttingen <br> <br><strong>EEG Pre-processing and Analysis Using EEGLAB and ERPLAB</strong> <br>Doctoral students, postdoctoral researchers, and faculty <br>Université Paris Descartes <br></p>
 </div>
 </div>
+<hr />
 </div>
+</div>
+<div id="sprechstunden-office-hours" class="section level2">
+<h2>Sprechstunden (Office Hours)</h2>
+<p>Während der Vorlesungszeit sind meine Sprechstunden normalerweise : Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden.</p>
+<p><em>Bitte tragen Sie Ihren Namen, Email und Anliegen ein.</em></p>
+<p>KEINE SPRECHSTUNDEN BIS 21 APRIL.</p>
+<p><br>Dienstag, 21 April <br>BLS Prüfungswoche <br>ausnamsweise von 13-14 Uhr <br> <a href="https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTX">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 28. April <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/exULFlmigF5NsYs8">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 5. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxS">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 12. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/WFfMnelU3BIGbg2w">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 19. Mai <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7">Melden Sie sich hier an</a></p>
+<p><br>Dienstag, 26. Mai <br>BLS Prüfungswoche <br>ausnamsweise von 9-10 Uhr <br> <a href="https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F">Melden Sie sich hier an</a></p>
 </div>
 
 

@@ -4,7 +4,7 @@ title: "Media"
 
 ----
 
-# Blogs I've contributed to
+# Blogs
 
 [Cogtales](https://cogtales.wordpress.com/), is "a blog by young female cognitive scientists" that I've contributed to, writing a guide for [writing effective introductory emails](https://cogtales.wordpress.com/2017/01/13/how-to-write-effective-introductory-emails/)
 

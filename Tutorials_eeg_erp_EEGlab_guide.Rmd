@@ -1,0 +1,9 @@
+---
+title: "Analyzing EEG data using EEGlab"
+---
+
+----
+
+[Guide](files/eeglab steps_speech.pdf) for loading and analyzing EEG data using EEGlab. This document is adapted from the original, created by [Simmy Poonian](https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au).
+
+*My hope is to someday write this out as fully autonomous guide*

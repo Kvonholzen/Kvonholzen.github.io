@@ -1,0 +1,40 @@
+---
+title: "Getting Started with Open Sesame"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+*In this section, we will open Open Sesame and create our first experiment following the online beginner tutorial.*
+
+# Step 1: Download Open Sesame
+
+[Download the latest version of Open Sesame](https://osdoc.cogsci.nl/3.2/download/)
+
+* If you are working on a laboratory laptop, Open Sesame should already be installed
+* If you are working on your personal computer, you can work on this tutorial while at home. You can also create your experiment on your own person computer. When you are ready and would like to test participants, you can then put your experiment on a laboratory laptop.
+
+# Step 2: Complete the Beginner Tutorial
+
+To get yourself familiar with the Open Sesame program, complete the [Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/)
+
+* When you have finished creating your first Open Sesame experiment, run yourself as a participant. Give yourself the subject number “999”. 
+* When you are finished with the experiment, the corresponding log file should be saved in the same folder as where your Open Sesame Experiment is saved. If you gave your subject number as “99”, this log file should be called “subject-999”.
+* If you are one of Dr. Von Holzen's students and have been instructed to complete these tutorials, please email this log file to her: [katie.vonholzen@tu-dortmund.de](<mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks>)
+
+# Step 3: What to do when you get stuck
+
+Although these tutorials will hopefully answer a lot of your questions, new questions are certain to arise. The Open Sesame website has a lot of good resources that may help. I've tried to link to many of them in my explanations. You can get a quick overview by clicking on the dropdown menu "Manual" on the [Open Sesame Website](https://osdoc.cogsci.nl/3.2/).
+
+If you're having a hard time figuring out the answer to your question, try typing in keywords to the [Open Sesame Forum](https://forum.cogsci.nl/categories/opensesame). Often, someone else has had your problem previously and the way to solve it has been documented.
+
+Sometimes, though, you won't be able to find the answer to your question in the Open Sesame Forum. If it concerns the inline script, you may be able to try your luck by searching for python solutions. Search for "python" + "[your question keywords]" and potential solutions will come up. Finding a solution may be frustrating at first, but try reformulating [your question keywords]. I promise, you'll get better at this with time, but it does take practice.
+
+If you find a mistake or issue in one of my tutorials, or have a suggestion, feel free to email me at  [katie.vonholzen@tu-dortmund.de](<mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks>).

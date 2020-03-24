@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -69,9 +69,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -85,7 +83,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -95,6 +92,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -110,7 +110,6 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
-
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -130,6 +129,43 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -151,19 +187,74 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -187,13 +278,37 @@ $(document).ready(function () {
   <a href="CV.html">CV</a>
 </li>
 <li>
-  <a href="Projects.html">Projects</a>
+  <a href="Research.html">Research</a>
 </li>
 <li>
   <a href="Teaching.html">Teaching</a>
 </li>
-<li>
-  <a href="Resources.html">Resources</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Open Sesame</li>
+    <li>
+      <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
+    </li>
+    <li class="dropdown-header">Eye-tracking</li>
+    <li>
+      <a href="Tutorials_eye_tracking_Cluster_RLadies.html">RLadies Nonparametric Permutation Clusters</a>
+    </li>
+    <li class="dropdown-header">EEG and ERPs</li>
+    <li>
+      <a href="Tutorials_eeg_erp_EEGlab_guide.html">Analyzing EEG data using EEGlab</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="Media.html">Media</a>
@@ -216,14 +331,15 @@ $(document).ready(function () {
 
 
 <hr />
-<div id="blogs-ive-contributed-to" class="section level1">
-<h1>Blogs I’ve contributed to</h1>
+<div id="blogs" class="section level1">
+<h1>Blogs</h1>
 <p><a href="https://cogtales.wordpress.com/">Cogtales</a>, is “a blog by young female cognitive scientists” that I’ve contributed to, writing a guide for <a href="https://cogtales.wordpress.com/2017/01/13/how-to-write-effective-introductory-emails/">writing effective introductory emails</a></p>
 </div>
 <div id="media-articles" class="section level1">
 <h1>Media Articles</h1>
 <ul>
-<li>My alma mater, the University of Wisconsin - Green Bay, has written a few articles about me, both <a href="https://news.uwgb.edu/featured/alumni/05/30/alumni-rising-research-sparks-international-career-for-von-holzen/">generally</a> and in the <a href="https://blog.uwgb.edu/uwgbpsych/featured-alumnus-katie-von-holzen/">Psychology Department</a>.</li>
+<li>Together with my collaborator, <a href="https://sites.google.com/site/chbergma/">Christina Bergmann</a>, our meta-analysis on infant mispronunciation sensitivity won the Berkeley Initiative for Transparency in the Social Sciences (BITSS) MetaLab challenge calling for meta-analyses on cognitive development. <a href="https://www.bitss.org/2018/07/24/metalab-awards-three-contribution-challenge-prizes/">Read more</a></li>
+<li>My alma mater, the University of Wisconsin - Green Bay, has written a few articles about me, both <a href="https://news.uwgb.edu/featured/alumni/05/30/alumni-rising-research-sparks-international-career-for-von-holzen/">generally</a> and in the [College of Arts, Humanities, and Social Sciences] (<a href="https://cahsseffect.org/featuredalumni/featured-alum-katie-von-holzen/" class="uri">https://cahsseffect.org/featuredalumni/featured-alum-katie-von-holzen/</a>) <a href="https://blog.uwgb.edu/uwgbpsych/featured-alumnus-katie-von-holzen/">Psychology Department</a>.</li>
 <li>In 2010, I won a <a href="https://news.uwgb.edu/log-news/releases/05/11/graduate-scholarship-1081/">Graduate Scholarship from the Phi Eta Sigma National Honor Society</a> to support my graduate studies in Göttingen, Germany.</li>
 <li>In 2009, I won a <a href="https://www.psychologicalscience.org/observer/apspsi-chi-summer-research-grant-winners#.WNqK42-GOUk">Summer Research Grant from the Psi Chi Honor Society</a> to work at Dartmouth College.</li>
 </ul>
@@ -246,6 +362,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

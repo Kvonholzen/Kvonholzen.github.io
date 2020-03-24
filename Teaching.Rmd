@@ -17,83 +17,6 @@ library(stringr)
 
 ----
 
-## Sprechstunden (Office Hours)
-
-Während der Vorlesungszeit sind meine Sprechstunden normalerweise :
-Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
-
-*Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
-
-KEINE SPRECHSTUNDEN BIS 21 APRIL. 
-
-<br>Dienstag, 21 April
-<br>BLS Prüfungswoche
-<br>ausnamsweise von 13-14 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTX)
-
-<br>Dienstag, 28. April
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/exULFlmigF5NsYs8)
-
-<br>Dienstag, 5. Mai
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxS)
-
-<br>Dienstag, 12. Mai
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WFfMnelU3BIGbg2w)
-
-<br>Dienstag, 19. Mai
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7)
-
-<br>Dienstag, 26. Mai
-<br>BLS Prüfungswoche
-<br>ausnamsweise von 9-10 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F)
-
-
-```{r admin_April_21, include=FALSE}
-
-#https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTXDsJ64EVV/admin
-
-```
-
-
-```{r admin_April_28, include=FALSE}
-
-#https://terminplaner4.dfn.de/exULFlmigF5NsYs8ZyiTIDks/admin
-
-```
-
-
-```{r admin_May_5, include=FALSE}
-
-#https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxSveibiYnt/admin
-
-```
-
-
-```{r admin_May_12, include=FALSE}
-
-#https://terminplaner4.dfn.de/WFfMnelU3BIGbg2wturXzWRZ/admin
-
-```
-
-```{r admin_May_19, include=FALSE}
-
-#https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7R6MAq8HR/admin
-
-```
-
-```{r admin_May_26, include=FALSE}
-
-#https://terminplaner4.dfn.de/9xnPNy3ZZEqI644FA99pc5Oc/admin
-
-```
-
-----
-
 ## Resources and Materials
 
 ### QALMRI Framework
@@ -223,4 +146,82 @@ Some resources from these tutorials can be found under the [Resources](https://k
 <br>
 </div>
 </div> 
+
+
+----
+
+## Sprechstunden (Office Hours)
+
+Während der Vorlesungszeit sind meine Sprechstunden normalerweise :
+Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
+
+*Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
+
+KEINE SPRECHSTUNDEN BIS 21 APRIL. 
+
+<br>Dienstag, 21 April
+<br>BLS Prüfungswoche
+<br>ausnamsweise von 13-14 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTX)
+
+<br>Dienstag, 28. April
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/exULFlmigF5NsYs8)
+
+<br>Dienstag, 5. Mai
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxS)
+
+<br>Dienstag, 12. Mai
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WFfMnelU3BIGbg2w)
+
+<br>Dienstag, 19. Mai
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7)
+
+<br>Dienstag, 26. Mai
+<br>BLS Prüfungswoche
+<br>ausnamsweise von 9-10 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F)
+
+
+```{r admin_April_21, include=FALSE}
+
+#https://terminplaner4.dfn.de/jpH5HcUTZgCcPBTXDsJ64EVV/admin
+
+```
+
+
+```{r admin_April_28, include=FALSE}
+
+#https://terminplaner4.dfn.de/exULFlmigF5NsYs8ZyiTIDks/admin
+
+```
+
+
+```{r admin_May_5, include=FALSE}
+
+#https://terminplaner4.dfn.de/QZzLlb6JOtgmRbxSveibiYnt/admin
+
+```
+
+
+```{r admin_May_12, include=FALSE}
+
+#https://terminplaner4.dfn.de/WFfMnelU3BIGbg2wturXzWRZ/admin
+
+```
+
+```{r admin_May_19, include=FALSE}
+
+#https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7R6MAq8HR/admin
+
+```
+
+```{r admin_May_26, include=FALSE}
+
+#https://terminplaner4.dfn.de/9xnPNy3ZZEqI644FA99pc5Oc/admin
+
+```
 
