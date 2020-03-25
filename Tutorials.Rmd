@@ -4,26 +4,29 @@ title: "Tutorials"
 
 ----
 
-Below you'll find my Tutorial for creating experiments using Open Sesame. I've also given several in-person tutorials focusing on EEG/ERP and eye-tracking analysis. My hope is to someday write these out as fully autonomous guides, but for now, here are a few less comprehensive files.
+I've put together several tutorials for creating experiments in Open Sesame and for analyzing Eye-tracking and EEG data. At the moment, the Open Sesame tutorials are the most complete (thank you COVID-19!). My hope is to someday write these other tutorials out as fully autonomous guides, but for now, there are a few less comprehensive files.
 
 
-# Open Sesame
+## Open Sesame
 
-*coming soon, COVID-19 home office project*
+The Open Sesame tutorials were designed to quickly get thesis students ready to create their own experiments in Open Sesame. The first tutorial, [Getting Started with Open Sesame](Tutorials_Open_Sesame_start.html) is a quick, basic introduction relying on the [Open Sesame Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/). If you haven't worked with Open Sesame yet, I would recommend starting there. The [Lexical Decision Task Tutorial](Tutorials_Open_Sesame_Lexical_decision.html) introduces the learner to inline scripting and pseudorandomization in the experimental design. The [Word Spotting Tutorial](Tutorials_Open_Sesame_Word_Spotting.html) includes these elements, and also shows the learner how to create audio recordings from participants.
+
+If you are completing a thesis with Dr. Von Holzen, she will tell you which tutorials you need to complete to prepare yourself for your thesis work. For example, if your experiment uses a Word Spotting task, she may ask you to complete the following:
+
+1. [Getting Started with Open Sesame](Tutorials_Open_Sesame_start.html)
+2. [Lexical Decision Task Tutorial](Tutorials_Open_Sesame_Lexical_decision.html)
+3. [Word Spotting Tutorial](Tutorials_Open_Sesame_Word_Spotting.html)
 
 
-# EEGlab
+**coming soon, Visual World with Eyetracking tutorial**
+
+
+## EEGlab
 
 [Guide](files/eeglab steps_speech.pdf) for loading and analyzing EEG data using EEGlab. This document is adapted from the original, created by [Simmy Poonian](https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au).
 
-# Eye-tracking Analyses
+## Eye-tracking Analyses
 
-## Nonparametric Permutation Clusters Analysis
+### Nonparametric Permutation Clusters Analysis
 
 A short [tutorial](files/RLadies_Permutation_Clusters.R) I gave for the [RLadies Paris](https://github.com/rladies-paris) Meetup.
-
-
-# More Resources: PaBaLa
-
-Together with [Christina Bergmann](https://sites.google.com/site/chbergma/), we founded a regular meeting of the Parisian Babylabs every. Christina and I have both left Paris, but PaBaLa still meets every 2-3 months, discussing topics such as how to improve baby recruitment, best practices for planning and analyzing experiments, and tips for keeping babies happy and not fussy.  Check out the [website](https://sites.google.com/site/lscplpp/) to learn more!
-

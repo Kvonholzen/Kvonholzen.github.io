@@ -11,8 +11,9 @@ navbar:
     - text: "Teaching"
       href: Teaching.html
     - text: "Tutorials"
-      href: Tutorials.html
       menu:
+        - text: "Tutorials Overview"
+          href: Tutorials.html
         - text: "Open Sesame"
         - text: "Getting Started with Open Sesame"
           href: Tutorials_Open_Sesame_start.html
