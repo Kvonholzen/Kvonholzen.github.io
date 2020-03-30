@@ -1,0 +1,13 @@
+subject,category,target,accuracy,rt,key_pressed,nonword_response,word_response,trial
+999,nonword,ipple,1,453,m,m,z,0
+999,word,apple,1,461,z,m,z,1
+999,nonword,mogac,1,523,m,m,z,2
+999,word,magic,0,620,m,m,z,3
+999,nonword,ourtel,1,520,m,m,z,4
+999,nonword,ipple,1,422,m,m,z,5
+999,word,turtle,1,489,z,m,z,6
+999,word,apple,1,546,z,m,z,7
+999,word,magic,1,460,z,m,z,8
+999,nonword,ourtel,1,346,m,m,z,9
+999,nonword,mogac,1,502,m,m,z,10
+999,word,turtle,1,530,z,m,z,11

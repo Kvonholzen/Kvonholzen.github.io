@@ -20,6 +20,7 @@ If you are completing a thesis with Dr. Von Holzen, she will tell you which tuto
 
 **coming soon, Visual World with Eyetracking tutorial**
 
+These tutorials were written and tested on a Windows 10 system running OpenSesame 3.2.8. Issues may arise when the operating system and Open Sesame version vary.
 
 ## EEGlab
 

@@ -432,7 +432,7 @@ div.tocify {
 <ul>
 <li>test_words.csv: This is a .csv file listing all of the information needed to eventually create a block loop for our experiment.</li>
 <li><strong>pool</strong> folder: This folder contains our auditory stimuli. In Open Sesame, if your experiment is in a folder that contains another folder labeled “<strong>pool</strong>”, Open Sesame will automatically look in this folder for stimuli, no need to load it. For more information on stimuli pools, <a href="https://osdoc.cogsci.nl/3.2/manual/python/pool/">read this</a></li>
-<li>“completed” folder: This folder contains two finished versions of the experiment. The first “wordspotting_study_1st_test_run” is the intermediate version of the experiment at Step 9 of this Tutorial. The second “wordspotting_study_finished” is the final version of this experiment after completing this Tutorial. These example experiments are provided for you to check in case you run into a problem.</li>
+<li>“completed” folder: This folder contains two finished versions of the experiment. The first “wordspotting_study_1st_test_run” is the intermediate version of the experiment at Step 9 of this Tutorial. The second “wordspotting_study_2nd_test_run” is the second intermediate version of this experiment at Step 16 of this Tutorial. “wordspotting_study_finished” is the final version of this experiment after completing this Tutorial. These example experiments are provided for you to check in case you run into a problem.</li>
 </ul>
 </div>
 <div id="step-2-start-open-sesame" class="section level1">
@@ -488,6 +488,7 @@ div.tocify {
 <div id="step-9-make-a-test-run-of-the-experiment" class="section level1">
 <h1>Step 9: Make a test-run of the experiment</h1>
 <p>We now have a very simple, one trial, but working experiment! Run yourself in the experiment. You’ll probably hear a real word in our wav file “aamaxflowshaxl”. Make sure you press the space bar and then say into your microphone the word that you heard. Then, when the experiment is finished, open the folder that “wordspotting_study” is saved in. There, you should see “default.wav”. Open this file, and it should be a recording of you producing the word you heard.</p>
+<p>The “completed” folder in the file you unzipped at the beginning of the tutorial contains the Open Sesame experiment “wordspotting_study_1st_test_run”, which is the intermediate version of the experiment at this step.</p>
 </div>
 <div id="step-10-load-and-edit-the-stimuli-list" class="section level1">
 <h1>Step 10: Load and edit the stimuli list</h1>
@@ -592,11 +593,12 @@ if not os.path.exists(sub_path):
     os.makedirs(sub_path)
 </code></pre>
 </div>
-<div id="step-13-pseudorandomize-and-set-up-the-experimental-variables" class="section level1">
-<h1>Step 13: Pseudorandomize and set up the experimental variables</h1>
+<div id="step-13-create-a-correct-response-pseudorandomize-and-set-up-the-experimental-variables" class="section level1">
+<h1>Step 13: Create a correct response, pseudorandomize and set up the experimental variables</h1>
 <p>In a previous tutorial (Lexical decision), you learned how to pseudorandomize the order of a DataMatrix object and then rename the variables in a loop to read the values of the DataMatrix. Now, its your turn to apply what you learned here. Refer back to the previous tutorial and complete the following:</p>
+<p><strong>Create a “correct_response” column</strong> Since this is a go/no go experiment, the correct response for the nonword category is ‘None’ (meaning no button was pressed in the 4000 ms allowed for an answer) and for the word category it is ‘space’ (or whatever button you tell your participant to press).</p>
 <p><strong>Pseudorandomize the order of trials</strong> Set a constraint that a particular category (word/nonword) can’t be repeated more than 3 times.</p>
-<p><strong>Set our DataMatrix object variables for the experimental “block_loop_1”</strong> This is the for loop with r_ticker and the exp.set() functions. Remember to change the code to reflect the names of variables we are using in this experiment (category, wav_file, recording).</p>
+<p><strong>Set our DataMatrix object variables for the experimental “block_loop_1”</strong> This is the for loop with r_ticker and the exp.set() functions. Remember to change the code to reflect the names of variables we are using in this experiment (category, wav_file, recording, correct_response).</p>
 <p><strong>Rename variables in “block_loop_1” to the environmental variables defined in our inline script</strong> Again, remember to change the names of the variables. Remember to set the Order to “sequential” so that Open Sesame doesn’t step in and randomize our nice order.</p>
 </div>
 <div id="step-13-set-location-and-name-of-sound_start_recording-item" class="section level1">
@@ -619,15 +621,31 @@ sub_num = str(var.subject_nr)
 #sub_num = 999
 
 
+# remember to add this in the inline script after sub_path has been defined!
 var.sub_path = sub_path</code></pre>
+</div>
+<div id="step-16-run-the-experiment" class="section level1">
+<h1>Step 16: Run the experiment!</h1>
+<p>Just as in the Beginner Tutorial and the previous running of this experiment, remember to use subject number “999” to get in the habit of not writing over important participant data files!</p>
+<p>The “completed” folder in the file you unzipped at the beginning of the tutorial contains the Open Sesame experiment “wordspotting_study_2nd_test_run”, which is the second intermediate version of the experiment at this step.</p>
+</div>
+<div id="step-17-add-a-custom-log-file" class="section level1">
+<h1>Step 17: Add a custom log file</h1>
+<p>In a previous tutorial (Lexical decision), you learned how to add a custom log file. Now, its your turn to apply what you learned here. Refer back to the previous tutorial and add a custom log file. Dont’ forget to edit our inline script to create the .csv log file and label its columns as well as add a new inline script at the end of the “trial_sequence” item to log all of our important variables. Remember, you want to record the following:</p>
+<ul>
+<li>subject identification code</li>
+<li>item information</li>
+<li>independent variable(s)</li>
+<li>dependent variable(s)</li>
+<li>trial number</li>
+</ul>
+<p>As well as what button was pressed and which button was the correct one.</p>
+<p>IMPORTANT! Place your inline script after the logger item, at the end of your trial_sequence object. If you place it in the new_sequence with the recording items, it will only log trials were the space bar is pressed. You can check this by clicking on your sequence items and inspecting their contents.</p>
 </div>
 <div id="step-16-finishing-touches" class="section level1">
 <h1>Step 16: Finishing touches</h1>
 <p>Is there anything else you’d like to add to your experiment? A practice block? An instructions screen explaining the task to the participant? Remember, participants need to press the space bar in order to activate the recording sequence, so we should probably inform them of that!</p>
-</div>
-<div id="step-17-run-the-experiment" class="section level1">
-<h1>Step 17: Run the experiment!</h1>
-<p>Just as in the Beginner Tutorial and the previous running of this experiment, remember to use subject number “999” to get in the habit of not writing over important participant data files!</p>
+<p>The “completed” folder in the file you unzipped at the beginning of the tutorial contains the Open Sesame experiment “wordspotting_study_finished”, which is my final version of this experiment after adding my custom log file and these finishing touches.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>

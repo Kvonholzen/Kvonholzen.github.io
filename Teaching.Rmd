@@ -112,7 +112,7 @@ and teaches students how to identify the questions being asked in the scientific
 
 ### Tutorials
 
-Some resources from these tutorials can be found under the [Resources](https://kvonholzen.github.io/Resources.html) tab.
+Some resources from these tutorials can be found under the [Tutorials](Tutorials.html) tab.
 
 <div class = "row">
   

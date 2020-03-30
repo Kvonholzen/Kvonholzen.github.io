@@ -387,9 +387,123 @@ else:
 
 Just as in the Beginner Tutorial and the previous running of this experiment, remember to use subject number "999" to get in the habit of not writing over important participant data files!
 
-## Step 14: If you get stuck
+# Prepare for data analysis
 
-If you run into trouble, you can find a completed, working version of this experiment [here](Tutorials/Lexical_Decision/Lexicaldecision_finished.zip). Download and unzip the file. If "Lexicaldecision_finished.osexp" works and you are able to run the experiment, then you have made a mistake in your editing of the experiment. Go back and work through this tutorial again, following the steps closely. If you are unable to run the experiment, then this is more tricky to solve. Perhaps you don't have a module installed correctly ([Installing packages, plugins, and extensions](https://osdoc.cogsci.nl/3.2/manual/environment/)) or your installation was corrupt ([Download Open Sesame](https://osdoc.cogsci.nl/3.2/download/)). 
+## Step 1: Inspect the log file
+
+After running the experiment in Step 13, open the subject log file that is created. If you used subject number "999", this file should be called "subject-999.csv". The creators of Open Sesame recommend logging all variables with logger items. This is the default in Open Sesame. I personally find this log output to be very abstruse. For this reason, I often create my own log file, in addition to the default log file created by Open Sesame. Read more about logger items [here](https://osdoc.cogsci.nl/3.2/manual/logging/).
+
+## Step 2: Add linked logger items
+
+The logger items in our experiment are currently unlinked. This can lead to messy data, as Open Sesame warns us. Delete these 2 logger items (one in the practice_loop and one in the experimental_loop). Drag a new logger item to the block_loop of your experimental_loop, placing it after your green_fix sketchpad. Copy this new logger item by right clicking it and selecting "Copy (linked)". Then, right click your green_fix sketchpad in the block_loop of your pratice_loop and select "Paste". These two logger items should now be linked to one another.
+
+```{r copy_linked_logger_image, echo= FALSE, out.width = "50%", fig.align="center"}
+
+knitr::include_graphics("Tutorials/Lexical_Decision/pictures/copy_linked_logger.png")
+
+```
+
+## Step 3: Create a custom logger file
+
+Let's make a custom logger file that's easier to read than the default. To do so, type the following into the "counterbalance" inline script on the Run tab:
+
+```{python, eval = FALSE}
+
+#####################################################
+# CREATE CUSTOM LOGGER FILE
+#####################################################
+
+
+# import the csv module which we will use to create and write to a new csv file
+import csv
+
+# need to have the subject name as a string variable
+subj = str(var.subject_nr)
+
+# determine what folder the current experiment is in, call it "path"
+# IMPORTANT! UPDATE THIS TO YOUR TUTORIAL FOLDER, OR WHEREVER FOLDER YOUR EXPERIMENT IS IN
+path = "C:\\Users\\user\\Documents\\TU_Dortmund\\Labor\\Tutorials\\Lexical Decision Template\\"
+
+# create a name for the csv file we will create, and using path to specify where it will be saved
+log_file = path + subj + '_sum_log.csv'
+
+# Open 'log_file'
+with open(log_file, 'wb') as csvfile:
+	filewriter = csv.writer(csvfile, delimiter=',',
+							quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# in the next line, we specify the names of the columns of variables that we want in our log file
+	filewriter.writerow(['subject', 'category', 'target', 'accuracy', 'rt', 'key_pressed', 'nonword_response', 'word_response', 'trial']) # write column head
+
+
+```
+
+It is very important that you edit this code to contain the folder that your Open Sesame experiment is located in!
+
+## Step 4: Log important variables to our custom logger file
+
+Drag a new inline script into the block_loop of your experimental_loop. You can place this after the logger item we added in Step 2. We now want to set all of our variables that we want to record in our logger file and then write these variables to that file. Type the following in the inline script:
+
+```{python, eval = FALSE}
+
+# define each of the variables we want
+# select the current row (count_trial_sequence_1) of our block_loop_1 (dm2)
+# and give the corresponding variable
+
+Category = dm2[var.count_trial_sequence_1].category# word/nonword
+Target = dm2[var.count_trial_sequence_1].target # target word
+Accuracy = var.correct # accuracy of participant answer
+rt = var.response_time # reaction time
+key_pressed = var.response_keyboard_response_1 # key pressed, 'm' or 'z'
+nonword_key = var.nonword_response # response key for nonwords
+word_key = var.word_response # response key for words
+trial = var.count_trial_sequence_1 # trial number
+
+# gather these variables together into one object, te
+te = [var.subject_nr, Category, Target, Accuracy, rt, key_pressed, nonword_key, word_key, trial]
+
+
+import csv
+
+# open the csv file we created in the counterbalance inline script
+with open(log_file, 'ab') as f:
+	writer = csv.writer(f, delimiter=',',
+							quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# write the te object to this csv file as the next row
+	writer.writerow(te)
+
+```
+
+Each of these variables is already defined in the default logger item that Open Sesame automatically creates. We're just putting them together in a much more tidy manner. You can check these variables by opening "subject-999.csv" and searching among the column names to make sure that these are the variables that we want to save.
+
+## Step 5: Run the experiment!
+
+Just as in the Beginner Tutorial and the previous running of this experiment, remember to use subject number "999" to get in the habit of not writing over important participant data files!
+
+## Step 6: Open and inspect our "999_sum_log.csv" log file
+
+After running the expeirment in the last step, you should now have the file "999_sum_log.csv" in your experimental folder. Open this file. It should look like this:
+
+``` {r echo = FALSE}
+
+log_file <- read.csv("Tutorials/Lexical_Decision/999_sum_log.csv")
+
+log_file
+
+```
+
+When thinking about the variables you want to include in your logger file, make sure you think about what you need to answer your research question. Lexical decision tasks are usually much more complicated than our current task, for example using different kinds of target words (semantically related vs. unrelated words) or testing different groups of participants (monolinguals vs. bilinguals). We always want to have the following information:
+
+* subject identification code (subject)
+* item information (target)
+* independent variable(s) (category)
+* dependent variable(s) (accuracy; rt)
+* trial number (trial)
+
+In addition, we can use the logger file to make sure that our experiment is doing what we asked it to. That's why I included "key_press", "nonword_response", and "word_response", so that I can check and make sure that correct and incorrect button presses are being recorded correctly. Always err on the side of including more information than you need!
+
+# If you get stuck
+
+If you run into trouble, you can find a completed, working version of this experiment [here](Tutorials/Lexical_Decision/Lexicaldecision_finished.zip). Download and unzip the file. If "Lexicaldecision_finished.osexp" works and you are able to run the experiment, then you have made a mistake in your editing of the experiment. Go back and work through this tutorial again, following the steps closely. If you are unable to run the experiment, then this is more tricky to solve. Perhaps you don't have a module installed correctly ([Installing packages, plugins, and extensions](https://osdoc.cogsci.nl/3.2/manual/environment/)) or your installation was corrupt ([Download Open Sesame](https://osdoc.cogsci.nl/3.2/download/)). When something doesn't work right, Open Sesame will also give information about the error and where it is occuring. Use this information to track down a solution.
 
 If you're having a hard time figuring out the answer to your question, try typing in keywords to the [Open Sesame Forum](https://forum.cogsci.nl/categories/opensesame). Often, someone else has had your problem previously and the way to solve it has been documented.
 
