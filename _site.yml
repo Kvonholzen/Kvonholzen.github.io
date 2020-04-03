@@ -4,6 +4,8 @@ navbar:
   left:
     - text: "About Me"
       href: About_Me.html
+    - text: "New: PhD Position"
+      href: Phd_ad.html      
     - text: "CV"
       href: CV.html
     - text: "Research"
