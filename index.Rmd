@@ -6,11 +6,6 @@ output:
     fig_width: 1
 ---
 
-----
-
-**I'm currently searching for a PhD student to come work with me at TU Dortmund. Read more about the position under the [New: PhD Position](Phd_ad.html) tab.**
-
-----
 
 <div class = "row">
   

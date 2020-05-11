@@ -139,5 +139,5 @@ accepted <- bibliography_entries("cv/Publications.bib") %>%
 
 ---
 nocite: |
-  @Naming, @Raneri2020, @OFallon2020, @ManyBabies, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
+  @VonHolzen2020, @Raneri2020, @OFallon2020, @ManyBabies, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
 ...
