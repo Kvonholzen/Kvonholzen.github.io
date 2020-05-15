@@ -160,10 +160,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 *Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
 
 
-<br>Dienstag, 12. Mai
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WFfMnelU3BIGbg2w)
-
 <br>Dienstag, 19. Mai
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7)
@@ -173,13 +169,26 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>ausnamsweise von 12-14 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F)
 
+<br>Dienstag, 2. Juni
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/YQk8msf1dPnCYoAv)
 
+<br>Dienstag, 9. Juni
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/DRGJ2e2CX8CAgaFg)
 
-```{r admin_May_12, include=FALSE}
+<br>Dienstag, 16. Juni
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/9lTxBjxPodKSprV1)
 
-#https://terminplaner4.dfn.de/WFfMnelU3BIGbg2wturXzWRZ/admin
+<br>Dienstag, 23. Juni
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/aUY9W2qpy3ajmviz)
 
-```
+<br>Dienstag, 30. Juni
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/XJEAD41ornECme8M)
+
 
 ```{r admin_May_19, include=FALSE}
 
@@ -193,3 +202,32 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 
 ```
 
+```{r admin_June_2, include=FALSE}
+
+#https://terminplaner4.dfn.de/YQk8msf1dPnCYoAvDlTyaPit/admin
+
+```
+
+```{r admin_June_9, include=FALSE}
+
+#https://terminplaner4.dfn.de/DRGJ2e2CX8CAgaFgcZr5WS7d/admin
+
+```
+
+```{r admin_June_16, include=FALSE}
+
+#https://terminplaner4.dfn.de/9lTxBjxPodKSprV16Bi2lddm/admin
+
+```
+
+```{r admin_June_23, include=FALSE}
+
+#https://terminplaner4.dfn.de/aUY9W2qpy3ajmviznGBoYBp3/admin
+
+```
+
+```{r admin_June_30, include=FALSE}
+
+#https://terminplaner4.dfn.de/XJEAD41ornECme8MV16MBgUV/admin
+
+```
