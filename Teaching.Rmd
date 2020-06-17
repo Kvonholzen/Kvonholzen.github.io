@@ -160,27 +160,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 *Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
 
 
-<br>Dienstag, 19. Mai
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7)
-
-<br>Dienstag, 26. Mai
-<br>BLS Prüfungswoche
-<br>ausnamsweise von 12-14 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/9xnPNy3ZZEqI644F)
-
-<br>Dienstag, 2. Juni
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/YQk8msf1dPnCYoAv)
-
-<br>Dienstag, 9. Juni
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/DRGJ2e2CX8CAgaFg)
-
-<br>Dienstag, 16. Juni
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/9lTxBjxPodKSprV1)
-
 <br>Dienstag, 23. Juni
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/aUY9W2qpy3ajmviz)
@@ -189,36 +168,22 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/XJEAD41ornECme8M)
 
+<br>Dienstag, 7. Juli
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/E9YtVfhM4TxUlP7i)
 
-```{r admin_May_19, include=FALSE}
+<br>Dienstag, 14. Juli
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/F1hcxQizyEUjYhEq)
 
-#https://terminplaner4.dfn.de/WpwDcEZHivqI9TH7R6MAq8HR/admin
+<br>Dienstag, 21. Juli
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/joZ9myXg8aBzkGae)
 
-```
+<br>Dienstag, 28. Juli
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/OLQ4nu9Imm4Q28X3)
 
-```{r admin_May_26, include=FALSE}
-
-#https://terminplaner4.dfn.de/9xnPNy3ZZEqI644FA99pc5Oc/admin
-
-```
-
-```{r admin_June_2, include=FALSE}
-
-#https://terminplaner4.dfn.de/YQk8msf1dPnCYoAvDlTyaPit/admin
-
-```
-
-```{r admin_June_9, include=FALSE}
-
-#https://terminplaner4.dfn.de/DRGJ2e2CX8CAgaFgcZr5WS7d/admin
-
-```
-
-```{r admin_June_16, include=FALSE}
-
-#https://terminplaner4.dfn.de/9lTxBjxPodKSprV16Bi2lddm/admin
-
-```
 
 ```{r admin_June_23, include=FALSE}
 
@@ -231,3 +196,28 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 #https://terminplaner4.dfn.de/XJEAD41ornECme8MV16MBgUV/admin
 
 ```
+
+```{r admin_Juli_7, include=FALSE}
+
+#https://terminplaner4.dfn.de/E9YtVfhM4TxUlP7i1HRb1KX6/admin
+
+```
+
+```{r admin_Juli_14, include=FALSE}
+
+#https://terminplaner4.dfn.de/F1hcxQizyEUjYhEqvV9ziO7S/admin
+
+```
+
+```{r admin_Juli_21, include=FALSE}
+
+#https://terminplaner4.dfn.de/joZ9myXg8aBzkGae11pJ6Gdz/admin
+
+```
+
+```{r admin_Juli_28, include=FALSE}
+
+#https://terminplaner4.dfn.de/OLQ4nu9Imm4Q28X3MYF1w9Tu/admin
+
+```
+
