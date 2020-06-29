@@ -1,0 +1,306 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# File name:
+
+# 	zero-x.praat
+
+# Title:
+
+# 	zero-x
+
+# Author:
+
+# 	Dennis Pasveer
+
+# Date:
+
+# 	2004-09-14
+
+# Description:
+
+# 	This script automatically adjusts the interval boundaries and text markers (points)
+
+# 	in one or more TextGrid files to the nearest zero crossings in the corresponding
+
+# 	Sound files. It is capable of processing multi-layed TextGrid files.
+
+#
+
+# 	Before running the script, select one or more TextGrid objects and their
+
+# 	corresponding Sound objects.
+
+#
+
+# 	You will be asked to overwrite existing TextGrid files, or create new TextGrid files.
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Ask the user if the original TextGrid file should be overwritten:
+
+
+
+  
+form Overwrite original TextGrid files or create new ones
+   word overwrite yes
+endform
+
+# Clear the info output window:
+
+clearinfo
+
+if overwrite$ = "yes"
+
+    write_mode =1
+
+else
+
+    write_mode =2
+
+endif
+
+# Determine the number of selected sounds and textgrids:
+
+s_count = numberOfSelected ("Sound")
+
+tg_count = numberOfSelected ("TextGrid")
+
+
+
+# Exit if no TextGrid is selected:
+
+if s_count = 0 or tg_count = 0
+
+	exit Select at least one Sound and TextGrid.
+
+endif
+
+
+
+# Exit if number of TextGrids and Sounds do not match:
+
+if s_count != tg_count
+
+	exit The number of Sounds and TextGrids must match.
+
+endif
+
+
+
+# Collect the names of the selected Sounds and TextGrids:
+
+for index from 1 to tg_count
+
+	s_name'index'$ = selected$ ("Sound", index)
+
+	tg_name'index'$ = selected$ ("TextGrid", index)
+
+endfor
+
+
+print Number of TextGrid files to be processed: 'tg_count''newline$'
+
+
+
+if write_mode = 1
+
+	print Files will be overwritten.'newline$'
+
+else
+
+	print New files will be created.'newline$'
+
+endif
+
+
+
+# Process each Sound and Textgrid:
+
+for index from 1 to tg_count
+
+	current$ = tg_name'index'$
+
+
+
+	# Select the current TextGrid:
+
+	select TextGrid 'current$'
+
+
+
+	# Determine the number of Tiers in the TextGrid:
+
+	tier_count = Get number of tiers
+
+	print TextGrid 'current$' has 'tier_count' Tier(s).'newline$'
+
+
+
+	# Determine the number of Intervals or Points in each Tier:
+
+	for tier_index from 1 to tier_count
+
+		# Keep the Tier type (0 = Points Tier, 1 = Interval Tier):
+
+		tier_type'tier_index' = Is interval tier... 'tier_index'
+
+
+
+		if tier_type'tier_index' = 1
+
+			# The current Tier is an Interval Tier; keep the number of Intervals:
+
+			interval_count'tier_index' = Get number of intervals... 'tier_index'
+
+			current_interval_count = interval_count'tier_index'
+
+			print Tier 'tier_index' has 'current_interval_count' Interval(s).'newline$'
+
+		else
+
+			# The current Tier is a Points Tier; keep the number of Points:
+
+			interval_count'tier_index' = Get number of points... 'tier_index'
+
+			current_interval_count = interval_count'tier_index'
+
+			print Tier 'tier_index' has 'current_interval_count' Point(s).'newline$'
+
+		endif
+
+	endfor
+
+
+
+	# Add the current Sound to the object selection:
+
+	plus Sound 'current$'
+
+
+
+	# Enter the editor:
+
+	Edit
+
+	editor TextGrid 'current$'
+
+		# Run through each Tier:
+
+		for tier_index from 1 to tier_count
+
+			if tier_type'tier_index' = 1
+
+				boundary_count = interval_count'tier_index' - 1
+
+			else
+
+				boundary_count = interval_count'tier_index'
+
+			endif
+
+
+
+			# Check if the number of Interval boundaries or Points is at least 1:
+
+			if boundary_count = 1
+
+				if tier_type'tier_index' = 0
+
+					# Exceptional case: only one point in tier:
+
+					Move cursor to end of selection
+
+					Move to nearest zero crossing
+
+				else
+
+					# Move each Interval boundary or Point to nearest zero crossing:
+
+					Move cursor to... 0
+
+					for boundary_index from 1 to boundary_count
+
+						Select next interval
+
+						Move to nearest zero crossing
+
+					endfor
+
+				endif
+
+			elsif boundary_count > 1
+
+				# Move each Interval boundary or Point to nearest zero crossing:
+
+				Move cursor to... 0
+
+				for boundary_index from 1 to boundary_count
+
+					Select next interval
+
+					Move to nearest zero crossing
+
+				endfor
+
+			endif
+
+
+
+			# Move on to the next Tier:
+
+			Select next tier
+
+		endfor
+
+
+
+		# Save TextGrid to file:
+
+		if write_mode = 1
+
+			Write TextGrid to text file... 'current$'.TextGrid
+
+			print Saved TextGrid to file: 'current$'.TextGrid.'newline$'
+
+		else
+
+			Write TextGrid to text file... 'current$'_new.TextGrid
+
+			print Saved TextGrid to file: 'current$'_new.TextGrid.'newline$'
+
+		endif
+
+
+
+		# Close the editor:
+
+		Close
+
+	endeditor
+
+endfor
+
+
+
+# Return to the original selection:
+
+for index from 1 to tg_count
+
+	current$ = tg_name'index'$
+
+	if index = 1
+
+		select Sound 'current$'
+
+		plus TextGrid 'current$'
+
+	else
+
+		plus Sound 'current$'
+
+		plus TextGrid 'current$'
+
+	endif
+
+endfor
+

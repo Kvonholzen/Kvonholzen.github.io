@@ -22,6 +22,10 @@ If you are completing a thesis with Dr. Von Holzen, she will tell you which tuto
 
 These tutorials were written and tested on a Windows 10 system running OpenSesame 3.2.8. Issues may arise when the operating system and Open Sesame version vary.
 
+## Audio Stimuli Preparation
+
+If you are using audio stimuli in your experiment, you'll need to record it and prepare it to be presented by your experimental software. The tutorial Recording Audio (coming soon) will walk you through the steps you need to take to record the auditory stimuli for your experiment. The tutorial [Segmenting and extracting audio stimuli in Praat](Tutorials_Audio_Praat_segmentation.html) will walk you through opening this file in Praat and selecting and saving the individual sound files.
+
 ## EEGlab
 
 [Guide](files/eeglab steps_speech.pdf) for loading and analyzing EEG data using EEGlab. This document is adapted from the original, created by [Simmy Poonian](https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au).

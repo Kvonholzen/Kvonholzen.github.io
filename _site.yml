@@ -20,7 +20,10 @@ navbar:
         - text: "Lexical Decision Task"
           href: Tutorials_Open_Sesame_Lexical_decision.html 
         - text: "Word Spotting Task"
-          href: Tutorials_Open_Sesame_Word_Spotting.html 
+          href: Tutorials_Open_Sesame_Word_Spotting.html
+        - text: "Audio Stimuli Preparation"
+        - text: "Segmenting and extracting audio stimuli in Praat"
+          href: Tutorials_Audio_Praat_segmentation.html
         - text: "Eye-tracking"
         - text: "RLadies Nonparametric Permutation Clusters"
           href: Tutorials_eye_tracking_Cluster_RLadies.html

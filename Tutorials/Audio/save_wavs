@@ -1,0 +1,18 @@
+Extract non-empty intervals: 1, "no"
+
+form Select a target directory
+	word dir D:\
+endform
+  
+n = numberOfSelected("Sound")
+for i from 1 to n
+   s'i'$ = selected$("Sound",'i')
+   s'i' = selected("Sound",'i')
+endfor
+
+for i from 1 to n
+   s$ = s'i'$
+   s = s'i'
+   select 's'
+   Write to WAV file... 'dir$''s$'.wav
+endfor

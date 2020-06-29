@@ -1,0 +1,88 @@
+---
+title: "Segmenting and extracting audio stimuli in Praat"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+**In this tutorial, we will load an audio file recording into Praat and segment the words/sentences into individual .wav files to be played during an experiment.**
+
+For an excellent general Introduction to Praat, follow [Maria Gouskova's Praat tutorial](https://www.gouskova.com/2016/09/03/praat-tutorial/). She talks about editing TextGrids (our main activity in this Tutorial) [here](https://www.gouskova.com/2016/09/03/praat-tutorial/#Annotating_an_audio_file_with_TextGrids).
+
+## Step 1: Download and Open Praat
+
+Download the Open Source Praat software [here](https://www.fon.hum.uva.nl/praat/).
+
+Once downloaded, open the Praat software by double clicking on Praat icon.
+
+Download the [Praat_wavs.zip](Tutorials/Audio/Praat_wavs.zip) folder, which contains the materials you'll need for this tutorial.
+
+## Step 2: Load a .wav file into Praat
+
+Click Open -> Read from file... and then select the .wav file you want to open in Praat. In this tutorial we'll work with the .wav file "example_recording", which can be found in the [Praat_wavs.zip](Tutorials/Audio/Praat_wavs.zip) folder. An object called "Sound example_recording" should appear in your list of Objects.
+
+If you'd like to listen to the audio file, just click "View & Edit". On Windows computers, you can play and stop replay of the recording by pressing the Tab key. You can play a specific part of the recording by clicking your mouse and dragging it to the desired length, then pressing Tab.
+
+## Step 3: Create and open a TextGrid file
+
+Select the Sound Object "Sound example_recording" and click Annotate -> To TextGrid... and then press ok. An object called "TextGrid example_recording" should appear in your list of Objects. Select both this TextGrid object and the object "Sound example_recording" and click "View & Edit". This will open both files in a viewer, which should look something like this picture:
+
+```{r textgrid_1, echo= FALSE, out.width = "50%", fig.align="center"}
+
+knitr::include_graphics("Tutorials/Audio/pictures/textgrid_1.png")
+
+```
+
+## Step 4: Edit the TextGrid and select a sound
+
+Select the first nonesense word in the recording "zorkwall" by clicking somewhere near the beginning of the sound and dragging the selection until the end of the sound. Once you have the sound selected, press Enter. This should create a boundary at the beginning and end of the sound on the selected tier in the Textgrid (whichever one is highlighted). With this selection highlighted, give it the name "zorkwall". You can click on this selection and play it, and only this selection will play. It should look something like this picture:
+
+```{r textgrid_2, echo= FALSE, out.width = "50%", fig.align="center"}
+
+knitr::include_graphics("Tutorials/Audio/pictures/textgrid_2.png")
+
+```
+
+## Step 5: Adjust the selection
+
+Zoom in on the "zorkwall" selection by going to View -> Zoom in until only this selection fills your screen. You can adjust the boundaries of this selection by clicking on them and dragging them back and forth. Adjust the boundary such that it starts when the sound begins and ends. You will get a feel for this after practice. Use the visual information from the sound wave and spectrogram to guide you. Play the selection several times to ensure that a key piece of sound information is not being cut off.
+
+
+## Step 6: Repeat selection and adjustment
+
+Now repeat Steps 4 and 5 for the second sound in this recording, "foomlong". This sound starts with a fricative, so make sure you adjust the beginning to include all parts of the sound. Your window should now look something like this:
+
+```{r textgrid_3, echo= FALSE, out.width = "50%", fig.align="center"}
+
+knitr::include_graphics("Tutorials/Audio/pictures/textgrid_3.png")
+
+```
+
+
+## Step 7: Adjust boundaries to zero crossing using a Praat script
+
+Close out your Editing window and return to your Praat Objects window. Make sure both your Sound and TextGrid objects are selected. Click Praat -> Open Praat Script and select the Praat script "boundary_2_zero_crossing", which is included in the [Praat_wavs.zip](Tutorials/Audio/Praat_wavs.zip) folder. This script was given to me (Katie Von Holzen) by Prof. Dr. Nicole Altvater-Mackensen a long time ago, it was originally written by Dennis Pasveer in 2004. This script takes the boundaries we set in the previous steps and adjusts them to the nearest zero crossing to ensure that the beginning and end of the sound occur in silence and don't cut in in the middle of a soundwave.
+
+In this script file, click Run -> Run and then OK. You will likely get an error message, just click OK. The boundaries in the TextGrid are now adjusted. We will want to save this TextGrid file now, so go to  File -> Save as TextGrid text file. Name it "example_recording" and click Save. You can close this Editing window, as well as the Praat Info and "Run script: Overwrite original TextGrid files or create new ones" windows.
+
+## Step 8: Save selected sounds using a Praat script
+
+Make sure both your Sound and TextGrid objects are selected. Click Praat -> Open Praat Script and select the Praat script "save_wavs", which is included in the [Praat_wavs.zip](Tutorials/Audio/Praat_wavs.zip) folder. This script was given to me (Katie Von Holzen) by Prof. Dr. Nicole Altvater-Mackensen a long time ago, I am no longer sure of the original author. This script takes the boundaries we selected which have text in them (zorkwall and foomlong) and saves each of them as an individual wav file in the folder of your choice.
+
+In this script file, click Run -> Run. In the window that opens, type in your desired directory location, where you would like to save the wav files. Don't forget to put a slash at the end of your directory location, so that the final folder destination is used! If you get an error, adjust the name of your directory. Check this folder directory to make sure that the files were saved there correctly.
+
+## Tips for longer recordings
+
+In this example, there were only two sounds in our recording. Sometimes recordings can contain hundreds of different sounds/words/sentences and hopefully your speaker recorded each a couple times in order to give you some options. In this case, you may want to only select the sound that you will eventually keep for your stimuli. Listen through each repetition and decide which one is the best. Only highlight and select that sound, not the others.
+
+Think about your experimental design and come up with naming conventions for your stimuli. Are they the same word (such as "fork"), but pronounced differently for different conditions? Consider the names "fork_A" and "fork_B" to ensure that you can differentiate between them later (and so can your experimental presentation program!). Also, if the same text is used twice in a TextGrid, it will only save 1 file, not two. So pay attention to your naming conventions!
+
+
+

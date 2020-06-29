@@ -11,7 +11,7 @@
 
 
 
-<title>Teaching</title>
+<title>Segmenting and extracting audio stimuli in Praat</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -408,78 +408,57 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Teaching</h1>
+<h1 class="title toc-ignore">Segmenting and extracting audio stimuli in Praat</h1>
 
 </div>
 
 
-<hr />
-<div id="resources-and-materials" class="section level2">
-<h2>Resources and Materials</h2>
-<div id="qalmri-framework" class="section level3">
-<h3>QALMRI Framework</h3>
-<p>Starting with the course “Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain &amp; Behavior Research”, which I taught as an <a href="https://gened.umd.edu/i-series/iseries.html">I-Series course</a> to incoming freshman at the University of Maryland (and which was conceptualized by <a href="https://hesp.umd.edu/facultyprofile/novick/jared">Jared Novick</a>), I began using the QALMRI Framework to guide students through reading primary, scientific articles (<a href="https://pdfs.semanticscholar.org/3bed/03eae99d886c3c7967419d3d3cfcb132b1ee.pdf">Brosowsky &amp; Parshina, 2017</a>). The QALMRI Framework stands for:</p>
-<ul>
-<li>Q: Question</li>
-<li>A: Alternatives</li>
-<li>L: Logic</li>
-<li>M: Methods</li>
-<li>R: Results</li>
-<li>I: Inferences</li>
-</ul>
-<p>and teaches students how to identify the questions being asked in the scientific article as well as how those questions are answered and the consequences of those answers. I’ve although used this approach in a seminar class on bilingualism taught at the Master level at the TU Dortmund. In this class, I found it particularly helpful in preparing students to summarize existing research and create an approach to answering their own research questions (Forschungskonzept).</p>
-<hr />
+<p><strong>In this tutorial, we will load an audio file recording into Praat and segment the words/sentences into individual .wav files to be played during an experiment.</strong></p>
+<p>For an excellent general Introduction to Praat, follow <a href="https://www.gouskova.com/2016/09/03/praat-tutorial/">Maria Gouskova’s Praat tutorial</a>. She talks about editing TextGrids (our main activity in this Tutorial) <a href="https://www.gouskova.com/2016/09/03/praat-tutorial/#Annotating_an_audio_file_with_TextGrids">here</a>.</p>
+<div id="step-1-download-and-open-praat" class="section level2">
+<h2>Step 1: Download and Open Praat</h2>
+<p>Download the Open Source Praat software <a href="https://www.fon.hum.uva.nl/praat/">here</a>.</p>
+<p>Once downloaded, open the Praat software by double clicking on Praat icon.</p>
+<p>Download the <a href="Tutorials/Audio/Praat_wavs.zip">Praat_wavs.zip</a> folder, which contains the materials you’ll need for this tutorial.</p>
 </div>
+<div id="step-2-load-a-.wav-file-into-praat" class="section level2">
+<h2>Step 2: Load a .wav file into Praat</h2>
+<p>Click Open -&gt; Read from file… and then select the .wav file you want to open in Praat. In this tutorial we’ll work with the .wav file “example_recording”, which can be found in the <a href="Tutorials/Audio/Praat_wavs.zip">Praat_wavs.zip</a> folder. An object called “Sound example_recording” should appear in your list of Objects.</p>
+<p>If you’d like to listen to the audio file, just click “View &amp; Edit”. On Windows computers, you can play and stop replay of the recording by pressing the Tab key. You can play a specific part of the recording by clicking your mouse and dragging it to the desired length, then pressing Tab.</p>
 </div>
-<div id="teaching-experience" class="section level2">
-<h2>Teaching Experience</h2>
-<div id="lecture-based-courses" class="section level3">
-<h3>Lecture-based Courses</h3>
-<div class="row">
-<div class="col-sm-2">
-<p><br>2018 <br> <br> <br> <br> <br>2011 <br> <br> <br> <br></p>
+<div id="step-3-create-and-open-a-textgrid-file" class="section level2">
+<h2>Step 3: Create and open a TextGrid file</h2>
+<p>Select the Sound Object “Sound example_recording” and click Annotate -&gt; To TextGrid… and then press ok. An object called “TextGrid example_recording” should appear in your list of Objects. Select both this TextGrid object and the object “Sound example_recording” and click “View &amp; Edit”. This will open both files in a viewer, which should look something like this picture:</p>
+<p><img src="Tutorials/Audio/pictures/textgrid_1.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="col-lg-6">
-<p><br><strong>Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain &amp; Behavior Research</strong> <br>Bachelor students <br>Department of Hearing and Speech Sciences <br>University of Maryland <br> <br><strong>Experimental Methods for Testing Language Comprehension</strong> <br>Bachelor students <br>German Department <br>Georg-August-Universität Göttingen <br></p>
+<div id="step-4-edit-the-textgrid-and-select-a-sound" class="section level2">
+<h2>Step 4: Edit the TextGrid and select a sound</h2>
+<p>Select the first nonesense word in the recording “zorkwall” by clicking somewhere near the beginning of the sound and dragging the selection until the end of the sound. Once you have the sound selected, press Enter. This should create a boundary at the beginning and end of the sound on the selected tier in the Textgrid (whichever one is highlighted). With this selection highlighted, give it the name “zorkwall”. You can click on this selection and play it, and only this selection will play. It should look something like this picture:</p>
+<p><img src="Tutorials/Audio/pictures/textgrid_2.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
+<div id="step-5-adjust-the-selection" class="section level2">
+<h2>Step 5: Adjust the selection</h2>
+<p>Zoom in on the “zorkwall” selection by going to View -&gt; Zoom in until only this selection fills your screen. You can adjust the boundaries of this selection by clicking on them and dragging them back and forth. Adjust the boundary such that it starts when the sound begins and ends. You will get a feel for this after practice. Use the visual information from the sound wave and spectrogram to guide you. Play the selection several times to ensure that a key piece of sound information is not being cut off.</p>
 </div>
+<div id="step-6-repeat-selection-and-adjustment" class="section level2">
+<h2>Step 6: Repeat selection and adjustment</h2>
+<p>Now repeat Steps 4 and 5 for the second sound in this recording, “foomlong”. This sound starts with a fricative, so make sure you adjust the beginning to include all parts of the sound. Your window should now look something like this:</p>
+<p><img src="Tutorials/Audio/pictures/textgrid_3.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="seminars" class="section level3">
-<h3>Seminars</h3>
-<div class="row">
-<div class="col-sm-2">
-<p><br>2019 <br> <br> <br> <br> <br>2019 <br> <br> <br> <br> <br>2012 <br> <br> <br> <br></p>
+<div id="step-7-adjust-boundaries-to-zero-crossing-using-a-praat-script" class="section level2">
+<h2>Step 7: Adjust boundaries to zero crossing using a Praat script</h2>
+<p>Close out your Editing window and return to your Praat Objects window. Make sure both your Sound and TextGrid objects are selected. Click Praat -&gt; Open Praat Script and select the Praat script “boundary_2_zero_crossing”, which is included in the <a href="Tutorials/Audio/Praat_wavs.zip">Praat_wavs.zip</a> folder. This script was given to me (Katie Von Holzen) by Prof. Dr. Nicole Altvater-Mackensen a long time ago, it was originally written by Dennis Pasveer in 2004. This script takes the boundaries we set in the previous steps and adjusts them to the nearest zero crossing to ensure that the beginning and end of the sound occur in silence and don’t cut in in the middle of a soundwave.</p>
+<p>In this script file, click Run -&gt; Run and then OK. You will likely get an error message, just click OK. The boundaries in the TextGrid are now adjusted. We will want to save this TextGrid file now, so go to File -&gt; Save as TextGrid text file. Name it “example_recording” and click Save. You can close this Editing window, as well as the Praat Info and “Run script: Overwrite original TextGrid files or create new ones” windows.</p>
 </div>
-<div class="col-lg-6">
-<p><br><strong>Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)</strong> <br>Master students <br>German Department <br>Technische Universität Dortmund <br> <br><strong>Einführung in die Sprachwissenschaft (Introduction to Linguistics)</strong> <br>Bachelor students <br>German Department <br>Technische Universität Dortmund <br> <br><strong>Language Acquisition and Processing</strong> <br>Bachelor students <br>German Department <br>Georg-August-Universität Göttingen <br></p>
+<div id="step-8-save-selected-sounds-using-a-praat-script" class="section level2">
+<h2>Step 8: Save selected sounds using a Praat script</h2>
+<p>Make sure both your Sound and TextGrid objects are selected. Click Praat -&gt; Open Praat Script and select the Praat script “save_wavs”, which is included in the <a href="Tutorials/Audio/Praat_wavs.zip">Praat_wavs.zip</a> folder. This script was given to me (Katie Von Holzen) by Prof. Dr. Nicole Altvater-Mackensen a long time ago, I am no longer sure of the original author. This script takes the boundaries we selected which have text in them (zorkwall and foomlong) and saves each of them as an individual wav file in the folder of your choice.</p>
+<p>In this script file, click Run -&gt; Run. In the window that opens, type in your desired directory location, where you would like to save the wav files. Don’t forget to put a slash at the end of your directory location, so that the final folder destination is used! If you get an error, adjust the name of your directory. Check this folder directory to make sure that the files were saved there correctly.</p>
 </div>
-</div>
-</div>
-<div id="tutorials" class="section level3">
-<h3>Tutorials</h3>
-<p>Some resources from these tutorials can be found under the <a href="Tutorials.html">Tutorials</a> tab.</p>
-<div class="row">
-<div class="col-sm-2">
-<p><br>2017 <br> <br> <br> <br>2017 <br> <br> <br> <br>2016 <br> <br> <br></p>
-</div>
-<div class="col-lg-6">
-<p><br><strong>Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R</strong> <br>Doctoral students, postdoctoral researchers, and faculty <br>Université Paris Descartes <br> <br><strong>Time Course Analysis in R</strong> <br>Doctoral students, Research Training Group 2070 <br>Georg-August-Universität Göttingen <br> <br><strong>EEG Pre-processing and Analysis Using EEGLAB and ERPLAB</strong> <br>Doctoral students, postdoctoral researchers, and faculty <br>Université Paris Descartes <br></p>
-</div>
-</div>
-<hr />
-</div>
-</div>
-<div id="sprechstunden-office-hours" class="section level2">
-<h2>Sprechstunden (Office Hours)</h2>
-<p>Während der Vorlesungszeit sind meine Sprechstunden normalerweise : Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden.</p>
-<p>Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online statt. Bitte nutzen Sie die Terminplaner Links unten um ein Termin auszumachen. Zu der ausgewählten Zeit, betreten Sie dann bitte mein Virtualen Meeting-Raum: <a href="https://tu-dortmund.webex.com/meet/katie.vonholzen" class="uri">https://tu-dortmund.webex.com/meet/katie.vonholzen</a>.</p>
-<p><em>Bitte tragen Sie Ihren Namen, Email und Anliegen ein.</em></p>
-<p><br>Dienstag, 23. Juni <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/aUY9W2qpy3ajmviz">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 30. Juni <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/XJEAD41ornECme8M">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 7. Juli <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/E9YtVfhM4TxUlP7i">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 14. Juli <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/F1hcxQizyEUjYhEq">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 21. Juli <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/joZ9myXg8aBzkGae">Melden Sie sich hier an</a></p>
-<p><br>Dienstag, 28. Juli <br>9-11 Uhr <br> <a href="https://terminplaner4.dfn.de/OLQ4nu9Imm4Q28X3">Melden Sie sich hier an</a></p>
+<div id="tips-for-longer-recordings" class="section level2">
+<h2>Tips for longer recordings</h2>
+<p>In this example, there were only two sounds in our recording. Sometimes recordings can contain hundreds of different sounds/words/sentences and hopefully your speaker recorded each a couple times in order to give you some options. In this case, you may want to only select the sound that you will eventually keep for your stimuli. Listen through each repetition and decide which one is the best. Only highlight and select that sound, not the others.</p>
+<p>Think about your experimental design and come up with naming conventions for your stimuli. Are they the same word (such as “fork”), but pronounced differently for different conditions? Consider the names “fork_A” and “fork_B” to ensure that you can differentiate between them later (and so can your experimental presentation program!). Also, if the same text is used twice in a TextGrid, it will only save 1 file, not two. So pay attention to your naming conventions!</p>
 </div>
 
 
@@ -528,7 +507,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "h1,h2",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
