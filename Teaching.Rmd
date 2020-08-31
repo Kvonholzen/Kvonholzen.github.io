@@ -159,27 +159,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 
 *Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
 
-
-<br>Dienstag, 7. Juli
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/E9YtVfhM4TxUlP7i)
-
-<br>Dienstag, 14. Juli
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/F1hcxQizyEUjYhEq)
-
-<br>Dienstag, 21. Juli
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/joZ9myXg8aBzkGae)
-
-<br>Dienstag, 28. Juli
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/OLQ4nu9Imm4Q28X3)
-
-<br>Dienstag, 18. August
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/nOwN8UzBq9J4oMBJ)
-
 <br>Dienstag, 1. September
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/ow4dllrnV84eO5Wd)
@@ -188,37 +167,10 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/3FQQzRiPyQ9fHgLg)
 
+<br>Dienstag, 13. Oktober
+<br>9-11 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/LLCLnmUNHxwApkRk)
 
-
-```{r admin_Juli_7, include=FALSE}
-
-#https://terminplaner4.dfn.de/E9YtVfhM4TxUlP7i1HRb1KX6/admin
-
-```
-
-```{r admin_Juli_14, include=FALSE}
-
-#https://terminplaner4.dfn.de/F1hcxQizyEUjYhEqvV9ziO7S/admin
-
-```
-
-```{r admin_Juli_21, include=FALSE}
-
-#https://terminplaner4.dfn.de/joZ9myXg8aBzkGae11pJ6Gdz/admin
-
-```
-
-```{r admin_Juli_28, include=FALSE}
-
-#https://terminplaner4.dfn.de/OLQ4nu9Imm4Q28X3MYF1w9Tu/admin
-
-```
-
-```{r admin_August_18, include=FALSE}
-
-#https://terminplaner4.dfn.de/nOwN8UzBq9J4oMBJMQD96P81/admin
-
-```
 
 ```{r admin_Sept_1, include=FALSE}
 
@@ -229,5 +181,11 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 ```{r admin_Sept_22, include=FALSE}
 
 #https://terminplaner4.dfn.de/3FQQzRiPyQ9fHgLgCT9DNQBB/admin
+
+```
+
+```{r admin_Okt_13, include=FALSE}
+
+#https://terminplaner4.dfn.de/LLCLnmUNHxwApkRku7jmBO3s/admin
 
 ```
