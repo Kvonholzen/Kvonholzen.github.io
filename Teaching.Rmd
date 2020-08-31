@@ -163,10 +163,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/ow4dllrnV84eO5Wd)
 
-<br>Dienstag, 22. September
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/3FQQzRiPyQ9fHgLg)
-
 <br>Dienstag, 13. Oktober
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/LLCLnmUNHxwApkRk)
@@ -175,12 +171,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 ```{r admin_Sept_1, include=FALSE}
 
 #https://terminplaner4.dfn.de/ow4dllrnV84eO5Wd6NTCJynx/admin
-
-```
-
-```{r admin_Sept_22, include=FALSE}
-
-#https://terminplaner4.dfn.de/3FQQzRiPyQ9fHgLgCT9DNQBB/admin
 
 ```
 
