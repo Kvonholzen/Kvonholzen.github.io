@@ -186,6 +186,26 @@ bibliography_entries("Presentations.bib") %>%
 
 ## Courses Taught
 
+### Seminars
+
+```{r}
+
+tribble(
+  ~Year, ~Course, ~blank1, ~blank2, ~Desc,
+  "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Master students",
+    "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "German Department",
+    "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Technische Universität Dortmund",
+    "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Bachelor students",
+    "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "German Department",
+    "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Technische Universität Dortmund",
+    2012, "Language Acquisition and Processing", "", "", "Bachelor students",
+    2012, "Language Acquisition and Processing", "", "", "German Department",
+    2012, "Language Acquisition and Processing", "", "", "Georg-August-Universität Göttingen"
+) %>% 
+  detailed_entries(Course, Year, blank1, blank2, Desc)
+
+```
+
 ### Lecture-based Courses
 
 ```{r}
@@ -198,26 +218,6 @@ tribble(
     2011, "Experimental Methods for Testing Language Comprehension", "", "", "Bachelor students", 
       2011, "Experimental Methods for Testing Language Comprehension", "", "", "German Department", 
       2011, "Experimental Methods for Testing Language Comprehension", "", "", "Georg-August-Universität Göttingen"
-) %>% 
-  detailed_entries(Course, Year, blank1, blank2, Desc)
-
-```
-
-### Seminars
-
-```{r}
-
-tribble(
-  ~Year, ~Course, ~blank1, ~blank2, ~Desc,
-  2019, "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Master students",
-    2019, "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "German Department",
-    2019, "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Technische Universität Dortmund",
-    2019, "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Bachelor students",
-    2019, "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "German Department",
-    2019, "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Technische Universität Dortmund",
-    2012, "Language Acquisition and Processing", "", "", "Bachelor students",
-    2012, "Language Acquisition and Processing", "", "", "German Department",
-    2012, "Language Acquisition and Processing", "", "", "Georg-August-Universität Göttingen"
 ) %>% 
   detailed_entries(Course, Year, blank1, blank2, Desc)
 
