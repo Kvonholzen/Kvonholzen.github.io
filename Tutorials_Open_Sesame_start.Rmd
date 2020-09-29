@@ -3,7 +3,6 @@ title: "Getting Started with Open Sesame"
 output:
   html_document:
     toc: true
-    toc_float: true
     toc_depth: 2
 ---
 
@@ -14,24 +13,38 @@ knitr::opts_chunk$set(echo = TRUE)
 
 *In this section, we will open Open Sesame and create our first experiment following the online beginner tutorial.*
 
-# Step 1: Download Open Sesame
+## Step 1: Download Open Sesame
 
-[Download the latest version of Open Sesame](https://osdoc.cogsci.nl/3.2/download/)
+[Download Open Sesame Version 3.3](https://osdoc.cogsci.nl/3.3/download/)
 
 * If you are working on a laboratory laptop, Open Sesame should already be installed
 * If you are working on your personal computer, you can work on this tutorial while at home. You can also create your experiment on your own person computer. When you are ready and would like to test participants, you can then put your experiment on a laboratory laptop.
+* Make sure you download version 3.3. Some commands/options/buttons differ by version.
+* You can choose your language for Open Sesame, including German. This tutorial, and therefore all the descriptions, are given in English. It is therefore recommended to use the English language for Open Sesame
+* This tutorial is written using a computer running Windows 10. If you are using a different Windows version or a Mac, there is a potential for discrepancies between the tutorial and what you see on your computer. In this case, you may have to search a bit longer in order to complete the steps, but the differences shouldn't be too great.
 
-# Step 2: Complete the Beginner Tutorial
 
-To get yourself familiar with the Open Sesame program, complete the [Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/)
+## Step 2: Complete the Beginner Tutorial
+
+To get yourself familiar with the Open Sesame program, complete the [Beginner Tutorial](https://osdoc.cogsci.nl/3.3/tutorials/beginner/). This tutorial was created by the creator of Open Sesame and gives an excellent introduction to the software.
+
+Pay particular attention to [Step 1: Create the main sequence](https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-1-create-the-main-sequence). This step explains the layout of Open Sesame and some basics about how it works. Read this carefully, as this information will be used again and again in these tutorials.
 
 * When you have finished creating your first Open Sesame experiment, run yourself as a participant. Give yourself the subject number “999”. 
 * When you are finished with the experiment, the corresponding log file should be saved in the same folder as where your Open Sesame Experiment is saved. If you gave your subject number as “999”, this log file should be called “subject-999”.
 * If you are one of Dr. Von Holzen's students and have been instructed to complete these tutorials, please email this log file to her: [katie.vonholzen@tu-dortmund.de](<mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks>)
 
-# Step 3: What to do when you get stuck
+## Step 3: Complete the Intermediate Tutorial
 
-Although these tutorials will hopefully answer a lot of your questions, new questions are certain to arise. The Open Sesame website has a lot of good resources that may help. I've tried to link to many of them in my explanations. You can get a quick overview by clicking on the dropdown menu "Manual" on the [Open Sesame Website](https://osdoc.cogsci.nl/3.2/). When something doesn't work right, Open Sesame will also give information about the error and where it is occuring. Use this information to track down a solution.
+Complete the [Intermediate Tutorial](https://osdoc.cogsci.nl/3.3/tutorials/intermediate/). This tutorial was also created by the creator of Open Sesame. The Beginner Tutorial introduced you to creating experiments in Open Sesame. In the Intermediate Tutorial, you deepen this knowledge. This will help you flexibly create your own experiment in the future!
+
+* When you have finished creating this Open Sesame experiment, run yourself as a participant. Give yourself the subject number “999”. 
+* When you are finished with the experiment, the corresponding log file should be saved in the same folder as where your Open Sesame Experiment is saved. If you gave your subject number as “999”, this log file should be called “subject-999”.
+* If you are one of Dr. Von Holzen's students and have been instructed to complete these tutorials, please email this log file to her: [katie.vonholzen@tu-dortmund.de](<mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks>)
+
+## Step 4: What to do when you get stuck
+
+Although these tutorials will hopefully answer a lot of your questions, new questions are certain to arise. The Open Sesame website has a lot of good resources that may help. I've tried to link to many of them in my explanations. You can get a quick overview by clicking on the dropdown menu "Manual" on the [Open Sesame Website](https://osdoc.cogsci.nl/3.3/).
 
 If you're having a hard time figuring out the answer to your question, try typing in keywords to the [Open Sesame Forum](https://forum.cogsci.nl/categories/opensesame). Often, someone else has had your problem previously and the way to solve it has been documented.
 

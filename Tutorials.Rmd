@@ -9,18 +9,18 @@ I've put together several tutorials for creating experiments in Open Sesame and 
 
 ## Open Sesame
 
-The Open Sesame tutorials were designed to quickly get thesis students ready to create their own experiments in Open Sesame. The first tutorial, [Getting Started with Open Sesame](Tutorials_Open_Sesame_start.html) is a quick, basic introduction relying on the [Open Sesame Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/). If you haven't worked with Open Sesame yet, I would recommend starting there. The [Lexical Decision Task Tutorial](Tutorials_Open_Sesame_Lexical_decision.html) introduces the learner to inline scripting and pseudorandomization in the experimental design. The [Word Spotting Tutorial](Tutorials_Open_Sesame_Word_Spotting.html) includes these elements, and also shows the learner how to create audio recordings from participants.
+The Open Sesame tutorials were designed to quickly get thesis students ready to create their own experiments in Open Sesame. The first tutorial, [Getting Started with Open Sesame](Tutorials_Open_Sesame_start.html) is a quick, basic introduction relying on the [Open Sesame Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/). If you haven't worked with Open Sesame yet, I would recommend starting there. The [Lexical Decision Task Tutorial](Tutorials_Open_Sesame_Lexical_decision.html) introduces the learner to inline scripting and pseudorandomization in the experimental design. The [Word Spotting Tutorial](Tutorials_Open_Sesame_Word_Spotting.html) includes these elements, and also shows the learner how to create audio recordings from participants. The [Lexical Decision Experiment in OSWeb (Open Sesame online)](Tutorials_Open_Sesame_Lexical_decision_OSWeb.html) Tutorial introduces [OsWeb](https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/), an online runtime for Open Sesame experiments using the Lexical Decision Task template.
 
 If you are completing a thesis with Dr. Von Holzen, she will tell you which tutorials you need to complete to prepare yourself for your thesis work. For example, if your experiment uses a Word Spotting task, she may ask you to complete the following:
 
 1. [Getting Started with Open Sesame](Tutorials_Open_Sesame_start.html)
 2. [Lexical Decision Task Tutorial](Tutorials_Open_Sesame_Lexical_decision.html)
 3. [Word Spotting Tutorial](Tutorials_Open_Sesame_Word_Spotting.html)
-
+4. [Lexical Decision Experiment in OSWeb Tutorial](Tutorials_Open_Sesame_Lexical_decision_OSWeb.html)
 
 **coming soon, Visual World with Eyetracking tutorial**
 
-These tutorials were written and tested on a Windows 10 system running OpenSesame 3.2.8. Issues may arise when the operating system and Open Sesame version vary.
+These tutorials were written and tested on a Windows 10 system running OpenSesame 3.3.3. Issues may arise when the operating system and Open Sesame version vary.
 
 ## Audio Stimuli Preparation
 

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>A Lexical Decision Experiment in OSWeb (Open Sesame online)</title>
+
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="About_Me.html">About Me</a>
+</li>
+<li>
+  <a href="CV.html">CV</a>
+</li>
+<li>
+  <a href="Research.html">Research</a>
+</li>
+<li>
+  <a href="Teaching.html">Teaching</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Tutorials.html">Tutorials Overview</a>
+    </li>
+    <li class="dropdown-header">Open Sesame</li>
+    <li>
+      <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical Decision Task (online)</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
+    </li>
+    <li class="dropdown-header">Audio Stimuli Preparation</li>
+    <li>
+      <a href="Tutorials_Audio_Praat_segmentation.html">Segmenting and extracting audio stimuli in Praat</a>
+    </li>
+    <li class="dropdown-header">Eye-tracking</li>
+    <li>
+      <a href="Tutorials_eye_tracking_Cluster_RLadies.html">RLadies Nonparametric Permutation Clusters</a>
+    </li>
+    <li class="dropdown-header">EEG and ERPs</li>
+    <li>
+      <a href="Tutorials_eeg_erp_EEGlab_guide.html">Analyzing EEG data using EEGlab</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Media.html">Media</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">A Lexical Decision Experiment in OSWeb (Open Sesame online)</h1>
+
+</div>
+
+
+<p><em>Steps 1-5 in this tutorial are identical to the <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Tutorial</a>. If you have already completed that tutorial, you can skip ahead to the section <a href="#OSWeb_edit">Edit the Lexical Decision experiment for OSWeb</a>.</em></p>
+<div id="explore-the-open-sesame-lexical-decision-experiment" class="section level1">
+<h1>Explore the Open Sesame Lexical decision experiment</h1>
+<p><em>In this section, we will open and inspect the Open Sesame Lexical decision experiment of the tutorial. You will learn about Open Sesame variables and inline scripting.</em></p>
+<p><strong>Overview of the Experiment</strong></p>
+<p>Independent variable</p>
+<ul>
+<li>Category (word/nonword)
+<ul>
+<li>This is a <strong>within-subjects</strong> manipulation, as all participants respond to word and nonword items</li>
+</ul></li>
+</ul>
+<p>Dependent variable(s)</p>
+<ul>
+<li>Reaction time of keypress (in milliseconds)</li>
+<li>Accuracy of keypress (correct, incorrect)</li>
+</ul>
+<div id="step-1-load-the-lexical-decision-experiment-pre-prepared-by-open-sesame" class="section level2">
+<h2>Step 1: Load the Lexical decision experiment pre-prepared by Open Sesame</h2>
+<p>When you start Open Sesame, click on “Tools &gt; Example Experiments”. This will bring up a menu of all the available example experiments in Open Sesame. Scroll down and click on “Lexical-decision task”. This will load the example Lexical decision experiment. Save this experiment in your tutorial folder by clicking “File &gt; Save as”. Its good practice to regularly save your experiment so that you don’t lose your progress!</p>
+</div>
+<div id="step-2-run-yourself-in-the-lexical-decision-experiment-and-think-about-its-design" class="section level2">
+<h2>Step 2: Run yourself in the Lexical decision experiment and think about its design</h2>
+<p>Run yourself in the Experiment by clicking the big green triangle. Remember the <a href="https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-13-run-the-experiment">instructions from the Beginner Tutorial</a> which describe how to run yourself in Open Sesame Experiments. Give yourself the subject number “999”. You should get in the habit of using this subject number when testing out your experiment, so that you don’t actually erase data for actual participants in the future! Since our participant numbers for a particular study are not likely to approach 1000, you will always know that you can write over this participant file. It will be saved in the same folder that you saved the experiment in.</p>
+<p>While running yourself in this experiment, think about the aspects of this experiment that you might want to use in your own experiment:</p>
+<ul>
+<li>Instruction screen</li>
+<li>Practice Phase</li>
+<li>Feedback: Red or green color indicating accuracy after each keypress
+<ul>
+<li>We’ll focus on this aspect more below</li>
+</ul></li>
+<li>Feedback: Summary of response accuracy and response time at the end of each block.
+<ul>
+<li>This was described in <a href="https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-10-draw-the-feedback-item">Step 10 of the Beginner Tutorial</a></li>
+</ul></li>
+<li>Counterbalancing word/nonword response across subjects
+<ul>
+<li>We’ll focus on this aspect more below</li>
+</ul></li>
+</ul>
+</div>
+<div id="step-3-familiarize-yourself-with-the-new-counterbalance-inline-script" class="section level2">
+<h2>Step 3: Familiarize yourself with the new “counterbalance” inline script</h2>
+<p>Open and inspect the “counterbalance” inline script. If you ran yourself with subject number 999, an odd number, the program should have told you to press “z” when the string of letters was a word, and “m” when it was a nonword. If your subject number was even, then the assignment of keys would have been reversed. This is exactly what is written in the code, it tells Open Sesame to assign the button for word responses to “z” and for nonword responses to “m” for odd numbered subjects, and in all other cases (even numbered subjects) to assign the reverse. This is a <strong>between-subjects</strong> manipulation, because it counterbalanced word/nonword button assignments across subjects. Inline scripts can also be used to accomplish within-subjects manipulations. When we start to edit this inline script later, we’ll change this code. This step is also described in <a href="https://osdoc.cogsci.nl/3.3/tutorials/advanced/#step-3-implement-counterbalancing">Step 3 of the Advanced Tutorial</a></p>
+<pre class="python"><code>if var.subject_parity == &#39;odd&#39;:
+  var.word_response = &#39;z&#39;
+  var.nonword_response = &#39;m&#39;
+else:
+  var.word_response = &#39;m&#39;
+  var.nonword_response = &#39;z&#39;  </code></pre>
+</div>
+<div id="step-4-see-how-variables-from-the-inline-script-are-used-in-sketchpad-objects" class="section level2">
+<h2>Step 4: See how variables from the inline script are used in Sketchpad objects</h2>
+<p>We can next see how this information is used in the rest of the experiment, starting with Sketchpad objects. Open and inspect the sketchpad “instructions. Here we can see how the information given in the”counterbalancing" inline script is translated into the instructions given to the participant. For example, the “var.word_response” given in the “counterbalance” inline script (here “z”) is then printed out anywhere that [word_response] is given (see picture below). You can look at the assignment of variables by opening the <a href="https://osdoc.cogsci.nl/3.3/manual/variables/#the-variable-inspector">Variable inspector</a>.</p>
+<p><img src="Tutorials/Lexical_Decision/pictures/Instructions.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-4-see-how-variables-from-the-inline-script-are-used-in-loop-objects" class="section level2">
+<h2>Step 4: See how variables from the inline script are used in Loop objects</h2>
+<p>Open and inspect the “block_loop” loop. This loop gives important information about the design of the experiment, telling it the item to present the participant (target), what condition this item belongs to (category, our independent variable) and what the correct keyboard response is (correct_response). As you can see, the actual keyboard responses “z” and “m” are not written here. Instead, they are decided in the counterbalance inline script, as we discussed in the previous step. By calling these previously defined variables in the column correct response, using brackets ([word_response]; [nonword_response]), Open Sesame knows to use the values for these previously defined variables.</p>
+</div>
+<div id="step-5-give-per-trial-feedback" class="section level2">
+<h2>Step 5: Give per trial feedback</h2>
+<p>As you may recall while completing the experiment yourself, if you answered incorrectly, the fixation turned red and if you answered correctly, the fixation turned green. Recalling the “block_loop”, the correct_response is defined by which category (word, nonword) the item belongs to. Since the correct keypress (“m” or “z”) is counterbalanced across participants, the correct_response is defined using [word_response] and [nonword_response]. If the variable [correct_response] is defined in Open Sesame, it can be also called using [correct].</p>
+<p>Open the sequence “trial_sequence”. Here, the column “Run if” is used to define whether the red_fix or green_fix sketchpads should be shown. If the response is correct ([correct] = 1) then the green_fix will be shown. If the response is incorrect ([correct] = 0) then the red_fix will be shown. You can read more about per-trial feedback in <a href="o%20https://osdoc.cogsci.nl/3.3/tutorials/intermediate/#step-8-give-per-trial-feedback">Step 8 of the Intermediate Tutorial</a></p>
+<p><img src="Tutorials/Lexical_Decision/pictures/Per_trial_feedback.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="OSWeb_edit" class="section level1">
+<h1>Edit the Lexical Decision experiment for OSWeb</h1>
+<p><em>In this section, we will adapt the Lexical Decision Task experiment so that it is ready to be tested online using OSWeb and JATOS. Before you begin this section, please read through <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/">the documentation on OSWeb</a>. Not all regular Open Sesame functions and features are available when using OSWeb. A list of supported functions can be found <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#supported-functionality">here</a>.</em></p>
+<div id="step-1-create-edit-the-counterbalance-inline-script" class="section level2">
+<h2>Step 1: Create Edit the counterbalance inline script</h2>
+<p>One of the biggest differences between a regular Open Sesame Experiment and an OSWeb experiment is that the former is based on python whil the latter is based on javascript. I (Katie Von Holzen) am only a beginner in python scripting and have barely written one line of independent code in javascript. That being said, though some <a href="https://forum.cogsci.nl/categories/osweb">OSWeb Forum</a> sleuthing, I’ve found some nifty code that can help customize our experiments. The most important difference for us is that inline_script objects no longer work. Instead, we need to use inline_javascript objects, which are based on javascript. Drag one to your Overview area next to your old counterbalance inline_script and delete the old counterbalance inline_script.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/inline_javascript.png" width="30%" style="display: block; margin: auto;" /></p>
+<p>Since we no longer have a counterbalance script, we should make a new one. Rename this inline_javascript “counterbalance” and in the Run tab place the following code:</p>
+<pre class="js"><code>
+if (vars.subject_nr % 2 == 1) {
+    vars.word_response = &#39;z&#39;
+    vars.nonword_response = &#39;m&#39;
+    vars.sub_parity = &#39;odd&#39;
+ } else {
+    vars.word_response = &#39;m&#39;
+    vars.nonword_response = &#39;z&#39;
+    vars.sub_parity = &#39;even&#39;
+}
+</code></pre>
+<p>This javascript code accomplishes essentially the same goal as our previous counterbalance inline_script, this time using javascript!</p>
+</div>
+<div id="instructions" class="section level2">
+<h2>Step 2: Edit the instructions</h2>
+<p>Unfortunately, OSWeb does not support named elements in sketchpad objects. That means that the variables [word_response] and [nonword_response] can not be flexibly updated when using OSWeb. Never fear, however, as there is a workaround! We just need to create two different instruction sketchpads, one to be shown when the subject number is odd, the other when it is even. Rename the exisitng instructions sketchpad as “instructions_odd” and rewrite it so that it looks like this:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/instructions_odd.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Then copy this sketchpad to create a second sketchpad, naming it “instructions_even”. Rewrite this sketchpad such that the response for letters that form a word should be ‘m’ and letters that form a nonword should be ‘m’.</p>
+<p>Drag a new sequence item below your counterbalance inline_javascript item. Place both of the instruction sketchpads into this sequence. In the sequence object, edit the Run if statements for these sketchpads as follows:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/sequence_parity.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="test_osweb" class="section level2">
+<h2>Step 3: Test our experiment using OSWeb</h2>
+<p>Our experiment should now work with OSWeb. These next instructions are similar to those given by Open Sesame for <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#testing-in-a-browser">Testing in a browser</a>. Click Tools -&gt; OSWeb to bring up the OSWeb options. OSWeb first runs a compatibility check on our experiment and it looks like it is compatible so far.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/osweb_options.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>To run the experiment, click “Test experiment in external browser”. The loading screen should look like this:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/osweb_test.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Click on the screen and complete the experiment. If you encounter any issues, go through the <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#debugging">OSWeb Debugging suggestions</a>. The <a href="https://forum.cogsci.nl/categories/osweb">OSWeb Forum</a> is also useful.</p>
+</div>
+</div>
+<div id="subject_code" class="section level1">
+<h1>Create a subject-specific code</h1>
+<p>Participants aren’t coming to our lab to complete the experiment; instead, they’re completing it anonymously online. But, we may want to collect some demographic information about our participants. Unfortunately, the ability for OSWeb to create a questionnaire is limited. There are plenty of options available, from free, such as a <a href="https://www.google.com/forms/about/">Google Form</a> or <a href="https://www.surveymonkey.com/">Survey Monkey</a>, to paid options, such as <a href="https://www.limesurvey.org/en/">Lime Survey</a>. The TU Dortmund has a Lime Survey subscription, so this is the option I use.</p>
+<p>In order to connect the results we collect using our OSWeb experiment with results we want to collect with an online questionnaire, we need to be able to link the data. But, we also want to ensure the data privacy of our participants. Following the suggestions in <a href="https://forum.cogsci.nl/discussion/5876/">this Forum post</a>, I ask participants to use their House Number, Birth Month, and the last two digits of their cell phone number. These values are not likely to be forgotten (whereas a randomly chosen variable might be). Participants give this code in the OSWeb experiment as well as when filling out the questionnaire, enabling matching during data analysis.</p>
+<div id="step-1-create-a-blank-javascript-variable-to-capture-the-subject-code" class="section level2">
+<h2>Step 1: Create a blank javascript variable to capture the subject code</h2>
+<p>First, we need to create a blank variable that we will fill with the subject’s typed input. Drag a new inline_javascript object below (but not inside!) the sequence object we created in <a href="#instructions">Step 2: Edit the instructions</a>. Name this inline_javascript “constants” and paste the following code into the Run tab of this inline_javascript object:</p>
+<pre class="js"><code>
+vars.block_count = 0
+vars.code_number = &#39;&#39;
+vars.response = &#39;&#39;
+</code></pre>
+</div>
+<div id="step-2-create-a-loop-to-capture-the-subject-code" class="section level2">
+<h2>Step 2: Create a loop to capture the subject code</h2>
+<p>Drag a loop object below the constants inline_javascript object. Drag a sequence object inside this loop object. Drag a sketchpad, keyboard_response, and inline_javascript object into this sequence. Add a feedback item after (but not inside!) the sequence item. Rename all of these new objects such that they match this picture:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/code_number_names.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>In the code_loop object, change Break if from “never” to “[response] = return or [response] = enter”. This will call the loop until the participant presses the Enter/Return button. Also, change Repeat from “each cycle 1.00 x” to “[response] = return or [response] = enter”.</p>
+<p>In the code_number_input keyboard_response object, add the following to Allowed responses: 1;2;3;4;5;6;7;8;9;0;backspace;return.</p>
+<p>In the process_code_number_input inline_javascript object, paste the following code into the Run tab:</p>
+<pre class="js"><code>
+console.log(vars.response)
+if (vars.response in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+    vars.code_number += vars.response.toString()
+} else if (vars.response === &#39;backspace&#39;) {
+    vars.code_number = vars.code_number.toString().slice(0, vars.code_number.toString().length - 1)
+}
+</code></pre>
+</div>
+<div id="step-3-edit-the-instructions-for-the-code-number" class="section level2">
+<h2>Step 3: Edit the instructions for the code number</h2>
+<p>We next edit the sketchpad which will both explain to the participants how to create their own code and show them what they input live, allowing them to confirm that their code is correct. In the show_code_number sketchpad, add the following text (either in English or German). You may have to edit this text to make sure that each line fits on the sketchpad:</p>
+<p><strong>German</strong></p>
+<p><em>Bitte geben Sie nur Zahlen und keine Buchstaben an. Bitte nutzen Sie die Zahlentasten oben auf der Tastatur (1 bis 0), wie im Bild dargestellt. Achten Sie darauf, nicht die Funktionstasten F1 bis F12 oder einen etwaig vorhandenen Nummerblock auf der rechten Seite der Tastatur zu verwenden.</em></p>
+<p><em>Bitte geben Sie den folgenden Zugangsode an:</em> <em>(Ihre Hausnummer)</em> <em>(Ihren Geburtsmonat als zwei Ziffern)</em> <em>(Die letzten zwei Ziffern Ihrer Handynummer). </em></p>
+<p><em>Beispiel:</em> <em>Hausnummer: 22</em> <em>Geburtsdatum: 3.4.1990</em> <em>Handynummer: 0178 1234567</em></p>
+<p><em>Beispiel Zugangsode: 220467</em></p>
+<p><em>Ihr Zugangsode: [code_number]</em></p>
+<p><em>Drücken Sie die Eingabe Taste um Ihre Eingabe zu bestätigen.</em></p>
+<p><strong>English</strong></p>
+<p><em>Please enter only numbers and no letters. Please use the numbers located above your keyboard (1 to 0), as shown in the picture. Please take care not to press the F1 to F12 buttons or, if applicable, the numberpad on the right side of your keyboard.</em></p>
+<p><em>Please give the following code:</em> <em>(Your House Number)</em> <em>(Your Birth Month, as two digits)</em> <em>(The last two digits of your Cell phone number). </em></p>
+<p><em>Example:</em> <em>House Number: 22</em> <em>Birth date: 3.4.1990</em> <em>Cell phone number: 0178 1234567</em></p>
+<p><em>Example code: 220467</em></p>
+<p><em>Your code: [code_number]</em></p>
+<p><em>Press the Enter/Return button to confirm your submission.</em></p>
+<p>As you can see in the instructions, a picture is alluded to. Download <a href="Tutorials\Lexical_Decision_OSWeb\pictures\keyboard.png">keyboard.png</a> and place it in your file pool (see <a href="https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-4-add-images-and-sound-files-to-the-file-pool">Step 4 of the Beginner Tutorial</a>). Add this picture to the sketchpad, at the top. You will likely have to scale down the image, I found that a cale of 0.10 x works well. Your sketchpad show_code_number should now look like this:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/show_code_number.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="code_verify" class="section level2">
+<h2>Step 4: Edit the code number verification</h2>
+<p>We want to double check that participants have given the correct code, otherwise we won’t be able to match their experimental results with their questionnaire results. Paste the following text (German or English) into the verify_code_number feedback_item:</p>
+<p><strong>German</strong></p>
+<p><em>Ihr Zugangscode ist [code_number]</em></p>
+<p><em>(Ihre Hausnummer)</em> <em>(Ihren Geburtsmonat als zwei Ziffern)</em> <em>(Die letzten zwei Ziffern Ihrer Handynummer).</em></p>
+<p><em>Wenn die Angaben richtig sind, drücken Sie eine beliebige Taste.</em></p>
+<p><em>Ansonsten starten Sie das Experiment bitte neu.</em></p>
+<p><strong>English</strong></p>
+<p><em>Your code is [code_number]</em></p>
+<p><em>(Your House Number)</em> <em>(Your Birth Month, as two digits)</em> <em>(The last two digits of your Cell phone number). </em></p>
+<p><em>If this submission is correct, please press any key.</em></p>
+<p><em>If this submission is incorrect, please restart the experiment.</em></p>
+</div>
+<div id="test_OSWeb2" class="section level2">
+<h2>Step 5: Test our experiment using OSWeb</h2>
+<p>Follow the same steps in the <a href="#test_osweb">previous section</a> to test the experiment using OSWeb</p>
+</div>
+</div>
+<div id="local_jatos" class="section level1">
+<h1>Upload your experiment to local version of JATOS</h1>
+<p>Although our experiment now works in an external browser, it is right now only functional on our local computer. But, we want to send this experiment to subjects wherever they are, so we need to host the experiment on a web server. Unfortunately, this does cost money and can be a bit tricky. Fortunately, Dr. Von Holzen has paid for a service for students working with her. Below, we’ll go through the steps for uploading our experiment to a web server using JATOS. To read more about this process, which is mirrored to a large extent below, <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/jatos/">click here</a>.</p>
+<p>This section can be followed to upload any experiment to a local version of JATOS.</p>
+<div id="zip" class="section level2">
+<h2>Step 1: Export the experiment as a JATOS study</h2>
+<p>Click Tools -&gt; OSWeb to bring up the OSWeb options. Click “Export experiment as JATOS study”. This will save a .zip file of our OSWeb experiment.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/osweb_options.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-2-install-a-local-version-of-jatos-on-your-computer" class="section level2">
+<h2>Step 2: Install a local version of JATOS on your computer</h2>
+<p>First, you need to install a local version of JATOS on your computer, to make sure that everything is installed correctly. <a href="https://www.jatos.org/Installation.html">Please follow the instructions given on the JATOS website for installation</a>.</p>
+</div>
+<div id="step-3-open-the-jatos-gui" class="section level2">
+<h2>Step 3: Open the JATOS GUI</h2>
+<p>If you just followed the installation instructions, you should have JATOS already running. If not, return to the installation instructions and open the loader file. For example, this is step 3 of <a href="https://www.jatos.org/Installation.html">Installation MS Windows</a> and step 3 of <a href="https://www.jatos.org/Installation.html">Installation MacOS X and Linux</a>.</p>
+<p>Copy and paste <a href="http://localhost:9000/jatos/login">http://localhost:9000/jatos/login</a> into an open browser window. This should open the local version of the JATOS GUI on your computer. Login with username ‘admin’ and password ‘admin’.</p>
+</div>
+<div id="step-4-import-your-experiment-in-jatos" class="section level2">
+<h2>Step 4: Import your experiment in JATOS</h2>
+<p>In JATOS, click on “Import Study” at the top of the page. Select the .zip file that you created in <a href="#zip">Step 1: Export the experiment as a JATOS study</a>. You will be asked if you want to proceed. Click “Import”.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/import_jatos.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>If the study imported correctly, you should get a green notification and the study should appear in the menu on the left side of the screen.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/jatos_success_import.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-5-run-the-experiment-using-jatos" class="section level2">
+<h2>Step 5: Run the experiment using JATOS</h2>
+<p>Although we’ve already run the experiment using OSWeb, we also want to check that JATOS is running our experiment correctly. Click on the name of our study (it should be “Lexical decision”) on the left hand menu of your screen. This will bring up the study’s page. Click the main run button to test the experiment. This should bring up a new browser window that looks very similar to our previous test of the experiment. Go through and complete the experiment. If you encounter any issues, go through the <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#debugging">OSWeb Debugging suggestions</a>. The <a href="https://forum.cogsci.nl/categories/osweb">OSWeb Forum</a> is also useful.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/run_jatos.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-6-download-our-results" class="section level2">
+<h2>Step 6: Download our results</h2>
+<p>Now that you’ve run through the experiment once, hopefully without any trouble, you can download your results file. Click on Results.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/jatos_results.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Select the results for the session you just completed and then click Export Results -&gt; Selected. This will download a file of your results. Move this file to your tutorial folder and add the extension “.txt” to the end of this file (example: jatos_results_20200929095506.txt).</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/export_jatos.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-7-convert-our-results" class="section level2">
+<h2>Step 7: Convert our results</h2>
+<p>If you open the file you just downloaded (example: jatos_results_20200929095506.txt) you’ll notice it looks nothing like the results files we created while doing the Beginner and Intermediate TUtorials. We need to convert it so that the file is organized in a way that we can analyze our results.</p>
+<p>Return back to Open Sesame and click Tools -&gt; OSWeb to bring up the OSWeb options. Click “Convert JATOS results to csv/xlsx”. In the window that pops up, select the results file you just downloaded (example: jatos_results_20200929095506.txt). In the next window, give the name of the converted file you’d like to create (example: jatos_results_1). Choose the file extension you would like to use, either .xlsx or .csv. I prefer .csv, as it is easier to load into R and can be read by any computer without proprietary software.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/osweb_options.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Open and inspect the new file you just created. It should now look like a typical Open Sesame results file!</p>
+</div>
+<div id="step-8-add-a-link-to-a-demographics-questionnaire-optional" class="section level2">
+<h2>Step 8: Add a link to a demographics questionnaire (optional)</h2>
+<p>As explained in the section <a href="#subject_code%7D">Create a subject-specific code</a>, we may also want to gather background or demographics information from our participants. Unfortunately, the ability for OSWeb to create a questionnaire is limited. There are plenty of options available, from a free, such as a <a href="https://www.google.com/forms/about/">Google Form</a> or <a href="https://www.surveymonkey.com/">Survey Monkey</a>, to paid, such as <a href="https://www.limesurvey.org/en/">Lime Survey</a>. The TU Dortmund has a Lime Survey subscription, so this is the option I use.</p>
+<p>This step assumes you have already created a questionnaire. If you are one of Dr. Von Holzen’s students, ask her for advice. Once you have the questionnaire completed, you will have a link that you can use to share it with participants. Copy this link.</p>
+<p>In your local JATOS experiment, click on Properties:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/jatos_properties.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Paste your questionnaire link in the section “End Redirect URL”:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/ques_url.png" width="75%" style="display: block; margin: auto;" /></p>
+<p>When the OSWeb experiment finishes, you participants will automatically be redirected to your online questionnaire!</p>
+</div>
+</div>
+<div id="upload-your-experiment-to-server-installation-of-jatos" class="section level1">
+<h1>Upload your experiment to server installation of JATOS</h1>
+<p>Up until now, we have worked on local installations of OSWeb and JATOS. However, the goal of creating an online study is to be able to send it to participants so that they can complete it on their own computers. In oder to achieve this, we need to create a server installation of JATOS and deploy our experiment to that server installation. The general principle is described <a href="https://www.jatos.org/Deploy-to-a-server-installation.html">here</a>.</p>
+<p>Dr. Von Holzen already has a server installation of JATOS. If you are running an online study with her, she will help you add your study to the server installation. Contact her for the details. If you are not in Dr. Von Holzen’s lab, you have different options, which you can read about <a href="https://www.jatos.org/Bring-your-JATOS-online.html">here</a>. Dr. Von Holzen uses DigitalOcean to host her OSWeb/JATOS studies, which costs about 5€ a month. You can read about how to use JATOS with DigitalOcean <a href="https://www.jatos.org/JATOS-on-DigitalOcean.html">here</a>.</p>
+<p>This section can be followed to upload any experiment to a server installation of JATOS.</p>
+<div id="step-1-export-your-experiment-to-a-server-installation." class="section level2">
+<h2>Step 1: Export your experiment to a server installation.</h2>
+<p>This step assumes you have previously followed all of the steps in section <a href="#local_jatos">Upload your experiment to local version of JATOS</a>. It is also possible to import an OSWeb experiment directly into the server installation using steps similar to those described in that section, but this will not be described in this section.</p>
+<p>On your local JATOS installation, click Export and save the .jzip file.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/export_jzip.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-2-import-your-experiment-to-a-server-installation." class="section level2">
+<h2>Step 2: Import your experiment to a server installation.</h2>
+<p>Log into your server installation of JATOS. If you work with Dr. Von Holzen, she will provide you with the login information. Click Import Study and select the .jzip file you created in the previous step. In the window that pops up, click “Import”. The study will now appear in the left hand menu.</p>
+<p>Check and make sure that the redirect URL for your online questionnaire is still correct by clicking on Properties.</p>
+</div>
+<div id="step-3-create-a-link-to-send-your-experiment-to-participants" class="section level2">
+<h2>Step 3: Create a link to send your experiment to participants</h2>
+<p>Finally, we are ready to generate a link for the experiment that we can share with participants. There are different options for the type of link that we can generate. They are described <a href="https://www.jatos.org/Run-your-Study-with-Worker-and-Batch-Manager.html">here</a>. To create these different links, click on “Work &amp; Batch Manager”.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/jatos_worker.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>This will open the Work &amp; Batch Manager. Click on the current batch to open the menu of different Worker options.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/worker_batch.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>The different types of Workers are well explained <a href="https://www.jatos.org/Worker-Types.html">here</a>. For the purpose of running a study with Dr. Von Holzen, it is important to know what options you would like to have. If you test the experiment on yourself, JATOS labels that as a “JATOS Worker”. If you would like to send participants individual links, use the Personal Single or the Personal Multiple Workers. Dr. Von Holzen prefers to use General Multiple Workers. This creates one link, which can be sent to all participants. A new worker will be created each time the link is clicked. This means someone could complete the experiment multiple times using the same link. We want participants to be able to restart the experiment, should they encounter a problem. For example, in <a href="#code_verify">Step 4: Edit the code number verification</a> we ask participants to close the experiment and restart it if their code is incorrect. They can only do this if the link we sent them is that of a General Multiple Worker.</p>
+<p>To create the link for a General Multiple Worker, click the X next to this option to allow this worker type and then click “Get Link”:</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/enable_worker.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>This will display a window with the General Multiple Worker link. Copy this link, it is the link you will send to participants!</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/exp_link.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="for-your-consideration" class="section level1">
+<h1>For your consideration</h1>
+<p>After following this tutorial, you should now have the tools to create and run your own online study using Open Sesame, OSWeb, and JATOS. The experiment that was described in this tutorial was very simple, but much more complex studies are possible. When creating a new experiment, always check that it runs in Open Sesame as well as OSWeb before deploying it to JATOS.</p>
+<p>In the rest of the section, I highlight some important information you should keep in mind when creating studies using OSWeb and JATOS</p>
+<div id="how-subject-numbers-work-in-osweb" class="section level2">
+<h2>How subject numbers work in OSWeb</h2>
+<p>The subject number does not get entered when participants complete the study online. Instead, this number is chosen randomly from a set of possible subject numbers. This set of possible numbers can be changed in the OSWeb options by clicking Tools -&gt; OSWeb.</p>
+<p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/osweb_options.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>Setting subject numbers is extremely important if there are different counterbalancing measures. In the tutorial experiment, the correct key for word/nonwords is counterbalanced depending on whether the subject number is even or odd (inline_javascript “counterbalance”). With the possible subject numbers 0 and 1, we will have an equal distribution between these two counterbalancing options. If more options are added, more possible subject numbers need to be available.</p>
+</div>
+<div id="supported-browsers" class="section level2">
+<h2>Supported browsers</h2>
+<p>Not all browsers will run OSWeb Experiments. When sending the study link to participants, inform them of the supportd browsers and their versions. A current list can be found <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#supported-browsers">here</a>.</p>
+</div>
+<div id="ethics-and-consent" class="section level2">
+<h2>Ethics and consent</h2>
+<p>Testing participants online gives experimenters freedom to find participants anywhere, but also provides challenges for ensuring their data stays private. It is also important that participants are given enough information about the experiment in advance that they can an informed consent to participate. To ensure this, you could include a series of sketchpads at the beginning of your experiment, which give instructions for participation but also ethically informs participants of their rights and risks. If you are working with Dr. Von Holzen, you can find example wording in the Confluence <a href="https://confluence.tu-dortmund.de/display/LH/Labor-Handbuch">DaF/DaZ Labor-Handbuch</a> under the menu Studien-&gt; Aktuelle under the experiment “Foreign Speech Segmentation (online study)” -&gt; Zur konkreten Studie. Information about the Ethikantrag and wording for informed consent are found under “Ethikantrag”.</p>
+<p>You may also want to include an explanation of your experiment that your participants can read afterwards, which contains your contact information if they should have any questions. This is best added to the last component of your experiment, in the case of this tutorial that would be the background questionnaire.</p>
+</div>
+<div id="ensuring-participants-have-a-working-computer" class="section level2">
+<h2>Ensuring participants have a working computer</h2>
+<p>When we run participants in the lab, we are able to jump in and troubleshoot if any of the equipment fails. We also usually ask them to turn off their cell phones, and they certainly don’t open any browsers themselves on our laboratory computers. When participants complete experiments online, we are at the mercy of their personal computers and attention span. When designing your experiment, think about any checks you would like to have in place to ensure that your participants are completing the experiment properly. Some suggestions:</p>
+<ul>
+<li>Including a speaker check. Play a word and ask participants to indicate which word they heard by pressing the correct button.</li>
+<li>Ask participants to close all external browser and turn their phone on silent before participating.</li>
+<li>Including comprehension check questions to ensure participants are paying attention and not just clicking through to the end.</li>
+</ul>
+</div>
+</div>
+<div id="if-you-get-stuck" class="section level1">
+<h1>If you get stuck</h1>
+<p>If you run into trouble, you can find a completed, working version of this experiment that is ready to be tested in a browser <a href="Tutorials/Lexical_Decision_OSWeb/Lexical%20Decision%20OSWeb.zip">here</a> (<a href="#test_OSWeb2">Step 5: Test our experiment using OSWeb</a>). Download and unzip the file. If “Lexical Decision OSWeb.osexp” works and you are able to run the experiment, then you have made a mistake in your editing of the experiment. Go back and work through this tutorial again, following the steps closely. If you are unable to run the experiment, then this is more tricky to solve. Perhaps you aren’t using a <a href="(https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#supported-browsers)">supported browser</a> or your installation was corrupt ( <a href="https://osdoc.cogsci.nl/3.3/download/">Download Open Sesame</a>). When something doesn’t work right, Open Sesame will also give information about the error and where it is occuring. Use this information to track down a solution. OSWeb also has <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#debugging">debugging suggestions</a>.</p>
+<p>If you’re having a hard time figuring out the answer to your question, try typing in keywords to the <a href="https://forum.cogsci.nl/categories/osweb">OSWeb Forum</a> or the <a href="https://forum.cogsci.nl/categories/opensesame">Open Sesame Forum</a>. Often, someone else has had your problem previously and the way to solve it has been documented.</p>
+<p>Sometimes, though, you won’t be able to find the answer to your question in the Forums. Finding a solution may be frustrating at first, but try reformulating [your question keywords]. I promise, you’ll get better at this with time, but it does take practice.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

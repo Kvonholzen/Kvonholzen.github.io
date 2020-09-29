@@ -13,15 +13,13 @@
 
 <title>Getting Started with Open Sesame</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -251,69 +249,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -321,16 +256,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -377,6 +302,9 @@ div.tocify {
       <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
     </li>
     <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical Decision Task (online)</a>
+    </li>
+    <li>
       <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
     </li>
     <li class="dropdown-header">Audio Stimuli Preparation</li>
@@ -412,28 +340,49 @@ div.tocify {
 
 </div>
 
+<div id="TOC">
+<ul>
+<li><a href="#step-1-download-open-sesame">Step 1: Download Open Sesame</a></li>
+<li><a href="#step-2-complete-the-beginner-tutorial">Step 2: Complete the Beginner Tutorial</a></li>
+<li><a href="#step-3-complete-the-intermediate-tutorial">Step 3: Complete the Intermediate Tutorial</a></li>
+<li><a href="#step-4-what-to-do-when-you-get-stuck">Step 4: What to do when you get stuck</a></li>
+</ul>
+</div>
 
 <p><em>In this section, we will open Open Sesame and create our first experiment following the online beginner tutorial.</em></p>
-<div id="step-1-download-open-sesame" class="section level1">
-<h1>Step 1: Download Open Sesame</h1>
-<p><a href="https://osdoc.cogsci.nl/3.2/download/">Download the latest version of Open Sesame</a></p>
+<div id="step-1-download-open-sesame" class="section level2">
+<h2>Step 1: Download Open Sesame</h2>
+<p><a href="https://osdoc.cogsci.nl/3.3/download/">Download Open Sesame Version 3.3</a></p>
 <ul>
 <li>If you are working on a laboratory laptop, Open Sesame should already be installed</li>
 <li>If you are working on your personal computer, you can work on this tutorial while at home. You can also create your experiment on your own person computer. When you are ready and would like to test participants, you can then put your experiment on a laboratory laptop.</li>
+<li>Make sure you download version 3.3. Some commands/options/buttons differ by version.</li>
+<li>You can choose your language for Open Sesame, including German. This tutorial, and therefore all the descriptions, are given in English. It is therefore recommended to use the English language for Open Sesame</li>
+<li>This tutorial is written using a computer running Windows 10. If you are using a different Windows version or a Mac, there is a potential for discrepancies between the tutorial and what you see on your computer. In this case, you may have to search a bit longer in order to complete the steps, but the differences shouldn’t be too great.</li>
 </ul>
 </div>
-<div id="step-2-complete-the-beginner-tutorial" class="section level1">
-<h1>Step 2: Complete the Beginner Tutorial</h1>
-<p>To get yourself familiar with the Open Sesame program, complete the <a href="https://osdoc.cogsci.nl/3.2/tutorials/beginner/">Beginner Tutorial</a></p>
+<div id="step-2-complete-the-beginner-tutorial" class="section level2">
+<h2>Step 2: Complete the Beginner Tutorial</h2>
+<p>To get yourself familiar with the Open Sesame program, complete the <a href="https://osdoc.cogsci.nl/3.3/tutorials/beginner/">Beginner Tutorial</a>. This tutorial was created by the creator of Open Sesame and gives an excellent introduction to the software.</p>
+<p>Pay particular attention to <a href="https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-1-create-the-main-sequence">Step 1: Create the main sequence</a>. This step explains the layout of Open Sesame and some basics about how it works. Read this carefully, as this information will be used again and again in these tutorials.</p>
 <ul>
 <li>When you have finished creating your first Open Sesame experiment, run yourself as a participant. Give yourself the subject number “999”.</li>
 <li>When you are finished with the experiment, the corresponding log file should be saved in the same folder as where your Open Sesame Experiment is saved. If you gave your subject number as “999”, this log file should be called “subject-999”.</li>
 <li>If you are one of Dr. Von Holzen’s students and have been instructed to complete these tutorials, please email this log file to her: <a href="mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks">katie.vonholzen@tu-dortmund.de</a></li>
 </ul>
 </div>
-<div id="step-3-what-to-do-when-you-get-stuck" class="section level1">
-<h1>Step 3: What to do when you get stuck</h1>
-<p>Although these tutorials will hopefully answer a lot of your questions, new questions are certain to arise. The Open Sesame website has a lot of good resources that may help. I’ve tried to link to many of them in my explanations. You can get a quick overview by clicking on the dropdown menu “Manual” on the <a href="https://osdoc.cogsci.nl/3.2/">Open Sesame Website</a>. When something doesn’t work right, Open Sesame will also give information about the error and where it is occuring. Use this information to track down a solution.</p>
+<div id="step-3-complete-the-intermediate-tutorial" class="section level2">
+<h2>Step 3: Complete the Intermediate Tutorial</h2>
+<p>Complete the <a href="https://osdoc.cogsci.nl/3.3/tutorials/intermediate/">Intermediate Tutorial</a>. This tutorial was also created by the creator of Open Sesame. The Beginner Tutorial introduced you to creating experiments in Open Sesame. In the Intermediate Tutorial, you deepen this knowledge. This will help you flexibly create your own experiment in the future!</p>
+<ul>
+<li>When you have finished creating this Open Sesame experiment, run yourself as a participant. Give yourself the subject number “999”.</li>
+<li>When you are finished with the experiment, the corresponding log file should be saved in the same folder as where your Open Sesame Experiment is saved. If you gave your subject number as “999”, this log file should be called “subject-999”.</li>
+<li>If you are one of Dr. Von Holzen’s students and have been instructed to complete these tutorials, please email this log file to her: <a href="mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks">katie.vonholzen@tu-dortmund.de</a></li>
+</ul>
+</div>
+<div id="step-4-what-to-do-when-you-get-stuck" class="section level2">
+<h2>Step 4: What to do when you get stuck</h2>
+<p>Although these tutorials will hopefully answer a lot of your questions, new questions are certain to arise. The Open Sesame website has a lot of good resources that may help. I’ve tried to link to many of them in my explanations. You can get a quick overview by clicking on the dropdown menu “Manual” on the <a href="https://osdoc.cogsci.nl/3.3/">Open Sesame Website</a>.</p>
 <p>If you’re having a hard time figuring out the answer to your question, try typing in keywords to the <a href="https://forum.cogsci.nl/categories/opensesame">Open Sesame Forum</a>. Often, someone else has had your problem previously and the way to solve it has been documented.</p>
 <p>Sometimes, though, you won’t be able to find the answer to your question in the Open Sesame Forum. If it concerns the inline script, you may be able to try your luck by searching for python solutions. Search for “python” + “[your question keywords]” and potential solutions will come up. Finding a solution may be frustrating at first, but try reformulating [your question keywords]. I promise, you’ll get better at this with time, but it does take practice.</p>
 <p>If you find a mistake or issue in one of my tutorials, or have a suggestion, feel free to email me at <a href="mailto:katie.vonholzen@tu-dortmund.de?subject=Hyperlinks">katie.vonholzen@tu-dortmund.de</a>.</p>
@@ -441,8 +390,6 @@ div.tocify {
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -475,32 +422,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

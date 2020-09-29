@@ -36,12 +36,12 @@ Dependent variable(s)
 
 ## Step 1: Load the Lexical decision experiment pre-prepared by Open Sesame
 
-When you start Open Sesame, click on "Tools > Example Experiments". This will bring up a menu of all the available example experiments in Open Sesame. Scroll down and click on "Lexical-decision task". This will load the Lexical decision experiment. Save this experiment in your tutorial folder by clicking "File > Save as". Its good practice to regularly save your experiment so that you don't lose your progress!
+When you start Open Sesame, click on "Tools > Example Experiments". This will bring up a menu of all the available example experiments in Open Sesame. Scroll down and click on "Lexical-decision task". This will load the example Lexical decision experiment. Save this experiment in your tutorial folder by clicking "File > Save as". Its good practice to regularly save your experiment so that you don't lose your progress!
 
 
 ## Step 2: Run yourself in the Lexical decision experiment and think about its design
 
-Run yourself in the Experiment by clicking the big green triangle. Remember the [instructions from the Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/#step-13-run-the-experiment). Give yourself the subject number "999". You should get in the habit of using this subject number when testing out your experiment, so that you don't actually erase data for actual participants in the future! Since our participant numbers for a particular study are not likely to approach 1000, you will always know that you can write over this participant file. It will be saved in the same folder that you saved the experiment in.
+Run yourself in the Experiment by clicking the big green triangle. Remember the [instructions from the Beginner Tutorial](https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-13-run-the-experiment) which describe how to run yourself in Open Sesame Experiments. Give yourself the subject number "999". You should get in the habit of using this subject number when testing out your experiment, so that you don't actually erase data for actual participants in the future! Since our participant numbers for a particular study are not likely to approach 1000, you will always know that you can write over this participant file. It will be saved in the same folder that you saved the experiment in.
 
 While running yourself in this experiment, think about the aspects of this experiment that you might want to use in your own experiment:
 
@@ -50,13 +50,13 @@ While running yourself in this experiment, think about the aspects of this exper
 * Feedback: Red or green color indicating accuracy after each keypress
     + We'll focus on this aspect more below
 * Feedback: Summary of response accuracy and response time at the end of each block.
-    + This was described in [Step 10 of the Beginner Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/beginner/#step-10-draw-the-feedback-item)
+    + This was described in [Step 10 of the Beginner Tutorial](https://osdoc.cogsci.nl/3.3/tutorials/beginner/#step-10-draw-the-feedback-item)
 * Counterbalancing word/nonword response across subjects
     + We'll focus on this aspect more below
 
 ## Step 3: Familiarize yourself with the new "counterbalance" inline script
 
-Open and inspect the "counterbalance" inline script. If you ran yourself with subject number 999, an odd number, the program should have told you to press “z” when the string of letters was a word, and “m” when it was a nonword. If your subject number was even, then the assignment of keys would have been reversed. This is exactly what is written in the code, it tells Open Sesame to assign the button for word responses to "z" and for nonword responses to "m" for odd numbered subjects, and in all other cases (even numbered subjects) to assign the reverse. This is a **between-subjects** manipulation, because it counterbalanced word/nonword button assignments across subjects. Inline scripts can also be used to accomplish within-subjects manipulations. When we start to edit this inline script later, we'll change this code. This step is also described in [Step 3 of the Advanced Tutorial](https://osdoc.cogsci.nl/3.2/tutorials/advanced/#step-3-implement-counterbalancing)
+Open and inspect the "counterbalance" inline script. If you ran yourself with subject number 999, an odd number, the program should have told you to press “z” when the string of letters was a word, and “m” when it was a nonword. If your subject number was even, then the assignment of keys would have been reversed. This is exactly what is written in the code, it tells Open Sesame to assign the button for word responses to "z" and for nonword responses to "m" for odd numbered subjects, and in all other cases (even numbered subjects) to assign the reverse. This is a **between-subjects** manipulation, because it counterbalanced word/nonword button assignments across subjects. Inline scripts can also be used to accomplish within-subjects manipulations. When we start to edit this inline script later, we'll change this code. This step is also described in [Step 3 of the Advanced Tutorial](https://osdoc.cogsci.nl/3.3/tutorials/advanced/#step-3-implement-counterbalancing)
 
 ```{python, eval = FALSE}
 
@@ -72,7 +72,7 @@ else:
 
 ## Step 4: See how variables from the inline script are used in Sketchpad objects
 
-We can next see how this information is used in the rest of the experiment, starting with Sketchpad objects. Open and inspect the sketchpad “instructions. Here we can see how the information given in the "counterbalancing" inline script is translated into the instructions given to the participant. For example, the "var.word_response" given in the "counterbalance" inline script (here "z") is then printed out anywhere that [word_response] is given (see picture below). You can look at the assignment of variables by opening the [Variable inspector](https://osdoc.cogsci.nl/3.2/manual/variables/#the-variable-inspector).
+We can next see how this information is used in the rest of the experiment, starting with Sketchpad objects. Open and inspect the sketchpad “instructions. Here we can see how the information given in the "counterbalancing" inline script is translated into the instructions given to the participant. For example, the "var.word_response" given in the "counterbalance" inline script (here "z") is then printed out anywhere that [word_response] is given (see picture below). You can look at the assignment of variables by opening the [Variable inspector](https://osdoc.cogsci.nl/3.3/manual/variables/#the-variable-inspector).
 
 ```{r Instructions_image, echo= FALSE, out.width = "50%", fig.align="center"}
 
@@ -90,7 +90,7 @@ Open and inspect the "block_loop" loop. This loop gives important information ab
 
 As you may recall while completing the experiment yourself, if you answered incorrectly, the fixation turned red and if you answered correctly, the fixation turned green. Recalling the “block_loop”, the correct_response is defined by which category (word, nonword) the item belongs to. Since the correct keypress (“m” or “z”) is counterbalanced across participants, the correct_response is defined using [word_response] and [nonword_response]. If the variable [correct_response] is defined in Open Sesame, it can be also called using [correct].
 
-Open the sequence "trial_sequence". Here, the column "Run if" is used to define whether the red_fix or green_fix sketchpads should be shown. If the response is correct ([correct] = 1) then the green_fix will be shown. If the response is incorrect ([correct] = 0) then the red_fix will be shown. You can read more about per-trial feedback in [Step 8 of the Intermediate Tutorial](o	https://osdoc.cogsci.nl/3.2/tutorials/intermediate/#step-8-give-per-trial-feedback)
+Open the sequence "trial_sequence". Here, the column "Run if" is used to define whether the red_fix or green_fix sketchpads should be shown. If the response is correct ([correct] = 1) then the green_fix will be shown. If the response is incorrect ([correct] = 0) then the red_fix will be shown. You can read more about per-trial feedback in [Step 8 of the Intermediate Tutorial](o	https://osdoc.cogsci.nl/3.3/tutorials/intermediate/#step-8-give-per-trial-feedback)
 
 
 ```{r per_trial_feedback_image, echo= FALSE, out.width = "50%", fig.align="center"}
@@ -103,6 +103,8 @@ knitr::include_graphics("Tutorials/Lexical_Decision/pictures/Per_trial_feedback.
 # Edit the Lexical Decision experiment: Create an experimental Loop and pseudorandomize the trials
 
 *In this section, we will use an inline script to create and pseudorandomize the information in a loop. We're going to make the experiment longer and then set some pseudorandomization constraints, specifically that the same target item (i.e. apple) isn’t presented within 5 trials of one another and that no more than 3 trials from the same category (i.e. word) will be presented in a row. *
+
+**If you are creating an experiment to be run online using OSWeb, you will be unable to include the features given in this section in your experiment. A list of supported functions can be found [here](https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#supported-functionality). To read more about running Open Sesame Experiment online using OSWeb, check out this [link](https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/) or complete the Tutorial [A Lexical Decision Experiment in OSWeb (Open Sesame online)](Tutorials_Open_Sesame_Lexical_decision_OSWeb.html) **
 
 ## Step 1: Unlink the "block_loop" loops
 
@@ -174,11 +176,11 @@ word_response
 
 ```
 
-If this worked correctly, congratulations, you've just edited python code! If you want to learn more about editing python code and inline scripts in Open Sesame, I recommend checking out their [Python Tutorial](https://osdoc.cogsci.nl/3.2/manual/python/about/).
+If this worked correctly, congratulations, you've just edited python code! If you want to learn more about editing python code and inline scripts in Open Sesame, I recommend checking out their [Python Tutorial](https://osdoc.cogsci.nl/3.3/manual/python/about/).
 
 ## Step 5: Recreate the "block_loop_1" loop using DataMatrix
 
-In the "counterbalance" inline script, navigate from the "Prepare" to the "Run" tab. Where we put our code here has to do with the [Prepare-run strategy](https://osdoc.cogsci.nl/3.2/manual/prepare-run/) of Open Sesame.
+In the "counterbalance" inline script, navigate from the "Prepare" to the "Run" tab. Where we put our code here has to do with the [Prepare-run strategy](https://osdoc.cogsci.nl/3.3/manual/prepare-run/) of Open Sesame.
 
 ```{r prepare_run_image, echo= FALSE, out.width = "50%", fig.align="center"}
 
@@ -391,7 +393,7 @@ Just as in the Beginner Tutorial and the previous running of this experiment, re
 
 ## Step 1: Inspect the log file
 
-After running the experiment in Step 13, open the subject log file that is created. If you used subject number "999", this file should be called "subject-999.csv". The creators of Open Sesame recommend logging all variables with logger items. This is the default in Open Sesame. I personally find this log output to be very abstruse. For this reason, I often create my own log file, in addition to the default log file created by Open Sesame. Read more about logger items [here](https://osdoc.cogsci.nl/3.2/manual/logging/).
+After running the experiment in Step 13, open the subject log file that is created. If you used subject number "999", this file should be called "subject-999.csv". The creators of Open Sesame recommend logging all variables with logger items. This is the default in Open Sesame. I personally find this log output to be very abstruse. For this reason, I often create my own log file, in addition to the default log file created by Open Sesame. Read more about logger items [here](https://osdoc.cogsci.nl/3.3/manual/logging/).
 
 ## Step 2: Add linked logger items
 
@@ -503,7 +505,7 @@ In addition, we can use the logger file to make sure that our experiment is doin
 
 # If you get stuck
 
-If you run into trouble, you can find a completed, working version of this experiment [here](Tutorials/Lexical_Decision/Lexicaldecision_finished.zip). Download and unzip the file. If "Lexicaldecision_finished.osexp" works and you are able to run the experiment, then you have made a mistake in your editing of the experiment. Go back and work through this tutorial again, following the steps closely. If you are unable to run the experiment, then this is more tricky to solve. Perhaps you don't have a module installed correctly ([Installing packages, plugins, and extensions](https://osdoc.cogsci.nl/3.2/manual/environment/)) or your installation was corrupt ([Download Open Sesame](https://osdoc.cogsci.nl/3.2/download/)). When something doesn't work right, Open Sesame will also give information about the error and where it is occuring. Use this information to track down a solution.
+If you run into trouble, you can find a completed, working version of this experiment [here](Tutorials/Lexical_Decision/Lexicaldecision_finished.zip). Download and unzip the file. If "Lexicaldecision_finished.osexp" works and you are able to run the experiment, then you have made a mistake in your editing of the experiment. Go back and work through this tutorial again, following the steps closely. If you are unable to run the experiment, then this is more tricky to solve. Perhaps you don't have a module installed correctly ([Installing packages, plugins, and extensions](https://osdoc.cogsci.nl/3.3/manual/environment/)) or your installation was corrupt ([Download Open Sesame](https://osdoc.cogsci.nl/3.3/download/)). When something doesn't work right, Open Sesame will also give information about the error and where it is occuring. Use this information to track down a solution.
 
 If you're having a hard time figuring out the answer to your question, try typing in keywords to the [Open Sesame Forum](https://forum.cogsci.nl/categories/opensesame). Often, someone else has had your problem previously and the way to solve it has been documented.
 

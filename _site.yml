@@ -19,6 +19,8 @@ navbar:
           href: Tutorials_Open_Sesame_start.html
         - text: "Lexical Decision Task"
           href: Tutorials_Open_Sesame_Lexical_decision.html 
+        - text: "Lexical Decision Task (online)"
+          href: Tutorials_Open_Sesame_Lexical_decision_OSWeb.html 
         - text: "Word Spotting Task"
           href: Tutorials_Open_Sesame_Word_Spotting.html
         - text: "Audio Stimuli Preparation"

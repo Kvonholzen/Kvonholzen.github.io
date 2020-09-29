@@ -13,6 +13,7 @@
 
 <title>Segmenting and extracting audio stimuli in Praat</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -377,6 +378,9 @@ div.tocify {
       <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
     </li>
     <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical Decision Task (online)</a>
+    </li>
+    <li>
       <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
     </li>
     <li class="dropdown-header">Audio Stimuli Preparation</li>
@@ -511,7 +515,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
