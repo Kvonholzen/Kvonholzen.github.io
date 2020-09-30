@@ -418,7 +418,7 @@ div.tocify {
 
 
 <p><em>Steps 1-5 in this tutorial are identical to the <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Tutorial</a>. If you have already completed that tutorial, you can skip ahead to the section <a href="#OSWeb_edit">Edit the Lexical Decision experiment for OSWeb</a>.</em></p>
-<div id="explore-the-open-sesame-lexical-decision-experiment" class="section level1">
+<div id="explore" class="section level1">
 <h1>Explore the Open Sesame Lexical decision experiment</h1>
 <p><em>In this section, we will open and inspect the Open Sesame Lexical decision experiment of the tutorial. You will learn about Open Sesame variables and inline scripting.</em></p>
 <p><strong>Overview of the Experiment</strong></p>
@@ -434,7 +434,7 @@ div.tocify {
 <li>Reaction time of keypress (in milliseconds)</li>
 <li>Accuracy of keypress (correct, incorrect)</li>
 </ul>
-<div id="step-1-load-the-lexical-decision-experiment-pre-prepared-by-open-sesame" class="section level2">
+<div id="load" class="section level2">
 <h2>Step 1: Load the Lexical decision experiment pre-prepared by Open Sesame</h2>
 <p>When you start Open Sesame, click on “Tools &gt; Example Experiments”. This will bring up a menu of all the available example experiments in Open Sesame. Scroll down and click on “Lexical-decision task”. This will load the example Lexical decision experiment. Save this experiment in your tutorial folder by clicking “File &gt; Save as”. Its good practice to regularly save your experiment so that you don’t lose your progress!</p>
 </div>
@@ -490,6 +490,7 @@ else:
 <p><em>In this section, we will adapt the Lexical Decision Task experiment so that it is ready to be tested online using OSWeb and JATOS. Before you begin this section, please read through <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/">the documentation on OSWeb</a>. Not all regular Open Sesame functions and features are available when using OSWeb. A list of supported functions can be found <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/#supported-functionality">here</a>.</em></p>
 <div id="step-1-create-edit-the-counterbalance-inline-script" class="section level2">
 <h2>Step 1: Create Edit the counterbalance inline script</h2>
+<p>If you did not just complete Steps 1-5 of section <a href="#explore">Explore the Open Sesame Lexical decision experiment</a>, please load the Lexical decision example experiment following <a href="#load">Step 1: Load the Lexical decision experiment pre-prepared by Open Sesame</a>.</p>
 <p>One of the biggest differences between a regular Open Sesame Experiment and an OSWeb experiment is that the former is based on python whil the latter is based on javascript. I (Katie Von Holzen) am only a beginner in python scripting and have barely written one line of independent code in javascript. That being said, though some <a href="https://forum.cogsci.nl/categories/osweb">OSWeb Forum</a> sleuthing, I’ve found some nifty code that can help customize our experiments. The most important difference for us is that inline_script objects no longer work. Instead, we need to use inline_javascript objects, which are based on javascript. Drag one to your Overview area next to your old counterbalance inline_script and delete the old counterbalance inline_script.</p>
 <p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/inline_javascript.png" width="30%" style="display: block; margin: auto;" /></p>
 <p>Since we no longer have a counterbalance script, we should make a new one. Rename this inline_javascript “counterbalance” and in the Run tab place the following code:</p>
