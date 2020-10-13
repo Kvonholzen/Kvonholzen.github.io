@@ -159,34 +159,43 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 
 *Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
 
-<br>Donnerstag, 24. September
-<br>13-15 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/i9aosdKUN7uqn8OD)
-
-<br>Donnerstag, 1. Oktober
-<br>9-11 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/OA9HLOKM35TWdWua)
-
-
 <br>Dienstag, 13. Oktober
 <br>9-11 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/LLCLnmUNHxwApkRk)
 
+**Sprechstunden November 2020**
 
-```{r admin_Sept_24, include=FALSE}
+<br>Mittwoch, 4. November
+<br>Mittwoch, 11. November
+<br>Mittwoch, 18. November
+<br>Mittwoch, 25. November
+<br>11-13 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/YRj1Vg3ohacF2ZrZ)
 
-#https://terminplaner4.dfn.de/i9aosdKUN7uqn8ODvnZG2VyE/admin
+**Sprechstunden Dezember 2020**
 
-```
+<br>Mittwoch, 2. Dezember
+<br>Mittwoch, 9. Dezember
+<br>Mittwoch, 16. Dezember
+<br>11-13 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/T3pr9jwxhlfmErfE)
 
-```{r admin_Okt_1, include=FALSE}
-
-#https://terminplaner4.dfn.de/OA9HLOKM35TWdWuaxnoURaSk/admin
-
-```
 
 ```{r admin_Okt_13, include=FALSE}
 
 #https://terminplaner4.dfn.de/LLCLnmUNHxwApkRku7jmBO3s/admin
+
+```
+
+```{r admin_Nov_2020, include=FALSE}
+
+#https://terminplaner4.dfn.de/YRj1Vg3ohacF2ZrZrNUTAtYj/admin
+
+```
+
+
+```{r admin_Dec_2020, include=FALSE}
+
+#https://terminplaner4.dfn.de/T3pr9jwxhlfmErfEe28fvb9i/admin
 
 ```
