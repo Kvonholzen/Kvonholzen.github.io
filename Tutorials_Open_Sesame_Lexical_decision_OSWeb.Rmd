@@ -207,7 +207,7 @@ knitr::include_graphics("Tutorials/Lexical_Decision_OSWeb/pictures/code_number_n
 
 ```
 
-In the code_loop object, change Break if from "never" to "[response] = return or [response] = enter". This will call the loop until the participant presses the Enter/Return button. Also, change Repeat from "each cycle 1.00 x" to "[response] = return or [response] = enter".
+In the code_loop object, change Break if from "never" to "[response] = return or [response] = enter". This will call the loop until the participant presses the Enter/Return button. Also, change Repeat from "each cycle 1.00 x" to "each cycle 200.00 x”,". This sets up how many times a code response from the participant will be searched for (up to 200 times) until return/enter is pressed.
 
 In the code_number_input keyboard_response object, add the following to Allowed responses: 1;2;3;4;5;6;7;8;9;0;backspace;return.
 

@@ -541,7 +541,7 @@ vars.response = &#39;&#39;
 <h2>Step 2: Create a loop to capture the subject code</h2>
 <p>Drag a loop object below the constants inline_javascript object. Drag a sequence object inside this loop object. Drag a sketchpad, keyboard_response, and inline_javascript object into this sequence. Add a feedback item after (but not inside!) the sequence item. Rename all of these new objects such that they match this picture:</p>
 <p><img src="Tutorials/Lexical_Decision_OSWeb/pictures/code_number_names.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>In the code_loop object, change Break if from “never” to “[response] = return or [response] = enter”. This will call the loop until the participant presses the Enter/Return button. Also, change Repeat from “each cycle 1.00 x” to “[response] = return or [response] = enter”.</p>
+<p>In the code_loop object, change Break if from “never” to “[response] = return or [response] = enter”. This will call the loop until the participant presses the Enter/Return button. Also, change Repeat from “each cycle 1.00 x” to “each cycle 200.00 x”,". This sets up how many times a code response from the participant will be searched for (up to 200 times) until return/enter is pressed.</p>
 <p>In the code_number_input keyboard_response object, add the following to Allowed responses: 1;2;3;4;5;6;7;8;9;0;backspace;return.</p>
 <p>In the process_code_number_input inline_javascript object, paste the following code into the Run tab:</p>
 <pre class="js"><code>
