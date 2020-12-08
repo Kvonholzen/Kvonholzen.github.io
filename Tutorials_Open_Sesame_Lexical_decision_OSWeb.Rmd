@@ -226,7 +226,7 @@ if (vars.response in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
 
 ## Step 3: Edit the instructions for the code number
 
-We next edit the sketchpad which will both explain to the participants how to create their own code and show them what they input live, allowing them to confirm that their code is correct. In the show_code_number sketchpad, add the following text (either in English or German). You may have to edit this text to make sure that each line fits on the sketchpad:
+We next edit the sketchpad which will both explain to the participants how to create their own code and show them what they input live, allowing them to confirm that their code is correct. In the show_code_number sketchpad, change the Duration from "keypress" to 0. Then, add the following text (either in English or German). You may have to edit this text to make sure that each line fits on the sketchpad:
 
 **German**
 
