@@ -160,18 +160,9 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 *Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
 <br>
 <br>
-**Sprechstunden November 2020**
-<br>Mittwoch, 4. November
-<br>Mittwoch, 11. November
-<br>Mittwoch, 18. November
-<br>Mittwoch, 25. November
-<br>
-<br>jeweils zwischen 11-13 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/YRj1Vg3ohacF2ZrZ)
 
-<br>
-<br>
 **Sprechstunden Dezember 2020**
+
 <br>Mittwoch, 2. Dezember
 <br>Mittwoch, 9. Dezember
 <br>Mittwoch, 16. Dezember
@@ -179,22 +170,57 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>jeweils zwischen 11-13 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/T3pr9jwxhlfmErfE)
 
+<br>
+<br>
+**Sprechstunden Januar 2021**
+<br>Mittwoch, 6. Januar
+<br>Mittwoch, 13. Januar
+<br>Mittwoch, 20. Januar
+<br>Mittwoch, 27. Januar
+<br>
+<br>jeweils zwischen 11-13 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/hE5D9evDU3rOuO8r)
 
-```{r admin_Okt_13, include=FALSE}
+<br>
+<br>
+**Sprechstunden Februar 2021**
+<br>Mittwoch, 3. Februar
+<br>Mittwoch, 10. Februar
+<br>Mittwoch, 17. Februar
+<br>Mittwoch, 24. Februar
+<br>
+<br>jeweils zwischen 11-13 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/xGrsNi3NhUEWJhyh)
 
-#https://terminplaner4.dfn.de/LLCLnmUNHxwApkRku7jmBO3s/admin
+<br>
+<br>
+**Sprechstunden März 2021**
+<br>Mittwoch, 17. März
+<br>
+<br>zwischen 11-13 Uhr
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/hjzuAzLQat7N83Oa)
+
+```{r admin_Dec_2020, include=FALSE}
+
+#https://terminplaner4.dfn.de/T3pr9jwxhlfmErfEe28fvb9i/admin
 
 ```
 
-```{r admin_Nov_2020, include=FALSE}
+```{r admin_Jan, include=FALSE}
+
+#https://terminplaner4.dfn.de/hE5D9evDU3rOuO8rzvThr8z2/admin
+
+```
+
+```{r admin_Feb, include=FALSE}
 
 #https://terminplaner4.dfn.de/YRj1Vg3ohacF2ZrZrNUTAtYj/admin
 
 ```
 
 
-```{r admin_Dec_2020, include=FALSE}
+```{r admin_März, include=FALSE}
 
-#https://terminplaner4.dfn.de/T3pr9jwxhlfmErfEe28fvb9i/admin
+#https://terminplaner4.dfn.de/hjzuAzLQat7N83OamwBfuvjV/admin
 
 ```
