@@ -6,6 +6,7 @@ address: Lehrstuhl Linguistik des Deutschen, Technische Universität Dortmund
 www: Kvonholzen.github.io
 email: katie.vonholzen@tu-dortmund.de
 github: Kvonholzen
+twitter: KatieVonHolzen
 date: "`r format(Sys.time(), '%B %Y')`"
 profilepic: katie_small.png
 output: vitae::hyndman
@@ -18,6 +19,11 @@ library(scholar)
 library(papaja)
 library(tibble)
 library(stringr)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
 ```
 
 
@@ -30,6 +36,8 @@ tribble(
   2009, "B.S. Psychology, summa cum laude", "", "University of Wisconsin - Green Bay, USA"
 ) %>% 
   detailed_entries(Degree, Year, blank1, Institution)
+
+
 ```
 
 # Employment
@@ -66,9 +74,9 @@ tribble(
 ## Published peer-reviewed papers
 
 ```{r}
-bibliography_entries("Publications.bib") %>%
-  filter(bibtype %in% "Article" & !(year %in% "accepted")) %>%
-  arrange(desc(year), surnames)
+bib <- bibliography_entries("Publications.bib")%>%
+   filter(type %in% "article-journal") %>%
+   arrange(issued)
 
 ```
 
@@ -76,8 +84,8 @@ bibliography_entries("Publications.bib") %>%
 
 ```{r}
 bibliography_entries("Publications.bib") %>%
-  filter(bibtype %in% "InCollection") %>%
-  arrange(desc(year), surnames)
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
 
 ```
 

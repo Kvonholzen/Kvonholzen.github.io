@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.16)  17 NOV 2020 14:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.16)  4 JAN 2021 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -936,6 +936,13 @@ ut line 255.
 esometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
+LaTeX Font Info:    Trying to load font information for U+fontawesomethree on i
+nput line 255.
+
+(c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/ufontaw
+esomethree.fd
+File: ufontawesomethree.fd 2016/05/22 Font definitions for U/fontawesomethree.
+)
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 255--256
 [][][][] 
  []
@@ -945,7 +952,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 261.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 313.
+(Font)              scaled to size 10.0pt on input line 314.
 [1
 
 {c:/Users/user/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex
@@ -969,26 +976,27 @@ Package logreq Info: Writing requests to 'K_Von_Holzen_CV.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20829 strings out of 481466
- 353101 string characters out of 5920252
- 1082755 words of memory out of 5000000
- 37113 multiletter control sequences out of 15000+600000
- 604578 words of font info for 55 fonts, out of 8000000 for 9000
+ 20839 strings out of 481466
+ 353455 string characters out of 5920252
+ 1082807 words of memory out of 5000000
+ 37119 multiletter control sequences out of 15000+600000
+ 604756 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 80i,19n,85p,1936b,1385s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,19n,85p,1936b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/carlito/crl
 t_z7vml3.enc}{c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/
-fontawesome/fontawesometwo.enc}<c:/Users/user/AppData/Roaming/TinyTeX/texmf-dis
-t/fonts/type1/typoland/carlito/Carlito-Bold.pfb><c:/Users/user/AppData/Roaming/
-TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb><c:/Users/us
-er/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb>
-<c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fontawesom
-e/FontAwesome.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
-/urw/zapfding/uzdr.pfb>
-Output written on K_Von_Holzen_CV.pdf (7 pages, 121026 bytes).
+fontawesome/fontawesomethree.enc}{c:/Users/user/AppData/Roaming/TinyTeX/texmf-d
+ist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}<c:/Users/user/AppData/Roami
+ng/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.pfb><c:/Users/u
+ser/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Ita
+lic.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/
+carlito/Carlito.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/typ
+e1/public/fontawesome/FontAwesome.pfb><c:/Users/user/AppData/Roaming/TinyTeX/te
+xmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on K_Von_Holzen_CV.pdf (7 pages, 121426 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
+ 400 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
  161 named destinations out of 1000 (max. 500000)
  377 words of extra memory for PDF output out of 10000 (max. 10000000)
 
