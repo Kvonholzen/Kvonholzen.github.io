@@ -30,7 +30,7 @@ Starting with the course "Should I Buy That? Comparing Media Claims with Scienti
  * R: Results
  * I: Inferences
  
-and teaches students how to identify the questions being asked in the scientific article as well as how those questions are answered and the consequences of those answers. I've although used this approach in a seminar class on bilingualism taught at the Master level at the TU Dortmund. In this class, I found it particularly helpful in preparing students to summarize existing research and create an approach to answering their own research questions (Forschungskonzept).
+and teaches students how to identify the questions being asked in the scientific article as well as how those questions are answered and the consequences of those answers. I've since used this approach in a seminar class on bilingualism taught at the Master level at the TU Dortmund. In this class, I found it particularly helpful in preparing students to summarize existing research and create an approach to answering their own research questions (Forschungskonzept).
 
 ----
 
@@ -153,7 +153,7 @@ Some resources from these tutorials can be found under the [Tutorials](Tutorials
 ## Sprechstunden (Office Hours)
 
 Während der Vorlesungszeit sind meine Sprechstunden normalerweise :
-Dienstags von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
+Mittwochs von 11 bis 13 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
 
 Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online statt. Bitte nutzen Sie die Terminplaner Links unten um ein Termin auszumachen. Zu der ausgewählten Zeit, betreten Sie dann bitte mein Virtualen Meeting-Raum: https://tu-dortmund.webex.com/meet/katie.vonholzen.
 
@@ -161,17 +161,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 <br>
 
-**Sprechstunden Dezember 2020**
-
-<br>Mittwoch, 2. Dezember
-<br>Mittwoch, 9. Dezember
-<br>Mittwoch, 16. Dezember
-<br>
-<br>jeweils zwischen 11-13 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/T3pr9jwxhlfmErfE)
-
-<br>
-<br>
 **Sprechstunden Januar 2021**
 <br>Mittwoch, 6. Januar
 <br>Mittwoch, 13. Januar
@@ -199,12 +188,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 <br>zwischen 11-13 Uhr
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/hjzuAzLQat7N83Oa)
-
-```{r admin_Dec_2020, include=FALSE}
-
-#https://terminplaner4.dfn.de/T3pr9jwxhlfmErfEe28fvb9i/admin
-
-```
 
 ```{r admin_Jan, include=FALSE}
 
