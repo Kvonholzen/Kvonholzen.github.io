@@ -74,9 +74,9 @@ tribble(
 ## Published peer-reviewed papers
 
 ```{r}
-bib <- bibliography_entries("Publications.bib")%>%
-   filter(type %in% "article-journal") %>%
-   arrange(issued)
+bibliography_entries("Publications.bib")%>%
+   filter(bibtype %in% "Article") %>%
+  arrange(desc(year), author)
 
 ```
 
@@ -84,8 +84,8 @@ bib <- bibliography_entries("Publications.bib")%>%
 
 ```{r}
 bibliography_entries("Publications.bib") %>%
-  filter(type %in% "chapter") %>%
-  arrange(desc(issued), author)
+  filter(bibtype %in% "InCollection") %>%
+  arrange(desc(year), author)
 
 ```
 
@@ -250,6 +250,27 @@ tribble(
 
 ## Students Mentored
 
+### TU Dortmund University
+
+*Child Foreign Speech Processing*
+
+|        Doctoral Thesis, Marie-Christin Flohr, in progress
+
+
+*Von Boomer zum Digital Native: Wie der Einfluss fremdsprachlicher Elemente der Jugendsprache in den sozialen Medien die Sprachverarbeitung beeinflusst* (From Boomer to Digital Native: How foreign language elements of German youth slang in social media influence language processing)
+
+|        Master Thesis, Franziska Schlage, in progress
+
+
+*The Difference in the Vocabulary Size of Children with and without Down Syndrome: A Meta-Analysis*
+
+|        Master Thesis, Judith Boveleth, 2020
+
+*Phonotaktische Segmentierung der L2 – Wie wirken L1-Merkmale deutscher Muttersprachler auf die Segmentierung des Sprachflusses und die Worterkennung in der L2 Englisch ein?.* (Phonotactic segmentation in the L2: How do L1 characteristics influence the segmentation and word recognition of the the L2 English speech stream in L1 German learners)
+
+|        Bachelor Thesis, Nina Schuster, 2020
+
+
 ### University of Maryland
 *A fast note about slow rate in IDS: Maternal speech rate to preverbal infants facilitates early language development*, 2018-2019  
 
@@ -380,6 +401,20 @@ tribble(
 # Service
 
 ## Institutional Service
+
+### TU Dortmund University
+
+```{r}
+library(tibble)
+tribble(
+  ~ Position, ~ Year,
+    "Committee Member in the founding of the Department for Language, Literature, and Culture", 2020,
+     "Executive Board Member of the Department for Language, Literature, and Culture", "2020-present",
+   "Manager of the Looking-While-Listening sub-project of ManyBabies-InHome", "2021-present"
+) %>% 
+  detailed_entries(Position, Year)
+
+```
 
 ### University of Maryland
 
