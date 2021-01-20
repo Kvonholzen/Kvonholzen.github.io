@@ -46,7 +46,7 @@ tribble(
 library(tibble)
 tribble(
   ~ Position, ~ Year, ~ Institution, ~ Supervisor,
-    "Akademische Rätin (Senior Postdoctoral Researcher)", "2019-present", "Technische Universität Dortmund, Germany", "Supervisor: Prof. Dr. Sarah Schimke",
+    "Akademische Rätin (Senior Postdoctoral Researcher)", "2019-present", "Technische Universität Dortmund, Germany", "Group Head: Prof. Dr. Sarah Schimke",
     "Postdoctoral Researcher", "2017-2019", "University of Maryland, USA", "Mentor: Prof. Rochelle Newman",
     "Postdoctoral Researcher", "2014-2017", "Université Paris Descartes, France", "Supervisor: Dr. Thierry Nazzi",
     "Scientific Staff", "2010-2013", "Georg-August-Universität Göttingen", "Supervisor: Prof. Dr. Nivedita Mani",
@@ -68,6 +68,7 @@ tribble(
  * Bilingual lexical access
  * Mispronunciation sensitivity
  * Consonant bias in lexical processing
+ * Open Science Principles (Open Data, meta-analyses)
 
 # Publications
 
@@ -115,12 +116,11 @@ bibliography_entries("Publications.bib") %>%
 ```
 
 
-## Manuscripts accepted for publication
-
 ```{r}
-bibliography_entries("Publications.bib") %>%
-  filter(bibtype %in% "Article" & year %in% "accepted") %>%
-  arrange(desc(year), surnames)
+## Manuscripts accepted for publication
+# bibliography_entries("Publications.bib") %>%
+#   filter(bibtype %in% "Article" & year %in% "accepted") %>%
+#   arrange(desc(year), surnames)
 
 ```
 
@@ -137,7 +137,9 @@ bibliography_entries("Publications.bib") %>%
 ```{r}
 tribble(
   ~Year, ~Type, ~Desc,
-  2017, "Comparative and Evolutionary Biology of Hearing NIH Postdoctoral Training Grant", "5T32DC00046 – 23",
+  "under review", "Initial foreign speech segmentation in school-aged children", "DFG Research Grant, 183,358 €",
+    "under review", "Recognition & comprehension of code-switched utterances", "NIH R01 Grant, $27,797",
+    2017, "Comparative and Evolutionary Biology of Hearing NIH Postdoctoral Training Grant", "5T32DC00046 – 23",
   2009, "Psi Chi Association of Psychological Science Summer Research Grant ", "$5,000"
 ) %>% 
   brief_entries(Type, Year, Desc)
@@ -198,14 +200,30 @@ bibliography_entries("Presentations.bib") %>%
 
 ```{r}
 
+# Alles in allem: Wie bewerten Sie diese Veranstaltung bisher (von 1 'sehr gut' bis 5 'mangelhaft')?
+
+# Intro to Linguistics
+# WS 19/20: 2.29
+# SoSe 2020: 1.8
+# average: 2
+
+# Master Bilingualism
+# WS 19/20: 2.24
+# SoSe 2020: 2
+# average: 2.1
+
+
+
 tribble(
   ~Year, ~Course, ~blank1, ~blank2, ~Desc,
   "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Master students",
     "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "German Department",
     "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Technische Universität Dortmund",
+      "2019-present", "Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)", "", "", "Average student evaluations' overall grade: 2,1 (German grading system)",
     "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Bachelor students",
     "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "German Department",
     "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Technische Universität Dortmund",
+      "2019-present", "Einführung in die Sprachwissenschaft (Introduction to Linguistics)", "", "", "Average student evaluations' overall grade: 2 (German grading system)",
     2012, "Language Acquisition and Processing", "", "", "Bachelor students",
     2012, "Language Acquisition and Processing", "", "", "German Department",
     2012, "Language Acquisition and Processing", "", "", "Georg-August-Universität Göttingen"
@@ -223,6 +241,7 @@ tribble(
   2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "Bachelor students",
     2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "Department of Hearing and Speech Sciences",
     2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "University of Maryland",
+      2018, "Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research", "", "", "Student evaluations' 'I learned a lot from this course': 3.03 (Disagree - 0 to Strongly Agree (4)",
     2011, "Experimental Methods for Testing Language Comprehension", "", "", "Bachelor students", 
       2011, "Experimental Methods for Testing Language Comprehension", "", "", "German Department", 
       2011, "Experimental Methods for Testing Language Comprehension", "", "", "Georg-August-Universität Göttingen"
@@ -250,87 +269,90 @@ tribble(
 
 ## Students Mentored
 
-### TU Dortmund University
+### Doctoral students
 
-*Child Foreign Speech Processing*
+```{r}
 
-|        Doctoral Thesis, Marie-Christin Flohr, in progress
+library(tibble)
+tribble(
+  ~ Person, ~ Year, ~ Title, ~ University,
+    "Marie-Christin Flohr", "2020-present", "Child Foreign Speech Processing", "TU Dortmund",
+) %>% 
+  detailed_entries(Person, Year, University, Title)
 
-
-*Von Boomer zum Digital Native: Wie der Einfluss fremdsprachlicher Elemente der Jugendsprache in den sozialen Medien die Sprachverarbeitung beeinflusst* (From Boomer to Digital Native: How foreign language elements of German youth slang in social media influence language processing)
-
-|        Master Thesis, Franziska Schlage, in progress
-
-
-*The Difference in the Vocabulary Size of Children with and without Down Syndrome: A Meta-Analysis*
-
-|        Master Thesis, Judith Boveleth, 2020
-
-*Phonotaktische Segmentierung der L2 – Wie wirken L1-Merkmale deutscher Muttersprachler auf die Segmentierung des Sprachflusses und die Worterkennung in der L2 Englisch ein?.* (Phonotactic segmentation in the L2: How do L1 characteristics influence the segmentation and word recognition of the the L2 English speech stream in L1 German learners)
-
-|        Bachelor Thesis, Nina Schuster, 2020
-
-
-### University of Maryland
-*A fast note about slow rate in IDS: Maternal speech rate to preverbal infants facilitates early language development*, 2018-2019  
-
-|        Sara Cusick, Assistantship
-|        Mary Murphy, Assistantship
-|        Kayla Whitlock, Assistantship
-|        Jennifer Zuhl, Assistantship
-|        Julia Grable, Assistantship
-|        Alexia Proctor, Assistantship
-
-
-*Utterance alignment of a large, longitudinal corpus in CLAN/CHAT*, 2018-2019
-
-|        Heather Wibberley, Assistantship 
-|        Taylor Trent, Assistantship 
-|        Jillian Doherty, Assistantship 
-|        Maggie Roman, Assistantship 
-|        Dominique Jenkins, Assistantship 
-|        Jessica Mooney, Assistantship 
-
-
-### Université Paris Descartes
-*French-learning infants' adaptation to a novel accent: The role of consonant/vowel asymmetry*
-
-|        Rosalie Delille, Internship, 2017 
+```
 
 
 
-*Consonant and vowel processing in word form segmentation: An infant ERP study*
-
-|        Sofia Carrion, Internship, 2017
-|        Elisa Moulin, Internship, 2015-2016
-|        Jeanne Charoy, Internship, 2015
-|        Marion Lafargue, Internship, 2014-2015 
 
 
+### Master students
 
-*Emergence of the C-bias during the first year of life: New evidence from own name recognition*
+```{r}
 
-|        Safyya Larinouna, Internship, 2016
-|        Henry Cheng, International Visiting Internship, 2014 
+library(tibble)
+tribble(
+  ~ Person, ~ Year, ~ Title, ~ University,
+    "Franziska Schlage", "2020-present", "Von Boomer zum Digital Native: Wie der Einfluss fremdsprachlicher Elemente der Jugendsprache in den sozialen Medien die Sprachverarbeitung beeinflusst (From Boomer to Digital Native: How foreign language elements of German youth slang in social media influence language processing)", "TU Dortmund",
+      "Judith Boveleth", "2020", "The Difference in the Vocabulary Size of Children with and without Down Syndrome: A Meta-Analysis", "TU Dortmund",
+        "Deborah Wolff", "2012", "Segmentierungsfähigkeit von infant- und adult-directed speech bei 11-13 Monate alten Kindern. Eine ERP-Studie. (Segmentation abilities in infant- and adult directed speech in 11-13 month old children: An ERP study)", "Georg-August-Universität Göttingen",
+) %>% 
+  detailed_entries(Person, Year, University, Title)
 
-
-
-### Georg-August-Universität Göttingen
-
-*Associating a language with a speaker: Bilingual production is influenced by speaker language*
-
-|        Bachelor Thesis, Fabienne Kremer, 2013
-
-
-*Segmentierungsfähigkeit von infant- und adult-directed speech bei 11-13 Monate alten Kindern. Eine ERP-Studie.* (Segmentation abilities in infant- and adult directed speech in 11-13 month old children: An ERP study)
-
-|        Master Thesis, Deborah Wolff, 2012
+```
 
 
-*Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*
+### Bachelor students
 
-|        Masters Internship, Agniezska Leszczynska, 2012
+```{r}
 
+library(tibble)
+tribble(
+  ~ Person, ~ Year, ~ Title, ~ University,
+    "Nina Schuster", "2020", "Phonotaktische Segmentierung der L2 – Wie wirken L1-Merkmale deutscher Muttersprachler auf die Segmentierung des Sprachflusses und die Worterkennung in der L2 Englisch ein?. (Phonotactic segmentation in the L2: How do L1 characteristics influence the segmentation and word recognition of the the L2 English speech stream in L1 German learners)", "TU Dortmund",
+        "Fabienne Kremer", "2013", "Associating a language with a speaker: Bilingual production is influenced by speaker language", "Georg-August-Universität Göttingen",
+) %>% 
+  detailed_entries(Person, Year, University, Title)
+
+```
+
+### Internship project students
+
+```{r}
+
+tribble(
+  ~Year, ~Project, ~blank, ~People,
+  "2017", "French-learning infants' adaptation to a novel accent: The role of consonant/vowel asymmetry", "", "Rosalie Delille (Université Paris Descartes)",  
+  "2014-2017", "Consonant and vowel processing in word form segmentation: An infant ERP study", "", "Sofia Carrion, Elisa Moulin, Jeanne Charoy, Marion Lafargue (Université Paris Descartes)",
+  "2014-2016", "Emergence of the C-bias during the first year of life: New evidence from own name recognition", "", "Safyya Larinouna, Henry Cheng (Université Paris Descartes") %>% 
+  detailed_entries(Project, Year, blank, People)
+
+# - Sofia Carrion, 2017
+# - Elisa Moulin, 2015-2016
+# - Jeanne Charoy, 2015
+# - Marion Lafargue, 2014-2015 
+
+# - Safyya Larinouna, 2016
+# - Henry Cheng, 2014 
+
+
+# *Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*, Georg-August-Universität Göttingen, 2012
+# - Agniezska Leszczynska
+
+```
+
+
+### Student project assistantships
+
+```{r}
+
+tribble(
+  ~Year, ~Project, ~blank, ~People,
+  "2018-2019", "A fast note about slow rate in IDS: Maternal speech rate to preverbal infants facilitates early language development", "", "Sara Cusick, Mary Murphy, Kayla Whitlock, Jennifer Zuhl, Julia Grable, Alexia Proctor (University of Maryland)",  
+  "2018-2019", "Utterance alignment of a large, longitudinal corpus in CLAN/CHAT", "", "Heather Wibberley, Taylor Trent, Jillian Doherty, Maggie Roman, Dominique Jenkins, Jessica Mooney (University of Maryland)") %>% 
+  detailed_entries(Project, Year, blank, People)
+
+```
 
 # Skills
 
@@ -408,10 +430,9 @@ tribble(
 library(tibble)
 tribble(
   ~ Position, ~ Year,
-    "Committee Member in the founding of the Department for Language, Literature, and Culture", 2020,
+"Manager of the Looking-While-Listening sub-project of ManyBabies-InHome", "2021-present",
      "Executive Board Member of the Department for Language, Literature, and Culture", "2020-present",
-   "Manager of the Looking-While-Listening sub-project of ManyBabies-InHome", "2021-present"
-) %>% 
+  "Committee Member in the founding of the Department for Language, Literature, and Culture", "2020") %>% 
   detailed_entries(Position, Year)
 
 ```
