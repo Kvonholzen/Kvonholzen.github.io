@@ -9,11 +9,12 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 library(reticulate)
 
-# use_python("C:/Program Files (x86)/OpenSesame/python")
-#py_install("datamatrix")
-#py_install("pseudorandom")
+#use_python("C:/Program Files (x86)/OpenSesame/python")
+# py_install("datamatrix")
+# py_install("pseudorandom")
 
 ```
 
