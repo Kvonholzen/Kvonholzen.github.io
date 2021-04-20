@@ -13,6 +13,7 @@ library(scholar)
 library(papaja)
 library(tibble)
 library(stringr)
+
 ```
 
 ----
@@ -147,7 +148,6 @@ Some resources from these tutorials can be found under the [Tutorials](Tutorials
 </div>
 </div> 
 
-
 ----
 
 ## Sprechstunden (Office Hours)
@@ -161,40 +161,32 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 <br>
 
-**Sprechstunden März 2021**
-<br>Mittwoch, 17. März
-<br>zwischen 11-13 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/hjzuAzLQat7N83Oa)
-<br> 
-<br>Dienstag, 23. März
-<br>zwischen 10-12 Uhr
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/x4bpKDbjLV8MniiF)
 
 **Sprechstunden April 2021**
-<br>Donnerstag, 1. April
-<br>zwischen 9-11 Uhr
-<br>
-<br>Donnerstag, 13. April
-<br>zwischen 13-15 Uhr
-<br>
-<br>Donnerstag, 20. April
-<br>zwischen 13-15 Uhr
-<br>
 <br>Donnerstag, 27. April
 <br>zwischen 13-15 Uhr
 <br>
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/VdNx7ffO5qr14vop)
 
-```{r admin_März, include=FALSE}
+**Sprechstunden Mai 2021**
+<br>Mittwochs
+<br>zwischen 10-112 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/vOpozVkGyNgppTzj)
 
-#https://terminplaner4.dfn.de/hjzuAzLQat7N83OamwBfuvjV/admin
 
-# https://terminplaner4.dfn.de/x4bpKDbjLV8MniiFN1FCYyeo/admin
-
-```
 
 ```{r admin_April, include=FALSE}
 
 # https://terminplaner4.dfn.de/VdNx7ffO5qr14vopUYHKkVPR/admin
 
 ```
+
+
+```{r admin_May, include=FALSE}
+
+# https://terminplaner4.dfn.de/vOpozVkGyNgppTzj49rJ4KJN/admin
+
+```
+
+

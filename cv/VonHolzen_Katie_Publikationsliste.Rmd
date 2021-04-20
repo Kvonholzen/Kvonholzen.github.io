@@ -1,0 +1,104 @@
+---
+name: Katie
+surname: Von Holzen
+position: Akademische Rätin
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.vonholzen@tu-dortmund.de
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+
+# Publications
+
+## Published peer-reviewed papers
+
+```{r}
+
+# apostrophe's need to be given as $'$
+
+bibliography_entries("Publications.bib")%>%
+   filter(type %in% "article-journal") %>%
+  arrange(desc(issued), author)
+
+```
+
+## Chapters in Books
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
+
+```
+
+## Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
+## Open Data
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(type %in% "no-type") %>%
+  arrange(desc(issued), author)
+```
+
+## PhD Thesis
+
+```{r}
+bibliography_entries("Publications.bib") %>%
+  filter(type %in% "thesis") %>%
+  arrange(desc(issued), author)
+
+```
+
+
+```{r}
+## Manuscripts accepted for publication
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+#   arrange(desc(issued), author)
+
+```
+
+
+```{r}
+
+## Manuscripts under revision or review
+
+
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "Unpublished") %>%
+#   arrange(desc(issued), author)
+```
+
+
+
