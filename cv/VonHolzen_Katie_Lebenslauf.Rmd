@@ -30,6 +30,8 @@ library(stringr)
 
 ```
 
+Born May 17th, 1988 in Oshkosh, WI, USA
+
 
 # Education
 
@@ -116,7 +118,7 @@ employ_data %>%
 
 grant_data <- data.frame(rbind(
   c("under review", "", "Initial foreign speech segmentation in school-aged children", 
-    "(183,358 €) DFG Research Grant"),
+    "(183,358 €) DFG Research Grant, co-PI Prof. Dr. Holger Hopp"),
   c(2017, 2019, "The role of infant- and adult-directed registers in initial foreign speech segmentation", 
     "Comparative and Evolutionary Biology of Hearing, NIH Postdoc Training Grant, 5T32DC00046 – 23"),
   c(2009, "", "The relationship between attractiveness rating and brain activity in males and females", 

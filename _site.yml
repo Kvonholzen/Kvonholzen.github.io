@@ -29,6 +29,8 @@ navbar:
         - text: "Eye-tracking"
         - text: "RLadies Nonparametric Permutation Clusters"
           href: Tutorials_eye_tracking_Cluster_RLadies.html
+        - text: "Tutorial for loading, cleaning, and analyzing eye-tracking data"
+          href: Tutorials_eye_tracking_bookdown.html
         - text: "EEG and ERPs"
         - text: "Analyzing EEG data using EEGlab"
           href: Tutorials_eeg_erp_EEGlab_guide.html 

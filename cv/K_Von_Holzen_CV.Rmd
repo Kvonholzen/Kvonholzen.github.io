@@ -1,7 +1,7 @@
 ---
 name: Katie
 surname: Von Holzen
-position: Akademische Rätin
+position: "Akademische Rätin"
 address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
 profilepic: "./img/katie_headshot.jpg"
 www: Kvonholzen.github.io

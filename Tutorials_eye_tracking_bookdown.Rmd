@@ -1,0 +1,9 @@
+---
+title: "Eyetracking Statistical Analysis Tutorial"
+---
+
+----
+
+As a part of my Psycholinguistic Research Meetings at the TU Dortmund, I'm creating a tutorial guide for how to load data recorded with an Eyelink eyetracker into R, clean the data, and then analyse it. This tutorial is published as a [bookdown](https://bookdown.org/) book and can be accessed by sending me a [short email](mailto:katie.m.vonholzen@gmail.com) explaining why you wish to use the tutorial.
+
+You can access this tutorial [here](https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/).
