@@ -162,25 +162,23 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 
 
-**Sprechstunden April 2021**
-<br>Donnerstag, 27. April
-<br>zwischen 13-15 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/VdNx7ffO5qr14vop)
-
 **Sprechstunden Mai 2021**
 <br>Mittwochs
-<br>zwischen 10-112 Uhr
+<br>zwischen 10-12 Uhr
 <br>
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/vOpozVkGyNgppTzj)
 
+**Sprechstunden Juni 2021**
+<br>Mittwochs
+<br>zwischen 10-12 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/kxBTNEUpzzVyb4UJ)
 
-
-```{r admin_April, include=FALSE}
-
-# https://terminplaner4.dfn.de/VdNx7ffO5qr14vopUYHKkVPR/admin
-
-```
+**Sprechstunden Juli 2021**
+<br>Mittwochs
+<br>zwischen 10-12 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/b21mc5NCslUQtzin)
 
 
 ```{r admin_May, include=FALSE}
@@ -189,4 +187,14 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 
 ```
 
+```{r admin_June, include=FALSE}
 
+# https://terminplaner4.dfn.de/kxBTNEUpzzVyb4UJ5iG2l5fp/admin
+
+```
+
+```{r admin_July, include=FALSE}
+
+# https://terminplaner4.dfn.de/b21mc5NCslUQtzinGowPE5mG/admin
+
+```
