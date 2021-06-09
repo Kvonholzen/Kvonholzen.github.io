@@ -162,12 +162,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 
 
-**Sprechstunden Mai 2021**
-<br>Mittwochs
-<br>zwischen 10-12 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/vOpozVkGyNgppTzj)
-
 **Sprechstunden Juni 2021**
 <br>Mittwochs
 <br>zwischen 10-12 Uhr
@@ -180,12 +174,19 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/b21mc5NCslUQtzin)
 
+**Sprechstunden August 2021**
+<br>Mittwoch den 18.
+<br>zwischen 10-12 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/bDaoCAWWOZ9qtT2r)
 
-```{r admin_May, include=FALSE}
+**Sprechstunden September 2021**
+<br>Mittwochs
+<br>zwischen 10-12 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/sFZK7mZXcFurfi9b)
 
-# https://terminplaner4.dfn.de/vOpozVkGyNgppTzj49rJ4KJN/admin
 
-```
 
 ```{r admin_June, include=FALSE}
 
@@ -196,5 +197,18 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 ```{r admin_July, include=FALSE}
 
 # https://terminplaner4.dfn.de/b21mc5NCslUQtzinGowPE5mG/admin
+
+```
+
+```{r admin_August, include=FALSE}
+
+# https://terminplaner4.dfn.de/bDaoCAWWOZ9qtT2reXx8SJzc/admin
+
+```
+
+
+```{r admin_September, include=FALSE}
+
+# https://terminplaner4.dfn.de/sFZK7mZXcFurfi9bvE47ZDOR/admin
 
 ```
