@@ -152,33 +152,16 @@ Some resources from these tutorials can be found under the [Tutorials](Tutorials
 
 ## Sprechstunden (Office Hours)
 
+**Für die BLS Prüfungen zwischen den 25.10. und 29.10.2021 biete ich eine am 15.9. eine gemeinsame Sprechstunde an. Bitte betreten Sie um 10:30 bitte mein Virtualen Meeting-Raum: https://tu-dortmund.webex.com/meet/katie.vonholzen.**
+
 Während der Vorlesungszeit sind meine Sprechstunden normalerweise :
-Mittwochs von 11 bis 13 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
+Mittwochs von 10 bis 12 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
 
 Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online statt. Bitte nutzen Sie die Terminplaner Links unten um ein Termin auszumachen. Zu der ausgewählten Zeit, betreten Sie dann bitte mein Virtualen Meeting-Raum: https://tu-dortmund.webex.com/meet/katie.vonholzen.
 
 *Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
 <br>
 <br>
-
-
-**Sprechstunden Juni 2021**
-<br>Mittwochs
-<br>zwischen 10-12 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/kxBTNEUpzzVyb4UJ)
-
-**Sprechstunden Juli 2021**
-<br>Mittwochs
-<br>zwischen 10-12 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/b21mc5NCslUQtzin)
-
-**Sprechstunden August 2021**
-<br>Mittwoch den 18.
-<br>zwischen 10-12 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/bDaoCAWWOZ9qtT2r)
 
 **Sprechstunden September 2021**
 <br>Mittwochs
@@ -187,24 +170,18 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/sFZK7mZXcFurfi9b)
 
 
+**Sprechstunden Oktober 2021**
+<br>Mittwochs
+<br>zwischen 10-12 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/dpUaWhXkpM9fScBV)
 
-```{r admin_June, include=FALSE}
 
-# https://terminplaner4.dfn.de/kxBTNEUpzzVyb4UJ5iG2l5fp/admin
-
-```
-
-```{r admin_July, include=FALSE}
-
-# https://terminplaner4.dfn.de/b21mc5NCslUQtzinGowPE5mG/admin
-
-```
-
-```{r admin_August, include=FALSE}
-
-# https://terminplaner4.dfn.de/bDaoCAWWOZ9qtT2reXx8SJzc/admin
-
-```
+**Sprechstunden November 2021**
+<br>Mittwochs
+<br>zwischen 10-12 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/dpUaWhXkpM9fScBV)
 
 
 ```{r admin_September, include=FALSE}
@@ -212,3 +189,16 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 # https://terminplaner4.dfn.de/sFZK7mZXcFurfi9bvE47ZDOR/admin
 
 ```
+
+```{r admin_Okt, include=FALSE}
+
+# https://terminplaner4.dfn.de/dpUaWhXkpM9fScBVeHUEfcpX/admin
+
+```
+
+```{r admin_Nov, include=FALSE}
+
+# https://terminplaner4.dfn.de/Jn969ZMGLWKvCHo7DID432JH/admin
+
+```
+

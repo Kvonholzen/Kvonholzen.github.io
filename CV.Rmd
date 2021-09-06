@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-bibliography: cv/Publications.bib
+bibliography: cv/data/Publications.bib
 csl: apa-cv.csl
 ---
 
@@ -123,14 +123,14 @@ library(stringr)
 
 ```{r}
 #easily get the keys for my published articles
-pubs <- bibliography_entries("cv/Publications.bib") %>%
+pubs <- bibliography_entries("cv/data/Publications.bib") %>%
    filter(type %in% "article-journal") %>%
   arrange(desc(issued), author)
 
 #unique(pubs$id)
 
 #unique(pubs$key)
-accepted <- bibliography_entries("cv/Publications.bib") %>%
+accepted <- bibliography_entries("cv/data/Publications.bib") %>%
   filter(type %in% "article-journal" & issued %in% "accepted") %>%
   arrange(desc(issued), author)
 

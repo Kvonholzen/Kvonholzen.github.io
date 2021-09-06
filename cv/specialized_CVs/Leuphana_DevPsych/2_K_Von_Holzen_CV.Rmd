@@ -1,0 +1,221 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Akademische Rätin"
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.vonholzen@tu-dortmund.de
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Curriculum Vitae"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+current_dir <- getwd()
+current_dir <- gsub("specialized_CVs/Leuphana_DevPsych", "", current_dir)
+
+
+knitr::opts_knit$set(root.dir = current_dir)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+
+```
+
+
+# Education
+
+```{r}
+
+edu_data <- read.csv(file = "data/education.csv", header = T)
+
+edu_data %>%
+  detailed_entries(
+    what = Degree,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+# Employment
+
+```{r}
+
+
+employ_data <- read.csv(file = "data/employment.csv", header = T)
+
+
+employ_data %>%
+  detailed_entries(
+    what = Position,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = Supervisor
+  )
+
+```
+
+# Research Areas
+
+```{r}
+
+research_area <- read.csv(file = "data/research_areas.csv", header = T)
+
+research_area <- research_area %>%
+  group_by(area) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+research_area <- unique(research_area[,c("area", "detail_list")])
+
+
+research_area %>%
+  detailed_entries(
+    what = detail_list,
+    when = area
+  )
+
+
+
+```
+
+# Skills
+
+## Experiment Programming Experience
+
+```{r}
+
+experiment_prog <- read.csv(file = "data/skills.csv", header = T)
+
+experiment_prog <- subset(experiment_prog, skill == "experiment_programming")
+
+experiment_prog <- experiment_prog %>%
+  group_by(program) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+experiment_prog <- unique(experiment_prog[,c("program", "expertise", "detail_list")])
+
+
+experiment_prog %>%
+  detailed_entries(
+    what = expertise,
+    when = program,
+    where = detail_list,
+    with = ""
+  )
+
+
+```
+
+\newpage
+
+## Statistical/Data Analysis Experience
+
+```{r}
+
+stats_an <- read.csv(file = "data/skills.csv", header = T)
+
+stats_an <- subset(stats_an, skill == "stats_analysis")
+
+stats_an <- stats_an %>%
+  group_by(program) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+stats_an <- unique(stats_an[,c("program", "expertise", "detail_list")])
+
+
+stats_an %>%
+  detailed_entries(
+    what = expertise,
+    when = program,
+    where = detail_list,
+    with = ""
+  )
+
+
+```
+
+# Service
+
+## Institutional Service
+
+```{r}
+
+inst_service <- read.csv(file = "data/service.csv", header = T)
+
+inst_service <- sapply(inst_service, as.character)
+inst_service[is.na(inst_service)] <- " "
+
+inst_service <- as.data.frame(inst_service)
+
+
+inst_service %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+## Professional Service
+
+For a complete record of my peer-review service, view my Publons Peer Review Profile (https://publons.com/researcher/1230020/katie-von-holzen/peer-review/)
+
+```{r}
+### Conference Review
+# 
+# - International Congress of Infant Studies (ICIS) Conference (2020), Glasgow, UK
+# - International Association for the Study of Child Language (IASCL) Conference (2020), Philadelphia, PA, USA
+# - CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
+# - International Workshop on Bilingualism and Cognitive Control (2013). Jagiellonian University, Krakow, Poland
+# - International Workshop: “Bilingual and Multilingual Interaction” ESRC Centre for Research on Bilingualism (2012), Bangor, Wales
+
+```
+
+# Professional Memberships
+
+```{r}
+
+prof_member <- read.csv(file = "data/memberships.csv", header = T)
+
+prof_member %>%
+  brief_entries(
+    what = Name,
+    when = glue::glue("{Start_Year} - {End_Year}"))
+
+
+```
+
+# Languages
+
+- English, native
+- German, fluent (C1)
+- French, beginner (A2)
+
+
+
+

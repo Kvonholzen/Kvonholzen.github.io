@@ -1,0 +1,30 @@
+skill,program,expertise,detail
+experiment_programming,Open Sesame/Python,Intermediate expertise,"Designing experiments, including lexical decision (adults), visual world paradigm (with and without an eye-tracker) and preferential listening (infants)"
+experiment_programming,Open Sesame/Python,Intermediate expertise,Experience advising colleagues on experimental design
+experiment_programming,Open Sesame/Python,Intermediate expertise,Conducting tutorials with colleagues and students
+experiment_programming,Open Sesame/Python,Intermediate expertise,Launching experiments online
+experiment_programming,Open Sesame/Python,Intermediate expertise,Used to promote Open Science practices
+experiment_programming,Presentation,Intermediate expertise (lapsed),"Designing experiments, including EEG experiments"
+experiment_programming,Eprime,Beginner expertise,"Designing experiments, including EEG experiments"
+stats_analysis,R,Proficient expertise,"Advising colleagues on statistical analysis, data wrangling"
+stats_analysis,R,Proficient expertise,Conducting tutorials
+stats_analysis,R,Proficient expertise,Growth growth curve modeling (lmer package)
+stats_analysis,R,Proficient expertise,Mixed effects models (lmer package)
+stats_analysis,R,Proficient expertise,ANOVA analyses (ez package)
+stats_analysis,R,Proficient expertise,Producing beautiful graphics (ggplot2 package)
+stats_analysis,R,Proficient expertise,Analyzing vocabulary data corpora (wordbankr package)
+stats_analysis,R,Proficient expertise,Power analysis (pwr package)
+stats_analysis,R,Proficient expertise,Creating RMarkdown files to promote collaboration and accuracy
+stats_analysis,R,Proficient expertise,Used to promote Open Science practices
+stats_analysis,Praat,Intermediate expertise,"Scripting to automatically analyze sounds (pitch, duration, intensity)"
+stats_analysis,Praat,Intermediate expertise,Stimuli creation
+stats_analysis,Praat,Intermediate expertise,Interfacing with CLAN output to analyze corpora
+stats_analysis,Praat,Intermediate expertise,Interfacing with a forced aligner (Easy Align)
+stats_analysis,Praat,Intermediate expertise,Used to promote Open Science practices
+stats_analysis,CHAT/CLAN,Intermediate expertise,Analyzing length of utterance
+stats_analysis,CHAT/CLAN,Intermediate expertise,Time-locking transcripts to audio recordings
+stats_analysis,CHAT/CLAN,Intermediate expertise,Interfacing with Praat
+stats_analysis,EEG/ERPlab,Intermediate expertise,Preprocessing EEG data
+stats_analysis,EEG/ERPlab,Intermediate expertise,Conducting tutorials
+stats_analysis,EEG/ERPlab,Intermediate expertise,Related MATLAB scripting to automatically analyze EEG/ERP data
+stats_analysis,SPSS,Intermediate expertise (lapsed),ANOVA analyses

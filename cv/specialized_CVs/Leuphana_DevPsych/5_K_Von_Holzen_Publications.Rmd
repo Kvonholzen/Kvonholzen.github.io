@@ -1,0 +1,177 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Akademische Rätin"
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.vonholzen@tu-dortmund.de
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Publications and Presentations"
+output: vitae::hyndman
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+current_dir <- getwd()
+current_dir <- gsub("specialized_CVs/Leuphana_DevPsych", "", current_dir)
+
+
+knitr::opts_knit$set(root.dir = current_dir)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+
+```
+
+# Publication metrics
+
+```{r}
+
+library(scholar)
+
+# google scholar stats
+
+id <- 'SVow498AAAAJ'
+l <- get_profile(id)
+
+total_cites <- l$total_cites
+h_index <- l$h_index
+i10_index <- l$i10_index
+
+```
+
+Total citations: `r total_cites`
+
+h-index: `r h_index`
+
+i10-index: `r i10_index`
+
+
+# Publications
+
+
+## Published peer-reviewed papers
+
+```{r}
+
+# apostrophe's need to be given as $'$
+
+bibliography_entries("data/Publications.bib")%>%
+   filter(type %in% "article-journal") %>%
+  arrange(desc(issued), author)
+
+```
+
+## Chapters in Books
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
+
+```
+
+## Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
+## Open Data
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "no-type") %>%
+  arrange(desc(issued), author)
+```
+
+## PhD Thesis
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "thesis") %>%
+  arrange(desc(issued), author)
+
+```
+
+
+```{r}
+## Manuscripts accepted for publication
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+#   arrange(desc(issued), author)
+
+```
+
+
+
+```{r}
+
+## Manuscripts under revision or review
+
+# be <- bibliography_entries("data/Publications.bib") %>%
+#   filter(type %in% "manuscript")
+```
+
+
+
+# Invited Talks
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^i"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+
+
+
+# Conference Activity
+
+
+## Talks Presented
+
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^t"))%>%
+  arrange(desc(issued), author)
+```
+
+
+## Posters Presented
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^p"))%>%
+  arrange(desc(issued), author)
+```
+
+
+
+

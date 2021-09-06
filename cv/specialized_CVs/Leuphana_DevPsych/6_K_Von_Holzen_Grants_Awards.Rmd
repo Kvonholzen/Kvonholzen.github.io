@@ -1,0 +1,84 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Akademische Rätin"
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.vonholzen@tu-dortmund.de
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Grants and Awards"
+output: vitae::hyndman
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+current_dir <- getwd()
+current_dir <- gsub("specialized_CVs/Leuphana_DevPsych", "", current_dir)
+
+
+knitr::opts_knit$set(root.dir = current_dir)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+
+```
+
+
+# Grants
+
+```{r}
+
+grant_data <- read.csv(file = "data/grants.csv", header = T)
+
+grant_data <- sapply(grant_data, as.character)
+grant_data[is.na(grant_data)] <- " "
+
+grant_data <- as.data.frame(grant_data)
+
+grant_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+```
+
+# Awards
+
+```{r}
+
+awards_data <- read.csv(file = "data/awards.csv", header = T)
+
+awards_data %>%
+  detailed_entries(
+    what = Name,
+    when = Year,
+    where = Desc,
+    with = Amount
+  )
+
+```
+
+
