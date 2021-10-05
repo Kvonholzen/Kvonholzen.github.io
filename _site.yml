@@ -24,7 +24,7 @@ navbar:
         - text: "Word Spotting Task"
           href: Tutorials_Open_Sesame_Word_Spotting.html
         - text: "Audio Stimuli Preparation"
-        - text: "Segmenting and extracting audio stimuli in Praat"
+        - text: "Noise reduction, segmenting, and extracting audio stimuli in Praat"
           href: Tutorials_Audio_Praat_segmentation.html
         - text: "Eye-tracking"
         - text: "RLadies Nonparametric Permutation Clusters"
