@@ -161,19 +161,6 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br>
 <br>
 
-**Sprechstunden September 2021**
-<br>Mittwochs
-<br>zwischen 10-12 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/sFZK7mZXcFurfi9b)
-
-
-**Sprechstunden Oktober 2021**
-<br>Donnerstags
-<br>zwischen 9-11 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/BWgoBoMQPfLkqmZk)
-
 
 **Sprechstunden November 2021**
 <br>Donnerstags
@@ -182,17 +169,26 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 <br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/l5SIRh8csOWr66CW)
 
 
-```{r admin_September, include=FALSE}
+**Sprechstunden Dezember 2021**
+<br>Donnerstags
+<br>zwischen 9-11 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/a3v73uezdDt5UgtG)
 
-# https://terminplaner4.dfn.de/sFZK7mZXcFurfi9bvE47ZDOR/admin
 
-```
+**Sprechstunden Januar 2022**
+<br>Donnerstags
+<br>zwischen 9-11 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/rZES5UY7HBJqxE7Q)
 
-```{r admin_Okt, include=FALSE}
 
-# https://terminplaner4.dfn.de/BWgoBoMQPfLkqmZkuYWZ5rLD/admin
+**Sprechstunden Februar 2022**
+<br>Donnerstags
+<br>zwischen 9-11 Uhr
+<br>
+<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/KIwGylmdvFpzUxxf)
 
-```
 
 ```{r admin_Nov, include=FALSE}
 
@@ -200,3 +196,20 @@ Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online sta
 
 ```
 
+```{r admin_Dez, include=FALSE}
+
+# https://terminplaner4.dfn.de/a3v73uezdDt5UgtGudahjzO1/admin
+
+```
+
+```{r admin_Jan, include=FALSE}
+
+# https://terminplaner4.dfn.de/rZES5UY7HBJqxE7QEz1HAcb8/admin
+
+```
+
+```{r admin_Feb, include=FALSE}
+
+# https://terminplaner4.dfn.de/KIwGylmdvFpzUxxfoo9OvomN/admin
+
+```
