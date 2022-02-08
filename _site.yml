@@ -7,7 +7,11 @@ navbar:
     - text: "CV"
       href: CV.html
     - text: "Research"
-      href: Research.html
+      menu:
+        - text: "Research Interests"      
+          href: Research.html
+        - text: "Ini-Seg DFG Project"      
+          href: Ini-Seg.html
     - text: "Teaching"
       href: Teaching.html
     - text: "Tutorials"

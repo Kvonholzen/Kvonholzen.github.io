@@ -1,5 +1,5 @@
 ---
-title: "Research"
+title: "Research Interests"
 bibliography: References.bib
 csl: apa-6th-edition.csl
 ---

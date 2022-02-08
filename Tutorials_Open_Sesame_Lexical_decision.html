@@ -323,8 +323,20 @@ div.tocify {
 <li>
   <a href="CV.html">CV</a>
 </li>
-<li>
-  <a href="Research.html">Research</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Research
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Research.html">Research Interests</a>
+    </li>
+    <li>
+      <a href="Ini-Seg.html">Ini-Seg DFG Project</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="Teaching.html">Teaching</a>
@@ -622,18 +634,18 @@ print(dm2)</code></pre>
 <pre><code>## +----+----------+------------------+--------+
 ## | #  | category | correct_response | target |
 ## +----+----------+------------------+--------+
-## | 11 | nonword  |        m         | mogac  |
-## | 0  |   word   |        z         | apple  |
-## | 5  | nonword  |        m         | ourtel |
-## | 1  | nonword  |        m         | ipple  |
-## | 3  |   word   |        z         | magic  |
-## | 10 |   word   |        z         | turtle |
-## | 9  | nonword  |        m         | mogac  |
-## | 8  | nonword  |        m         | ourtel |
-## | 6  |   word   |        z         | apple  |
-## | 4  |   word   |        z         | magic  |
+## | 3  | nonword  |        m         | ourtel |
+## | 9  | nonword  |        m         | ipple  |
+## | 5  |   word   |        z         | magic  |
 ## | 2  |   word   |        z         | turtle |
-## | 7  | nonword  |        m         | ipple  |
+## | 4  | nonword  |        m         | mogac  |
+## | 7  |   word   |        z         | apple  |
+## | 1  | nonword  |        m         | ipple  |
+## | 0  | nonword  |        m         | ourtel |
+## | 10 |   word   |        z         | magic  |
+## | 11 | nonword  |        m         | mogac  |
+## | 8  |   word   |        z         | turtle |
+## | 6  |   word   |        z         | apple  |
 ## +----+----------+------------------+--------+</code></pre>
 </div>
 <div id="step-9-set-our-datamatrix-object-variables-for-the-experimental-block_loop_1" class="section level2">
