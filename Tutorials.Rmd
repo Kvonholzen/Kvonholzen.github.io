@@ -22,6 +22,17 @@ If you are completing a thesis with Dr. Von Holzen, she will tell you which tuto
 
 These tutorials were written and tested on a Windows 10 system running OpenSesame 3.3.3. Issues may arise when the operating system and Open Sesame version vary.
 
+## Eye-tracking Analyses
+
+### Eyetracking Statistical Analysis Tutorial
+
+Tutorial guide for how to load data recorded with an Eyelink eyetracker into R, clean the data, and then analyse it. You can access the tutorial [here](https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/).
+
+### Nonparametric Permutation Clusters Analysis
+
+A short [tutorial](files/RLadies_Permutation_Clusters.R) I gave for the [RLadies Paris](https://github.com/rladies-paris) Meetup.
+
+
 ## Audio Stimuli Preparation
 
 If you are using audio stimuli in your experiment, you'll need to record it and prepare it to be presented by your experimental software. The tutorial Recording Audio (coming soon) will walk you through the steps you need to take to record the auditory stimuli for your experiment. The tutorial [Segmenting and extracting audio stimuli in Praat](Tutorials_Audio_Praat_segmentation.html) will walk you through opening this file in Praat and selecting and saving the individual sound files.
@@ -30,8 +41,3 @@ If you are using audio stimuli in your experiment, you'll need to record it and 
 
 [Guide](files/eeglab steps_speech.pdf) for loading and analyzing EEG data using EEGlab. This document is adapted from the original, created by [Simmy Poonian](https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au).
 
-## Eye-tracking Analyses
-
-### Nonparametric Permutation Clusters Analysis
-
-A short [tutorial](files/RLadies_Permutation_Clusters.R) I gave for the [RLadies Paris](https://github.com/rladies-paris) Meetup.

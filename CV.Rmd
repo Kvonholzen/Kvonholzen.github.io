@@ -48,7 +48,12 @@ library(stringr)
 <div class = "row">
   
 <div class = "col-sm-2">
-<br>2019-present
+<br>2022-present
+<br>
+<br>
+<br>
+<br>
+<br>2019-2022
 <br>
 <br>
 <br>
@@ -77,11 +82,16 @@ library(stringr)
 </div>
   
 <div class = "col-lg-6">
+<br>Wissenschaftliche Mitarbeiterin (Senior Postdoc)
+<br>English Linguistics,
+<br>Technische Universität Braunschweig, Germany
+<br>Group Lead: Prof. Dr. Holger Hopp
+<br>
 <br>Akademische Rätin (Senior Postdoc)
 <br>Lehrstuhl Linguistik des Deutschen,
 <br>Schwerpunkt Deutsch als Fremdsprache/Deutsch als Zweitsprache
 <br>Technische Universität Dortmund, Germany
-<br>Supervisor: Prof. Dr. Sarah Schimke
+<br>Group Lead: Prof. Dr. Sarah Schimke
 <br>
 <br>Postdoctoral Researcher
 <br>Department of Hearing and Speech Sciences
@@ -130,9 +140,9 @@ pubs <- bibliography_entries("cv/data/Publications.bib") %>%
 #unique(pubs$id)
 
 #unique(pubs$key)
-accepted <- bibliography_entries("cv/data/Publications.bib") %>%
-  filter(type %in% "article-journal" & issued %in% "accepted") %>%
-  arrange(desc(issued), author)
+# accepted <- bibliography_entries("cv/data/Publications.bib") %>%
+#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+#   arrange(desc(issued), author)
 
 #unique(accepted$id)
 
@@ -140,7 +150,7 @@ accepted <- bibliography_entries("cv/data/Publications.bib") %>%
 
 ---
 nocite: |
-  @Autism, @MetaAnalysis,  @VonHolzen2020, @Raneri2020, @OFallon2020, @MB1, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012
+  @Autism, @MetaAnalysis,  @VonHolzen2020, @Raneri2020, @OFallon2020, @MB1, @Basque, @VonHolzen2019, @VonHolzen2018, @Nazzi2016, @VonHolzen2014, @VonHolzen2012; @CVaccent
 ...
 
 

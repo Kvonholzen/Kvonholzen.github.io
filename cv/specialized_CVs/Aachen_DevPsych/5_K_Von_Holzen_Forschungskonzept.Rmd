@@ -1,0 +1,70 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Akademische Rätin"
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Research Concept"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+current_dir <- getwd()
+current_dir <- gsub("specialized_CVs/Aachen_DevPsych", "", current_dir)
+
+knitr::opts_knit$set(root.dir = current_dir)
+
+
+# try different R version?
+# otherwise switch back to 3.6.1
+
+
+# hyndman
+
+library(vitae)
+library(scholar)
+#library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+library(rmarkdown)
+#library(RefManageR)
+
+
+
+```
+
+In the context of globalization, language competence is key for effective communication, cultural understanding, and positive developmental outcomes. As a result, great importance is given to both second language (L2) learners, such as new immigrants learning a second language (L2), and foreign language (FL) instruction, such as English for German-speaking children. But, we know little about the basic mechanisms available to learners at the start of their FL learning (ab initio learners), the factors influencing this acquisition, nor how this knowledge could be transferred to support better learning outcomes. To address this gap, I focus on the first tasks facing the language learner, including identifying words in the incoming speech signal (speech segmentation; e.g. Von Holzen, Nishibayashi, & Nazzi, 2018) and associating them with concepts. FL teachers are often encouraged to speak to children exclusively in the FL, using full phrases and sentences (Große-Brauckmann & Heidelberg, 2018, p. 6). Although this type of input is certainly supportive to long-term language learning, it presents an immediate challenge to the learner, as speech does not contain any ostensive pauses between words which would signal a word boundary (Cole & Jakimik, 2005). I focus on the mechanisms available to the learner to parse this speech into individual words and associate these words with new or known concepts, how the input can be modified to ease learning, and how we can improve learning situations and educational approaches for L2 and FL learning.  
+\
+One strain of research focuses on the role of individual differences. This is the focus of my funded DFG Grant, in collaboration with Prof. Holger Hopp (TU Braunschweig), “Initial foreign speech segmentation in school-aged children”, which examines how individual differences in early verbal and cognitive abilities, whether due to age or language background (monolingual vs. bilingual), support initial processing and learning from a FL. A second strain focuses on how we can modify language input to support uptake in language learners. At the University of Maryland and the TU Dortmund, I am currently investigating how foreigner- or infant-directed speech can facilitate ab initio learners’ foreign speech segmentation and subsequent word learning. Input can also be modified to highlight similarities between the FL or L2 and the learners’ first language(s) (L1), which can support initial word recognition in a foreign language (Von Holzen, Fennell, & Mani, 2019; Von Holzen & Newman, 2021). In a student project, we are investigating how L2 learners of different proficiencies can use the specific properties of the L2 to segment and recognize words, but also how they may be hampered in this process by conflicting cues from their L1 (Von Holzen, Harnischmacher, & Schuster, 2021). These findings have led me to the development of my third strain of research, which focuses on how input can be modified in the L2 and FL learning classroom to support language learning. In collaboration with Prof. Dr. Altvater-Mackensen from the Universität Mainz, we are developing a research proposal to study whether explicit use of the L1 during classroom storybook reading (with an eBook), can ease processing constraints and lead to better uptake during L2 word learning. We anticipate that this intervention will provide a valuable tool to educational professionals as well as expose German monolingual children in the same classrooms to more linguistic diversity and potentially lead to greater acceptance and well-being for L2 learners.  
+\
+My long-term goal is to use the knowledge I gain from these current strains of research to conduct new studies aimed at uncovering how the capacities and constraints of FL and L2 learning that adult and child learners possess lay the foundation for long-term achievement. This will build upon my previous work examining how early speech segmentation abilities predict later language development (Von Holzen, Nishibayashi, & Nazzi, 2018). The outcome of my work will support children and adults in becoming competent speakers of their new languages, as well as help guide national policy and support networks for foreign language teaching. 
+
+
+
+```{r}
+
+## References
+
+# bib <- bibliography_entries("References.bib")
+# 
+# bibliography_entries(bib) %>%
+#   arrange(desc(title))
+# # 
+# bib <- ReadBib("References.bib")
+#print(bib)
+
+#print(bib, .opts = list(bib.style = "authoryear"))
+
+```
+

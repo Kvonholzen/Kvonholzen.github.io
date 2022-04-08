@@ -1,0 +1,59 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Akademische Rätin"
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Teaching Concept"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+current_dir <- getwd()
+current_dir <- gsub("specialized_CVs/Aachen_DevPsych", "", current_dir)
+
+knitr::opts_knit$set(root.dir = current_dir)
+
+
+# try different R version?
+# otherwise switch back to 3.6.1
+
+
+# hyndman
+
+library(vitae)
+library(scholar)
+#library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+library(rmarkdown)
+#library(RefManageR)
+
+
+
+```
+
+I emphasize to hands-on experiences in my teaching, ensuring students leave my courses with the tools for success in their professional careers. Not all learning activities can be hands-on, but as I discuss below, I design my so that students can solidify and apply what they have learned and explore their own interests. I have come to this teaching philosophy through my years of teaching in the United States and Germany as well as through the NRW Teaching Program “Professionelle Lehrkompetenz für die Hochschule”. Please find evidence of the success of this approach in my most recent teaching evaluations, which are included in this application.  
+\
+I design my advanced seminar courses to be led by students in a structured discussion. Students read a scientific article or book chapter and prepare a brief summary of the topic, their remaining questions, and information they found surprising or interesting. To ensure students come to class prepared, a few students are randomly chosen to present their prepared materials and the entire class is invited to add their summaries and questions. I then guide the discussion around their questions, surprises, and interests. This teaches students how to critique and think critically through dialogue with their peers, while demonstrating a deep understanding of the material, which will be an essential skill in their scholarly and professional lives.   
+\
+I place great importance on scientific literacy in my teaching. I use the QALMRI method (Brosowsky & Parshina, 2017) to teach students how to identify the questions being asked in a scientific article, as well as how those questions are answered and the consequences of those answers, differentiating between methodological approach and interpretation of analyses. I’ve used this method in both a first semester class on brain and behavioral research to study phenomena such as the Mozart Effect from both the perspective of popular media and from primary scientific articles, as well as a more traditional master’s seminar on bilingualism research. Reading and understanding scientific articles can be daunting for students, but I’ve found that when I give my students a scaffold for approaching and processing scientific articles, our discussions of those articles reflect a deep level of learning.  
+\
+In my statistics tutorials and research methods courses, which include eye-tracking, EEG and ERPs, and statistical analyses, my goal is that the students will be able to take the concepts that I teach and apply them outside of the classroom to their own datasets. In my tutorials, I achieve this by first working through analyses together and then guiding students through analyses with their own dataset or a dataset with which they are familiar. This provides an opportunity to solidify the new concepts and gives students a head start to analyzing their own data.  
+\
+Through the NRW Teaching Program I’ve learned several strategies for effective teaching. One central insight is how to design assignments for students that support their ability to apply their knowledge to real-world situations. For example, in my seminar “Introduction to Linguistics”, I introduce students to the basic concepts of Linguistics through the eyes of a young child learning their first language. In their assignments, students can test their own hypotheses about development using public databases (e.g. Wordbank, wordbank.com). I’ve also begun to integrate different types of technology, such as Audience Response Systems, to encourage discussion with my students, and noted a rise in participation in comparison to past semesters.  
+\
+At the RWTH Aachen, I would apply my experience teaching about child development and within the education sciences to teach the bachelor lectures and seminars in Developmental and Educational Psychology, as well as the master’s project module in Developmental Psychology. I would also apply my hands-on approach to the courses offered in Psychological Methods, especially the two semesters of the master’s colloquium (Forschungsergebnisse I & II), the laboratory practical courses and the bachelor’s Experimental Planning and the master’s Behavior Analysis Methods. I have extensive experience teaching in German, but would be interested in offering some classes in English in order to give international, excellent students the opportunity to study Psychology in Aachen. I am eager to put this approach into action as a Professor for Developmental Psychology and Research Methods at RWTH Aachen.  
+\
+

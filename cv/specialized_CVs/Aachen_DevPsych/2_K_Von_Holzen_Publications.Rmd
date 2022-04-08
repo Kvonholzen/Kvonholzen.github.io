@@ -5,7 +5,7 @@ position: "Akademische Rätin"
 address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
 profilepic: "./img/katie_headshot.jpg"
 www: Kvonholzen.github.io
-email: katie.vonholzen@tu-dortmund.de
+email: katie.m.vonholzen@gmail.com
 github: Kvonholzen
 twitter: KatieVonHolzen
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -18,7 +18,7 @@ output: vitae::hyndman
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
 
 current_dir <- getwd()
-current_dir <- gsub("specialized_CVs/Leuphana_DevPsych", "", current_dir)
+current_dir <- gsub("specialized_CVs/Aachen_DevPsych", "", current_dir)
 
 
 knitr::opts_knit$set(root.dir = current_dir)
@@ -75,9 +75,12 @@ i10-index: `r i10_index`
 
 # apostrophe's need to be given as $'$
 
+`%!in%` <- Negate(`%in%`)
+
 bibliography_entries("data/Publications.bib")%>%
-   filter(type %in% "article-journal") %>%
+   filter(type %in% "article-journal" & id %!in% "CVaccent") %>%
   arrange(desc(issued), author)
+
 
 ```
 
@@ -118,10 +121,28 @@ bibliography_entries("data/Publications.bib") %>%
 ```
 
 
+## Manuscripts accepted pending minor revisions
+
+
 ```{r}
-## Manuscripts accepted for publication
-# bibliography_entries("Publications.bib") %>%
-#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+# 
+
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# print(bib)
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(id %in% "CVaccent")
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# 
+# 
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(issued %in% "accepted pending minor revisions") %>%
 #   arrange(desc(issued), author)
 
 ```
@@ -136,43 +157,6 @@ bibliography_entries("data/Publications.bib") %>%
 #   filter(type %in% "manuscript")
 ```
 
-
-
-# Invited Talks
-
-
-```{r}
-
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^i"))%>%
-  arrange(desc(issued), author)
-
-```
-
-
-
-
-
-# Conference Activity
-
-
-## Talks Presented
-
-
-```{r}
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^t"))%>%
-  arrange(desc(issued), author)
-```
-
-
-## Posters Presented
-
-```{r}
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^p"))%>%
-  arrange(desc(issued), author)
-```
 
 
 

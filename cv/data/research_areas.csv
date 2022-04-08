@@ -3,10 +3,6 @@ number,area,detail
 2,Language acquisition,First-language
 3,Language acquisition,Second-language
 4,Language acquisition,Foreign-language
-1,(Phono)-Lexical processing,Word/wordform recognition
-2,(Phono)-Lexical processing,Consonant bias
-3,(Phono)-Lexical processing,Speech segmentation
-4,(Phono)-Lexical processing,Mispronunciation sensitivity
 1,Methodology,Event-Related Potentials (ERPs)
 2,Methodology,Eyetracking (gaze)
 3,Methodology,Eyetracking (pupillometry)
@@ -15,3 +11,7 @@ number,area,detail
 2,Open Science Principles,Reproducible code
 3,Open Science Principles,Open data
 4,Open Science Principles,Large-scale collaborations (Many Babies)
+1,(Phono)-Lexical processing,Word/wordform recognition
+2,(Phono)-Lexical processing,Consonant bias
+3,(Phono)-Lexical processing,Speech segmentation
+4,(Phono)-Lexical processing,Mispronunciation sensitivity

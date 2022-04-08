@@ -1,11 +1,11 @@
 ---
 name: Katie
 surname: Von Holzen
-position: "Wissenschaftliche Mitarbeiterin"
-address: "Bienroder Weg 80, 38106 Braunschweig, Germany"
+position: "Akademische Rätin"
+address: "Emil-Figge Str. 50, 44227 Dortmund, Germany, Tel: (+49)231 755-2850"
 profilepic: "./img/katie_headshot.jpg"
 www: Kvonholzen.github.io
-email: k.von-holzen@tu-braunschweig.de
+email: katie.vonholzen@tu-dortmund.de
 github: Kvonholzen
 twitter: KatieVonHolzen
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -16,6 +16,12 @@ output: vitae::hyndman
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+current_dir <- getwd()
+current_dir <- gsub("specialized_CVs/Aachen_DevPsych", "", current_dir)
+
+knitr::opts_knit$set(root.dir = current_dir)
+
 
 # hyndman
 
@@ -97,141 +103,6 @@ research_area %>%
 ```
 
 
-# Publications
-
-## Published peer-reviewed papers
-
-```{r}
-
-# apostrophe's need to be given as $'$
-
-`%!in%` <- Negate(`%in%`)
-
-bibliography_entries("data/Publications.bib")%>%
-   filter(type %in% "article-journal") %>%
-     #filter(type %in% "article-journal" & id %!in% "CVaccent") %>%
-  arrange(desc(issued), author)
-
-
-```
-
-## Chapters in Books
-
-```{r}
-bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "chapter") %>%
-  arrange(desc(issued), author)
-
-```
-
-## Peer-Reviewed Conference Proceedings
-
-```{r}
-bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "paper-conference") %>%
-  arrange(desc(issued), author)
-```
-
-## Open Data
-
-```{r}
-bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "no-type") %>%
-  arrange(desc(issued), author)
-```
-
-## PhD Thesis
-
-```{r}
-bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "thesis") %>%
-  arrange(desc(issued), author)
-
-```
-
-## Manuscripts accepted pending minor revisions
-
-
-```{r}
-# 
-
-
-
-# bib <- bibliography_entries("data/Publications.bib")
-# 
-# print(bib)
-
-# bibliography_entries("data/Publications.bib") %>%
-#   filter(id %in% "CVaccent")
-
-
-# bib <- bibliography_entries("data/Publications.bib")
-# 
-# 
-# 
-# bibliography_entries("data/Publications.bib") %>%
-#   filter(issued %in% "accepted pending minor revisions") %>%
-#   arrange(desc(issued), author)
-
-```
-
-```{r}
-## Manuscripts accepted for publication
-# bibliography_entries("Publications.bib") %>%
-#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
-#   arrange(desc(issued), author)
-
-```
-
-
-```{r}
-
-## Manuscripts under revision or review
-
-
-# bibliography_entries("Publications.bib") %>%
-#   filter(type %in% "Unpublished") %>%
-#   arrange(desc(issued), author)
-```
-
-
-# Grants
-
-```{r}
-
-grant_data <- read.csv(file = "data/grants.csv", header = T)
-
-grant_data <- sapply(grant_data, as.character)
-grant_data[is.na(grant_data)] <- " "
-
-grant_data <- as.data.frame(grant_data)
-
-grant_data %>%
-  detailed_entries(
-    what = Name,
-    when = glue::glue("{Start_Year}{End_Year}"),
-    where = Funding_Body,
-    with = Amount,
-    why = Role
-  )
-
-```
-
-# Awards
-
-```{r}
-
-awards_data <- read.csv(file = "data/awards.csv", header = T)
-
-awards_data %>%
-  detailed_entries(
-    what = Name,
-    when = Year,
-    where = Desc,
-    with = Amount
-  )
-
-```
 
 
 # Invited Talks
