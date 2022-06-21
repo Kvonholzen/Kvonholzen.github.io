@@ -13,7 +13,7 @@
 
 <title>Word Spotting in Open Sesame</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -60,6 +60,29 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 
 
 
@@ -83,6 +106,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -308,7 +334,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -324,7 +350,7 @@ div.tocify {
   <a href="CV.html">CV</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Research
      
     <span class="caret"></span>
@@ -342,7 +368,7 @@ div.tocify {
   <a href="Teaching.html">Teaching</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Tutorials
      
     <span class="caret"></span>
@@ -401,13 +427,25 @@ div.tocify {
 </div>
 
 
-<p><em>In this tutorial, we will create a word spotting study from scratch(-ish). James McQueen gives a brief overview of word spotting studies in his article on Word spotting <span class="citation">(McQueen, 1996)</span>. In our experiment, participants will hear a nonsense word that either has a real, English word embedded in it (word) or not (pseduoword). The participants are instructed to press a button as soon as they recognize a real word and then to say the word they heard out loud. The stimuli used in this tutorial are pseduowords taken from the The Massive Auditory Lexical Decision (MALD) database <span class="citation">(Tucker et al., 2019)</span>. The stimuli I consider to have real words embedded are determined by me alone, and are used here for convenience with no strict criteria.</em></p>
+<p><em>In this tutorial, we will create a word spotting study from
+scratch(-ish). James McQueen gives a brief overview of word spotting
+studies in his article on Word spotting <span class="citation">(McQueen,
+1996)</span>. In our experiment, participants will hear a nonsense word
+that either has a real, English word embedded in it (word) or not
+(pseduoword). The participants are instructed to press a button as soon
+as they recognize a real word and then to say the word they heard out
+loud. The stimuli used in this tutorial are pseduowords taken from the
+The Massive Auditory Lexical Decision (MALD) database <span
+class="citation">(Tucker et al., 2019)</span>. The stimuli I consider to
+have real words embedded are determined by me alone, and are used here
+for convenience with no strict criteria.</em></p>
 <p><strong>Overview of the Experiment</strong></p>
 <p>Independent variable</p>
 <ul>
 <li>Category (word/nonword)
 <ul>
-<li>This is a <strong>within-subjects</strong> manipulation, as all participants respond to word and nonword items</li>
+<li>This is a <strong>within-subjects</strong> manipulation, as all
+participants respond to word and nonword items</li>
 </ul></li>
 </ul>
 <p>Dependent variable(s)</p>
@@ -416,75 +454,181 @@ div.tocify {
 <li>Accuracy of keypress (correct, incorrect)</li>
 <li>Accuracy of spoken word</li>
 </ul>
-<div id="step-1-copy-and-open-the-word-spotting-tutorial-folder" class="section level1">
+<div id="step-1-copy-and-open-the-word-spotting-tutorial-folder"
+class="section level1">
 <h1>Step 1: Copy and open the Word Spotting Tutorial folder</h1>
-<p><a href="Tutorials/Word_Spotting/Word_Spotting_Tutorial.zip">Download the Word Spotting Tutorial folder</a></p>
-<p>If you are on a lab laptop, save this tutorial folder in a new folder called "[YOURNAME_Word_Spotting_Tutorial].</p>
+<p><a href="Tutorials/Word_Spotting/Word_Spotting_Tutorial.zip">Download
+the Word Spotting Tutorial folder</a></p>
+<p>If you are on a lab laptop, save this tutorial folder in a new folder
+called “[YOURNAME_Word_Spotting_Tutorial].</p>
 <p>Inside, you should see the following items:</p>
 <ul>
-<li>test_words.csv: This is a .csv file listing all of the information needed to eventually create a block loop for our experiment.</li>
-<li><strong>pool</strong> folder: This folder contains our auditory stimuli. In Open Sesame, if your experiment is in a folder that contains another folder labeled “<strong>pool</strong>”, Open Sesame will automatically look in this folder for stimuli, no need to load it. For more information on stimuli pools, <a href="https://osdoc.cogsci.nl/3.3/manual/python/pool/">read this</a></li>
-<li>“completed” folder: This folder contains two finished versions of the experiment. The first “wordspotting_study_1st_test_run” is the intermediate version of the experiment at Step 9 of this Tutorial. The second “wordspotting_study_2nd_test_run” is the second intermediate version of this experiment at Step 16 of this Tutorial. “wordspotting_study_finished” is the final version of this experiment after completing this Tutorial. These example experiments are provided for you to check in case you run into a problem.</li>
+<li>test_words.csv: This is a .csv file listing all of the information
+needed to eventually create a block loop for our experiment.</li>
+<li><strong>pool</strong> folder: This folder contains our auditory
+stimuli. In Open Sesame, if your experiment is in a folder that contains
+another folder labeled “<strong>pool</strong>”, Open Sesame will
+automatically look in this folder for stimuli, no need to load it. For
+more information on stimuli pools, <a
+href="https://osdoc.cogsci.nl/3.3/manual/python/pool/">read
+this</a></li>
+<li>“completed” folder: This folder contains two finished versions of
+the experiment. The first “wordspotting_study_1st_test_run” is the
+intermediate version of the experiment at Step 9 of this Tutorial. The
+second “wordspotting_study_2nd_test_run” is the second intermediate
+version of this experiment at Step 16 of this Tutorial.
+“wordspotting_study_finished” is the final version of this experiment
+after completing this Tutorial. These example experiments are provided
+for you to check in case you run into a problem.</li>
 </ul>
 </div>
 <div id="step-2-start-open-sesame" class="section level1">
 <h1>Step 2: Start Open Sesame</h1>
-<p>Start your Open Sesame program. On the “Get Started!” page, you’ll be given the option to open different templates or recent experiments. Click on the “Extended Template”, which will give you an Open Sesame experiment that already has some structure. Save this experiment as “wordspotting_study”.</p>
+<p>Start your Open Sesame program. On the “Get Started!” page, you’ll be
+given the option to open different templates or recent experiments.
+Click on the “Extended Template”, which will give you an Open Sesame
+experiment that already has some structure. Save this experiment as
+“wordspotting_study”.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/extended_template.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="step-3-choose-the-general-properties-of-your-experiment-remove-unneeded-sections" class="section level1">
-<h1>Step 3: Choose the general properties of your experiment, remove unneeded sections</h1>
-<p>In the “General tab” that opens (also found when clicking Extended template on the Overview), you can change different properties of your experiment. We want to give our experiment a name, change the backend, change the resolution, and change the font size. Do the following:</p>
+<div
+id="step-3-choose-the-general-properties-of-your-experiment-remove-unneeded-sections"
+class="section level1">
+<h1>Step 3: Choose the general properties of your experiment, remove
+unneeded sections</h1>
+<p>In the “General tab” that opens (also found when clicking Extended
+template on the Overview), you can change different properties of your
+experiment. We want to give our experiment a name, change the backend,
+change the resolution, and change the font size. Do the following:</p>
 <ul>
-<li>Change the name of the experiment from “Extended template” to “Word Spotting”</li>
+<li>Change the name of the experiment from “Extended template” to “Word
+Spotting”</li>
 <li>Change the back-end to “psycho”.</li>
 <li>Set the resolution to that of the monitor you’re using.</li>
 <li>Change the font size to 32 px.</li>
 </ul>
 <p><img src="Tutorials/Word_Spotting/pictures/general_properties.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>Delete the “practice_loop” loop and the “end_of_practice” sketchpad. If you want an extra challenge, you can add these back in later. They will still be available in your “Unused items”. Also, delete the feedback and reset_feedback items. Your Overview should look like this:</p>
+<p>Delete the “practice_loop” loop and the “end_of_practice” sketchpad.
+If you want an extra challenge, you can add these back in later. They
+will still be available in your “Unused items”. Also, delete the
+feedback and reset_feedback items. Your Overview should look like
+this:</p>
 <p><img src="Tutorials/Word_Spotting/pictures/overview_bare.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="step-4-add-a-sampler-item-to-play-an-audio-file" class="section level1">
+<div id="step-4-add-a-sampler-item-to-play-an-audio-file"
+class="section level1">
 <h1>Step 4: Add a sampler item to play an audio file</h1>
-<p>Drag a new sampler item into the experiment Overview, placing it into the “trial_sequence” as the first item. Using the “Browse” button, select the .wav file “aamaxflowshaxl.wav” from our file pool (folder “pool”). Change the Duration from “sound” to 0, so that Open Sesame does not wait until the end of the audio file to move on to the next item.</p>
+<p>Drag a new sampler item into the experiment Overview, placing it into
+the “trial_sequence” as the first item. Using the “Browse” button,
+select the .wav file “aamaxflowshaxl.wav” from our file pool (folder
+“pool”). Change the Duration from “sound” to 0, so that Open Sesame does
+not wait until the end of the audio file to move on to the next
+item.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/new_sampler.png" width="75%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="step-5-change-the-keyboard_response-timeout" class="section level1">
+<div id="step-5-change-the-keyboard_response-timeout"
+class="section level1">
 <h1>Step 5: Change the keyboard_response timeout</h1>
-<p>Right now, they “keyboard_response” will wait until a button is pressed. But, not all trials require a button press (this is a go/no go expeirment). So, we want to wait on each trial an appropriate amount of time (let’s say 4 seconds) before we move on to the next trial. Open the “keyboard_response” and in Timeout, type “4000”.</p>
+<p>Right now, they “keyboard_response” will wait until a button is
+pressed. But, not all trials require a button press (this is a go/no go
+expeirment). So, we want to wait on each trial an appropriate amount of
+time (let’s say 4 seconds) before we move on to the next trial. Open the
+“keyboard_response” and in Timeout, type “4000”.</p>
 </div>
 <div id="step-6-add-a-sound_recording-item" class="section level1">
 <h1>Step 6: Add a sound_recording item</h1>
-<p>We want to be able to have a recording of what the participant says when they think a trial contains a real word. In order to do that, we need to add “sound_start_recording” and a “sound_end_recording” items. If you’re working on the lab laptop, they are already installed and you can find them in the commonly used plugins under the category “Response collection”. Don’t forget to press the arrow button at the bottom to expand the commonly used plugins :)</p>
+<p>We want to be able to have a recording of what the participant says
+when they think a trial contains a real word. In order to do that, we
+need to add “sound_start_recording” and a “sound_end_recording” items.
+If you’re working on the lab laptop, they are already installed and you
+can find them in the commonly used plugins under the category “Response
+collection”. Don’t forget to press the arrow button at the bottom to
+expand the commonly used plugins :)</p>
 <p><img src="Tutorials/Word_Spotting/pictures/new_plugins.png" width="25%" style="display: block; margin: auto;" /></p>
-<p>Add a sound_start_recording and a sound_stop_recording item after the keyboard_response.</p>
+<p>Add a sound_start_recording and a sound_stop_recording item after the
+keyboard_response.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/add_recording.png" width="50%" style="display: block; margin: auto;" /></p>
-<p><strong>IMPORTANT:</strong> If you’re working on your personal computer, you’ll have to download the “sound_recording” plugin. You can find more information about this plugin <a href="https://osdoc.cogsci.nl/3.3/manual/response/soundrecording/">here</a>. Download the appropriate version of the sound_recorder plugin <a href="https://github.com/dschreij/opensesame_soundrecorder_plugins/tags">here</a>. For example, click on “v0.15”, select “opensesame-plugins-soundrecorder_0.15-win32-py27.zip”, and save the .zip file. <strong>IMPORTANT:</strong> The sound recording plugin is not available for Mac computers. If you are using your personal computer, a Mac, to complete this tutorial, you will only be able to complete steps 9, 10, and 14-18.</p>
+<p><strong>IMPORTANT:</strong> If you’re working on your personal
+computer, you’ll have to download the “sound_recording” plugin. You can
+find more information about this plugin <a
+href="https://osdoc.cogsci.nl/3.3/manual/response/soundrecording/">here</a>.
+Download the appropriate version of the sound_recorder plugin <a
+href="https://github.com/dschreij/opensesame_soundrecorder_plugins/tags">here</a>.
+For example, click on “v0.15”, select
+“opensesame-plugins-soundrecorder_0.15-win32-py27.zip”, and save the
+.zip file. <strong>IMPORTANT:</strong> The sound recording plugin is not
+available for Mac computers. If you are using your personal computer, a
+Mac, to complete this tutorial, you will only be able to complete steps
+9, 10, and 14-18.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/soundrecorder_download.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>Unzip this file, and open the folder. Inside, there should be two folders: sound_start_recording and sound_stop_recording. Move these files to your Open Sesame plugins folder, which should be located at “C:\Program Files (x86)\OpenSesame\share\opensesame_plugins” or the Mac equivalent. Restart Open Sesame, and then open the experiment again. You should now have the two sound recording plugins under “Response collection”.</p>
+<p>Unzip this file, and open the folder. Inside, there should be two
+folders: sound_start_recording and sound_stop_recording. Move these
+files to your Open Sesame plugins folder, which should be located at
+“C:\Program Files (x86)\OpenSesame\share\opensesame_plugins” or the Mac
+equivalent. Restart Open Sesame, and then open the experiment again. You
+should now have the two sound recording plugins under “Response
+collection”.</p>
 </div>
-<div id="step-7-configure-the-length-of-the-recording-for-the-sound_recording-items" class="section level1">
-<h1>Step 7: Configure the length of the recording for the sound_recording items</h1>
-<p>The way sound_recording is currently set up, however, the recording won’t last long enough to cover what the participant actually says! Let’s make sure that the recording will last long enough to cover what the participant actually says. In the plugins list, move an “advanced_delay” item between the “new_sound_start_recording” and “new_sound_end_recording” items. Set the duration to 5000 ms. Now, once the recording starts, it will record for 5 seconds until it stops recording.</p>
+<div
+id="step-7-configure-the-length-of-the-recording-for-the-sound_recording-items"
+class="section level1">
+<h1>Step 7: Configure the length of the recording for the
+sound_recording items</h1>
+<p>The way sound_recording is currently set up, however, the recording
+won’t last long enough to cover what the participant actually says!
+Let’s make sure that the recording will last long enough to cover what
+the participant actually says. In the plugins list, move an
+“advanced_delay” item between the “new_sound_start_recording” and
+“new_sound_end_recording” items. Set the duration to 5000 ms. Now, once
+the recording starts, it will record for 5 seconds until it stops
+recording.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/advanced_delay.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="step-8-set-recording-to-be-conditional-on-keyboard-press" class="section level1">
+<div id="step-8-set-recording-to-be-conditional-on-keyboard-press"
+class="section level1">
 <h1>Step 8: Set recording to be conditional on keyboard press</h1>
-<p>Now, we want to set up the recording to only take place if the participant pressed a button. To do so, we need to add a new sequence item. Drag one over and position it right after the “keyboard_response” item. Now, drag “new_sound_start_recording”, “new_advanced_delay”, and “new_sound_stop_recording” into this new sequence item. If a dialog appears, you want to inset <em>into</em> the sequence.</p>
+<p>Now, we want to set up the recording to only take place if the
+participant pressed a button. To do so, we need to add a new sequence
+item. Drag one over and position it right after the “keyboard_response”
+item. Now, drag “new_sound_start_recording”, “new_advanced_delay”, and
+“new_sound_stop_recording” into this new sequence item. If a dialog
+appears, you want to inset <em>into</em> the sequence.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/new_sequence.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>We only want this sequence to run if a button has been pressed. So, open up trial sequence and in the Run if column for our new sequence item, type [response_keyboard_response] = ‘space’. Now, when the participant presses the space bar while listening to the wav file, it will start recording.</p>
+<p>We only want this sequence to run if a button has been pressed. So,
+open up trial sequence and in the Run if column for our new sequence
+item, type [response_keyboard_response] = ‘space’. Now, when the
+participant presses the space bar while listening to the wav file, it
+will start recording.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/runif_button_press.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>Finally, let’s tell our participant to produce what they just heard. Add a sketchpad item to your new sequence item, before “sound_start_recording”. Add the text “What word did you just hear?” and center it on the sketchpad. Set the Duration to 0, so that Open Sesame moves onto the next item, but this image stays on the screen.</p>
+<p>Finally, let’s tell our participant to produce what they just heard.
+Add a sketchpad item to your new sequence item, before
+“sound_start_recording”. Add the text “What word did you just hear?” and
+center it on the sketchpad. Set the Duration to 0, so that Open Sesame
+moves onto the next item, but this image stays on the screen.</p>
 </div>
-<div id="step-9-make-a-test-run-of-the-experiment" class="section level1">
+<div id="step-9-make-a-test-run-of-the-experiment"
+class="section level1">
 <h1>Step 9: Make a test-run of the experiment</h1>
-<p>We now have a very simple, one trial, but working experiment! Run yourself in the experiment. You’ll probably hear a real word in our wav file “aamaxflowshaxl”. Make sure you press the space bar and then say into your microphone the word that you heard. Then, when the experiment is finished, open the folder that “wordspotting_study” is saved in. There, you should see “default.wav”. Open this file, and it should be a recording of you producing the word you heard.</p>
-<p>The “completed” folder in the file you unzipped at the beginning of the tutorial contains the Open Sesame experiment “wordspotting_study_1st_test_run”, which is the intermediate version of the experiment at this step.</p>
+<p>We now have a very simple, one trial, but working experiment! Run
+yourself in the experiment. You’ll probably hear a real word in our wav
+file “aamaxflowshaxl”. Make sure you press the space bar and then say
+into your microphone the word that you heard. Then, when the experiment
+is finished, open the folder that “wordspotting_study” is saved in.
+There, you should see “default.wav”. Open this file, and it should be a
+recording of you producing the word you heard.</p>
+<p>The “completed” folder in the file you unzipped at the beginning of
+the tutorial contains the Open Sesame experiment
+“wordspotting_study_1st_test_run”, which is the intermediate version of
+the experiment at this step.</p>
 </div>
 <div id="step-10-load-and-edit-the-stimuli-list" class="section level1">
 <h1>Step 10: Load and edit the stimuli list</h1>
-<p>When we started, we inspected the file “test_words.csv” that was included in our tutorial folder. Now, let’s load that into Open Sesame using an inline script and convert it into a DataMatrix file. Drag an inline script into the beginning of the experiment. It is very important that you edit this code to contain the folder that your Open Sesame experiment is located in! Type in the following in the Run tab:</p>
+<p>When we started, we inspected the file “test_words.csv” that was
+included in our tutorial folder. Now, let’s load that into Open Sesame
+using an inline script and convert it into a DataMatrix file. Drag an
+inline script into the beginning of the experiment. It is very important
+that you edit this code to contain the folder that your Open Sesame
+experiment is located in! Type in the following in the Run tab:</p>
 <pre class="python"><code>
 
 
@@ -498,7 +642,7 @@ import os
 # determine what folder the current experiment is in, call it &quot;path&quot;
 # IMPORTANT! UPDATE THIS TO YOUR TUTORIAL FOLDER, OR WHEREVER FOLDER YOUR EXPERIMENT IS IN
 
-path = &quot;C:\\Users\\user\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&quot;
+path = &quot;D:\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&quot;
 
 stimuli_file = path + &quot;test_words.csv&quot; 
 
@@ -532,10 +676,13 @@ print(dm)</code></pre>
 ## | 13 | nonword  |    saxdvihfihzaxns    |
 ## | 14 | nonword  |   stihmayshaxnaaniy   |
 ## +----+----------+-----------------------+</code></pre>
-<p>We have two columns, category (word/nonword) and wav_file. Let’s make a new column that we’ll use to name recordings that participants may make during the experiment (they can’t all be called default!).</p>
+<p>We have two columns, category (word/nonword) and wav_file. Let’s make
+a new column that we’ll use to name recordings that participants may
+make during the experiment (they can’t all be called default!).</p>
 <pre class="python"><code>
 dm.recording = dm.wav_file</code></pre>
-<p>Also, we need to tell Open Sesame that our wav_file column contains files with a .wav extension.</p>
+<p>Also, we need to tell Open Sesame that our wav_file column contains
+files with a .wav extension.</p>
 <pre class="python"><code>
 dm.wav_file = dm.wav_file + &quot;.wav&quot;
 
@@ -559,15 +706,26 @@ print(dm)</code></pre>
 ## | 13 | nonword  |    saxdvihfihzaxns    |    saxdvihfihzaxns.wav    |
 ## | 14 | nonword  |   stihmayshaxnaaniy   |   stihmayshaxnaaniy.wav   |
 ## +----+----------+-----------------------+---------------------------+</code></pre>
-<p>IMPORTANT: If you haven’t installed the pandas module, you will need to do so in order to load the csv file. For more information about downloading modules in Open Sesame, <a href="https://osdoc.cogsci.nl/3.3/manual/environment/">read this</a> The easiest method is to run the following code to install pandas:</p>
+<p>IMPORTANT: If you haven’t installed the pandas module, you will need
+to do so in order to load the csv file. For more information about
+downloading modules in Open Sesame, <a
+href="https://osdoc.cogsci.nl/3.3/manual/environment/">read this</a> The
+easiest method is to run the following code to install pandas:</p>
 <pre class="python"><code>import pip
 
 pip.main([&#39;install&#39;, &#39;pandas&#39;])</code></pre>
-<p>If you get an “Access denied” error, make sure you are running Open Sesame as an administrator.</p>
+<p>If you get an “Access denied” error, make sure you are running Open
+Sesame as an administrator.</p>
 </div>
-<div id="step-11-automatically-create-a-new-folder-for-recordings-for-each-participant" class="section level1">
-<h1>Step 11: Automatically create a new folder for recordings for each participant</h1>
-<p>For each participant that takes part in our experiment, we want to have a folder of their recordings afterwards, so that we can analyze them. In order to do that, we need to write some code to create a new folder every time a new participant is run. Type the following:</p>
+<div
+id="step-11-automatically-create-a-new-folder-for-recordings-for-each-participant"
+class="section level1">
+<h1>Step 11: Automatically create a new folder for recordings for each
+participant</h1>
+<p>For each participant that takes part in our experiment, we want to
+have a folder of their recordings afterwards, so that we can analyze
+them. In order to do that, we need to write some code to create a new
+folder every time a new participant is run. Type the following:</p>
 <pre class="python"><code>
 
 # this is the current path (wherever you have the experiment saved)
@@ -576,7 +734,7 @@ path
 
 
 # now, we want to create a new folder for this subject within the current folder</code></pre>
-<pre><code>## &#39;C:\\Users\\user\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&#39;</code></pre>
+<pre><code>## &#39;D:\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&#39;</code></pre>
 <pre class="python"><code>sub_path = path + &quot;\subject_&quot; + str(sub_num)
 
 # create the folder if it doesn&#39;t exist
@@ -585,29 +743,62 @@ if not os.path.exists(sub_path):
     os.makedirs(sub_path)
 </code></pre>
 </div>
-<div id="step-13-create-a-correct-response-pseudorandomize-and-set-up-the-experimental-variables" class="section level1">
-<h1>Step 13: Create a correct response, pseudorandomize and set up the experimental variables</h1>
-<p>In a previous tutorial (Lexical decision), you learned how to pseudorandomize the order of a DataMatrix object and then rename the variables in a loop to read the values of the DataMatrix. Now, its your turn to apply what you learned here. Refer back to the previous tutorial and complete the following:</p>
-<p><strong>Create a “correct_response” column</strong> Since this is a go/no go experiment, the correct response for the nonword category is ‘None’ (meaning no button was pressed in the 4000 ms allowed for an answer) and for the word category it is ‘space’ (or whatever button you tell your participant to press).</p>
-<p><strong>Pseudorandomize the order of trials</strong> Set a constraint that a particular category (word/nonword) can’t be repeated more than 3 times.</p>
-<p><strong>Set our DataMatrix object variables for the experimental “block_loop_1”</strong> This is the for loop with r_ticker and the exp.set() functions. Remember to change the code to reflect the names of variables we are using in this experiment (category, wav_file, recording, correct_response).</p>
-<p><strong>Rename variables in “block_loop_1” to the environmental variables defined in our inline script</strong> Again, remember to change the names of the variables. Remember to set the Order to “sequential” so that Open Sesame doesn’t step in and randomize our nice order.</p>
+<div
+id="step-13-create-a-correct-response-pseudorandomize-and-set-up-the-experimental-variables"
+class="section level1">
+<h1>Step 13: Create a correct response, pseudorandomize and set up the
+experimental variables</h1>
+<p>In a previous tutorial (Lexical decision), you learned how to
+pseudorandomize the order of a DataMatrix object and then rename the
+variables in a loop to read the values of the DataMatrix. Now, its your
+turn to apply what you learned here. Refer back to the previous tutorial
+and complete the following:</p>
+<p><strong>Create a “correct_response” column</strong> Since this is a
+go/no go experiment, the correct response for the nonword category is
+‘None’ (meaning no button was pressed in the 4000 ms allowed for an
+answer) and for the word category it is ‘space’ (or whatever button you
+tell your participant to press).</p>
+<p><strong>Pseudorandomize the order of trials</strong> Set a constraint
+that a particular category (word/nonword) can’t be repeated more than 3
+times.</p>
+<p><strong>Set our DataMatrix object variables for the experimental
+“block_loop_1”</strong> This is the for loop with r_ticker and the
+exp.set() functions. Remember to change the code to reflect the names of
+variables we are using in this experiment (category, wav_file,
+recording, correct_response).</p>
+<p><strong>Rename variables in “block_loop_1” to the environmental
+variables defined in our inline script</strong> Again, remember to
+change the names of the variables. Remember to set the Order to
+“sequential” so that Open Sesame doesn’t step in and randomize our nice
+order.</p>
 </div>
-<div id="step-13-set-location-and-name-of-sound_start_recording-item" class="section level1">
+<div id="step-13-set-location-and-name-of-sound_start_recording-item"
+class="section level1">
 <h1>Step 13: Set location and name of “sound_start_recording” item</h1>
-<p>Use the label of your recording column (I call it “exp_recording” in my block loop) as a variable for the Output Folder/File for your “sound_start_recording” item.</p>
+<p>Use the label of your recording column (I call it “exp_recording” in
+my block loop) as a variable for the Output Folder/File for your
+“sound_start_recording” item.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/exp_variable_name.png" width="50%" style="display: block; margin: auto;" /></p>
-<p>Combine this variable with your “sub_path” variable, with a slash in between to indicate that these files should be saved inside the subject recording folder. For example, I typed in “[sub_path]/[exp_recording]”.</p>
+<p>Combine this variable with your “sub_path” variable, with a slash in
+between to indicate that these files should be saved inside the subject
+recording folder. For example, I typed in
+“[sub_path]/[exp_recording]”.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/recording_output_folder.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="step-14-set-name-of-wav-file-for-sampler-item" class="section level1">
+<div id="step-14-set-name-of-wav-file-for-sampler-item"
+class="section level1">
 <h1>Step 14: Set name of wav file for “sampler” item</h1>
-<p>Use the label of your recording column (I call it “exp_wav_fiile” in my block loop) as a variable for the Sound file for your “sampler” item.</p>
+<p>Use the label of your recording column (I call it “exp_wav_fiile” in
+my block loop) as a variable for the Sound file for your “sampler”
+item.</p>
 <p><img src="Tutorials/Word_Spotting/pictures/sampler_variable.png" width="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="step-15-change-back-to-environment-variables" class="section level1">
+<div id="step-15-change-back-to-environment-variables"
+class="section level1">
 <h1>Step 15: Change back to environment variables</h1>
-<p>Now that we have a working experiment, we can change our variables to be environmental variables. Do this for subject number and the location of our participant recording folder:</p>
+<p>Now that we have a working experiment, we can change our variables to
+be environmental variables. Do this for subject number and the location
+of our participant recording folder:</p>
 <pre class="python"><code># Now that we&#39;re ready to run this experiment, commenting out #sub_num = 999
 sub_num = str(var.subject_nr)
 #sub_num = 999
@@ -618,12 +809,23 @@ var.sub_path = sub_path</code></pre>
 </div>
 <div id="step-16-run-the-experiment" class="section level1">
 <h1>Step 16: Run the experiment!</h1>
-<p>Just as in the Beginner Tutorial and the previous running of this experiment, remember to use subject number “999” to get in the habit of not writing over important participant data files!</p>
-<p>The “completed” folder in the file you unzipped at the beginning of the tutorial contains the Open Sesame experiment “wordspotting_study_2nd_test_run”, which is the second intermediate version of the experiment at this step.</p>
+<p>Just as in the Beginner Tutorial and the previous running of this
+experiment, remember to use subject number “999” to get in the habit of
+not writing over important participant data files!</p>
+<p>The “completed” folder in the file you unzipped at the beginning of
+the tutorial contains the Open Sesame experiment
+“wordspotting_study_2nd_test_run”, which is the second intermediate
+version of the experiment at this step.</p>
 </div>
 <div id="step-17-add-a-custom-log-file" class="section level1">
 <h1>Step 17: Add a custom log file</h1>
-<p>In a previous tutorial (Lexical decision), you learned how to add a custom log file. Now, its your turn to apply what you learned here. Refer back to the previous tutorial and add a custom log file. Dont’ forget to edit our inline script to create the .csv log file and label its columns as well as add a new inline script at the end of the “trial_sequence” item to log all of our important variables. Remember, you want to record the following:</p>
+<p>In a previous tutorial (Lexical decision), you learned how to add a
+custom log file. Now, its your turn to apply what you learned here.
+Refer back to the previous tutorial and add a custom log file. Dont’
+forget to edit our inline script to create the .csv log file and label
+its columns as well as add a new inline script at the end of the
+“trial_sequence” item to log all of our important variables. Remember,
+you want to record the following:</p>
 <ul>
 <li>subject identification code</li>
 <li>item information</li>
@@ -631,22 +833,42 @@ var.sub_path = sub_path</code></pre>
 <li>dependent variable(s)</li>
 <li>trial number</li>
 </ul>
-<p>As well as what button was pressed and which button was the correct one.</p>
-<p>IMPORTANT! Place your inline script after the logger item, at the end of your trial_sequence object. If you place it in the new_sequence with the recording items, it will only log trials were the space bar is pressed. You can check this by clicking on your sequence items and inspecting their contents.</p>
+<p>As well as what button was pressed and which button was the correct
+one.</p>
+<p>IMPORTANT! Place your inline script after the logger item, at the end
+of your trial_sequence object. If you place it in the new_sequence with
+the recording items, it will only log trials were the space bar is
+pressed. You can check this by clicking on your sequence items and
+inspecting their contents.</p>
 </div>
 <div id="step-18-finishing-touches" class="section level1">
 <h1>Step 18: Finishing touches</h1>
-<p>Is there anything else you’d like to add to your experiment? A practice block? An instructions screen explaining the task to the participant? Remember, participants need to press the space bar in order to activate the recording sequence, so we should probably inform them of that!</p>
-<p>The “completed” folder in the file you unzipped at the beginning of the tutorial contains the Open Sesame experiment “wordspotting_study_finished”, which is my final version of this experiment after adding my custom log file and these finishing touches.</p>
+<p>Is there anything else you’d like to add to your experiment? A
+practice block? An instructions screen explaining the task to the
+participant? Remember, participants need to press the space bar in order
+to activate the recording sequence, so we should probably inform them of
+that!</p>
+<p>The “completed” folder in the file you unzipped at the beginning of
+the tutorial contains the Open Sesame experiment
+“wordspotting_study_finished”, which is my final version of this
+experiment after adding my custom log file and these finishing
+touches.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="unnumbered">References</h1>
-<div id="refs" class="references hanging-indent">
-<div id="ref-McQueen1996">
-<p>McQueen, J. (1996). Word spotting. <em>Language and Cognitive Processes</em>, <em>11</em>(6), 695–699. <a href="https://doi.org/10.1080/016909696387114">https://doi.org/10.1080/016909696387114</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+<div id="ref-McQueen1996" class="csl-entry">
+McQueen, J. (1996). <span class="nocase">Word spotting</span>.
+<em>Language and Cognitive Processes</em>, <em>11</em>(6), 695–699. <a
+href="https://doi.org/10.1080/016909696387114">https://doi.org/10.1080/016909696387114</a>
 </div>
-<div id="ref-Tucker2019">
-<p>Tucker, B. V., Brenner, D., Danielson, D. K., Kelley, M. C., Nenadić, F., &amp; Sims, M. (2019). The Massive Auditory Lexical Decision (MALD) database. <em>Behavior Research Methods</em>, <em>51</em>(3), 1187–1204. <a href="https://doi.org/10.3758/s13428-018-1056-1">https://doi.org/10.3758/s13428-018-1056-1</a></p>
+<div id="ref-Tucker2019" class="csl-entry">
+Tucker, B. V., Brenner, D., Danielson, D. K., Kelley, M. C., Nenadić,
+F., &amp; Sims, M. (2019). <span class="nocase">The Massive Auditory
+Lexical Decision (MALD) database</span>. <em>Behavior Research
+Methods</em>, <em>51</em>(3), 1187–1204. <a
+href="https://doi.org/10.3758/s13428-018-1056-1">https://doi.org/10.3758/s13428-018-1056-1</a>
 </div>
 </div>
 </div>

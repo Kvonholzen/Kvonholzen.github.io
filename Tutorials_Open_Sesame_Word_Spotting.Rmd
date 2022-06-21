@@ -185,7 +185,7 @@ import os
 # determine what folder the current experiment is in, call it "path"
 # IMPORTANT! UPDATE THIS TO YOUR TUTORIAL FOLDER, OR WHEREVER FOLDER YOUR EXPERIMENT IS IN
 
-path = "C:\\Users\\user\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\"
+path = "D:\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\"
 
 stimuli_file = path + "test_words.csv" 
 

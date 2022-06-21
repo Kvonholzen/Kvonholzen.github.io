@@ -13,7 +13,7 @@
 
 <title>Tutorials</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -248,7 +252,7 @@ $(document).ready(function () {
   <a href="CV.html">CV</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Research
      
     <span class="caret"></span>
@@ -266,7 +270,7 @@ $(document).ready(function () {
   <a href="Teaching.html">Teaching</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Tutorials
      
     <span class="caret"></span>
@@ -326,38 +330,88 @@ $(document).ready(function () {
 
 
 <hr />
-<p>I’ve put together several tutorials for creating experiments in Open Sesame and for analyzing Eye-tracking and EEG data. At the moment, the Open Sesame tutorials are the most complete (thank you COVID-19!). My hope is to someday write these other tutorials out as fully autonomous guides, but for now, there are a few less comprehensive files.</p>
+<p>I’ve put together several tutorials for creating experiments in Open
+Sesame and for analyzing Eye-tracking and EEG data. At the moment, the
+Open Sesame tutorials are the most complete (thank you COVID-19!). My
+hope is to someday write these other tutorials out as fully autonomous
+guides, but for now, there are a few less comprehensive files.</p>
 <div id="open-sesame" class="section level2">
 <h2>Open Sesame</h2>
-<p>The Open Sesame tutorials were designed to quickly get thesis students ready to create their own experiments in Open Sesame. The first tutorial, <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a> is a quick, basic introduction relying on the <a href="https://osdoc.cogsci.nl/3.2/tutorials/beginner/">Open Sesame Beginner Tutorial</a>. If you haven’t worked with Open Sesame yet, I would recommend starting there. The <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task Tutorial</a> introduces the learner to inline scripting and pseudorandomization in the experimental design. The <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Tutorial</a> includes these elements, and also shows the learner how to create audio recordings from participants. The <a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical Decision Experiment in OSWeb (Open Sesame online)</a> Tutorial introduces <a href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/">OsWeb</a>, an online runtime for Open Sesame experiments using the Lexical Decision Task template.</p>
-<p>If you are completing a thesis with Dr. Von Holzen, she will tell you which tutorials you need to complete to prepare yourself for your thesis work. For example, if your experiment uses a Word Spotting task, she may ask you to complete the following:</p>
+<p>The Open Sesame tutorials were designed to quickly get thesis
+students ready to create their own experiments in Open Sesame. The first
+tutorial, <a href="Tutorials_Open_Sesame_start.html">Getting Started
+with Open Sesame</a> is a quick, basic introduction relying on the <a
+href="https://osdoc.cogsci.nl/3.2/tutorials/beginner/">Open Sesame
+Beginner Tutorial</a>. If you haven’t worked with Open Sesame yet, I
+would recommend starting there. The <a
+href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task
+Tutorial</a> introduces the learner to inline scripting and
+pseudorandomization in the experimental design. The <a
+href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting
+Tutorial</a> includes these elements, and also shows the learner how to
+create audio recordings from participants. The <a
+href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical
+Decision Experiment in OSWeb (Open Sesame online)</a> Tutorial
+introduces <a
+href="https://osdoc.cogsci.nl/3.3/manual/osweb/osweb/">OsWeb</a>, an
+online runtime for Open Sesame experiments using the Lexical Decision
+Task template.</p>
+<p>If you are completing a thesis with Dr. Von Holzen, she will tell you
+which tutorials you need to complete to prepare yourself for your thesis
+work. For example, if your experiment uses a Word Spotting task, she may
+ask you to complete the following:</p>
 <ol style="list-style-type: decimal">
-<li><a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a></li>
-<li><a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task Tutorial</a></li>
-<li><a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Tutorial</a></li>
-<li><a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical Decision Experiment in OSWeb Tutorial</a></li>
+<li><a href="Tutorials_Open_Sesame_start.html">Getting Started with Open
+Sesame</a></li>
+<li><a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical
+Decision Task Tutorial</a></li>
+<li><a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting
+Tutorial</a></li>
+<li><a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical
+Decision Experiment in OSWeb Tutorial</a></li>
 </ol>
-<p><strong>coming soon, Visual World with Eyetracking tutorial</strong></p>
-<p>These tutorials were written and tested on a Windows 10 system running OpenSesame 3.3.3. Issues may arise when the operating system and Open Sesame version vary.</p>
+<p><strong>coming soon, Visual World with Eyetracking
+tutorial</strong></p>
+<p>These tutorials were written and tested on a Windows 10 system
+running OpenSesame 3.3.3. Issues may arise when the operating system and
+Open Sesame version vary.</p>
 </div>
 <div id="eye-tracking-analyses" class="section level2">
 <h2>Eye-tracking Analyses</h2>
-<div id="eyetracking-statistical-analysis-tutorial" class="section level3">
+<div id="eyetracking-statistical-analysis-tutorial"
+class="section level3">
 <h3>Eyetracking Statistical Analysis Tutorial</h3>
-<p>Tutorial guide for how to load data recorded with an Eyelink eyetracker into R, clean the data, and then analyse it. You can access the tutorial <a href="https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/">here</a>.</p>
+<p>Tutorial guide for how to load data recorded with an Eyelink
+eyetracker into R, clean the data, and then analyse it. You can access
+the tutorial <a
+href="https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/">here</a>.</p>
 </div>
-<div id="nonparametric-permutation-clusters-analysis" class="section level3">
+<div id="nonparametric-permutation-clusters-analysis"
+class="section level3">
 <h3>Nonparametric Permutation Clusters Analysis</h3>
-<p>A short <a href="files/RLadies_Permutation_Clusters.R">tutorial</a> I gave for the <a href="https://github.com/rladies-paris">RLadies Paris</a> Meetup.</p>
+<p>A short <a href="files/RLadies_Permutation_Clusters.R">tutorial</a> I
+gave for the <a href="https://github.com/rladies-paris">RLadies
+Paris</a> Meetup.</p>
 </div>
 </div>
 <div id="audio-stimuli-preparation" class="section level2">
 <h2>Audio Stimuli Preparation</h2>
-<p>If you are using audio stimuli in your experiment, you’ll need to record it and prepare it to be presented by your experimental software. The tutorial Recording Audio (coming soon) will walk you through the steps you need to take to record the auditory stimuli for your experiment. The tutorial <a href="Tutorials_Audio_Praat_segmentation.html">Segmenting and extracting audio stimuli in Praat</a> will walk you through opening this file in Praat and selecting and saving the individual sound files.</p>
+<p>If you are using audio stimuli in your experiment, you’ll need to
+record it and prepare it to be presented by your experimental software.
+The tutorial Recording Audio (coming soon) will walk you through the
+steps you need to take to record the auditory stimuli for your
+experiment. The tutorial <a
+href="Tutorials_Audio_Praat_segmentation.html">Segmenting and extracting
+audio stimuli in Praat</a> will walk you through opening this file in
+Praat and selecting and saving the individual sound files.</p>
 </div>
 <div id="eeglab" class="section level2">
 <h2>EEGlab</h2>
-<p><a href="files/eeglab%20steps_speech.pdf">Guide</a> for loading and analyzing EEG data using EEGlab. This document is adapted from the original, created by <a href="https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au">Simmy Poonian</a>.</p>
+<p><a href="files/eeglab%20steps_speech.pdf">Guide</a> for loading and
+analyzing EEG data using EEGlab. This document is adapted from the
+original, created by <a
+href="https://www.linkedin.com/in/simmy-poonian-4b588a176/?originalSubdomain=au">Simmy
+Poonian</a>.</p>
 </div>
 
 

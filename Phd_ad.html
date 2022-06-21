@@ -13,7 +13,7 @@
 
 <title>Searching for a PhD student</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -248,7 +252,7 @@ $(document).ready(function () {
   <a href="CV.html">CV</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Research
      
     <span class="caret"></span>
@@ -266,7 +270,7 @@ $(document).ready(function () {
   <a href="Teaching.html">Teaching</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Tutorials
      
     <span class="caret"></span>
@@ -326,44 +330,73 @@ $(document).ready(function () {
 
 
 <hr />
-<p>The department of German Linguistics, with a focus on German as a second/foreign language, at the TU Dortmund University is advertising a position for a research associate. This is a temporary position, salary level TV-L E13, 50% for the next 3 years and enables the pursuit of a PhD. The candidate will work closely with Dr. Katie Von Holzen (<a href="https://kvonholzen.github.io/" class="uri">https://kvonholzen.github.io/</a>) and Prof. Dr. Sarah Schimke (<a href="http://www.schimke.germanistik.tu-dortmund.de/cms/de/home/Mitarbeiter/Professorin/Schimke.html" class="uri">http://www.schimke.germanistik.tu-dortmund.de/cms/de/home/Mitarbeiter/Professorin/Schimke.html</a>).</p>
-<p><a href="https://service.tu-dortmund.de/documents/18/2120797/w30-20_FK15_1+Stelle+als+wiss.+Besch._E13+TV-L+50%25+befristet+f%C3%BCr+die+Dauer+von+3+Jahren.pdf/61c9ff7d-0852-9414-9c98-">Read the official advertisement in German.</a></p>
-<p>Applications from persons of all genders and nationalities are encouraged. Candidates with disabilities will be preferred if equally qualified.</p>
+<p>The department of German Linguistics, with a focus on German as a
+second/foreign language, at the TU Dortmund University is advertising a
+position for a research associate. This is a temporary position, salary
+level TV-L E13, 50% for the next 3 years and enables the pursuit of a
+PhD. The candidate will work closely with Dr. Katie Von Holzen (<a
+href="https://kvonholzen.github.io/"
+class="uri">https://kvonholzen.github.io/</a>) and Prof. Dr. Sarah
+Schimke (<a
+href="http://www.schimke.germanistik.tu-dortmund.de/cms/de/home/Mitarbeiter/Professorin/Schimke.html"
+class="uri">http://www.schimke.germanistik.tu-dortmund.de/cms/de/home/Mitarbeiter/Professorin/Schimke.html</a>).</p>
+<p><a
+href="https://service.tu-dortmund.de/documents/18/2120797/w30-20_FK15_1+Stelle+als+wiss.+Besch._E13+TV-L+50%25+befristet+f%C3%BCr+die+Dauer+von+3+Jahren.pdf/61c9ff7d-0852-9414-9c98-">Read
+the official advertisement in German.</a></p>
+<p>Applications from persons of all genders and nationalities are
+encouraged. Candidates with disabilities will be preferred if equally
+qualified.</p>
 <hr />
 <div id="we-are-looking-for-someone-with" class="section level2">
 <h2>We are looking for someone with:</h2>
 <ul>
 <li>a Masters degree in German linguistics or a similar field.</li>
-<li>interest in psycholinguistics research in the areas of language acquisition and multilingualism, especially lexical processing in early foreign language acquisition.</li>
-<li>high work ethic, good communication skills, and who is a team player.</li>
+<li>interest in psycholinguistics research in the areas of language
+acquisition and multilingualism, especially lexical processing in early
+foreign language acquisition.</li>
+<li>high work ethic, good communication skills, and who is a team
+player.</li>
 <li>skills and potential for independent/self-motivated work.</li>
 <li>interest in completing a PhD.</li>
-<li>(optional) experience in empirical research, for example an empirical thesis in psycholinguistics</li>
+<li>(optional) experience in empirical research, for example an
+empirical thesis in psycholinguistics</li>
 </ul>
 </div>
 <div id="duties" class="section level2">
 <h2>Duties:</h2>
 <ul>
 <li>Teaching in German linguistics (2 SWS/credit hours)</li>
-<li>Empirical research in psycholinguistics, multilingualism, and language acquisition</li>
+<li>Empirical research in psycholinguistics, multilingualism, and
+language acquisition</li>
 <li>Active participation in administrative activities</li>
 </ul>
 </div>
 <div id="we-offer" class="section level2">
 <h2>We offer:</h2>
 <ul>
-<li>a good research infrastructure in an innovative environment with a motivated, interdisciplinary, and international team</li>
+<li>a good research infrastructure in an innovative environment with a
+motivated, interdisciplinary, and international team</li>
 </ul>
 <hr />
 </div>
 <div id="how-to-apply" class="section level2">
 <h2>How to apply</h2>
-<p>Interested candidates should send their applications (Letter of Motivation, CV, Certificates, scientific writing sample-Masters thesis) by April 9th, 2020 with Reference Number <strong>w30-20</strong> by post and email:</p>
-<p>Email: <a href="mailto:sarah.schimke@tu-dortmund.de" class="email">sarah.schimke@tu-dortmund.de</a></p>
+<p>Interested candidates should send their applications (Letter of
+Motivation, CV, Certificates, scientific writing sample-Masters thesis)
+by April 9th, 2020 with Reference Number <strong>w30-20</strong> by post
+and email:</p>
+<p>Email: <a href="mailto:sarah.schimke@tu-dortmund.de"
+class="email">sarah.schimke@tu-dortmund.de</a></p>
 <p>and</p>
-<p>Post: <br>Technische Universität Dortmund <br>Fakultät Kulturwissenschaften <br>Univ.-Prof. Dr. Sarah Schimke <br>Professurfür Linguistik des Deutschen: <br>Schwerpunkt Deutsche als Fremdsprache/Deutsch als Zweitsprache <br>Emil-Figge-Straße 50 <br>44227 Dortmund <br>Germany</p>
+<p>Post: <br>Technische Universität Dortmund <br>Fakultät
+Kulturwissenschaften <br>Univ.-Prof. Dr. Sarah Schimke <br>Professurfür
+Linguistik des Deutschen: <br>Schwerpunkt Deutsche als
+Fremdsprache/Deutsch als Zweitsprache <br>Emil-Figge-Straße 50 <br>44227
+Dortmund <br>Germany</p>
 <hr />
-<p>Questions should be directed to Prof. Sarah Schimke <br>Tel.: 0231 755-2921 <br>E-Mail:<a href="mailto:sarah.schimke@tu-dortmund.de" class="email">sarah.schimke@tu-dortmund.de</a></p>
+<p>Questions should be directed to Prof. Sarah Schimke <br>Tel.: 0231
+755-2921 <br>E-Mail:<a href="mailto:sarah.schimke@tu-dortmund.de"
+class="email">sarah.schimke@tu-dortmund.de</a></p>
 <p>We look forward to your application!</p>
 </div>
 
