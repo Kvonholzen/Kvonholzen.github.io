@@ -1,0 +1,16 @@
+---
+title: "Contact"
+---
+
+----
+
+The best way to get in touch with me is to write an email.
+
+**TU Braunschweig**: [k.von-holzen@tu-braunschweig.de](mailto:k.von-holzen@tu-braunschweig.de)
+
+**Private**: [katie.m.vonholzen@gmail.com](mailto:katie.m.vonholzen@gmail.com)
+
+
+I'm also active on Twitter [@KatieVonHolzen](https://twitter.com/KatieVonHolzen).
+
+You can also browse my [Github repositories](https://github.com/Kvonholzen) and [Open Science Framework pages](https://osf.io/kauc4/).

@@ -6,10 +6,18 @@ csl: apa-6th-edition.csl
 
 ----
 
-# Initial Foreign Speech Processing
+# Foreign speech segmentation
+
+My current research at the TU Braunschweig focuses on the first steps of processing and acquisition in a new language for *ab initio* learners, who haven't had any instruction in the new language, as well as experienced learners of that language. I study word segmentation, or segmenting the incomings speech stream into individual words, one of the first challenges facing a learner in a new language. In particular, I'm interested in how different modifications to the input can influence this initial processing, concentrating on:
+
+* learner-directed speech modifications, such as infant- or foreigner-directed speech
+* similarities between the new language and languages the learner already knows, with an emphasis on lexical transparency and phonotactics
+
+# Initial foreign speech segmentation in school-aged children (DFG-funded project)
 
 Primary school-aged children in Germany are required to learn English, but the age at which instruction should start remains a topic of debate. Although research with immigrants who arrived as children suggests an advantage for an earlier start, children receiving only classroom English instruction often benefit more from starting later in primary school [@Jaekel2017]. I'm interested in the underlying mechanisms driving this developmental difference in foreign language learning by studying the child learner’s readiness to process and learn from foreign speech before they have received instruction in that language. This research focuses on German-learning pre-school and school-aged children. In one set of experiments, the initial ability to segment or extract words from English foreign speech will be examined; speech segmentation is an essential ability for learning words and building a vocabulary in a foreign language. These experiments will focus on two specific aspects of prior language knowledge, phonotactics and top-down lexical knowledge. Knowledge of majority-language phonotactics, which describe the sequence of sounds permitted by a particular language, may interfere with segmentation of foreign speech with word boundaries that conflict with phonotactic cues from the majority-language [@Weber2006]. In contrast, if children are familiar with words present in the foreign speech, such as cognate words (i.e. English: baby /beɪbi/; German: Baby /be:bi/), this top-down lexical knowledge should highlight the word boundary and facilitate segmentation of cognate words as well as words adjacent to cognate words [@Carroll2012; @Bortfeld2005]. The goal of this research is to better understand the capacities and constraints that the learner possesses when they are first exposed to a foreign language.
 
+Find out more about our project at [ini-seg.de](ini-seg.de)
 
 # The Nature of Bilingual Lexical Processing Across the Lifespan
 

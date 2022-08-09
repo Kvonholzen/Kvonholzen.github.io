@@ -4,14 +4,12 @@ navbar:
   left:
     - text: "About Me"
       href: About_Me.html
+    - text: "Contact"
+      href: Contact.html
     - text: "CV"
       href: CV.html
     - text: "Research"
-      menu:
-        - text: "Research Interests"      
-          href: Research.html
-        - text: "Ini-Seg DFG Project"      
-          href: Ini-Seg.html
+      href: Research.html
     - text: "Teaching"
       href: Teaching.html
     - text: "Tutorials"
