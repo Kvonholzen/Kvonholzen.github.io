@@ -28,10 +28,11 @@ These tutorials were written and tested on a Windows 10 system running OpenSesam
 
 Tutorial guide for how to load data recorded with an Eyelink eyetracker into R, clean the data, and then analyse it. You can access the tutorial [here](https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/).
 
-### Nonparametric Permutation Clusters Analysis
+### Cluster-based Permutation Analysis
 
 A short [tutorial](files/RLadies_Permutation_Clusters.R) I gave for the [RLadies Paris](https://github.com/rladies-paris) Meetup.
 
+A short [presentation](files/Macquarie_Presentation.pdf) I gave at the CLaS Eye-tracking Workshop held at Macquarie University On September 8th, 2022, titled "Using cluster-based permutation tests to analyze eye-tracking data". The presentation has a [companion tutorial](https://kvonholzen.github.io/Macquarie_Presentation_buddy.html).
 
 ## Audio Stimuli Preparation
 

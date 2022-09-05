@@ -29,10 +29,12 @@ navbar:
         - text: "Noise reduction, segmenting, and extracting audio stimuli in Praat"
           href: Tutorials_Audio_Praat_segmentation.html
         - text: "Eye-tracking"
-        - text: "RLadies Nonparametric Permutation Clusters"
-          href: Tutorials_eye_tracking_Cluster_RLadies.html
         - text: "Tutorial for loading, cleaning, and analyzing eye-tracking data"
           href: Tutorials_eye_tracking_bookdown.html
+        - text: "HowTo Cluster-based Permutation Tests"
+          href: Macquarie_Presentation_buddy.html
+        - text: "RLadies Nonparametric Permutation Clusters"
+          href: Tutorials_eye_tracking_Cluster_RLadies.html
         - text: "EEG and ERPs"
         - text: "Analyzing EEG data using EEGlab"
           href: Tutorials_eeg_erp_EEGlab_guide.html 
