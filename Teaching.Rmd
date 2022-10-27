@@ -74,12 +74,27 @@ and teaches students how to identify the questions being asked in the scientific
 <div class = "row">
   
 <div class = "col-sm-2">
-<br>2019 - present
+<br>2022 - present
 <br>
 <br>
 <br>
 <br>
-<br>2019 - present
+<br>2022 - present
+<br>
+<br>
+<br>
+<br>
+<br>2021 - 2022
+<br>
+<br>
+<br>
+<br>
+<br>2019 - 2021
+<br>
+<br>
+<br>
+<br>
+<br>2019 - 2022
 <br>
 <br>
 <br>
@@ -92,6 +107,21 @@ and teaches students how to identify the questions being asked in the scientific
 </div>
   
 <div class = "col-lg-6">
+<br>**Listening in the L1 and L2**
+<br>Bachelor students
+<br>English Department
+<br>Technische Universität Braunschweig
+<br>
+<br>**Introduction to Linguistics**
+<br>Bachelor students
+<br>English Department
+<br>Technische Universität Braunschweig
+<br>
+<br>**Wortsegmentierung: Erkenntnisse aus der Psycho- und Neurolinguistik (Word segmentation: Findings from Psycho- and Neurolinguistics)**
+<br>Master students
+<br>German Department
+<br>Technische Universität Dortmund
+<br>
 <br>**Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)**
 <br>Master students
 <br>German Department
@@ -149,56 +179,4 @@ Some resources from these tutorials can be found under the [Tutorials](Tutorials
 </div> 
 
 ----
-
-## Sprechstunden (Office Hours)
-
-Während der Vorlesungszeit sind meine Sprechstunden normalerweise :
-Donnerstag von 9 bis 11 Uhr. Damit ich es besser organizieren und ein Übersicht über alle Termine zu gewinnen kann, möchte ich Studierende bitten sich für meine Sprechstunde vorher anzumelden. Links für kommende Wochen sind unten zu finden. 
-
-Auf Grund der aktuellen Situation finden alle meine Sprechstunden nur Online statt (Stand WS 21/22). Bitte nutzen Sie die Terminplaner Links unten um ein Termin auszumachen. Zu der ausgewählten Zeit, betreten Sie dann bitte mein Virtualen Meeting-Raum: https://tu-dortmund.webex.com/meet/katie.vonholzen.
-
-*Bitte tragen Sie Ihren Namen, Email und Anliegen ein.*
-<br>
-<br>
-
-
-**Sprechstunden Januar 2022**
-<br>Donnerstags
-<br>zwischen 9-11 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/rZES5UY7HBJqxE7Q)
-
-
-**Sprechstunden Februar 2022**
-<br>Donnerstags
-<br>zwischen 9-11 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/KIwGylmdvFpzUxxf)
-
-
-**Sprechstunden März 2022**
-<br>Donnerstags
-<br>zwischen 9-11 Uhr
-<br>
-<br> [Melden Sie sich hier an](https://terminplaner4.dfn.de/ZTFfY6nDDJzXwxSK)
-
-
-```{r admin_Jan, include=FALSE}
-
-# https://terminplaner4.dfn.de/rZES5UY7HBJqxE7QEz1HAcb8/admin
-
-```
-
-```{r admin_Feb, include=FALSE}
-
-# https://terminplaner4.dfn.de/KIwGylmdvFpzUxxfoo9OvomN/admin
-
-```
-
-```{r admin_Mar, include=FALSE}
-
-# https://terminplaner4.dfn.de/ZTFfY6nDDJzXwxSKBvwJfQXg/admin
-
-```
-
 
