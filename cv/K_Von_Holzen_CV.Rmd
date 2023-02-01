@@ -1,7 +1,7 @@
 ---
 name: Katie
 surname: Von Holzen
-position: "Wissenschaftliche Mitarbeiterin"
+position: "Lecturer and Researcher"
 address: "Bienroder Weg 80, 38106 Braunschweig, Germany"
 profilepic: "./img/katie_headshot.jpg"
 www: Kvonholzen.github.io
@@ -10,8 +10,10 @@ github: Kvonholzen
 twitter: KatieVonHolzen
 date: "`r format(Sys.time(), '%B %Y')`"
 docname: "Curriculum Vitae"
-output: vitae::hyndman
-
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
 ---
 
 ```{r setup, include=FALSE}
@@ -40,7 +42,8 @@ library(gtable)
 
 ```{r}
 
-edu_data <- read.csv(file = "data/education.csv", header = T)
+# needed to add ", encoding = "UTF-8" to get special characters to read in properly
+edu_data <- read.csv(file = "data/education.csv", header = T, encoding = "UTF-8")
 
 edu_data %>%
   detailed_entries(
@@ -59,7 +62,7 @@ edu_data %>%
 ```{r}
 
 
-employ_data <- read.csv(file = "data/employment.csv", header = T)
+employ_data <- read.csv(file = "data/employment.csv", header = T, encoding = "UTF-8")
 
 
 employ_data %>%
@@ -101,6 +104,8 @@ research_area %>%
 
 ## Published peer-reviewed papers
 
+**Average Impact Factor of 3.4**
+
 ```{r}
 
 # apostrophe's need to be given as $'$
@@ -108,8 +113,8 @@ research_area %>%
 `%!in%` <- Negate(`%in%`)
 
 bibliography_entries("data/Publications.bib")%>%
-   filter(type %in% "article-journal") %>%
-     #filter(type %in% "article-journal" & id %!in% "CVaccent") %>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %!in% "MB5") %>%
   arrange(desc(issued), author)
 
 
@@ -136,8 +141,9 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```{r}
 bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "no-type") %>%
-  arrange(desc(issued), author)
+  filter(id %in% "VonHolzen2018d")
+  #arrange(desc(issued), author)
+
 ```
 
 ## PhD Thesis
@@ -149,11 +155,9 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```
 
-## Manuscripts accepted pending minor revisions
-
-
 ```{r}
 # 
+## Manuscripts accepted pending minor revisions
 
 
 
@@ -183,11 +187,15 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```
 
+## Manuscripts under revision or review
 
 ```{r}
 
-## Manuscripts under revision or review
 
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %in% "MB5")
 
 # bibliography_entries("Publications.bib") %>%
 #   filter(type %in% "Unpublished") %>%
@@ -199,7 +207,7 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```{r}
 
-grant_data <- read.csv(file = "data/grants.csv", header = T)
+grant_data <- read.csv(file = "data/grants.csv", header = T, encoding = "UTF-8")
 
 grant_data <- sapply(grant_data, as.character)
 grant_data[is.na(grant_data)] <- " "
@@ -221,7 +229,7 @@ grant_data %>%
 
 ```{r}
 
-awards_data <- read.csv(file = "data/awards.csv", header = T)
+awards_data <- read.csv(file = "data/awards.csv", header = T, encoding = "UTF-8")
 
 awards_data %>%
   detailed_entries(
@@ -234,41 +242,8 @@ awards_data %>%
 ```
 
 
-# Invited Talks
 
 
-```{r}
-
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^i"))%>%
-  arrange(desc(issued), author)
-
-```
-
-
-
-
-
-# Conference Activity
-
-
-## Talks Presented
-
-
-```{r}
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^t"))%>%
-  arrange(desc(issued), author)
-```
-
-
-## Posters Presented
-
-```{r}
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^p"))%>%
-  arrange(desc(issued), author)
-```
 
 
 # Teaching and Mentorship
@@ -279,7 +254,7 @@ bibliography_entries("data/Presentations.bib") %>%
 
 ```{r}
 
-teaching_data <- read.csv(file = "data/teaching.csv", header = T)
+teaching_data <- read.csv(file = "data/teaching.csv", header = T, encoding = "UTF-8")
 
 
 teaching_data <- sapply(teaching_data, as.character)
@@ -349,17 +324,35 @@ tutorial_data %>%
 ```
 
 
-## Students Mentored
+## Supervision/Mentorship
 
 
 ```{r}
 
-student_data <- read.csv(file = "data/students.csv", header = T)
+student_data <- read.csv(file = "data/students.csv", header = T, encoding = "UTF-8")
 
 student_data <- sapply(student_data, as.character)
 student_data[is.na(student_data)] <- " "
 
 student_data <- as.data.frame(student_data)
+
+```
+
+### Postdoctoral researchers
+
+```{r}
+
+postdoc_data <- subset(student_data, Type == "Postdoctoral Researcher")
+
+
+postdoc_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
 
 ```
 
@@ -372,9 +365,9 @@ phd_data <- subset(student_data, Type == "PhD")
 
 phd_data %>%
   detailed_entries(
-    what = Title,
+    what = Person,
     when = glue::glue("{Start_Year}{End_Year}"),
-    where = Person,
+    where = Title,
     with = Institution
   )
 
@@ -390,9 +383,9 @@ master_data <- subset(student_data, Type == "Master")
 
 master_data %>%
   detailed_entries(
-    what = Title,
+    what = Person,
     when = glue::glue("{Start_Year}{End_Year}"),
-    where = Person,
+    where = Title,
     with = Institution
   )
 
@@ -409,9 +402,9 @@ bachelor_data <- subset(student_data, Type == "Bachelor")
 
 bachelor_data %>%
   detailed_entries(
-    what = Title,
+    what = Person,
     when = glue::glue("{Start_Year}{End_Year}"),
-    where = Person,
+    where = Title,
     with = Institution
   )
 
@@ -447,13 +440,53 @@ intern_data %>%
 ```
 
 
+
+# Invited Talks and Conference Activity
+
+## Invited Talks
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^i"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+## Conference Talks
+
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^t"))%>%
+  arrange(desc(issued), author)
+```
+
+
+
+## Conference Posters
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^p"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+
+
 # Skills
 
 ## Experiment Programming Experience
 
 ```{r}
 
-experiment_prog <- read.csv(file = "data/skills.csv", header = T)
+experiment_prog <- read.csv(file = "data/skills.csv", header = T, encoding = "UTF-8")
 
 experiment_prog <- subset(experiment_prog, skill == "experiment_programming")
 
@@ -480,7 +513,7 @@ experiment_prog %>%
 
 ```{r}
 
-stats_an <- read.csv(file = "data/skills.csv", header = T)
+stats_an <- read.csv(file = "data/skills.csv", header = T, encoding = "UTF-8")
 
 stats_an <- subset(stats_an, skill == "stats_analysis")
 
@@ -510,7 +543,7 @@ stats_an %>%
 
 ```{r}
 
-inst_service <- read.csv(file = "data/service.csv", header = T)
+inst_service <- read.csv(file = "data/service.csv", header = T, encoding = "UTF-8")
 
 inst_service <- sapply(inst_service, as.character)
 inst_service[is.na(inst_service)] <- " "
@@ -531,7 +564,7 @@ inst_service %>%
 
 ## Professional Service
 
-For a complete record of my peer-review service, view my Publons Peer Review Profile (https://publons.com/researcher/1230020/katie-von-holzen/peer-review/)
+For a complete record of my peer-review service, view my Publons Peer Review Profile (https://www.webofscience.com/wos/author/record/1483321)
 
 
 ```{r}
@@ -551,7 +584,7 @@ For a complete record of my peer-review service, view my Publons Peer Review Pro
 
 ```{r}
 
-prof_member <- read.csv(file = "data/memberships.csv", header = T)
+prof_member <- read.csv(file = "data/memberships.csv", header = T, encoding = "UTF-8")
 
 prof_member %>%
   brief_entries(
@@ -570,11 +603,14 @@ prof_member %>%
 
 
 
+
+
+
 # Community Involvement/Outreach
 
 ```{r}
 
-community <- read.csv(file = "data/community.csv", header = T)
+community <- read.csv(file = "data/community.csv", header = T, encoding = "UTF-8")
 
 community <- sapply(community, as.character)
 community[is.na(community)] <- " "
@@ -590,5 +626,9 @@ community %>%
   )
 
 ```
+
+
+
+
 
 

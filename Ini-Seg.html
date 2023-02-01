@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Ini-Seg</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="About_Me.html">About Me</a>
+</li>
+<li>
+  <a href="Contact.html">Contact</a>
+</li>
+<li>
+  <a href="CV.html">CV</a>
+</li>
+<li>
+  <a href="Research.html">Research</a>
+</li>
+<li>
+  <a href="Teaching.html">Teaching</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Tutorials.html">Tutorials Overview</a>
+    </li>
+    <li class="dropdown-header">Open Sesame</li>
+    <li>
+      <a href="Tutorials_Open_Sesame_start.html">Getting Started with Open Sesame</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision.html">Lexical Decision Task</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Lexical_decision_OSWeb.html">Lexical Decision Task (online)</a>
+    </li>
+    <li>
+      <a href="Tutorials_Open_Sesame_Word_Spotting.html">Word Spotting Task</a>
+    </li>
+    <li class="dropdown-header">Audio Stimuli Preparation</li>
+    <li>
+      <a href="Tutorials_Audio_Praat_segmentation.html">Noise reduction, segmenting, and extracting audio stimuli in Praat</a>
+    </li>
+    <li class="dropdown-header">Eye-tracking</li>
+    <li>
+      <a href="Tutorials_eye_tracking_Cluster_RLadies.html">RLadies Nonparametric Permutation Clusters</a>
+    </li>
+    <li>
+      <a href="Tutorials_eye_tracking_bookdown.html">Tutorial for loading, cleaning, and analyzing eye-tracking data</a>
+    </li>
+    <li class="dropdown-header">EEG and ERPs</li>
+    <li>
+      <a href="Tutorials_eeg_erp_EEGlab_guide.html">Analyzing EEG data using EEGlab</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Media.html">Media</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Ini-Seg</h1>
+
+</div>
+
+
+<hr />
+<div id="initial-foreign-speech-segmentation-in-school-aged-children"
+class="section level1">
+<h1>Initial foreign speech segmentation in school-aged children</h1>
+<div id="dfg-funded-project-2022-2025" class="section level3">
+<h3>DFG funded project 2022-2025</h3>
+<p>Primary school-aged children in Germany are required to learn
+English, but the age at which instruction should start remains a topic
+of debate. Although research with immigrants who arrived as children
+suggests an advantage for an earlier start, children receiving only
+classroom English instruction often benefit more from starting later in
+primary school. This project seeks to understand the underlying
+mechanisms driving this developmental difference in foreign language
+learning by studying the child learner’s readiness to process and learn
+from foreign speech before they have received instruction in that
+language. It focuses on German-learning school-aged children at two ages
+when English instruction begins in the German school system (6-7 and
+9-10 years). In a series of experiments, German-learning children’s
+initial ability to segment or extract words from English foreign speech
+will be examined; speech segmentation is an essential ability for
+learning words and building a vocabulary in a foreign language. The role
+of children’s developing knowledge of the majority language (German)
+will be investigated, as well as individual differences in linguistic
+and cognitive skill with the goal of uncovering the driving force in
+developmental change. Monolingual and bilingual children will both be
+studied and are expected to differ from one another in these skills. A
+series of experiments is proposed to study two specific aspects of prior
+language knowledge, phonotactics and top-down lexical knowledge.
+Knowledge of majority-language phonotactics, which describe the sequence
+of sounds permitted by a particular language, may interfere with
+segmentation of foreign speech with word boundaries that conflict with
+phonotactic cues from the majority-language (Expeirment 1). In contrast,
+if children are familiar with words present in the foreign speech, such
+as cognate words (i.e. English: baby /beɪbi/; German: Baby /be:bi/),
+this top-down lexical knowledge should highlight the word boundary and
+facilitate segmentation of cognate words (Experiment 2) as well as words
+adjacent to cognate words (Experiment 3). When controlling for
+increasing cognitive skill, which generally improves with age, we
+predict that prior majority-language knowledge will differentially
+impact the use of phonotactic cues and top-down lexical knowledge. On
+the other hand, phonological awareness, which describes the ability to
+explicitly manipulate phonemes in spoken language, develops rapidly once
+children enter primary school and is predicted to be driving force
+behind differences between children of different ages and between
+monolingual and bilingual children. Together, this project goes far
+beyond previous group-based work to examine the contributions of
+individual experiential, linguistic and cognitive factors. These studies
+will yield comprehensive insights into the capacities and constraints
+that the school-aged child learner possesses when they are first exposed
+to a foreign language.</p>
+<div class="figure">
+<img src="images/DFG_Ini-Seg_Theoretical_Predictions.png" alt="Figure 1. Variables measured and their predicted influence on the foreign speech segmentation tasks studied in the Ini-Seg Project, when accounting for the control variables. A solid line indicates a predicted positive correlation between the variable value and the connected variable value or experimental task, whereas a dashed line indicates a predicted negative correlation." width="100%" />
+<p class="caption">
+Figure 1. Variables measured and their predicted influence on the
+foreign speech segmentation tasks studied in the Ini-Seg Project, when
+accounting for the control variables. A solid line indicates a predicted
+positive correlation between the variable value and the connected
+variable value or experimental task, whereas a dashed line indicates a
+predicted negative correlation.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
