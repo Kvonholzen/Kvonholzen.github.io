@@ -1,0 +1,17 @@
+---
+title: "ManyBabies-AtHome: Looking-While-Listening"
+---
+
+----
+
+This is a landing page catch-all for RMarkdown produced HTML files pertaining to the MBAH-LWL project.
+
+# Choosing Stimuli for the Varied Set
+
+Below are a set of vignettes designed to aid MB-AH LWL researchers in choosing target words for the Varied Set to test in their language. The first set of vignettes pertain to using the "Wordbank Procedure", which relies on the age of acquisition data calculated by Wordbank to choose words.
+
+[Wordbank Procedure for English (American).](MBAH/Wordbank_Procedure_American_English.html)
+
+[Wordbank Procedure for Italian.](MBAH/Wordbank_Procedure_Italian.html)
+
+[Wordbank Procedure for Korean.](MBAH/Wordbank_Procedure_Korean.html)
