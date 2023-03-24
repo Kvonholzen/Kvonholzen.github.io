@@ -1,0 +1,888 @@
+%% Template for a CV
+%% Author: Rob J Hyndman
+
+\documentclass[10pt,a4paper,]{article}
+\usepackage[scaled=0.86]{DejaVuSansMono}
+\usepackage[sfdefault,lf,t]{carlito}
+
+% Change color to blue
+\usepackage{color,xcolor}
+\definecolor{headcolor}{HTML}{990000}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true,hidelinks]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{geometry}
+\geometry{left=1.75cm,right=1.75cm,top=2.2cm,bottom=2cm}
+
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\date{March 2023}
+
+
+\usepackage{paralist,ragged2e,datetime}
+\usepackage[hyphens]{url}
+\usepackage{fancyhdr,enumitem,pifont}
+\usepackage[compact,small,sf,bf]{titlesec}
+
+\RaggedRight
+\sloppy
+
+% Header and footer
+\pagestyle{fancy}
+\makeatletter
+\lhead{\sf\textcolor[gray]{0.4}{Curriculum Vitae: \@name}}
+\rhead{\sf\textcolor[gray]{0.4}{\thepage}}
+\cfoot{}
+\def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+\makeatother
+
+% Header box
+\usepackage{tabularx}
+
+\makeatletter
+\def\name#1{\def\@name{#1}}
+\def\info#1{\def\@info{#1}}
+\makeatother
+\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
+
+\usepackage{calc}
+\newlength{\headerboxwidth}
+\setlength{\headerboxwidth}{\textwidth}
+%\addtolength{\headerboxwidth}{0.2cm}
+\makeatletter
+\def\maketitle{
+\thispagestyle{plain}
+\vspace*{-1.4cm}
+\shadebox[0.9]{\headerboxwidth}{\sf\color{headcolor}\hfil
+\hbox to 0.98\textwidth{\begin{tabular}{l}
+\\[-0.3cm]
+\LARGE\textbf{\@name}
+\\[0.1cm]\large Lecturer and Researcher\\[0.6cm]
+\normalsize\textbf{Curriculum Vitae}\\
+\normalsize March 2023
+\end{tabular}
+\hfill\hbox{\fontsize{9}{12}\sf
+\begin{tabular}{@{}rl@{}}
+\@info
+\end{tabular}}}\hfil
+}
+\vspace*{0.2cm}}
+\makeatother
+
+% Section headings
+\titlelabel{}
+\titlespacing{\section}{0pt}{1.5ex}{0.5ex}
+\titleformat*{\section}{\color{headcolor}\large\sf\bfseries}
+\titleformat*{\subsection}{\color{headcolor}\sf\bfseries}
+\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
+
+% Miscellaneous dimensions
+\setlength{\parskip}{0ex}
+\setlength{\parindent}{0em}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{0.15cm}
+\clubpenalty = 10000
+\widowpenalty = 10000
+\setlist{itemsep=1pt}
+\setdescription{labelwidth=1.2cm,leftmargin=1.5cm,labelindent=1.5cm,font=\rm}
+
+% Make nicer bullets
+\renewcommand{\labelitemi}{\ding{228}}
+
+\usepackage{booktabs,fontawesome5}
+%\usepackage[t1,scale=0.86]{sourcecodepro}
+
+\name{Katie Von Holzen}
+\def\imagetop#1{\vtop{\null\hbox{#1}}}
+\info{%
+\raisebox{-0.05cm}{\imagetop{\faIcon{map-marker-alt}}} &  \imagetop{\begin{tabular}{@{}l@{}}Bienroder
+Weg 80, 38106 Braunschweig, Germany\end{tabular}}\\ %
+\faIcon{home} & \href{http://Kvonholzen.github.io}{Kvonholzen.github.io}\\% %
+%
+\faIcon{envelope} & \href{mailto:katie.m.vonholzen@gmail.com}{\nolinkurl{katie.m.vonholzen@gmail.com}}\\%
+\faIcon{twitter} & \href{https://twitter.com/KatieVonHolzen}{@KatieVonHolzen}\\%
+\faIcon{github} & \href{https://github.com/Kvonholzen}{Kvonholzen}\\%
+%
+%
+%
+}
+
+
+%\usepackage{inconsolata}
+
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\hfill #1~}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \cslhangindent - \csllabelwidth}{#1}\vspace{0.8ex}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+\def\endfirstpage{\newpage}
+
+\begin{document}
+\maketitle
+
+
+\hypertarget{employment}{%
+\section{Employment}\label{employment}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022 - - & \parbox[t]{0.85\textwidth}{%
+\textbf{Wissenschaftliche Mitarbeiterin (Lecturer/Researcher)}\hfill{\footnotesize Group Head: Prof. Dr. Holger Hopp}\newline
+  Technische Universitaet Braunschweig, Germany\par%
+  \empty%
+\vspace{\parsep}}\\
+2023 - - & \parbox[t]{0.85\textwidth}{%
+\textbf{Media Coordinator}\hfill{\footnotesize IASCL President Dr. Annick De Houwer}\newline
+  IASCL (International Association for the Study of Child Language) \par%
+  \empty%
+\vspace{\parsep}}\\
+2019 - 2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Akademische Raetin (Lecturer/Researcher)}\hfill{\footnotesize Group Head: Prof. Dr. Sarah Schimke}\newline
+  Technische Universitaet Dortmund, Germany\par%
+  \empty%
+\vspace{\parsep}}\\
+2017 - 2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{Postdoctoral Researcher}\hfill{\footnotesize Mentor: Dr. Rochelle Newman}\newline
+  University of Maryland, USA\par%
+  \empty%
+\vspace{\parsep}}\\
+2014 - 2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Postdoctoral Researcher}\hfill{\footnotesize Supervisor: Dr. Thierry Nazzi}\newline
+  Universite Paris Descartes, France\par%
+  \empty%
+\vspace{\parsep}}\\
+2010 - 2013 & \parbox[t]{0.85\textwidth}{%
+\textbf{Wissenschaftliche Mitarbeiterin (Doctoral Researcher)}\hfill{\footnotesize Supervisor: Prof. Dr. Nivedita Mani}\newline
+  Georg-August-Universitaet Goettingen, Germany\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{open-science-experience}{%
+\section{Open Science Experience}\label{open-science-experience}}
+
+\hypertarget{open-data}{%
+\subsection{Open Data}\label{open-data}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-VonHolzen2022}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K., van Ommen, S., White, K., \& Nazzi, T.
+(2022). \emph{The impact of phonological biases on mispronunciation
+sensitivity and novel accent adaptation}. Open Science Foundation.
+\url{https://doi.org/10.17605/OSF.IO/D6GWP}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-VonHolzen2021}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2021). \emph{Infant
+Mispronunciation Sensitivity Meta-Analysis (InMisSens)}. Open Science
+Foundation. \href{https://osf.io/rvbjs}{osf.io/rvbjs}}
+
+\hypertarget{preregistrations}{%
+\subsection{Preregistrations}\label{preregistrations}}
+
+\begin{itemize}
+\tightlist
+\item
+  Ini-Seg: Phonotactics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://osf.io/58bhv/?view_only=d48e6184241f4c77b5cb1ce20c98e2d7}
+  \end{itemize}
+\item
+  Ini-Seg: Lexical Transparency
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://osf.io/dsg57/?view_only=b0ee304b3b0941ffa6e64ce0abc3b193}
+  \end{itemize}
+\item
+  The role of speech register in foreign word learning
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://osf.io/5g2bz/?view_only=5ed0e404a83746cd906a4720232e3d3e}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{talks}{%
+\subsection{Talks}\label{talks}}
+
+\begin{itemize}
+\tightlist
+\item
+  How to integrate open science into language acquisition research
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Presented at colloquiums at the TU Braunschweig, TU Dortmund, and
+    University of Maryland
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{within-manybabies}{%
+\subsection{Within ManyBabies}\label{within-manybabies}}
+
+\begin{itemize}
+\tightlist
+\item
+  Open Handbook for ManyBabies - AtHome: Hand Annotation
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://osf.io/axtqr/?view_only=8aaeac0683f34bcdb6acfd2aa2309bc0}
+  \end{itemize}
+\item
+  Draft of stimuli selection procedure for the ManyBabies - AtHome LWL
+  Team
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://kvonholzen.github.io/MBAH_LWL.html}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{grants}{%
+\section{Grants}\label{grants}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-2025 & \parbox[t]{0.85\textwidth}{%
+\textbf{Initial foreign speech segmentation in school-aged children}\hfill{\footnotesize 216,325 euros}\newline
+  HO 6614/3 - DFG Research Grant, Germany\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Primary Investigator%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2017-2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{The role of infant- and adult-directed registers in initial foreign speech segmentation}\hfill{\footnotesize }\newline
+  Comparative and Evolutionary Biology of Hearing, NIH Postdoc Training Grant, 5T32DC00046-23, USA\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Postdoctoral Trainee as Primary Investigator%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2009  & \parbox[t]{0.85\textwidth}{%
+\textbf{The relationship between attractiveness rating and brain activity in males and females}\hfill{\footnotesize \$5,000 }\newline
+  Psi Chi Association of Psychological Science Summer Research Grant, USA\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Primary Investigator mentored by Prof. Todd Heatherton%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{awards}{%
+\section{Awards}\label{awards}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{Society for Improvement of Psychological Science Mission Award}\hfill{\footnotesize }\newline
+  For improving psychological science in the face of challenge, as contributor to the ManyBabies1 Collaboration\par%
+  \empty%
+\vspace{\parsep}}\\
+2018 & \parbox[t]{0.85\textwidth}{%
+\textbf{Berkeley Initiative for Transparency in the Social Sciences (BITSS) Meta-Analysis Challenge}\hfill{\footnotesize \$1,000 }\newline
+  Shared with co-author Christina Bergmann\par%
+  \empty%
+\vspace{\parsep}}\\
+2014 & \parbox[t]{0.85\textwidth}{%
+\textbf{GDR Neurosciences Cognitives du Developpement bourses de mobilite a des doctorants}\hfill{\footnotesize }\newline
+  Travel award for the Potsdam Summer School, Infant Studies on Language Development in Europe (ISOLDE)\par%
+  \empty%
+\vspace{\parsep}}\\
+2013 & \parbox[t]{0.85\textwidth}{%
+\textbf{Universitaetsbund Goettingen Travel Grant}\hfill{\footnotesize }\newline
+  For the International Workshop on Bilingualism and Cognitive Control in Krakow, Poland\par%
+  \empty%
+\vspace{\parsep}}\\
+2011 & \parbox[t]{0.85\textwidth}{%
+\textbf{Paula Menyuk Travel Award}\hfill{\footnotesize \$300 }\newline
+  For BUCLD 2011\par%
+  \empty%
+\vspace{\parsep}}\\
+2010 & \parbox[t]{0.85\textwidth}{%
+\textbf{Phi Eta Sigma National Honor Society Graduate Scholarship}\hfill{\footnotesize \$7,000 }\newline
+  Phi Eta Sigma is a National Honors Society\par%
+  \empty%
+\vspace{\parsep}}\\
+2009 & \parbox[t]{0.85\textwidth}{%
+\textbf{Margaret Bernauer Psychology Research Award (2nd Place)}\hfill{\footnotesize \$200 }\newline
+  Awarded for Poster Presentation at the Wisconsin Psychological Association Conference\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2019 - in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Habilitation, English Linguistics}\hfill{\footnotesize }\newline
+  Technische Universitaet Braunschweig, Germany\par%
+  \empty%
+\vspace{\parsep}}\\
+2010 - 2013 & \parbox[t]{0.85\textwidth}{%
+\textbf{Dr. rer. nat. Psychology, magna cum laude}\hfill{\footnotesize }\newline
+  Georg-August-Universitaet Goettingen, Germany\par%
+  \empty%
+\vspace{\parsep}}\\
+2006 - 2009 & \parbox[t]{0.85\textwidth}{%
+\textbf{B.S. Psychology, summa cum laude}\hfill{\footnotesize }\newline
+  University of Wisconsin - Green Bay, USA\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{selected-publications}{%
+\section{Selected Publications}\label{selected-publications}}
+
+For a complete list, visit my
+\href{https://orcid.org/0000-0001-7636-2209}{ORCID profile}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-CVaccent}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K., van Ommen, S., White, K., \& Nazzi, T.
+(2022). The impact of phonological biases on mispronunciation
+sensitivity and novel accent adaptation. \emph{Language Learning and
+Development}. \url{https://doi.org/10.1080/15475441.2022.2071717}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-MetaAnalysis}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2021). The development
+of infants' responses to mispronunciations: A Meta-Analysis.
+\emph{Developmental Psychology}, \emph{57}(1), 1--18.
+\url{https://doi.org/10.1037/dev0001141}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-MB1}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{ManyBabiesConsortium. (2020). Quantifying sources of
+variability in infancy research using the infant-directed speech
+preference. \emph{Advances in Methods and Practices in Psychological
+Science}, \emph{3}(1), 24--52.
+\url{https://doi.org/10.1177/2515245919900809}}
+
+\hypertarget{manuscripts-under-revision-or-review}{%
+\subsection{Manuscripts under revision or
+review}\label{manuscripts-under-revision-or-review}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-MB5}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Kosie, J., Zettersten, M., \& The ManyBabies5 Team.
+(n.d.). \emph{ManyBabies5: A large-scale investigation of the proposed
+shift from familiarity preference to novelty preference in infant
+looking time.} \url{https://doi.org/10.31234/osf.io/ck3vd}}
+
+\hypertarget{teaching-and-mentorship}{%
+\section{Teaching and Mentorship}\label{teaching-and-mentorship}}
+
+\hypertarget{tutorials}{%
+\subsection{Tutorials}\label{tutorials}}
+
+\emph{I've written a suite of Tutorials available on my website
+(\url{https://kvonholzen.github.io/Tutorials.html}) for creating
+experiments in Open Sesame, analyzing data in R, working in Praat, and
+preprocessing EEG/ERP data in EEGlab/ERPlab. I've also created a
+tutorial for analyzing eyetracking data with R
+(\url{https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/})}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Eyetracking Statistical Analysis Tutorial}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Workshop series with TU Dortmund and TU Braunschweig (https://bookdown.org/katie\_m\_vonholzen/Eyetracking\_Statistical\_Analysis\_Tutorial/)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Doctoral students, postdoctoral researchers, and faculty, Universite Paris Descartes%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Time Course Analysis in R}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Doctoral students, Research Training Group 2070, Georg-August-Universitaet Goettingen%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2016 & \parbox[t]{0.85\textwidth}{%
+\textbf{EEG Pre-processing and Analysis Using EEGLAB and ERPLAB}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Doctoral students, postdoctoral researchers, and faculty, Universite Paris Descartes%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{courses-taught}{%
+\subsection{Courses Taught}\label{courses-taught}}
+
+\hypertarget{seminars}{%
+\subsubsection{Seminars}\label{seminars}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-  & \parbox[t]{0.85\textwidth}{%
+\textbf{Listening in the L1 and L2}\hfill{\footnotesize }\newline
+  Bachelors in English Studies, TU Braunschweig\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 1,3 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2022-  & \parbox[t]{0.85\textwidth}{%
+\textbf{Introduction to Linguistics}\hfill{\footnotesize }\newline
+  Bachelors in English Studies, TU Braunschweig\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 1,3 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2021-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Wortsegmentierung: Erkenntnisse aus der Psycho- und Neurolinguistik (Word segmentation: Findings from Psycho- and Neurolinguistics)}\hfill{\footnotesize }\newline
+  Masters in Germanistik, TU Dortmund\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 2,0 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2019-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Einfuehrung in die Sprachwissenschaft (Introduction to Linguistics)}\hfill{\footnotesize }\newline
+  Bachelors in Germanistik, TU Dortmund\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 1,65 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2019-2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)}\hfill{\footnotesize }\newline
+  Masters in Germanistik, TU Dortmund\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation:  2,00 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2012  & \parbox[t]{0.85\textwidth}{%
+\textbf{Language Acquisition and Processing}\hfill{\footnotesize }\newline
+  Bachelors in Germanistik, Georg-August-Universitaet Goettingen\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item No evaluation available%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{lecture-based-courses}{%
+\subsubsection{Lecture-based Courses}\label{lecture-based-courses}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2018  & \parbox[t]{0.85\textwidth}{%
+\textbf{Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain \& Behavior Research}\hfill{\footnotesize }\newline
+  Bachelor students, University of Maryland\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Evaluation: 'I learned a lot from this course'- 3.03 (Disagree - 0 to Strongly Agree (4)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2011  & \parbox[t]{0.85\textwidth}{%
+\textbf{Experimental Methods for Testing Language Comprehension}\hfill{\footnotesize }\newline
+  Bachelors in Germanistik, Georg-August-Universitaet Goettingen\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item No evaluation available%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{current-students}{%
+\subsection{Current Students}\label{current-students}}
+
+\hypertarget{postdoctoral-researchers}{%
+\subsubsection{Postdoctoral
+researchers}\label{postdoctoral-researchers}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Sophia Wulfert}\hfill{\footnotesize TU Braunschweig}\newline
+  TBD\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{doctoral-students}{%
+\subsubsection{Doctoral students}\label{doctoral-students}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Marie Schnieders}\hfill{\footnotesize TU Braunschweig}\newline
+  Initial Steps into Foreign Language Learning: Lexical and Morphosyntactic Abilities of Primary School Students \par%
+  \empty%
+\vspace{\parsep}}\\
+2020-in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Marie-Christin Flohr}\hfill{\footnotesize Ludwig Maximilian University of Munich}\newline
+  Child Foreign Speech Processing\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{invited-talks-and-conference-activity}{%
+\section{Invited Talks and Conference
+Activity}\label{invited-talks-and-conference-activity}}
+
+\hypertarget{selected-invited-talks}{%
+\subsection{Selected Invited Talks}\label{selected-invited-talks}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2022c}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K. (2022). \emph{Using cluster-based
+permutation tests to analyse eye-tracking data}. Presented at the CLaS
+Eye-tracking Workshop 2, Macquarie University, Australia.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2021}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K. (2021). \emph{Babies know words, even
+when they're mispronounced: An introduction to meta-analyses}. Presented
+at the German Seminar Colloquium, Albert-Ludwigs Universitaet Freiburg,
+Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2020}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Von Holzen, K. (2020). \emph{Babies know words, even
+when they're mispronounced: A meta-analysis of mispronunciation
+sensitivity studies}. Presented at the Team Meeting of the Language and
+Cognition Group, The Institute of Neuroscience and Cognition, Paris
+Descartes Universite, Paris, France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2019a}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Von Holzen, K. (2019). \emph{Babies know words, even
+when they're mispronounced: A meta-analysis of mispronunciation
+sensitivity}. Presented at the Linguistics Department, City University
+of New York, USA.}
+
+\hypertarget{selected-conference-talks}{%
+\subsection{Selected Conference Talks}\label{selected-conference-talks}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-tV2022a}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K., Bergmann, C., \&
+ManyBabies-AtHome-Consortium. (2022). \emph{ManyBabies-AtHome looking
+while listening: Constructing an online, cross-linguistic investigation
+of word recognition}. Presented at the 52nd Congress of the German
+Psychological Society, Hildesheim, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tV2022b}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K., \& ManyBabies-AtHome-Consortium. (2022).
+\emph{ManyBabies-AtHome}. Presented at the 2022 Big Team Science
+Conference, Virtual Conference.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tB2021}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Boveleth, J., \& Von Holzen, K. (2021). \emph{The
+difference in the vocabulary size of children with und without down
+syndrome: A meta analysis}. Presented at the Muenster Conference
+Linguistic Representtions and Language Processing, Muenster, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2019}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2019). \emph{Can a tog
+be a dog? A meta-analysis of experimental factors influencing infants'
+mispronunciation sensitivity}. In Gonzalez-Gomez, N. (Chair), Big ideas
+to tackle small samples. Presented at the Biennial Meeting of the
+Society for Research in Child Development, Baltimore, USA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2018b}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2018). \emph{A
+meta-analysis of infants' mispronunciation sensitivity development}.
+Presented at the 40th Annual Meeting of the Cognitive Science Society,
+Madison, WI, USA.}
+
+\hypertarget{selected-conference-posters}{%
+\subsection{Selected Conference
+Posters}\label{selected-conference-posters}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2022a}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K., Bergmann, C., \&
+ManyBabies-AtHome-Consortium. (2022). \emph{ManyBabies-AtHome looking
+while listening: Constructing an online, cross-linguistic investigation
+of word recognition}. Presented at the 2022 Workshop on Infant Language
+Development, San Sebastian, Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2018a}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2018). \emph{A
+meta-analysis of mispronunciation sensitivity in infancy}. Presented at
+the XXIth Biennial International Conference on Infant Studies,
+Philadelphia, PA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2017c}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2017). \emph{Babies
+know words, even when they are mispronounced: A meta-analytic view}.
+Presented at the Workshop on Infant Language Development, Bilbao, Spain.
+\url{https://doi.org/10.6084/m9.figshare.5492464.v1}}
+
+\hypertarget{skills}{%
+\section{Skills}\label{skills}}
+
+\hypertarget{experiment-programming-experience}{%
+\subsection{Experiment Programming
+Experience}\label{experiment-programming-experience}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+Open Sesame/Python & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Designing experiments, including lexical decision (adults), visual world paradigm (with and without an eye-tracker) and preferential listening (infants); Experience advising colleagues on experimental design; Conducting tutorials with colleagues and students; Launching experiments online; Used to promote Open Science practices\par%
+  \empty%
+\vspace{\parsep}}\\
+Presentation & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise (lapsed)}\hfill{\footnotesize }\newline
+  Designing experiments, including EEG experiments\par%
+  \empty%
+\vspace{\parsep}}\\
+Eprime & \parbox[t]{0.85\textwidth}{%
+\textbf{Beginner expertise}\hfill{\footnotesize }\newline
+  Designing experiments, including EEG experiments\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{statisticaldata-analysis-experience}{%
+\subsection{Statistical/Data Analysis
+Experience}\label{statisticaldata-analysis-experience}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+R & \parbox[t]{0.85\textwidth}{%
+\textbf{Proficient expertise}\hfill{\footnotesize }\newline
+  Advising colleagues on statistical analysis, data wrangling; Conducting tutorials; Growth growth curve modeling (lmer package); Mixed effects models (lmer package); ANOVA analyses (ez package); Producing beautiful graphics (ggplot2 package); Analyzing vocabulary data corpora (wordbankr package); Power analysis (pwr package); Creating RMarkdown files to promote collaboration and accuracy; Used to promote Open Science practices\par%
+  \empty%
+\vspace{\parsep}}\\
+Praat & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Scripting to automatically analyze sounds (pitch, duration, intensity); Stimuli creation; Interfacing with CLAN output to analyze corpora; Interfacing with a forced aligner (Easy Align); Used to promote Open Science practices\par%
+  \empty%
+\vspace{\parsep}}\\
+CHAT/CLAN & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Analyzing length of utterance; Time-locking transcripts to audio recordings; Interfacing with Praat\par%
+  \empty%
+\vspace{\parsep}}\\
+EEG/ERPlab & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Preprocessing EEG data; Conducting tutorials; Related MATLAB scripting to automatically analyze EEG/ERP data\par%
+  \empty%
+\vspace{\parsep}}\\
+SPSS & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise (lapsed)}\hfill{\footnotesize }\newline
+  ANOVA analyses\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{service}{%
+\section{Service}\label{service}}
+
+\hypertarget{institutional-service}{%
+\subsection{Institutional Service}\label{institutional-service}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-present & \parbox[t]{0.85\textwidth}{%
+\textbf{Leadership Board ManyBabies-AtHome}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+2021-present & \parbox[t]{0.85\textwidth}{%
+\textbf{Project manager of the Looking-While-Listening sub-project of ManyBabies-AtHome}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+2021-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Consulting Editor at the Journal Child Development}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+2020-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Executive Board Member of the Department for Language, Literature, and Culture}\hfill{\footnotesize }\newline
+  TU Dortmund\par%
+  \empty%
+\vspace{\parsep}}\\
+2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{Member of the Cultural and Linguistic Diversity Committee}\hfill{\footnotesize }\newline
+  University of Maryland\par%
+  \empty%
+\vspace{\parsep}}\\
+2018 & \parbox[t]{0.85\textwidth}{%
+\textbf{Panel judge for Graduate Research Appreciation Day}\hfill{\footnotesize }\newline
+  University of Maryland\par%
+  \empty%
+\vspace{\parsep}}\\
+2014-2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Co-founder and organizer, Parisian BabyLab Meetings (PaBaLa)}\hfill{\footnotesize }\newline
+  Universite Paris Descartes\par%
+  \empty%
+\vspace{\parsep}}\\
+2014-2016 & \parbox[t]{0.85\textwidth}{%
+\textbf{Co-Chair, Student and Post-doc Talks (SPOT)}\hfill{\footnotesize }\newline
+  Universite Paris Descartes\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{professional-service}{%
+\subsection{Professional Service}\label{professional-service}}
+
+For a complete record of my peer-review service, view my Publons Peer
+Review Profile
+(\url{https://www.webofscience.com/wos/author/record/1483321})
+
+\hypertarget{professional-memberships}{%
+\section{Professional Memberships}\label{professional-memberships}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022 - present & \parbox[t]{0.85\textwidth}{%
+\textbf{Member of the German Psychological Society}\\[-0.1cm]{\footnotesize }}\\[0.4cm]
+2019 - present & \parbox[t]{0.85\textwidth}{%
+\textbf{Member of the Deutscher Hochschulverband}\\[-0.1cm]{\footnotesize }}\\[0.4cm]
+2017 - present & \parbox[t]{0.85\textwidth}{%
+\textbf{Member of the National Postdoctoral Association (USA)}\\[-0.1cm]{\footnotesize }}\\[0.4cm]
+2012 - present & \parbox[t]{0.85\textwidth}{%
+\textbf{Member of Women in Cognitive Science (WICS)}\\[-0.1cm]{\footnotesize }}\\[0.4cm]
+\end{longtable}
+
+\hypertarget{languages}{%
+\section{Languages}\label{languages}}
+
+\begin{itemize}
+\tightlist
+\item
+  English, native
+\item
+  German, fluent (C1)
+\item
+  French, beginner (A2)
+\end{itemize}
+
+\hypertarget{community-involvementoutreach}{%
+\section{Community
+Involvement/Outreach}\label{community-involvementoutreach}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2018-2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{Rosa Parks Elementary School, Hyattsville Education Advisory Committee's Summer Reading Program}\hfill{\footnotesize }\newline
+  Volunteer\par%
+  \empty%
+\vspace{\parsep}}\\
+2014  & \parbox[t]{0.85\textwidth}{%
+\textbf{Winneconne Elementary School: Being a scientist and living in a foreign country}\hfill{\footnotesize }\newline
+  Presenter\par%
+  \empty%
+\vspace{\parsep}}\\
+2012  & \parbox[t]{0.85\textwidth}{%
+\textbf{Preschool Immersion Event: Bilingual Language Development at ASC Kinderbewegungshaus}\hfill{\footnotesize }\newline
+  Presenter\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\end{document}

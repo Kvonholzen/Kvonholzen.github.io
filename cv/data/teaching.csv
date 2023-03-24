@@ -1,13 +1,13 @@
-Type,Start_Year,End_Year,Name,Desc,Evaluation,WS_19_20,SoSe_2020,WS_20_21,SoSe_2021,WS_21_22,SoSe_2022
-Seminar,2022-,,Listening in the L1 and L2,"Bachelors in English Studies, TU Braunschweig",Evaluation not yet available,,,,,,
-Seminar,2022-,,Introduction to Linguistics,"Bachelors in English Studies, TU Braunschweig","Average Evaluation: 1,6 (German grading system)",,,,,,1.6
-Seminar,2021,-2022,Wortsegmentierung: Erkenntnisse aus der Psycho- und Neurolinguistik (Word segmentation: Findings from Psycho- and Neurolinguistics),"Masters in Germanistik, TU Dortmund","Average Evaluation: 2,0 (German grading system)",,,,,2,
-Seminar,2019,-2022,Einführung in die Sprachwissenschaft (Introduction to Linguistics),"Bachelors in Germanistik, TU Dortmund","Average Evaluation: 1,65 (German grading system)",2.29,1.8,1.44,1.25,1.47,
-Seminar,2019,-2021,"Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)","Masters in Germanistik, TU Dortmund","Average Evaluation:  2,00 (German grading system)",2.24,2,2.36,1.47,,
-Seminar,2012,,Language Acquisition and Processing,"Bachelors in Germanistik, Georg-August-Universität Göttingen",No evaluation available,,,,,,
-Lecture,2018,,Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research,"Bachelor students, University of Maryland",Evaluation: 'I learned a lot from this course'- 3.03 (Disagree - 0 to Strongly Agree (4),,,,,,
-Lecture,2011,,Experimental Methods for Testing Language Comprehension,"Bachelors in Germanistik, Georg-August-Universität Göttingen",No evaluation available,,,,,,
-Tutorial,2021,,Eyetracking Statistical Analysis Tutorial,Workshop series with TU Dortmund and TU Braunschweig (https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/),,,,,,,
-Tutorial,2017,,Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R,"Doctoral students, postdoctoral researchers, and faculty, Université Paris Descartes",,,,,,,
-Tutorial,2017,,Time Course Analysis in R,"Doctoral students, Research Training Group 2070, Georg-August-Universität Göttingen",,,,,,,
-Tutorial,2016,,EEG Pre-processing and Analysis Using EEGLAB and ERPLAB,"Doctoral students, postdoctoral researchers, and faculty, Université Paris Descartes",,,,,,,
+Type,Start_Year,End_Year,Name,Desc,Evaluation,WS_19_20,SoSe_2020,WS_20_21,SoSe_2021,WS_21_22,SoSe_2022,WS_22_23
+Seminar,2022-,,Listening in the L1 and L2,"Bachelors in English Studies, TU Braunschweig","Average Evaluation: 1,3 (German grading system)",,,,,,,1.3
+Seminar,2022-,,Introduction to Linguistics,"Bachelors in English Studies, TU Braunschweig","Average Evaluation: 1,3 (German grading system)",,,,,,1.6,1 and 1.2
+Seminar,2021,-2022,Wortsegmentierung: Erkenntnisse aus der Psycho- und Neurolinguistik (Word segmentation: Findings from Psycho- and Neurolinguistics),"Masters in Germanistik, TU Dortmund","Average Evaluation: 2,0 (German grading system)",,,,,2,,
+Seminar,2019,-2022,Einfuehrung in die Sprachwissenschaft (Introduction to Linguistics),"Bachelors in Germanistik, TU Dortmund","Average Evaluation: 1,65 (German grading system)",2.29,1.8,1.44,1.25,1.47,,
+Seminar,2019,-2021,"Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)","Masters in Germanistik, TU Dortmund","Average Evaluation:  2,00 (German grading system)",2.24,2,2.36,1.47,,,
+Seminar,2012,,Language Acquisition and Processing,"Bachelors in Germanistik, Georg-August-Universitaet Goettingen",No evaluation available,,,,,,,
+Lecture,2018,,Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain & Behavior Research,"Bachelor students, University of Maryland",Evaluation: 'I learned a lot from this course'- 3.03 (Disagree - 0 to Strongly Agree (4),,,,,,,
+Lecture,2011,,Experimental Methods for Testing Language Comprehension,"Bachelors in Germanistik, Georg-August-Universitaet Goettingen",No evaluation available,,,,,,,
+Tutorial,2021, ,Eyetracking Statistical Analysis Tutorial,Workshop series with TU Dortmund and TU Braunschweig (https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/),,,,,,,,
+Tutorial,2017, ,Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R,"Doctoral students, postdoctoral researchers, and faculty, Universite Paris Descartes",,,,,,,,
+Tutorial,2017, ,Time Course Analysis in R,"Doctoral students, Research Training Group 2070, Georg-August-Universitaet Goettingen",,,,,,,,
+Tutorial,2016, ,EEG Pre-processing and Analysis Using EEGLAB and ERPLAB,"Doctoral students, postdoctoral researchers, and faculty, Universite Paris Descartes",,,,,,,,

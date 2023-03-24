@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2023-03-20" />
+<meta name="date" content="2023-03-24" />
 
 <title>MB AtHome - LWL: Wordbank Procedure for Varied Items (American English)</title>
 
@@ -1710,83 +1710,11 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">MB AtHome - LWL: Wordbank Procedure for
 Varied Items (American English)</h1>
-<h4 class="date">2023-03-20</h4>
+<h4 class="date">2023-03-24</h4>
 
 </div>
 
 
-<p>This is a script is designed to aid MB-AH LWL researchers in choosing
-target words for the Varied Set (see below) to test in their language.
-There are several Procedures specified that researchers can use to
-choose stimuli for the Varied Set based on the resources available.
-Answer the following questions to determine the procedure that your
-particular language should use.</p>
-<p><strong>Does Wordbank have comprehension data for infants between 10-
-and 14-months for my particular language?</strong></p>
-<p>If Yes: Use the Wordbank Procedure</p>
-<p>If No: continue on</p>
-<p><em>Here we could add more questions/procedures, if there is older
-comprehension data or production data available. Or, for simplicity’s
-sake, we could just move on to private CDI data</em></p>
-<p><strong>Is there in-house, private lab CDI comprehension data for
-infants between 10- and 14-months for my particular
-language?</strong></p>
-<p>If Yes: Use the In-House Lab CDI Procedure (using CDI data privately
-available by developmental laboratories studying that language)</p>
-<p>If No: Use the Knowledgeable Expert Procedure (participating
-researchers will be asked to make informed choices)</p>
-<div id="the-wordbank-procedure" class="section level1">
-<h1>The Wordbank Procedure</h1>
-<p>This particular version relies on the age of acquisition data
-calculated by Wordbank to choose words (Wordbank Procedure).</p>
-<p>We focus first on stimuli selection for infants under 18 months. For
-each language, we will select 12 nouns. Half of these target words will
-be strictly set across languages (Set Items) and the other half will be
-allowed to vary across languages (Varied Items). The choice of Varied
-Items will control for estimated age of acquisition (AoA) and other
-factors known to influence looking behavior in LWL studies (see below).
-Within the Set and Varied Items, target words will be counterbalanced
-across three semantic categories: body parts, food/drink/household
-(eating?), and toys. Set Items were chosen to be language-specific
-translations of “foot” and “hand” for the body parts category, “banana”
-and “milk” for the food/drink/household category, and “book” and “ball”
-for the toys category. These items were chosen because they were deemed
-likely to be known by young infants across several languages (Dutch,
-English (American), French (Quebecois), German, Hebrew, Italian, Korean,
-Norwegian, Polish, Spanish (European, Mexican)), and would not likely
-differ in familiarity across cultures (Is this description good
-enough?!?!?!).</p>
-<p>For the Varied Items, researchers will choose target words that meet
-the criteria set by the MBAH-LWL stimuli team. Similar to the Set Items,
-2 words should come from the body parts category, 2 from the
-food/drink/household category, and 2 from the toys category, but should
-not include items from the Set Items. To ensure that the chosen words
-are likely to be known by the young infants tested in each language and
-also minimize variation in age of acquisition across languages, Varied
-Items will be chosen using different procedures designed to determined
-the age of acquisition for items in a particular language. The procedure
-used for a particular language will depend on resource availability, but
-will follow either the Wordbank Procedure (if CDI data is publically
-available in the Wordbank database), In-House Lab CDI Procedure (if CDI
-data is not available in the Wordbank database, but is privately
-available by developmental laboratories studying that language), or
-Knowledgable Expert Procedure (if CDI is neither available on Wordbank
-or privately In-House, participating researchers will be asked to make
-informed choices).</p>
-<p>The current procedure, the Wordbank Procedure, relies on the CDI data
-available on Wordbank. Items will be chosen at which 50% of children in
-the age range of 10 to 14 months are estimated to understand the word
-according to CDI data available on Wordbank, using the aoa_fit()
-function available in the wordbankR package. For each pair of words from
-a category, the following constraints apply:</p>
-<ul>
-<li>Pairs should have the same grammatical gender if your language uses
-determiners that mark grammatical gender (e.g., la/le in French)</li>
-<li>Pairs should not start with the same phoneme</li>
-</ul>
-<p>ANY OTHER CONSTRAINTS? COULD LIST HERE THE PROCEDURE FOR CHOOSING
-WORDS WHEN THERE ARE MORE THAN TWO OPTIONS</p>
-</div>
 <div id="querying-the-wordbank-database" class="section level1">
 <h1>Querying the Wordbank Database</h1>
 <p>To determine the AoA of words and facilitate our choice of target
@@ -3974,10 +3902,9 @@ items on the WG form using the “fit_aoa” function. <a href="https://langcog.
 can read more here.</a>. Our criteria for establishing an AoA is that
 50% of children are estimated to understand the word, so we set measure
 to “understands” and proportion to 0.5.</p>
-<p>MAKE A DECISION ABOUT fit_aoa METHOD!</p>
 <pre class="r"><code>  aoa.comp &lt;- fit_aoa(i.data, 
           measure = &quot;understands&quot;, 
-          method = &quot;glm&quot;, 
+          method = &quot;glmrob&quot;, 
           proportion = 0.5)</code></pre>
 <p>The fit_aoa() function does not return the item names, just the item
 id’s, so we join our AoA values with the item data. We also remove items
@@ -4021,17 +3948,6 @@ nose
 </tr>
 <tr>
 <td style="text-align:left;">
-ear
-</td>
-<td style="text-align:left;">
-ear
-</td>
-<td style="text-align:right;">
-14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 eye
 </td>
 <td style="text-align:left;">
@@ -4058,17 +3974,6 @@ hair
 </td>
 <td style="text-align:left;">
 hair
-</td>
-<td style="text-align:right;">
-14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-hand
-</td>
-<td style="text-align:left;">
-hand
 </td>
 <td style="text-align:right;">
 14
@@ -4109,10 +4014,10 @@ belly button
 </tr>
 <tr>
 <td style="text-align:left;">
-head
+ear
 </td>
 <td style="text-align:left;">
-head
+ear
 </td>
 <td style="text-align:right;">
 15
@@ -4120,10 +4025,10 @@ head
 </tr>
 <tr>
 <td style="text-align:left;">
-toe
+hand
 </td>
 <td style="text-align:left;">
-toe
+hand
 </td>
 <td style="text-align:right;">
 15
@@ -4131,13 +4036,13 @@ toe
 </tr>
 <tr>
 <td style="text-align:left;">
-arm
+head
 </td>
 <td style="text-align:left;">
-arm
+head
 </td>
 <td style="text-align:right;">
-16
+15
 </td>
 </tr>
 <tr>
@@ -4160,6 +4065,28 @@ tooth
 </td>
 <td style="text-align:right;">
 16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+toe
+</td>
+<td style="text-align:left;">
+toe
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arm
+</td>
+<td style="text-align:left;">
+arm
+</td>
+<td style="text-align:right;">
+17
 </td>
 </tr>
 <tr>
@@ -4298,17 +4225,6 @@ cup
 </tr>
 <tr>
 <td style="text-align:left;">
-telephone
-</td>
-<td style="text-align:left;">
-telephone
-</td>
-<td style="text-align:right;">
-13
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 cheerios
 </td>
 <td style="text-align:left;">
@@ -4324,17 +4240,6 @@ cheese
 </td>
 <td style="text-align:left;">
 cheese
-</td>
-<td style="text-align:right;">
-14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-cracker
-</td>
-<td style="text-align:left;">
-cracker
 </td>
 <td style="text-align:right;">
 14
@@ -4375,10 +4280,10 @@ key
 </tr>
 <tr>
 <td style="text-align:left;">
-toothbrush
+telephone
 </td>
 <td style="text-align:left;">
-toothbrush
+telephone
 </td>
 <td style="text-align:right;">
 14
@@ -4408,10 +4313,10 @@ cookie
 </tr>
 <tr>
 <td style="text-align:left;">
-food
+cracker
 </td>
 <td style="text-align:left;">
-food
+cracker
 </td>
 <td style="text-align:right;">
 15
@@ -4419,10 +4324,10 @@ food
 </tr>
 <tr>
 <td style="text-align:left;">
-juice
+food
 </td>
 <td style="text-align:left;">
-juice
+food
 </td>
 <td style="text-align:right;">
 15
@@ -4452,6 +4357,17 @@ spoon
 </tr>
 <tr>
 <td style="text-align:left;">
+toothbrush
+</td>
+<td style="text-align:left;">
+toothbrush
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 bread
 </td>
 <td style="text-align:left;">
@@ -4463,10 +4379,10 @@ bread
 </tr>
 <tr>
 <td style="text-align:left;">
-cereal
+juice
 </td>
 <td style="text-align:left;">
-cereal
+juice
 </td>
 <td style="text-align:right;">
 16
@@ -4496,10 +4412,10 @@ light (object)
 </tr>
 <tr>
 <td style="text-align:left;">
-box
+cereal
 </td>
 <td style="text-align:left;">
-box
+cereal
 </td>
 <td style="text-align:right;">
 17
@@ -4507,10 +4423,10 @@ box
 </tr>
 <tr>
 <td style="text-align:left;">
-broom
+box
 </td>
 <td style="text-align:left;">
-broom
+box
 </td>
 <td style="text-align:right;">
 17
@@ -4544,17 +4460,6 @@ pillow
 </td>
 <td style="text-align:left;">
 pillow
-</td>
-<td style="text-align:right;">
-17
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-towel
-</td>
-<td style="text-align:left;">
-towel
 </td>
 <td style="text-align:right;">
 17
@@ -4639,17 +4544,6 @@ orange (food)
 </tr>
 <tr>
 <td style="text-align:left;">
-peas
-</td>
-<td style="text-align:left;">
-peas
-</td>
-<td style="text-align:right;">
-18
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 pizza
 </td>
 <td style="text-align:left;">
@@ -4665,6 +4559,17 @@ toast
 </td>
 <td style="text-align:left;">
 toast
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+broom
+</td>
+<td style="text-align:left;">
+broom
 </td>
 <td style="text-align:right;">
 18
@@ -4683,28 +4588,6 @@ comb (object)
 </tr>
 <tr>
 <td style="text-align:left;">
-paper
-</td>
-<td style="text-align:left;">
-paper
-</td>
-<td style="text-align:right;">
-18
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-picture
-</td>
-<td style="text-align:left;">
-picture
-</td>
-<td style="text-align:right;">
-18
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 plate
 </td>
 <td style="text-align:left;">
@@ -4720,6 +4603,17 @@ soap
 </td>
 <td style="text-align:left;">
 soap
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+towel
+</td>
+<td style="text-align:left;">
+towel
 </td>
 <td style="text-align:right;">
 18
@@ -4835,7 +4729,7 @@ doll
 doll
 </td>
 <td style="text-align:right;">
-16
+17
 </td>
 </tr>
 <tr>

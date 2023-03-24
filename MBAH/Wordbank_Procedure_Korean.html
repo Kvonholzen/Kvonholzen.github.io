@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2023-03-20" />
+<meta name="date" content="2023-03-24" />
 
 <title>MB AtHome - LWL: Wordbank Procedure for Varied Items (Korean)</title>
 
@@ -1710,7 +1710,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">MB AtHome - LWL: Wordbank Procedure for
 Varied Items (Korean)</h1>
-<h4 class="date">2023-03-20</h4>
+<h4 class="date">2023-03-24</h4>
 
 </div>
 
@@ -3886,10 +3886,9 @@ items on the WG form using the “fit_aoa” function. <a href="https://langcog.
 can read more here.</a>. Our criteria for establishing an AoA is that
 50% of children are estimated to understand the word, so we set measure
 to “understands” and proportion to 0.5.</p>
-<p>MAKE A DECISION ABOUT fit_aoa METHOD!</p>
 <pre class="r"><code>  aoa.comp &lt;- fit_aoa(i.data, 
           measure = &quot;understands&quot;, 
-          method = &quot;glm&quot;, 
+          method = &quot;glmrob&quot;, 
           proportion = 0.5)</code></pre>
 <p>The fit_aoa() function does not return the item names, just the item
 id’s, so we join our AoA values with the item data. We also remove items
@@ -4148,6 +4147,17 @@ milk
 </tr>
 <tr>
 <td style="text-align:left;">
+빗
+</td>
+<td style="text-align:left;">
+comb (object)
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
 칫솔
 </td>
 <td style="text-align:left;">
@@ -4185,17 +4195,6 @@ apple
 </td>
 <td style="text-align:left;">
 cheese
-</td>
-<td style="text-align:right;">
-15
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-빗
-</td>
-<td style="text-align:left;">
-comb (object)
 </td>
 <td style="text-align:right;">
 15
@@ -4384,21 +4383,21 @@ book
 </tr>
 <tr>
 <td style="text-align:left;">
-인형
-</td>
-<td style="text-align:left;">
-doll
-</td>
-<td style="text-align:right;">
-14
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
 연필
 </td>
 <td style="text-align:left;">
 pencil
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+인형
+</td>
+<td style="text-align:left;">
+doll
 </td>
 <td style="text-align:right;">
 15
