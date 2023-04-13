@@ -6,54 +6,13 @@ title: "ManyBabies-AtHome: Looking-While-Listening"
 
 This is a landing page catch-all for RMarkdown produced HTML files pertaining to the MBAH-LWL project.
 
-# Choosing Stimuli
 
-We focus first on stimuli selection for infants under 18 months. For each language, we will select 12 nouns. Half of these target words will be strictly set across languages (Set Items) and the other half will be allowed to vary across languages (Varied Items). The choice of Varied Items will control for estimated age of acquisition (AoA) and other factors known to influence looking behavior in LWL studies (see below). Within the Set and Varied Items, target words will be counterbalanced across three semantic categories: body parts, food/drink/household (eating?), and toys. Set Items were chosen to be language-specific translations of "foot" and "hand" for the body parts category, "banana" and "milk" for the food/drink/household category, and "book" and "ball" for the toys category. These items were chosen because they were deemed likely to be known by young infants across several languages (Dutch, English (American), French (Quebecois), German, Hebrew, Italian, Korean, Norwegian, Polish, Spanish (European, Mexican)), and would not likely differ in familiarity across cultures (Is this description good enough?!?!?!). 
+# Stimuli Choice Procedure
 
-For the Varied Items, researchers will choose target words that meet the criteria set by the MBAH-LWL stimuli team. Similar to the Set Items, 2 words should come from the body parts category, 2 from the food/drink/household category, and 2 from the toys category, but should not include items from the Set Items. To ensure that the chosen words are likely to be known by the young infants tested in each language and also minimize variation in age of acquisition across languages, Varied Items will be chosen using different procedures designed to determined the age of acquisition for items in a particular language. The procedure used for a particular language will depend on resource availability, but will follow either the Wordbank Procedure (if CDI data is publically available in the Wordbank database), In-House Lab CDI Procedure (if CDI data is not available in the Wordbank database, but is privately available or could feasibly be collected by developmental laboratories studying that language), or Knowledgable Expert Procedure (if CDI is neither available on Wordbank or privately In-House, participating researchers will be asked to make informed choices).
-
-## Guidelines for choosing a Procedure
-
-Collaborators should answer the following questions to determine the procedure that their particular language should use.
-
-**Does Wordbank have comprehension data for infants between 10- and 14-months for my particular language?**
-
-If Yes: Use the Wordbank Procedure
-
-If No: continue on
-
-*Here we could add more questions/procedures, if there is older comprehension data or production data available. Or, for simplicity's sake, we could just move on to private CDI data*
+We are designing the Procedures for choosing stimuli in different languages depending on available resources. The collaborative document outlining these Procedures [can be found here] (https://docs.google.com/document/d/1Rwruqwi1X_gpQWzchV721yEIew0E6GesPDwWVRbcMTY/edit?usp=sharing).
 
 
-**Is there in-house, private lab CDI comprehension data for infants between 10- and 14-months for my particular language?**
-
-If Yes: Use the In-House Lab CDI Procedure (using CDI data privately available by developmental laboratories studying that language)
-
-If No: continue on
-
-
-**Could in-house, private lab CDI comprehension data for infants between 10- and 14-months for my particular language be collected from parents?**
-
-If Yes: Collect that data and use the In-House Lab CDI Procedure (using CDI data privately available by developmental laboratories studying that language)
-
-If No: Use the Knowledgeable Expert Procedure (participating researchers will be asked to make informed choices)
-
-
-
-## The Wordbank Procedure
-
-The Wordbank Procedure, relies on the CDI data available on Wordbank. Items will be chosen at which 50% of children in the age range of 10 to 14 months are estimated to understand the word according to CDI data available on Wordbank, using the aoa_fit() function and method "glmrob" available in the wordbankR package. For each pair of words from a category, the following constraints apply: 
-
-* Pairs should have the same grammatical gender if your language uses determiners that mark grammatical gender (e.g., la/le in French)
-* Pairs should not start with the same phoneme
-
-If in a particular language not enough appropriate words meet this criteria in one or more than one category, then the age of acquisition range can be expanded to include older ages (e.g. 15, 16 months).
-
-If more than two words are available that meet the above criteria, researchers should consider the following to choose words in their language:
-
-* Image-ability of word (we are considering using Masterson & Druks, 1998)
-* Similarity with the Set Items
-* XXXXXXXXXXXXXXXXXXXXXX
+## Wordbank Procedure
 
 ### Languages
 
@@ -70,16 +29,3 @@ Below are a first set of vignettes outlining our attempt to define the "Wordbank
 [Wordbank Procedure for Korean.](MBAH/Wordbank_Procedure_Korean.html)
 
 
-## In-House Lab CDI Procedure
-
-*using CDI data privately available by developmental laboratories studying that language*
-
-
-### Collecting In-House Lab CDI data
-
-*how to collect CDI data by developmental laboratories studying that language*
-
-
-## Knowledgeable Expert Procedure
-
-*asking participating researchers to make informed choices*
