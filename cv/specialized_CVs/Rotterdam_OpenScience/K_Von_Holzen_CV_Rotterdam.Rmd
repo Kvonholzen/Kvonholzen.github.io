@@ -78,8 +78,12 @@ bibliography_entries("data/Publications.bib") %>%
     + https://osf.io/58bhv/?view_only=d48e6184241f4c77b5cb1ce20c98e2d7
 * Ini-Seg: Lexical Transparency
     + https://osf.io/dsg57/?view_only=b0ee304b3b0941ffa6e64ce0abc3b193
+* The influence of sentence frames in an online (remote) word comprehension experiment
+    + https://osf.io/7dpqg/?view_only=620d69ba96d24e4892bcfe351dc3a406
 * The role of speech register in foreign word learning
     + https://osf.io/5g2bz/?view_only=5ed0e404a83746cd906a4720232e3d3e
+
+
 
 
 ## Talks

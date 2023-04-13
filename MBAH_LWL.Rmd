@@ -61,6 +61,10 @@ Below are a first set of vignettes outlining our attempt to define the "Wordbank
 
 [Wordbank Procedure for English (American).](MBAH/Wordbank_Procedure_American_English.html)
 
+[Wordbank Procedure for French (France).](MBAH/Wordbank_Procedure_French_France.html)
+
+[Wordbank Procedure for Hebrew.](MBAH/Wordbank_Procedure_Hebrew.html)
+
 [Wordbank Procedure for Italian.](MBAH/Wordbank_Procedure_Italian.html)
 
 [Wordbank Procedure for Korean.](MBAH/Wordbank_Procedure_Korean.html)

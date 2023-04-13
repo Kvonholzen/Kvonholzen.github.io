@@ -1,0 +1,360 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Bienroder Weg 80, 38106 Braunschweig, Germany"
+phone: +49 531 391 8704
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: k.von-holzen@tu-braunschweig.de
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Curriculum Vitae"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+# Education
+
+```{r}
+
+# needed to add " to get special characters to read in properly
+edu_data <- read.csv(file = "data/education.csv", header = T)
+#edu_data <- read.csv(file = "data/education.csv", header = T)
+
+edu_data %>%
+  detailed_entries(
+    what = Degree,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+
+# Employment
+
+```{r}
+
+
+employ_data <- read.csv(file = "data/employment.csv", header = T)
+
+
+employ_data %>%
+  detailed_entries(
+    what = Position,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = Supervisor
+  )
+
+```
+
+# Publications
+
+## Published peer-reviewed papers
+
+**Average Impact Factor of 3.4**
+
+```{r}
+
+# apostrophe's need to be given as $'$
+
+`%!in%` <- Negate(`%in%`)
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %!in% "MB5") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+## Chapters in Books
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
+
+```
+
+## Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
+## Open Data
+
+```{r}
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(id %in% "VonHolzen2021" | id %in% "VonHolzen2022") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+## PhD Thesis
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "thesis") %>%
+  arrange(desc(issued), author)
+
+```
+
+```{r}
+# 
+## Manuscripts accepted pending minor revisions
+
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# print(bib)
+
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(id %in% "CVaccent")
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# 
+# 
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(issued %in% "accepted pending minor revisions") %>%
+#   arrange(desc(issued), author)
+
+```
+
+```{r}
+## Manuscripts accepted for publication
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+#   arrange(desc(issued), author)
+
+```
+
+## Manuscripts under revision or review
+
+```{r}
+
+
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %in% "MB5")
+
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "Unpublished") %>%
+#   arrange(desc(issued), author)
+```
+
+
+# Grants
+
+```{r}
+
+grant_data <- read.csv(file = "data/grants.csv", header = T)
+
+grant_data <- sapply(grant_data, as.character)
+grant_data[is.na(grant_data)] <- " "
+
+grant_data <- as.data.frame(grant_data)
+
+grant_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+```
+
+# Awards
+
+```{r}
+
+awards_data <- read.csv(file = "data/awards.csv", header = T)
+
+awards_data %>%
+  detailed_entries(
+    what = Name,
+    when = Year,
+    where = Desc,
+    with = Amount
+  )
+
+```
+
+
+
+
+
+
+
+## Supervision/Mentorship
+
+
+```{r}
+
+student_data <- read.csv(file = "data/students.csv", header = T)
+
+student_data <- sapply(student_data, as.character)
+student_data[is.na(student_data)] <- " "
+
+student_data <- as.data.frame(student_data)
+
+```
+
+### Postdoctoral researchers
+
+```{r}
+
+postdoc_data <- subset(student_data, Type == "Postdoctoral Researcher")
+
+
+postdoc_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+### Doctoral students
+
+```{r}
+
+phd_data <- subset(student_data, Type == "PhD")
+
+
+phd_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+### Master students
+
+```{r}
+
+master_data <- subset(student_data, Type == "Master")
+
+
+master_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+
+### Bachelor students
+
+```{r}
+
+bachelor_data <- subset(student_data, Type == "Bachelor")
+
+
+bachelor_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+```
+
+### Internships and project assistantships
+
+```{r}
+
+intern_data <- subset(student_data, Type == "Intern")
+
+intern_data %>%
+  detailed_entries(
+    what = Title,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Person,
+    with = Institution
+  )
+
+
+# - Sofia Carrion, 2017
+# - Elisa Moulin, 2015-2016
+# - Jeanne Charoy, 2015
+# - Marion Lafargue, 2014-2015 
+
+# - Safyya Larinouna, 2016
+# - Henry Cheng, 2014 
+
+
+# *Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*, Georg-August-Universität Göttingen, 2012
+# - Agniezska Leszczynska
+
+```
+
+
+
+
+# Languages
+
+- English, native
+- German, fluent (C1)
+- French, beginner (A2)
+
+
+
+
+
+
+
+
+
