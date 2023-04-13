@@ -9,7 +9,7 @@ This is a landing page catch-all for RMarkdown produced HTML files pertaining to
 
 # Stimuli Choice Procedure
 
-We are designing the Procedures for choosing stimuli in different languages depending on available resources. The collaborative document outlining these Procedures [can be found here] (https://docs.google.com/document/d/1Rwruqwi1X_gpQWzchV721yEIew0E6GesPDwWVRbcMTY/edit?usp=sharing).
+We are designing the Procedures for choosing stimuli in different languages depending on available resources. The collaborative document outlining these Procedures [can be found here](https://docs.google.com/document/d/1Rwruqwi1X_gpQWzchV721yEIew0E6GesPDwWVRbcMTY/edit?usp=sharing).
 
 
 ## Wordbank Procedure
