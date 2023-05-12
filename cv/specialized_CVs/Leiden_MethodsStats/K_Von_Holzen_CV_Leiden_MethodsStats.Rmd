@@ -2,10 +2,9 @@
 name: Katie
 surname: Von Holzen
 position: "Lecturer and Researcher"
-address: "Bienroder Weg 80, 38106 Braunschweig, Germany"
 profilepic: "./img/katie_headshot.jpg"
 www: Kvonholzen.github.io
-email: k.von-holzen@tu-braunschweig.de
+email: katie.m.vonholzen@gmail.com
 github: Kvonholzen
 twitter: KatieVonHolzen
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -121,6 +120,14 @@ bibliography_entries("data/Publications.bib")%>%
 
 ```
 
+## Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
 ## Chapters in Books
 
 ```{r}
@@ -128,14 +135,6 @@ bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "chapter") %>%
   arrange(desc(issued), author)
 
-```
-
-## Peer-Reviewed Conference Proceedings
-
-```{r}
-bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "paper-conference") %>%
-  arrange(desc(issued), author)
 ```
 
 ## Open Data
@@ -204,6 +203,17 @@ bibliography_entries("data/Publications.bib")%>%
 #   filter(type %in% "Unpublished") %>%
 #   arrange(desc(issued), author)
 ```
+
+## Preregistrations
+
+* Ini-Seg: Phonotactics
+    + https://osf.io/58bhv/?view_only=d48e6184241f4c77b5cb1ce20c98e2d7
+* Ini-Seg: Lexical Transparency
+    + https://osf.io/dsg57/?view_only=b0ee304b3b0941ffa6e64ce0abc3b193
+* The influence of sentence frames in an online (remote) word comprehension experiment
+    + https://osf.io/7dpqg/?view_only=620d69ba96d24e4892bcfe351dc3a406
+* The role of speech register in foreign word learning
+    + https://osf.io/5g2bz/?view_only=5ed0e404a83746cd906a4720232e3d3e
 
 
 # Grants
@@ -448,46 +458,6 @@ intern_data %>%
 ```
 
 
-
-# Invited Talks and Conference Activity
-
-## Invited Talks
-
-
-```{r}
-
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^i"))%>%
-  arrange(desc(issued), author)
-
-```
-
-
-## Conference Talks
-
-
-```{r}
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^t"))%>%
-  arrange(desc(issued), author)
-```
-
-
-
-## Conference Posters
-
-
-```{r}
-
-bibliography_entries("data/Presentations.bib") %>%
-  filter(str_detect(id, "^p"))%>%
-  arrange(desc(issued), author)
-
-```
-
-
-
-
 # Skills
 
 ## Experiment Programming Experience
@@ -543,6 +513,42 @@ stats_an %>%
 
 ```
 
+
+# Invited Talks and Conference Activity
+
+## Invited Talks
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^i"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+## Conference Talks
+
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^t"))%>%
+  arrange(desc(issued), author)
+```
+
+
+
+## Conference Posters
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^p"))%>%
+  arrange(desc(issued), author)
+
+```
 
 
 # Service
@@ -608,11 +614,6 @@ prof_member %>%
 - English, native
 - German, fluent (C1)
 - French, beginner (A2)
-- Dutch, beginner (A1)
-- Greek, beginner (A1)
-
-
-
 
 
 

@@ -81,7 +81,7 @@ employ_data %>%
 
 ```{r}
 
-research_area <- read.csv(file = "data/research_areas.csv", header = T)
+research_area <- read.csv(file = "data/research_areas_DevPsych.csv", header = T)
 
 research_area <- research_area %>%
   group_by(area) %>%
@@ -205,6 +205,7 @@ bibliography_entries("data/Publications.bib")%>%
 #   arrange(desc(issued), author)
 ```
 
+\newpage
 
 # Grants
 
@@ -329,7 +330,9 @@ tutorial_data %>%
 
 ## PhD examination committees
 
-I will serve as a member of the reading committee for Mareike Sahling's PhD thesis entitled “Effects of Otitis Media with Effusion on Speech Perception and Production in Preschoolers” at the University of Macquarie, Australia in Spring 2023 and as an external examiner for Paul Ratnage's PhD viva at the University of Plymouth, UK in Summer 2023.
+I will serve as a member of the reading committee for Mareike Sahling's PhD thesis entitled “Effects of Otitis Media with Effusion on Speech Perception and Production in Preschoolers” at the University of Macquarie, Australia in Spring 2023 and as an external examiner for Paul Ratnage's PhD viva entitled "The phonetic specificity of British English-learning infants’ word form recognition in their first year of life" at the University of Plymouth, UK in Summer 2023.
+
+\newpage
 
 
 ## Supervision/Mentorship
@@ -543,6 +546,7 @@ stats_an %>%
 
 ```
 
+\newpage
 
 
 # Service
@@ -607,9 +611,7 @@ prof_member %>%
 
 - English, native
 - German, fluent (C1)
-- French, beginner (A2)
-- Dutch, beginner (A1)
-- Greek, beginner (A1)
+- French, conversational (A2)
 
 
 
