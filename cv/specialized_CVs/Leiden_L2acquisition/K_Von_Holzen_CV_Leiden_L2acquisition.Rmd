@@ -1,0 +1,644 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Curriculum Vitae"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+# Education
+
+```{r}
+
+# needed to add " to get special characters to read in properly
+edu_data <- read.csv(file = "data/education.csv", header = T)
+#edu_data <- read.csv(file = "data/education.csv", header = T)
+
+edu_data %>%
+  detailed_entries(
+    what = Degree,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+
+# Employment
+
+```{r}
+
+
+employ_data <- read.csv(file = "data/employment.csv", header = T)
+
+
+employ_data %>%
+  detailed_entries(
+    what = Position,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = Supervisor
+  )
+
+```
+
+# Research Areas
+
+
+```{r}
+
+research_area <- read.csv(file = "data/research_areas_L2.csv", header = T)
+
+research_area <- research_area %>%
+  group_by(area) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+research_area <- unique(research_area[,c("area", "detail_list")])
+
+
+research_area %>%
+  detailed_entries(
+    what = detail_list,
+    when = area
+  )
+
+
+
+```
+
+
+# Publications
+
+## Published peer-reviewed papers
+
+**Average Impact Factor of 3.4**
+
+```{r}
+
+# apostrophe's need to be given as $'$
+
+`%!in%` <- Negate(`%in%`)
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %!in% "MB5") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+## Chapters in Books
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
+
+```
+
+## Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
+## Open Data
+
+```{r}
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(id %in% "VonHolzen2021" | id %in% "VonHolzen2022") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+## PhD Thesis
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "thesis") %>%
+  arrange(desc(issued), author)
+
+```
+
+```{r}
+# 
+## Manuscripts accepted pending minor revisions
+
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# print(bib)
+
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(id %in% "CVaccent")
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# 
+# 
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(issued %in% "accepted pending minor revisions") %>%
+#   arrange(desc(issued), author)
+
+```
+
+```{r}
+## Manuscripts accepted for publication
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+#   arrange(desc(issued), author)
+
+```
+
+## Manuscripts under revision or review
+
+```{r}
+
+
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %in% "MB5")
+
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "Unpublished") %>%
+#   arrange(desc(issued), author)
+```
+
+\newpage
+
+# Grants
+
+```{r}
+
+grant_data <- read.csv(file = "data/grants.csv", header = T)
+
+grant_data <- sapply(grant_data, as.character)
+grant_data[is.na(grant_data)] <- " "
+
+grant_data <- as.data.frame(grant_data)
+
+grant_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+```
+
+# Awards
+
+```{r}
+
+awards_data <- read.csv(file = "data/awards.csv", header = T)
+
+awards_data %>%
+  detailed_entries(
+    what = Name,
+    when = Year,
+    where = Desc,
+    with = Amount
+  )
+
+```
+
+
+# Teaching and Mentorship
+
+
+## Courses Taught
+
+
+```{r}
+
+teaching_data <- read.csv(file = "data/teaching.csv", header = T)
+
+
+teaching_data <- sapply(teaching_data, as.character)
+teaching_data[is.na(teaching_data)] <- " "
+
+teaching_data <- as.data.frame(teaching_data)
+
+
+```
+
+
+### Seminars
+
+
+```{r}
+
+seminar_data <- subset(teaching_data, Type == "Seminar")
+
+
+seminar_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Desc,
+    with = "",
+    why = Evaluation
+  )
+
+```
+
+
+### Lecture-based Courses
+
+```{r}
+
+lecture_data <- subset(teaching_data, Type == "Lecture")
+
+lecture_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Desc,
+    with = "",
+    why = Evaluation
+  )
+
+```
+
+
+### Tutorials
+
+*I've written a suite of Tutorials available on my website (https://kvonholzen.github.io/Tutorials.html) for creating experiments in Open Sesame, analyzing data in R, working in Praat, and preprocessing EEG/ERP data in EEGlab/ERPlab. I've also created a tutorial for analyzing eyetracking data with R (https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/)*
+
+```{r}
+
+tutorial_data <- subset(teaching_data, Type == "Tutorial")
+
+tutorial_data$End_Year <- ""
+
+tutorial_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    with = "",
+    why = Desc
+  )
+
+```
+
+## PhD examination committees
+
+I will serve as a member of the reading committee for Mareike Sahling's PhD thesis entitled “Effects of Otitis Media with Effusion on Speech Perception and Production in Preschoolers” at the University of Macquarie, Australia in Spring 2023 and as an external examiner for Paul Ratnage's PhD viva at the University of Plymouth, UK in Summer 2023.
+
+\newpage
+
+
+## Supervision/Mentorship
+
+
+```{r}
+
+student_data <- read.csv(file = "data/students.csv", header = T)
+
+student_data <- sapply(student_data, as.character)
+student_data[is.na(student_data)] <- " "
+
+student_data <- as.data.frame(student_data)
+
+```
+
+### Postdoctoral researchers
+
+```{r}
+
+postdoc_data <- subset(student_data, Type == "Postdoctoral Researcher")
+
+
+postdoc_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+### Doctoral students
+
+```{r}
+
+phd_data <- subset(student_data, Type == "PhD")
+
+
+phd_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+### Master students
+
+```{r}
+
+master_data <- subset(student_data, Type == "Master")
+
+
+master_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+
+### Bachelor students
+
+```{r}
+
+bachelor_data <- subset(student_data, Type == "Bachelor")
+
+
+bachelor_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+```
+
+### Internships and project assistantships
+
+```{r}
+
+intern_data <- subset(student_data, Type == "Intern")
+
+intern_data %>%
+  detailed_entries(
+    what = Title,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Person,
+    with = Institution
+  )
+
+
+# - Sofia Carrion, 2017
+# - Elisa Moulin, 2015-2016
+# - Jeanne Charoy, 2015
+# - Marion Lafargue, 2014-2015 
+
+# - Safyya Larinouna, 2016
+# - Henry Cheng, 2014 
+
+
+# *Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*, Georg-August-Universität Göttingen, 2012
+# - Agniezska Leszczynska
+
+```
+
+
+
+# Invited Talks and Conference Activity
+
+## Invited Talks
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^i"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+## Conference Talks
+
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^t"))%>%
+  arrange(desc(issued), author)
+```
+
+
+
+## Conference Posters
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^p"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+
+
+# Skills
+
+## Experiment Programming Experience
+
+```{r}
+
+experiment_prog <- read.csv(file = "data/skills.csv", header = T)
+
+experiment_prog <- subset(experiment_prog, skill == "experiment_programming")
+
+experiment_prog <- experiment_prog %>%
+  group_by(program) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+experiment_prog <- unique(experiment_prog[,c("program", "expertise", "detail_list")])
+
+
+experiment_prog %>%
+  detailed_entries(
+    what = expertise,
+    when = program,
+    where = detail_list,
+    with = ""
+  )
+
+
+```
+
+
+## Statistical/Data Analysis Experience
+
+```{r}
+
+stats_an <- read.csv(file = "data/skills.csv", header = T)
+
+stats_an <- subset(stats_an, skill == "stats_analysis")
+
+stats_an <- stats_an %>%
+  group_by(program) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+stats_an <- unique(stats_an[,c("program", "expertise", "detail_list")])
+
+
+stats_an %>%
+  detailed_entries(
+    what = expertise,
+    when = program,
+    where = detail_list,
+    with = ""
+  )
+
+
+```
+
+\newpage
+
+
+# Service
+
+## Institutional Service
+
+```{r}
+
+inst_service <- read.csv(file = "data/service.csv", header = T)
+
+inst_service <- sapply(inst_service, as.character)
+inst_service[is.na(inst_service)] <- " "
+
+inst_service <- as.data.frame(inst_service)
+
+
+inst_service %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+## Professional Service
+
+For a complete record of my peer-review service, view my Publons Peer Review Profile (https://www.webofscience.com/wos/author/record/1483321)
+
+
+```{r}
+### Conference Review
+# 
+# - International Congress of Infant Studies (ICIS) Conference (2020), Glasgow, UK
+# - International Association for the Study of Child Language (IASCL) Conference (2020), Philadelphia, PA, USA
+# - CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
+# - International Workshop on Bilingualism and Cognitive Control (2013). Jagiellonian University, Krakow, Poland
+# - International Workshop: “Bilingual and Multilingual Interaction” ESRC Centre for Research on Bilingualism (2012), Bangor, Wales
+
+```
+
+
+
+# Professional Memberships
+
+```{r}
+
+prof_member <- read.csv(file = "data/memberships.csv", header = T)
+
+prof_member %>%
+  brief_entries(
+    what = Name,
+    when = glue::glue("{Start_Year} - {End_Year}"))
+
+
+```
+
+
+# Languages
+
+- English, native
+- German, fluent (C1)
+- French, beginner (A2)
+- Dutch, beginner (A1)
+- Greek, beginner (A1)
+
+
+
+
+
+
+# Community Involvement/Outreach
+
+```{r}
+
+community <- read.csv(file = "data/community.csv", header = T)
+
+community <- sapply(community, as.character)
+community[is.na(community)] <- " "
+
+community <- as.data.frame(community)
+
+community %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Role,
+    with = ""
+  )
+
+```
+
+
+
+
+
+
