@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.8.16)  11 SEP 2023 14:11
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.8.16)  5 SEP 2023 15:39
  restricted system commands enabled.
-**K_Von_Holzen_CV.tex
-(./K_Von_Holzen_CV.tex
+**K_Von_Holzen_Kassel_ResearchExperience.tex
+(./K_Von_Holzen_Kassel_ResearchExperience.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
 Lua module: luaotfload 2022-10-03 3.23 Lua based OpenType font support
@@ -500,8 +500,8 @@ LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on 
 (c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.fd)))
 \cslhangindent=\skip92
 \csllabelwidth=\skip93
-(./K_Von_Holzen_CV.aux)
-\openout1 = K_Von_Holzen_CV.aux
+(./K_Von_Holzen_Kassel_ResearchExperience.aux)
+\openout1 = K_Von_Holzen_Kassel_ResearchExperience.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 188.
 LaTeX Font Info:    ... okay on input line 188.
@@ -608,10 +608,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: Link coloring OFF on input line 188.
-(./K_Von_Holzen_CV.out) (./K_Von_Holzen_CV.out)
+(./K_Von_Holzen_Kassel_ResearchExperience.out) (./K_Von_Holzen_Kassel_ResearchExperience.out)
 \@outlinefile=\write3
 
-\openout3 = K_Von_Holzen_CV.out
+\openout3 = K_Von_Holzen_Kassel_ResearchExperience.out
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
@@ -676,897 +676,558 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 189--190
  []
 
 
-Overfull \hbox (15.50665pt too wide) in alignment at lines 195--211
-[] []
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 197.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--211
+ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 1087) in paragraph at lines 230--241
+\T1/lmr/m/n/10 jor-ity of the world's pop-u-la-tion. Ini-tia-tives such as Many-Ba-bies, a com-mu-nity of mem-bers fo-cused on 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--241
+ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
 \T1/lmr/bx/n/10 Event-Related Po-ten-tials (ERPs); Eye-track-ing (gaze); Time-course anal-y-ses; Lon-gi-
  []
 
 
-Overfull \hbox (30.25684pt too wide) in alignment at lines 252--278
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
+\T1/lmr/bx/n/10 Large-scale col-lab-o-ra-tions (Many Ba-bies); Ac-ces-si-bil-ity and di-ver-sity; Open and
+ []
+
+
+Overfull \hbox (30.25684pt too wide) in alignment at lines 262--288
 [] []
- []
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 285.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--296
-\T1/lmr/m/n/10 mis-pro-nun-ci-a-tion sen-si-tiv-ity and novel ac-cent adap-ta-tion. \T1/lmr/m/it/10 Lan-guage Learn-ing and De-vel-op-ment\T1/lmr/m/n/10 , \T1/lmr/m/it/10 19\T1/lmr/m/n/10 (3),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--303
-[]\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2021). The de-vel-op-ment of in-fants' re-sponses to mis-pro-nun-ci-a-tions: A
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
-[]\T1/lmr/m/n/10 New-man, R. S., Kirby, L. A., Von Holzen, K., & Red-cay, E. (2021). Read my lips ! Per-cep-tion of speech
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
-\T1/lmr/m/n/10 in noise by preschool chil-dren with autism and the im-pact of watch-ing the speaker' s face. \T1/lmr/m/it/10 Jour-nal of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-[]\T1/lmr/m/n/10 Raneri, D., Von Holzen, K., New-man, R., & Rat-ner, N. B. (2020). Change in ma-ter-nal speech
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/10 rate to pre-ver-bal in-fants over the first two years of life. \T1/lmr/m/it/10 Jour-nal of Child Lan-guage\T1/lmr/m/n/10 , 1--13. []$https:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--325
-[]\T1/lmr/m/n/10 Von Holzen, K., & Nazzi, T. (2020). Emer-gence of a con-so-nant bias dur-ing the first year of life: New
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
-\T1/lmr/m/n/10 directed speech pref-er-ence. \T1/lmr/m/it/10 Ad-vances in Meth-ods and Prac-tices in Psy-cho-log-i-cal Sci-ence\T1/lmr/m/n/10 , \T1/lmr/m/it/10 3\T1/lmr/m/n/10 (1), 24--52.
  []
 
 [1
 
 {c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 341--341
-\T1/lmr/m/n/10 read-ing in-ter-ac-tions: Com-par-ing re-peated and elab-o-rated in-put. \T1/lmr/m/it/10 Jour-nal of Speech Lan-guage and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--349
-[]\T1/lmr/m/n/10 Bobb, S. C., Von Holzen, K., Mayor, J., Mani, N., & Car-reiras, M. (2020). Co-activation of the L2
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--349
-\T1/lmr/m/n/10 dur-ing L1 au-di-tory pro-cess-ing : An ERP cross-modal prim-ing study. \T1/lmr/m/it/10 Brain and Lan-guage\T1/lmr/m/n/10 , \T1/lmr/m/it/10 203\T1/lmr/m/n/10 , 104739.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
-[]\T1/lmr/m/n/10 Von Holzen, K., Fen-nell, C. T., & Mani, N. (2019). The im-pact of cross-language phono-log-i-cal over-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
-\T1/lmr/m/n/10 lap on bilin-gual and mono-lin-gual tod-dlers' word recog-ni-tion. \T1/lmr/m/it/10 Bilin-gual-ism: Lan-guage and Cog-ni-tion\T1/lmr/m/n/10 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--363
-[]\T1/lmr/m/n/10 Von Holzen, K., Nishibayashi, L.-L., & Nazzi, T. (2018). Con-so-nant and vowel pro-cess-ing in word
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--363
-\T1/lmr/m/n/10 form seg-men-ta-tion: An in-fant ERP study. \T1/lmr/m/it/10 Brain Sci-ences\T1/lmr/m/n/10 , \T1/lmr/m/it/10 8\T1/lmr/m/n/10 (24), 1--15. []$https://doi.org/10.3390/
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 370--370
-[]\T1/lmr/m/n/10 Nazzi, T., Poltrock, S., & Von Holzen, K. (2016). The de-vel-op-men-tal ori-gins of the con-so-nant
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 370--370
-\T1/lmr/m/n/10 bias in lex-i-cal pro-cess-ing. \T1/lmr/m/it/10 Cur-rent Di-rec-tions in Psy-cho-log-i-cal Sci-ence\T1/lmr/m/n/10 , \T1/lmr/m/it/10 25\T1/lmr/m/n/10 (4), 291--296. []$https:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
-[]\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2014). Bilin-guals im-plic-itly name ob-jects in both their lan-guages: An ERP
- []
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--395
-[]\T1/lmr/m/n/10 New-man, R., & Von Holzen, K. (2023). Com-mu-ni-ca-tion De-vel-op-ment in In-fancy. In J. Berko Glea-son &
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--403
-[]\T1/lmr/m/n/10 Bobb, S. C., Drum-mond Nauck, L. Y., Altvater-Mackensen, N., Von Holzen, K., & Mani, N. (2016).
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--403
-\T1/lmr/m/n/10 Lis-ten-ing with your co-hort: Do bilin-gual tod-dlers co-activate co-horts from both lan-guages when hear-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 403--403
-\T1/lmr/m/n/10 words in one lan-guage alone? In \T1/lmr/m/it/10 Cog-ni-tive con-trol and con-se-quences of mul-ti-lin-gual-ism \T1/lmr/m/n/10 (pp. 47--69).
- []
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--416
-[]\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2018). A meta-analysis of in-fants' mis-pro-nun-ci-a-tion sen-si-tiv-ity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--416
-\T1/lmr/m/it/10 con-fer-ence of the cog-ni-tive sci-ence So-ci-ety-Science so-ci-ety \T1/lmr/m/n/10 (pp. 1157--1162). Cog-ni-tive Sci-ence So-ci-ety,
- []
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]\T1/lmr/m/n/10 Von Holzen, K., van Om-men, S., White, K., & Nazzi, T. (2022). \T1/lmr/m/it/10 The im-pact of phono-log-i-cal bi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-\T1/lmr/m/it/10 ases on mis-pro-nun-ci-a-tion sen-si-tiv-ity and novel ac-cent adap-ta-tion\T1/lmr/m/n/10 . Open Sci-ence Foun-da-tion.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--433
-[]\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2021). \T1/lmr/m/it/10 In-fant Mis-pro-nun-ci-a-tion Sen-si-tiv-ity Meta-Analysis (In-Mis-
- []
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 444--444
-[]\T1/lmr/m/n/10 Von Holzen, K. (2013). \T1/lmr/m/it/10 The ini-tial and long-lasting ef-fects of early bilin-gual lan-guage ac-qui-si-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 444--444
-\T1/lmr/m/it/10 on lex-i-cal ac-cess: Ev-i-dence from ERP and eye-tracking stud-ies \T1/lmr/m/n/10 [Un-pub-lished doc-toral dis-ser-ta-tion].
- []
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 455--455
-[]\T1/lmr/m/n/10 Von Holzen, K., & New-man, R. (n.d.). \T1/lmr/m/it/10 Ab ini-tio word seg-men-ta-tion in infant- and adult-directed speech.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 462--462
-[]\T1/lmr/m/n/10 Kosie, J., Zetter-sten, M., & The Many-Ba-bies5 Team. (n.d.). \T1/lmr/m/it/10 Many-Ba-bies5: A large-scale in-ves-ti-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 462--462
-\T1/lmr/m/it/10 ga-tion of the pro-posed shift from fa-mil-iar-ity pref-er-ence to nov-elty pref-er-ence in in-fant look-ing time.
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 487--487
-\T1/lmr/m/n/10 Com-par-a-tive and Evo-lu-tion-ary Bi-ol-ogy of Hear-ing, NIH Post-doc Train-ing Grant, 5T32DC00046-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
-[]\T1/lmr/bx/n/10 The re-la-tion-ship be-tween at-trac-tive-ness rat-ing and brain ac-tiv-ity in males and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-[]\T1/lmr/bx/n/10 Berke-ley Ini-tia-tive for Trans-parency in the So-cial Sci-ences (BITSS) Meta-Analysis
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
-[]\T1/lmr/bx/n/10 GDR Neu-ro-sciences Cog-ni-tives du De-vel-oppe-ment bourses de mo-bilite a des doc-tor-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
-\T1/lmr/m/n/10 Travel award for the Pots-dam Sum-mer School, In-fant Stud-ies on Lan-guage De-vel-op-ment in
- []
-
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 544.
+(hyperref)                be the same. Added a new anchor on input line 297.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--573
-[]\T1/lmr/bx/n/10 Wort-seg-men-tierung: Erken-nt-nisse aus der Psycho- und Neu-rolin-guis-tik (Word
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 591--591
-[]\T1/lmr/bx/n/10 Zwei Sprachen, ein Gehirn: Bilin-gual-is-mus und dessen Kon-se-quen-zen (Two Lan-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 615--615
-[]\T1/lmr/m/n/10 Eval-u-a-tion: 'I learned a lot from this course'- 3.03 (Dis-agree - 0 to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 646--646
-\T1/lmr/m/n/10 down.org/katie_m_von-holzen/Eye-track-ing_Sta-tis-ti-cal_Anal-y-sis_Tu-to-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 664--664
-[]\T1/lmr/m/n/10 Doc-toral stu-dents, Re-search Train-ing Group 2070, Georg-August-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 690--690
-\T1/lmr/m/n/10 The Pho-netic Speci-ficity of British English-Learning In-fants' Word Form Recog-ni-tion in Their
- []
-
-[4]
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 704.
-
-
-Overfull \hbox (8.84pt too wide) in alignment at lines 706--712
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 722--722
-\T1/lmr/m/n/10 Ini-tial Steps into For-eign Lan-guage Learn-ing: Lex-i-cal and Mor-phosyn-tac-tic Abil-i-ties of Pri-mary
- []
-
-
-Overfull \hbox (8.84pt too wide) in alignment at lines 717--728
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 738--738
-\T1/lmr/m/n/10 Auswirkun-gen kindgerichteter Sprache auf die Merk-fae-higkeit von Wo-ert-ern (The role of child-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 743--743
-\T1/lmr/m/n/10 Beitet ``foreigner-directed speech'' einen Vorteil beim ler-nen? Auswirkung auf den Fremd-spracher-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 748--748
-\T1/lmr/m/n/10 und dem Wortschatz von bilin-gualen Kindern (The re-la-tion-ship be-tween SES, in-put fre-quency,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 753--753
-\T1/lmr/m/n/10 Von Boomer zum Dig-i-tal Na-tive: Wie der Ein-fluss fremd-sprach-licher El-e-mente der Ju-gend-sprache
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 758--758
-\T1/lmr/m/n/10 The Dif-fer-ence in the Vo-cab-u-lary Size of Chil-dren with and with-out Down Syn-drome: A Meta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 763--763
-\T1/lmr/m/n/10 Seg-men-tierungs-fae-higkeit von infant- und adult-directed speech bei 11-13 Monate al-ten Kindern.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 763--763
-\T1/lmr/m/n/10 Eine ERP-Studie. (Seg-men-ta-tion abil-i-ties in infant- and adult di-rected speech in 11-13 month old
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 774--774
-\T1/lmr/m/n/10 Us-age of Prosodic Cues: Mono-lin-gual and Bilin-gual In-fants' Word Seg-men-ta-tion Abil-i-ties in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 779--779
-\T1/lmr/m/n/10 (1995) on the role of acoustic-prosodic speech mod-i-fi-ca-tions on word learn-ing in a for-eign
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 784--784
-\T1/lmr/m/n/10 Das Vere-in-fachen der Wort-seg-men-ta-tion bei Zweit-sprach-ler-nende: Eine Nei-gung zur
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 789--789
-\T1/lmr/m/n/10 Ein-fluss des Zweit-sprach-niveaus auf den Er-werb ihrer Phono-tak-tik (The In-flu-ence of L2 pro-fi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 794--794
-\T1/lmr/m/n/10 Mehrsprachigkeit im Schu-lall-tag: In-wiefern beziehen Lehrkraefte die Er-st-sprache von Schuelerin-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 794--794
-\T1/lmr/m/n/10 nen und Schuel-ern im deutsch-sprachigen (Fach-)Un-ter-richt mit ein? (Mul-ti-lin-gual-ism in schools:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
-\T1/lmr/m/n/10 Phono-tak-tis-che Seg-men-tierung der L2: Wie wirken L1-Merkmale deutscher Mut-ter-sprach-ler auf
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
-\T1/lmr/m/n/10 die Seg-men-tierung des Sprach-flusses und die Worterken-nung in der L2 En-glisch ein?. (Phono-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 799--799
-\T1/lmr/m/n/10 tac-tic seg-men-ta-tion in the L2: How do L1 char-ac-ter-is-tics in-flu-ence the seg-men-ta-tion and word
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 821--821
-\T1/lmr/m/n/10 Heather Wib-ber-ley, Tay-lor Trent, Jil-lian Do-herty, Mag-gie Ro-man, Do-minique Jenk-ins, Jes-sica
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 836--836
-[]\T1/lmr/bx/n/10 Emer-gence of the C-bias dur-ing the first year of life: New ev-i-dence from own name
- []
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 844.
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 853--853
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
 []\T1/lmr/m/n/10 Von Holzen, K. (2023). \T1/lmr/m/it/10 Study-ing speech seg-men-ta-tion on-line us-ing be-hav-ioral, eye-tracking, and elec-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--853
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
 \T1/lmr/m/it/10 tro-phys-i-o-log-i-cal meth-ods\T1/lmr/m/n/10 . Pre-sented at the Ringvor-lesung ``Re-cent Ad-vances in Lin-guis-tic Meth-ods,''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--859
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []\T1/lmr/m/n/10 Von Holzen, K. (2022). \T1/lmr/m/it/10 Doy-ou-un-der-stand-wha-tim-say-ing : How learn-ers break into speech stream seg-men-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 865--865
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
 []\T1/lmr/m/n/10 Von Holzen, K. (2022). \T1/lmr/m/it/10 Us-ing cluster-based per-mu-ta-tion tests to anal-yse eye-tracking data\T1/lmr/m/n/10 . Pre-sented at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--872
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
 []\T1/lmr/m/n/10 Von Holzen, K. (2022). \T1/lmr/m/it/10 Doy-ou-un-der-stand-wha-tI-amsay-ing? How learn-ers break into speech seg-men-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--872
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
 \T1/lmr/m/it/10 tion\T1/lmr/m/n/10 . Pre-sented at the Lin-guis-Tisch Sem-i-nar Se-ries, So-ci-olin-guis-tics Lab, Uni-ver-sität Duisburg-Essen,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--879
+Underfull \hbox (badness 10000) in paragraph at lines 332--332
 []\T1/lmr/m/n/10 Von Holzen, K. (2022). \T1/lmr/m/it/10 Doy-ou-un-der-stand-wha-tI-amsay-ing? How learn-ers break into speech seg-men-ta-tion\T1/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []\T1/lmr/m/n/10 Von Holzen, K. (2021). \T1/lmr/m/it/10 Ba-bies know words, even when they're mis-pro-nounced: An in-tro-duc-tion to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T1/lmr/m/it/10 meta-analyses\T1/lmr/m/n/10 . Pre-sented at the Ger-man Sem-i-nar Col-lo-quium, Albert-Ludwigs Uni-ver-si-taet Freiburg,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--894
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 []\T1/lmr/m/n/10 Von Holzen, K. (2020). \T1/lmr/m/it/10 Ba-bies know words, even when they're mis-pro-nounced: A meta-analysis of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 894--894
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
 \T1/lmr/m/it/10 mis-pro-nun-ci-a-tion sen-si-tiv-ity stud-ies\T1/lmr/m/n/10 . Pre-sented at the Team Meet-ing of the Lan-guage and Cog-ni-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 901--901
+Underfull \hbox (badness 10000) in paragraph at lines 354--354
 []\T1/lmr/m/n/10 Von Holzen, K. (2019). \T1/lmr/m/it/10 On the road to bilin-gual-ism: For-eign speech pro-cess-ing at first ex-po-sure in early
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 908--908
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 []\T1/lmr/m/n/10 Von Holzen, K. (2019). \T1/lmr/m/it/10 Ba-bies know words, even when they're mis-pro-nounced: A meta-analysis of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--908
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 \T1/lmr/m/it/10 mis-pro-nun-ci-a-tion sen-si-tiv-ity\T1/lmr/m/n/10 . Pre-sented at the Lin-guis-tics De-part-ment, City Uni-ver-sity of New York,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--916
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []\T1/lmr/m/n/10 Von Holzen, K. (2018). \T1/lmr/m/it/10 On the road to bilin-gual-ism: The role of age in for-eign speech pro-cess-ing\T1/lmr/m/n/10 . Pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--916
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/lmr/m/n/10 sented at the Team Meet-ing of the Lan-guage and Cog-ni-tion Group, The In-sti-tute of Neu-ro-science and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 929--929
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
 \T1/lmr/m/n/10 Pre-sented at the Agence na-tionale de la recherche meet-ing of the grant fund-ing pro-gramme BLANC
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--935
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
 []\T1/lmr/m/n/10 Von Holzen, K. (2014). \T1/lmr/m/it/10 Seg-men-ta-tion of infant- and adult-directed speech in 12-month-olds: An ERP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
 []\T1/lmr/m/n/10 Von Holzen, K. (2012). \T1/lmr/m/it/10 The cog-nate fa-cil-i-ta-tion ef-fect in bilin-gual and mono-lin-gual tod-dlers\T1/lmr/m/n/10 . Pre-sented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
 \T1/lmr/m/n/10 at the Work-shop on Mono-lin-gual and Bilin-gual Word Recog-ni-tion and Learn-ing in In-fants and Adults,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--951
+Underfull \hbox (badness 10000) in paragraph at lines 404--404
 []\T1/lmr/m/n/10 Von Holzen, K. (2012). \T1/lmr/m/it/10 Learn-ing phonemes from faces: The role of speaker iden-tity in non-native
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--951
+Underfull \hbox (badness 10000) in paragraph at lines 404--404
 \T1/lmr/m/it/10 phoneme dis-crim-i-na-tion\T1/lmr/m/n/10 . Pre-sented at the Work-shop on Mono-lin-gual and Bilin-gual Word Recog-ni-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 959--959
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []\T1/lmr/m/n/10 Von Holzen, K. (2012). \T1/lmr/m/it/10 Mech-a-nisms un-der-ly-ing lex-i-cal-pro-cess-ing in mono-lin-gual and bilin-gual tod-dlers\T1/lmr/m/n/10 .
  []
 
 
-warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
-
-Underfull \hbox (badness 10000) in paragraph at lines 969--969
+Underfull \hbox (badness 10000) in paragraph at lines 422--422
 []\T1/lmr/m/n/10 Wulfert, S., Von Holzen, K., Schnieders, M., & Hopp, H. (2023). \T1/lmr/m/it/10 Use of L1 phono-tac-tics in ini-tial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 977--977
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
 \T1/lmr/m/it/10 ing while lis-ten-ing: Con-struct-ing an on-line, cross-linguistic in-ves-ti-ga-tion of word recog-ni-tion\T1/lmr/m/n/10 . Pre-sented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 983--983
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 []\T1/lmr/m/n/10 Von Holzen, K., & ManyBabies-AtHome-Consortium. (2022). \T1/lmr/m/it/10 ManyBabies-AtHome\T1/lmr/m/n/10 . Pre-sented at the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 991--991
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
 []\T1/lmr/m/n/10 Schlage, F., & Von Holzen, K. (2021). \T1/lmr/m/it/10 From boomer to dig-i-tal na-tive: The in-flu-ence of an-gli-cisms in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 991--991
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
 \T1/lmr/m/it/10 ger-man so-cial me-dia lan-guage on lan-guage pro-cess-ing\T1/lmr/m/n/10 . Pre-sented at the 2021 Con-fer-ence Ar-chi-tec-tures
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 998--998
+[2
+warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
+]
+Underfull \hbox (badness 10000) in paragraph at lines 451--451
 []\T1/lmr/m/n/10 Boveleth, J., & Von Holzen, K. (2021). \T1/lmr/m/it/10 The dif-fer-ence in the vo-cab-u-lary size of chil-dren with und with-out
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1005
+Underfull \hbox (badness 10000) in paragraph at lines 458--458
 \T1/lmr/m/n/10 Pre-sented at the 2021 Con-fer-ence Ar-chi-tec-tures and Mech-a-nisms for Lan-guage Pro-cess-ing (AM-LaP),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 []\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2019). \T1/lmr/m/it/10 Can a tog be a dog? A meta-analysis of ex-per-i-men-tal fac-tors
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 \T1/lmr/m/it/10 in-flu-enc-ing in-fants' mis-pro-nun-ci-a-tion sen-si-tiv-ity\T1/lmr/m/n/10 . In Gonzalez-Gomez, N. (Chair), Big ideas to tackle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
+Underfull \hbox (badness 10000) in paragraph at lines 466--466
 \T1/lmr/m/n/10 small sam-ples. Pre-sented at the Bi-en-nial Meet-ing of the So-ci-ety for Re-search in Child De-vel-op-ment,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1020
+Underfull \hbox (badness 10000) in paragraph at lines 473--473
 []\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2018). \T1/lmr/m/it/10 A meta-analysis of in-fants' mis-pro-nun-ci-a-tion sen-si-tiv-ity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1020
+Underfull \hbox (badness 10000) in paragraph at lines 473--473
 \T1/lmr/m/it/10 de-vel-op-ment\T1/lmr/m/n/10 . Pre-sented at the 40th An-nual Meet-ing of the Cog-ni-tive Sci-ence So-ci-ety, Madi-son, WI,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
 []\T1/lmr/m/n/10 Von Holzen, K., & New-man, R. (2018). \T1/lmr/m/it/10 On the road to bilin-gual-ism: The role of na-tive lan-guage knowl-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1028
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
 \T1/lmr/m/it/10 edge in for-eign speech pro-cess-ing\T1/lmr/m/n/10 . In Koos-tra, G. J. and Bosma, E. (Chairs), Cross-language ac-ti-va-tion in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1035--1035
+Underfull \hbox (badness 10000) in paragraph at lines 488--488
 []\T1/lmr/m/n/10 Von Holzen, K., Nishibayashi, L.-L., & Nazzi, T. (2017). \T1/lmr/m/it/10 An ERP study of con-so-nant and vowel pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1042
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
 []\T1/lmr/m/n/10 Von Holzen, K., & Nazzi, T. (2015). \T1/lmr/m/it/10 The role of con-so-nants and vow-els in 5- and 8-month-old own name
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
 []\T1/lmr/m/n/10 Von Holzen, K., Wolff, D., & Mani, N. (2014). \T1/lmr/m/it/10 Seg-men-ta-tion of infant- and adult-directed speech in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
 \T1/lmr/m/it/10 12-month-olds: An ERP study\T1/lmr/m/n/10 . In K. Von Holzen (Chair), Seg-ment-ing words from con-tin-u-ous speech:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
+Underfull \hbox (badness 10000) in paragraph at lines 504--504
 \T1/lmr/m/n/10 Ex-am-in-ing var-ied in-put sources for in-fants. Sym-po-sium con-ducted at the XIXth Bi-en-nial In-ter-na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 []\T1/lmr/m/n/10 Von Holzen, K., Wolff, D., & Mani, N. (2013). \T1/lmr/m/it/10 Seg-men-tierungs-fähigkeit von infant- und adult-directed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1059
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 \T1/lmr/m/it/10 speech bei 12 monate al-ten kindern (seg-men-ta-tion of infant- and adult-directed speech in 12-month-old
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1068
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2012). \T1/lmr/m/it/10 Learn-ing phonemes from faces: The role of speaker iden-tity in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1068
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 \T1/lmr/m/it/10 non-native phoneme dis-crim-i-na-tion\T1/lmr/m/n/10 . In K. Von Holzen (Chair), In-fant pho-netic learn-ing in con-text: The
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1068--1068
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 \T1/lmr/m/n/10 in-flu-ence of faces, ob-jects, and words. Sym-po-sium con-ducted at the XVI-I-Ith Bi-en-nial In-ter-na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1075--1075
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2012). \T1/lmr/m/it/10 The cog-nate fa-cil-i-ta-tion ef-fect in bilin-gual tod-dlers\T1/lmr/m/n/10 . Pre-sented at the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+Underfull \hbox (badness 10000) in paragraph at lines 535--535
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2012). \T1/lmr/m/it/10 Lan-guage non-selective lex-i-cal ac-cess in bilin-gual tod-dlers\T1/lmr/m/n/10 . Pre-sented
  []
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'bibliography'
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+Underfull \hbox (badness 10000) in paragraph at lines 556--556
 []\T1/lmr/m/n/10 Von Holzen, K., Schnieders, M., & Hopp, H. (2023). \T1/lmr/m/it/10 Use of L1 lex-i-cal over-lap in ini-tial foreign-language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1103
+Underfull \hbox (badness 10000) in paragraph at lines 556--556
 \T1/lmr/m/it/10 speech seg-men-ta-tion\T1/lmr/m/n/10 . Pre-sented at the 2023 Con-fer-ence Ar-chi-tec-tures and Mech-a-nisms for Lan-guage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1111
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
 []\T1/lmr/m/n/10 Von Holzen, K., Schnieders, M., Wulfert, S., & Hopp, H. (2023). \T1/lmr/m/it/10 Foreign-language speech seg-men-ta-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1111
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
 \T1/lmr/m/it/10 in ab ini-tio child learn-ers: The roles of sub-lex-i-cal and lex-i-cal L2 over-lap and phono-log-i-cal aware-ness\T1/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1111--1111
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
 \T1/lmr/m/n/10 Ac-cepted for pre-sen-ta-tion at the 2023 Boston Uni-ver-sity Con-fer-ence on Lan-guage De-vel-op-ment, Boston,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1118
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
 []\T1/lmr/m/n/10 Von Holzen, K., Schnieders, M., Wulfert, S., & Hopp, H. (2023). \T1/lmr/m/it/10 Lex-i-cal over-lap in for-eign lan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1118
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
 \T1/lmr/m/it/10 guage speech seg-men-ta-tion in primary-level stu-dents\T1/lmr/m/n/10 . Pre-sented at Eu-roSLA 32, Birm-ing-ham, UK.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1126--1126
+Underfull \hbox (badness 10000) in paragraph at lines 579--579
 []\T1/lmr/m/n/10 Von Holzen, K., Wulfert, S., & Hopp, H. (2023). \T1/lmr/m/it/10 Use of L1 phono-tac-tics in ini-tial foreign-language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1126--1126
+Underfull \hbox (badness 10000) in paragraph at lines 579--579
 \T1/lmr/m/it/10 speech seg-men-ta-tion\T1/lmr/m/n/10 . Pre-sented at the 2023 Con-fer-ence Ar-chi-tec-tures and Mech-a-nisms for Lan-guage
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1133
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
 []\T1/lmr/m/n/10 Flohr, M.-C., Von Holzen, K., & Schimke, S. (2023). \T1/lmr/m/it/10 Ex-plor-ing the bound-aries of sta-tis-ti-cal learn-ing:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1141--1141
+Underfull \hbox (badness 10000) in paragraph at lines 594--594
 []\T1/lmr/m/n/10 Flohr, M.-C., Von Holzen, K., & Schimke, S. (2023). \T1/lmr/m/it/10 Ex-plor-ing the bound-aries of sta-tis-ti-cal learn-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1141--1141
+Underfull \hbox (badness 10000) in paragraph at lines 594--594
 \T1/lmr/m/it/10 ing: Word seg-men-ta-tion in a nat-u-ral lan-guage\T1/lmr/m/n/10 . Pre-sented at the 2023 Con-fer-ence Ar-chi-tec-tures and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1148
+Underfull \hbox (badness 10000) in paragraph at lines 601--601
 []\T1/lmr/m/n/10 Von Holzen, K. (2022). \T1/lmr/m/it/10 The role of speech mod-i-fi-ca-tions in ab inito learn-ers' ini-tial speech seg-men-ta-tion\T1/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1157--1157
+Underfull \hbox (badness 10000) in paragraph at lines 610--610
 []\T1/lmr/m/n/10 Von Holzen, K., Bergmann, C., & ManyBabies-AtHome-Consortium. (2022). \T1/lmr/m/it/10 ManyBabies-AtHome
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1157--1157
+Underfull \hbox (badness 10000) in paragraph at lines 610--610
 \T1/lmr/m/it/10 look-ing while lis-ten-ing: Con-struct-ing an on-line, cross-linguistic in-ves-ti-ga-tion of word recog-ni-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1157--1157
+Underfull \hbox (badness 10000) in paragraph at lines 610--610
 \T1/lmr/m/it/10 tion\T1/lmr/m/n/10 . Pre-sented at the 2022 Work-shop on In-fant Lan-guage De-vel-op-ment, San Se-bas-tian, Spain.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1166
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
 []\T1/lmr/m/n/10 Von Holzen, K., & New-man, R. (2021). \T1/lmr/m/it/10 The recog-ni-tion of for-eign words at first ex-po-sure in early
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1166
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
 \T1/lmr/m/it/10 lan-guage de-vel-op-ment: The role of phono-log-i-cal sim-i-lar-ity\T1/lmr/m/n/10 . Pre-sented at the Bi-en-nial Meet-ing of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1166--1166
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
 \T1/lmr/m/n/10 So-ci-ety for Re-search in Child De-vel-op-ment, Vir-tual Con-fer-ence. []$https://doi.org/10.6084/m9.gshare.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1173
+Underfull \hbox (badness 10000) in paragraph at lines 626--626
 []\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2018). \T1/lmr/m/it/10 A meta-analysis of mis-pro-nun-ci-a-tion sen-si-tiv-ity in in-fancy\T1/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1180--1180
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
 []\T1/lmr/m/n/10 Von Holzen, K., Van Om-men, S., White, K., & Nazzi, T. (2018). \T1/lmr/m/it/10 French-learning in-fants' adap-ta-tion to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1180--1180
+Underfull \hbox (badness 10000) in paragraph at lines 633--633
 \T1/lmr/m/it/10 a novel ac-cent: The role of con-so-nant/vowel asym-me-try\T1/lmr/m/n/10 . Pre-sented at the XXIth Bi-en-nial In-ter-na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1187
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 []\T1/lmr/m/n/10 Von Holzen, K., & Bergmann, C. (2017). \T1/lmr/m/it/10 Ba-bies know words, even when they are mis-pro-nounced:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1187
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
 \T1/lmr/m/it/10 A meta-analytic view\T1/lmr/m/n/10 . Pre-sented at the Work-shop on In-fant Lan-guage De-vel-op-ment, Bil-bao, Spain.
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 1195--1195
+
+Underfull \hbox (badness 10000) in paragraph at lines 648--648
 \T1/lmr/m/it/10 olds own name recog-ni-tion: The role of acous-tic/pho-netic and lex-i-cal fac-tors\T1/lmr/m/n/10 . Pre-sented at the Congress
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1202--1202
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
 []\T1/lmr/m/n/10 Von Holzen, K., Nishibayashi, L.-L., & Nazzi, T. (2017). \T1/lmr/m/it/10 Neu-ral bases of phono-log-i-cal pro-cess-ing of newly
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1209--1209
+Underfull \hbox (badness 10000) in paragraph at lines 662--662
 []\T1/lmr/m/n/10 Von Holzen, K., Fen-nell, C. T., & Mani, N. (2014). \T1/lmr/m/it/10 The cog-nate fa-cil-i-ta-tion ef-fect in bilin-gual and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1209--1209
+Underfull \hbox (badness 10000) in paragraph at lines 662--662
 \T1/lmr/m/it/10 mono-lin-gual tod-dlers\T1/lmr/m/n/10 . Pre-sented at the XIXth Bi-en-nial In-ter-na-tional Con-fer-ence on In-fant Stud-ies,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1216
+Underfull \hbox (badness 10000) in paragraph at lines 669--669
 []\T1/lmr/m/n/10 Von Holzen, K., Wolff, D., & Mani, N. (2013). \T1/lmr/m/it/10 Seg-men-ta-tion of IDS and ADS in 12-month-olds: An
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1223--1223
+Underfull \hbox (badness 10000) in paragraph at lines 676--676
 []\T1/lmr/m/n/10 Von Holzen, K., Kre-mer, F., & Mani, N. (2013). \T1/lmr/m/it/10 As-so-ci-at-ing a lan-guage with a speaker: Bilin-gual
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1223--1223
+Underfull \hbox (badness 10000) in paragraph at lines 676--676
 \T1/lmr/m/it/10 pro-duc-tion is in-flu-enced by speaker lan-guage\T1/lmr/m/n/10 . Pre-sented at the In-ter-na-tional Work-shop on Bilin-gual-ism
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1230
+Underfull \hbox (badness 10000) in paragraph at lines 683--683
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2013). \T1/lmr/m/it/10 Na-tive and non-native phoneme per-cep-tion in bilin-gual tod-dlers: A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1237
+Underfull \hbox (badness 10000) in paragraph at lines 690--690
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2011). \T1/lmr/m/it/10 Learn-ing phonemes from faces: The role of speaker iden-tity in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1237--1237
+Underfull \hbox (badness 10000) in paragraph at lines 690--690
 \T1/lmr/m/it/10 non-native phoneme dis-crim-i-na-tion\T1/lmr/m/n/10 . Pre-sented at the 2011 Boston Uni-ver-sity Con-fer-ence on Lan-guage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1243--1243
+Underfull \hbox (badness 10000) in paragraph at lines 696--696
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2011). \T1/lmr/m/it/10 Word-word re-la-tion-ships be-tween lan-guages and across de-vel-op-ment\T1/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1249
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
 []\T1/lmr/m/n/10 Von Holzen, K., & Mani, N. (2010). \T1/lmr/m/it/10 Phono-log-i-cal prim-ing across lan-guage bor-ders: No pass-port re-quired?
  []
 
+[4]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1256.
+(hyperref)                be the same. Added a new anchor on input line 711.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1263
+Underfull \hbox (badness 10000) in paragraph at lines 718--718
 \T1/lmr/m/n/10 De-sign-ing ex-per-i-ments, in-clud-ing lex-i-cal de-ci-sion (adults), vi-sual world paradigm (with and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1263
+Underfull \hbox (badness 10000) in paragraph at lines 718--718
 \T1/lmr/m/n/10 with-out an eye-tracker) and pref-er-en-tial lis-ten-ing (in-fants); Ex-pe-ri-ence ad-vis-ing col-leagues on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1263--1263
+Underfull \hbox (badness 10000) in paragraph at lines 718--718
 \T1/lmr/m/n/10 ex-per-i-men-tal de-sign; Con-duct-ing tu-to-ri-als with col-leagues and stu-dents; Launch-ing ex-per-i-ments
  []
 
 
-Overfull \hbox (33.86783pt too wide) in alignment at lines 1258--1274
+Overfull \hbox (33.86783pt too wide) in alignment at lines 713--729
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+Underfull \hbox (badness 10000) in paragraph at lines 740--740
 \T1/lmr/m/n/10 curve mod-el-ing (lmer pack-age); Mixed ef-fects mod-els (lmer pack-age); ANOVA anal-y-ses (ez
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+Underfull \hbox (badness 10000) in paragraph at lines 740--740
 \T1/lmr/m/n/10 pack-age); Pro-duc-ing beau-ti-ful graph-ics (gg-plot2 pack-age); An-a-lyz-ing vo-cab-u-lary data cor-pora
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+Underfull \hbox (badness 10000) in paragraph at lines 740--740
 \T1/lmr/m/n/10 (word-bankr pack-age); Power anal-y-sis (pwr pack-age); Cre-at-ing RMark-down files to pro-mote
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1290--1290
+Underfull \hbox (badness 10000) in paragraph at lines 745--745
 \T1/lmr/m/n/10 Script-ing to au-to-mat-i-cally an-a-lyze sounds (pitch, du-ra-tion, in-ten-sity); Stim-uli cre-ation; In-ter-fac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1290--1290
+Underfull \hbox (badness 10000) in paragraph at lines 745--745
 \T1/lmr/m/n/10 ing with CLAN out-put to an-a-lyze cor-pora; In-ter-fac-ing with a forced aligner (Easy Align); Used to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1295--1295
+Underfull \hbox (badness 10000) in paragraph at lines 750--750
 \T1/lmr/m/n/10 An-a-lyz-ing length of ut-ter-ance; Time-locking tran-scripts to au-dio record-ings; In-ter-fac-ing with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1300--1300
+Underfull \hbox (badness 10000) in paragraph at lines 755--755
 \T1/lmr/m/n/10 Pre-pro-cess-ing EEG data; Con-duct-ing tu-to-ri-als; Re-lated MAT-LAB script-ing to au-to-mat-i-cally
  []
 
-[9]
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1312.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1402--1402
-[]\T1/lmr/bx/n/10 Rosa Parks El-e-men-tary School, Hy-attsville Ed-u-ca-tion Ad-vi-sory Com-mit-tee's Sum-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1412--1412
-[]\T1/lmr/bx/n/10 Preschool Im-mer-sion Event: Bilin-gual Lan-guage De-vel-op-ment at ASC Kinder-be-we-
- []
-
-[10] (./K_Von_Holzen_CV.aux)
+[5] (./K_Von_Holzen_Kassel_ResearchExperience.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
-Package rerunfilecheck Info: File `K_Von_Holzen_CV.out' has not changed.
-(rerunfilecheck)             Checksum: A6314E22B31F47C98CE9756A5E05A5A1;5231.
+Package rerunfilecheck Info: File `K_Von_Holzen_Kassel_ResearchExperience.out' has not changed.
+(rerunfilecheck)             Checksum: 8A8698CB41A3283CED65D4B2BE28AD73;2147.
 )
 
 Here is how much of LuaTeX's memory you used:
- 19506 strings out of 477514
- 125086,1977958 words of node,token memory allocated
- 712 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 1 local_par, 4 glue, 3 kern, 1 penalty, 1 margin_kern, 4 glyph, 11 attribute, 85 glue_spec, 11 attribute_list, 1 write, 6 pdf_action nodes
-   avail lists: 1:2,2:1118,3:605,4:167,5:736,6:138,7:12060,8:81,9:861,10:28,11:890,12:1
- 40003 multiletter control sequences out of 65536+600000
+ 19368 strings out of 477514
+ 156368,1977958 words of node,token memory allocated
+ 601 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 5 attribute, 85 glue_spec, 5 attribute_list, 1 write, 1 pdf_action nodes
+   avail lists: 1:6,2:824,3:362,4:172,5:843,6:134,7:15225,8:47,9:571,10:33,11:1312,12:1
+ 39935 multiletter control sequences out of 65536+600000
  55 fonts using 4105759 bytes
- 79i,19n,89p,1203b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Brands-Regular-400.otf><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss9.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on K_Von_Holzen_CV.pdf (10 pages, 254847 bytes).
+ 79i,19n,89p,1226b,1129s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Brands-Regular-400.otf><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss9.pfb><c:/Users/KatieVH/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on K_Von_Holzen_Kassel_ResearchExperience.pdf (5 pages, 193460 bytes).
 
-PDF statistics: 396 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
- 148 named destinations out of 1000 (max. 131072)
- 289 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 196 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 78 named destinations out of 1000 (max. 131072)
+ 89 words of extra memory for PDF output out of 10000 (max. 100000000)
 

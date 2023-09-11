@@ -1,0 +1,263 @@
+%% Template for a CV
+%% Author: Rob J Hyndman
+
+\documentclass[10pt,a4paper,]{article}
+\usepackage[scaled=0.86]{DejaVuSansMono}
+%\usepackage[sfdefault,lf,t]{carlito}
+
+% Change color to blue
+\usepackage{color,xcolor}
+\definecolor{headcolor}{HTML}{990000}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true,hidelinks]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{geometry}
+\geometry{left=1.75cm,right=1.75cm,top=2.2cm,bottom=2cm}
+
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\date{September 2023}
+
+
+\usepackage{paralist,ragged2e,datetime}
+\usepackage[hyphens]{url}
+\usepackage{fancyhdr,enumitem,pifont}
+\usepackage[compact,small,sf,bf]{titlesec}
+
+\RaggedRight
+\sloppy
+
+% Header and footer
+\pagestyle{fancy}
+\makeatletter
+\lhead{\sf\textcolor[gray]{0.4}{Teaching Concept: \@name}}
+\rhead{\sf\textcolor[gray]{0.4}{\thepage}}
+\cfoot{}
+\def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+\makeatother
+
+% Header box
+\usepackage{tabularx}
+
+\makeatletter
+\def\name#1{\def\@name{#1}}
+\def\info#1{\def\@info{#1}}
+\makeatother
+\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
+
+\usepackage{calc}
+\newlength{\headerboxwidth}
+\setlength{\headerboxwidth}{\textwidth}
+%\addtolength{\headerboxwidth}{0.2cm}
+\makeatletter
+\def\maketitle{
+\thispagestyle{plain}
+\vspace*{-1.4cm}
+\shadebox[0.9]{\headerboxwidth}{\sf\color{headcolor}\hfil
+\hbox to 0.98\textwidth{\begin{tabular}{l}
+\\[-0.3cm]
+\LARGE\textbf{\@name}
+\\[0.1cm]\large Lecturer and Researcher\\[0.6cm]
+\normalsize\textbf{Teaching Concept}\\
+\normalsize September 2023
+\end{tabular}
+\hfill\hbox{\fontsize{9}{12}\sf
+\begin{tabular}{@{}rl@{}}
+\@info
+\end{tabular}}}\hfil
+}
+\vspace*{0.2cm}}
+\makeatother
+
+% Section headings
+\titlelabel{}
+\titlespacing{\section}{0pt}{1.5ex}{0.5ex}
+\titleformat*{\section}{\color{headcolor}\large\sf\bfseries}
+\titleformat*{\subsection}{\color{headcolor}\sf\bfseries}
+\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
+
+% Miscellaneous dimensions
+\setlength{\parskip}{0ex}
+\setlength{\parindent}{0em}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{0.15cm}
+\clubpenalty = 10000
+\widowpenalty = 10000
+\setlist{itemsep=1pt}
+\setdescription{labelwidth=1.2cm,leftmargin=1.5cm,labelindent=1.5cm,font=\rm}
+
+% Make nicer bullets
+\renewcommand{\labelitemi}{\ding{228}}
+
+\usepackage{booktabs,fontawesome5}
+%\usepackage[t1,scale=0.86]{sourcecodepro}
+
+\name{Katie Von Holzen}
+\def\imagetop#1{\vtop{\null\hbox{#1}}}
+\info{%
+\raisebox{-0.05cm}{\imagetop{\faIcon{map-marker-alt}}} &  \imagetop{\begin{tabular}{@{}l@{}}Hagenring
+22, 38106 Braunschweig, Germany\end{tabular}}\\ %
+\faIcon{home} & \href{http://Kvonholzen.github.io}{Kvonholzen.github.io}\\% %
+%
+%
+\faIcon{envelope} & \href{mailto:katie.m.vonholzen@gmail.com}{\nolinkurl{katie.m.vonholzen@gmail.com}}\\%
+\faIcon{twitter} & \href{https://twitter.com/KatieVonHolzen}{@KatieVonHolzen}\\%
+\faIcon{github} & \href{https://github.com/Kvonholzen}{Kvonholzen}\\%
+%
+%
+%
+%
+}
+
+
+%\usepackage{inconsolata}
+
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\hfill #1~}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \cslhangindent - \csllabelwidth}{#1}\vspace{0.8ex}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+\def\endfirstpage{\newpage}
+
+\begin{document}
+\maketitle
+
+
+As a teacher, I understand my role to be that of a guide. I know the
+goal (learning outcome) and I know at least one way to get there (my own
+way), but it is my job to accompany the students as they find their
+individual ways through their learning process. In this regard, I
+especially focus on the student as an individual and understand that
+each student comes to my class with their own needs, wants, skills, and
+interests. I therefore try to create my courses such that all learners
+can be successful, integrating sections where I give information,
+sections that encourage discussion or interaction amongst the students,
+and sections where students need to apply what they've learned to a
+task. I have come to this teaching approach through my years of teaching
+in the United States and Germany as well as through the NRW Teaching
+Certificate Program ``Professionelle Lehrkompetenz für die Hochschule''.
+\linebreak
+
+In my courses, I encourage students to be critical thinkers. For
+example, I design my advanced seminar courses to be led by students in a
+structured discussion. For each class, students read a scientific
+article or book chapter and prepare a brief summary of the topic, their
+remaining questions, and information they found surprising or
+interesting. To ensure students come to class prepared, a few students
+are randomly chosen to present their prepared materials and the entire
+class is invited to add their summaries and questions. I then guide the
+class discussion around the points that the students presented. This
+teaches students how to critique and think critically through dialogue
+with their peers, while demonstrating a deep understanding of the
+material, which will be an essential skill in their scholarly and
+professional lives. \linebreak
+
+I place great importance on scientific literacy in my teaching. I use
+the QALMRI method (Brosowsky \& Parshina, 2017) to teach students how to
+identify the questions being asked in a scientific article, as well as
+how those questions are answered and the consequences of those answers.
+I've used this method in both a first semester class on brain and
+behavioral research, investigating topics such as the ``bilingual
+advantage'' from both the perspective of popular media and from primary
+scientific articles, as well as more traditional master's seminars on
+language processing and bilingualism research. Reading and understanding
+scientific articles can be daunting for students, but I've found that
+when I guide my students using a scaffold for approaching and processing
+scientific articles, our discussions of those articles reflect a deep
+level of learning. \linebreak
+
+Through the NRW Teaching Certificate Program I've learned several
+strategies for effective teaching. One central insight is how to design
+assignments for students that support their ability to apply their
+knowledge to real-world situations. For example, in my seminar
+``Introduction to Linguistics'' at the TU Dortmund, I introduced
+students to the basic concepts of Linguistics through the eyes of a
+young child learning their first language. In their assignments,
+students tested their own hypothesis about how vocabulary develops in
+children using the Wordbank database
+(\url{http://wordbank.stanford.edu/}) or analyzed a child's stage in the
+acquisition of morpho-syntax using the CHILDES database
+(\url{https://childes.talkbank.org/}). \linebreak
+
+I look forward to applying my teaching approach at the University of
+Kassel by taking over existing classes or developing new classes within
+the Institute for English and American Studies. The BA, MA, and teacher
+training specializations in English and American Studies offer classes
+that I am qualified for and excited to teach, ranging from content
+courses (e.g.~Introduction to Linguistics) to methods and statistics
+(e.g.~Processing Sentences: Experimental Methods in Linguistics). I
+would also be interested in developing new courses, such as
+\emph{Exploring Psycholinguistics through Open Science}, as well as
+adapting my existing seminars, such as \emph{Listening in the L1 and L2,
+Word Segmentation: Findings from Psycho- and Neurolinguistics}, or
+\emph{Two Languages, One Mind: Bilingualism and its Consequences}. I
+would also be interested in contributing to and supporting the
+organization of the lecture series ``Linguistik U Kassel''.
+
+\end{document}

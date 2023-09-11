@@ -1,0 +1,60 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "External Funding"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+```{r}
+
+grant_data <- read.csv(file = "data/grants.csv", header = T)
+
+grant_data <- sapply(grant_data, as.character)
+grant_data[is.na(grant_data)] <- " "
+
+grant_data <- as.data.frame(grant_data)
+
+grant_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+```
+

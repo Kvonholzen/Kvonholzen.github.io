@@ -1,0 +1,490 @@
+%% Template for a CV
+%% Author: Rob J Hyndman
+
+\documentclass[10pt,a4paper,]{article}
+\usepackage[scaled=0.86]{DejaVuSansMono}
+%\usepackage[sfdefault,lf,t]{carlito}
+
+% Change color to blue
+\usepackage{color,xcolor}
+\definecolor{headcolor}{HTML}{990000}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true,hidelinks]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{geometry}
+\geometry{left=1.75cm,right=1.75cm,top=2.2cm,bottom=2cm}
+
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\date{September 2023}
+
+
+\usepackage{paralist,ragged2e,datetime}
+\usepackage[hyphens]{url}
+\usepackage{fancyhdr,enumitem,pifont}
+\usepackage[compact,small,sf,bf]{titlesec}
+
+\RaggedRight
+\sloppy
+
+% Header and footer
+\pagestyle{fancy}
+\makeatletter
+\lhead{\sf\textcolor[gray]{0.4}{Teaching and Supervision
+Experience: \@name}}
+\rhead{\sf\textcolor[gray]{0.4}{\thepage}}
+\cfoot{}
+\def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+\makeatother
+
+% Header box
+\usepackage{tabularx}
+
+\makeatletter
+\def\name#1{\def\@name{#1}}
+\def\info#1{\def\@info{#1}}
+\makeatother
+\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
+
+\usepackage{calc}
+\newlength{\headerboxwidth}
+\setlength{\headerboxwidth}{\textwidth}
+%\addtolength{\headerboxwidth}{0.2cm}
+\makeatletter
+\def\maketitle{
+\thispagestyle{plain}
+\vspace*{-1.4cm}
+\shadebox[0.9]{\headerboxwidth}{\sf\color{headcolor}\hfil
+\hbox to 0.98\textwidth{\begin{tabular}{l}
+\\[-0.3cm]
+\LARGE\textbf{\@name}
+\\[0.1cm]\large Lecturer and Researcher\\[0.6cm]
+\normalsize\textbf{Teaching and Supervision Experience}\\
+\normalsize September 2023
+\end{tabular}
+\hfill\hbox{\fontsize{9}{12}\sf
+\begin{tabular}{@{}rl@{}}
+\@info
+\end{tabular}}}\hfil
+}
+\vspace*{0.2cm}}
+\makeatother
+
+% Section headings
+\titlelabel{}
+\titlespacing{\section}{0pt}{1.5ex}{0.5ex}
+\titleformat*{\section}{\color{headcolor}\large\sf\bfseries}
+\titleformat*{\subsection}{\color{headcolor}\sf\bfseries}
+\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
+
+% Miscellaneous dimensions
+\setlength{\parskip}{0ex}
+\setlength{\parindent}{0em}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{0.15cm}
+\clubpenalty = 10000
+\widowpenalty = 10000
+\setlist{itemsep=1pt}
+\setdescription{labelwidth=1.2cm,leftmargin=1.5cm,labelindent=1.5cm,font=\rm}
+
+% Make nicer bullets
+\renewcommand{\labelitemi}{\ding{228}}
+
+\usepackage{booktabs,fontawesome5}
+%\usepackage[t1,scale=0.86]{sourcecodepro}
+
+\name{Katie Von Holzen}
+\def\imagetop#1{\vtop{\null\hbox{#1}}}
+\info{%
+\raisebox{-0.05cm}{\imagetop{\faIcon{map-marker-alt}}} &  \imagetop{\begin{tabular}{@{}l@{}}Hagenring
+22, 38106 Braunschweig, Germany\end{tabular}}\\ %
+\faIcon{home} & \href{http://Kvonholzen.github.io}{Kvonholzen.github.io}\\% %
+%
+%
+\faIcon{envelope} & \href{mailto:katie.m.vonholzen@gmail.com}{\nolinkurl{katie.m.vonholzen@gmail.com}}\\%
+\faIcon{twitter} & \href{https://twitter.com/KatieVonHolzen}{@KatieVonHolzen}\\%
+\faIcon{github} & \href{https://github.com/Kvonholzen}{Kvonholzen}\\%
+%
+%
+%
+%
+}
+
+
+%\usepackage{inconsolata}
+
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\hfill #1~}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \cslhangindent - \csllabelwidth}{#1}\vspace{0.8ex}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+\def\endfirstpage{\newpage}
+
+\begin{document}
+\maketitle
+
+
+\hypertarget{teaching}{%
+\section{Teaching}\label{teaching}}
+
+\hypertarget{seminars}{%
+\subsection{Seminars}\label{seminars}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-  & \parbox[t]{0.85\textwidth}{%
+\textbf{Listening in the L1 and L2}\hfill{\footnotesize }\newline
+  Bachelors in English Studies, TU Braunschweig\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 1,3 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2022-  & \parbox[t]{0.85\textwidth}{%
+\textbf{Introduction to Linguistics}\hfill{\footnotesize }\newline
+  Bachelors in English Studies, TU Braunschweig\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 1,2 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2021-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Wortsegmentierung: Erkenntnisse aus der Psycho- und Neurolinguistik (Word segmentation: Findings from Psycho- and Neurolinguistics)}\hfill{\footnotesize }\newline
+  Masters in Germanistik, TU Dortmund\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 2,0 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2019-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Einfuehrung in die Sprachwissenschaft (Introduction to Linguistics)}\hfill{\footnotesize }\newline
+  Bachelors in Germanistik, TU Dortmund\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation: 1,65 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2019-2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Zwei Sprachen, ein Gehirn: Bilingualismus und dessen Konsequenzen (Two Languages, One Mind: Bilingualism and its Consequences)}\hfill{\footnotesize }\newline
+  Masters in Germanistik, TU Dortmund\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Average Evaluation:  2,00 (German grading system)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2012  & \parbox[t]{0.85\textwidth}{%
+\textbf{Language Acquisition and Processing}\hfill{\footnotesize }\newline
+  Bachelors in Germanistik, Georg-August-Universitaet Goettingen\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item No evaluation available%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{lecture-based-courses}{%
+\subsection{Lecture-based Courses}\label{lecture-based-courses}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2018  & \parbox[t]{0.85\textwidth}{%
+\textbf{Should I Buy That? Comparing Media Claims with Scientific Evidence from Brain \& Behavior Research}\hfill{\footnotesize }\newline
+  Bachelor students, University of Maryland\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Evaluation: 'I learned a lot from this course'- 3.03 (Disagree - 0 to Strongly Agree (4)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2011  & \parbox[t]{0.85\textwidth}{%
+\textbf{Experimental Methods for Testing Language Comprehension}\hfill{\footnotesize }\newline
+  Bachelors in Germanistik, Georg-August-Universitaet Goettingen\par%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item No evaluation available%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{tutorials}{%
+\subsection{Tutorials}\label{tutorials}}
+
+\emph{I've written a suite of Tutorials available on my website
+(\url{https://kvonholzen.github.io/Tutorials.html}) for creating
+experiments in Open Sesame, analyzing data in R, working in Praat, and
+preprocessing EEG/ERP data in EEGlab/ERPlab. I've also created a
+tutorial for analyzing eyetracking data with R
+(\url{https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/})}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Eyetracking Statistical Analysis Tutorial}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Workshop series with TU Dortmund and TU Braunschweig (https://bookdown.org/katie\_m\_vonholzen/Eyetracking\_Statistical\_Analysis\_Tutorial/)%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Setting up and analyzing an eye-tracking experiment: From Open Sesame to Eyelink to R}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Doctoral students, postdoctoral researchers, and faculty, Universite Paris Descartes%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Time Course Analysis in R}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Doctoral students, Research Training Group 2070, Georg-August-Universitaet Goettingen%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+2016 & \parbox[t]{0.85\textwidth}{%
+\textbf{EEG Pre-processing and Analysis Using EEGLAB and ERPLAB}\hfill{\footnotesize }\newline
+  \empty%
+  \vspace{0.1cm}\begin{minipage}{0.7\textwidth}%
+\begin{itemize}%
+\item Doctoral students, postdoctoral researchers, and faculty, Universite Paris Descartes%
+\end{itemize}%
+\end{minipage}%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{external-phd-examination-committees}{%
+\section{External PhD examination
+committees}\label{external-phd-examination-committees}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2023 & \parbox[t]{0.85\textwidth}{%
+\textbf{Mareike Sahling}\hfill{\footnotesize University of Macquarie, Australia}\newline
+  Effects of Otitis Media with Effusion on Speech Perception and Production in Preschoolers\par%
+  \empty%
+\vspace{\parsep}}\\
+2023 & \parbox[t]{0.85\textwidth}{%
+\textbf{Paul Ratnage}\hfill{\footnotesize University of Plymouth, UK}\newline
+  The Phonetic Specificity of British English-Learning Infants' Word Form Recognition in Their First Year of Life\par%
+  \empty%
+\vspace{\parsep}}\\
+2023 & \parbox[t]{0.85\textwidth}{%
+\textbf{Elly Koutamanis}\hfill{\footnotesize Radboud University Nijmegen, The Netherlands}\newline
+  Spreading the Word: Cross-Linguistic Influence in the Bilingual Child's Lexicon\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{supervisionmentorship}{%
+\section{Supervision/Mentorship}\label{supervisionmentorship}}
+
+\hypertarget{postdoctoral-researchers}{%
+\subsection{Postdoctoral researchers}\label{postdoctoral-researchers}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Sophia Wulfert}\hfill{\footnotesize TU Braunschweig}\newline
+  Cross-linguistic phonetic similarity and lexical co-activation\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{doctoral-students}{%
+\subsection{Doctoral students}\label{doctoral-students}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2022-in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Marie Schnieders}\hfill{\footnotesize TU Braunschweig}\newline
+  Initial Steps into Foreign Language Learning: Lexical and Morphosyntactic Abilities of Primary School Students \par%
+  \empty%
+\vspace{\parsep}}\\
+2020-in progress & \parbox[t]{0.85\textwidth}{%
+\textbf{Marie-Christin Flohr}\hfill{\footnotesize Ludwig Maximilian University of Munich}\newline
+  Exploring the boundaries of statistical learning. Word segmentation in a natural language\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{master-students}{%
+\subsection{Master students}\label{master-students}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2021-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Julia Heimann}\hfill{\footnotesize TU Dortmund}\newline
+  Auswirkungen kindgerichteter Sprache auf die Merkfaehigkeit von Woertern (The role of child-directed speech on the acquisition of words)\par%
+  \empty%
+\vspace{\parsep}}\\
+2021-2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Julia Lumpe}\hfill{\footnotesize TU Dortmund}\newline
+  Beitet ``foreigner-directed speech'' einen Vorteil beim lernen? Auswirkung auf den Fremdspracherwerb am Beispiel deutscher Chinesischlerner (Does foreigner-directed speech offer an advantage in learning? An examination of foreign language acquisition in German learners of Chinese)\par%
+  \empty%
+\vspace{\parsep}}\\
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Antonia Gutland}\hfill{\footnotesize TU Dortmund}\newline
+  Der Zusammenhang zwischen dem soziooekonimische Status, der Haeufigkeit des Vokabelinputs und dem Wortschatz von bilingualen Kindern (The relationship between SES, input frequency, and vocabulary in bilingual children)\par%
+  \empty%
+\vspace{\parsep}}\\
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Franziska Schlage}\hfill{\footnotesize TU Dortmund}\newline
+  Von Boomer zum Digital Native: Wie der Einfluss fremdsprachlicher Elemente der Jugendsprache in den sozialen Medien die Sprachverarbeitung beeinflusst (From Boomer to Digital Native: How foreign language elements of German youth slang in social media influence language processing)\par%
+  \empty%
+\vspace{\parsep}}\\
+2020 & \parbox[t]{0.85\textwidth}{%
+\textbf{Judith Boveleth}\hfill{\footnotesize TU Dortmund}\newline
+  The Difference in the Vocabulary Size of Children with and without Down Syndrome: A Meta-Analysis\par%
+  \empty%
+\vspace{\parsep}}\\
+2012 & \parbox[t]{0.85\textwidth}{%
+\textbf{Deborah Wolff}\hfill{\footnotesize Georg-August-Universitaet Goettingen}\newline
+  Segmentierungsfaehigkeit von infant- und adult-directed speech bei 11-13 Monate alten Kindern. Eine ERP-Studie. (Segmentation abilities in infant- and adult directed speech in 11-13 month old children: An ERP study)\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{bachelor-students}{%
+\subsection{Bachelor students}\label{bachelor-students}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2023 & \parbox[t]{0.85\textwidth}{%
+\textbf{Melina Rusche}\hfill{\footnotesize TU Braunschweig}\newline
+  Usage of Prosodic Cues: Monolingual and Bilingual Infants<91> Word Segmentation Abilities in Rhythmically Different Languages\par%
+  \empty%
+\vspace{\parsep}}\\
+2022 & \parbox[t]{0.85\textwidth}{%
+\textbf{Lea Pauls}\hfill{\footnotesize TU Dortmund}\newline
+  Erweiterung einer Studie von Golinkoff \& Alioto (1995) zur Rolle akustisch-prosodischer Sprachmodifikationen im Prozess des fremdsprachlichen Wortlernens (Extention of Golinkoff \& Alioto (1995) on the role of acoustic-prosodic speech modifications on word learning in a foreign language)\par%
+  \empty%
+\vspace{\parsep}}\\
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Hicran Tekin}\hfill{\footnotesize TU Dortmund}\newline
+  Das Vereinfachen der Wortsegmentation bei Zweitsprachlernende: Eine Neigung zur kindgerechten und/oder erwachsenengerechten Sprechweise (The facilitation of L2 word segmentation: The role of infant- and adult-directed speech)\par%
+  \empty%
+\vspace{\parsep}}\\
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Victoria Harnischmacher}\hfill{\footnotesize TU Dortmund}\newline
+  Einfluss des Zweitsprachniveaus auf den Erwerb ihrer Phonotaktik (The Influence of L2 proficiency on L2 phonotactic acquisition)\par%
+  \empty%
+\vspace{\parsep}}\\
+2021 & \parbox[t]{0.85\textwidth}{%
+\textbf{Maren Wilhelm}\hfill{\footnotesize TU Dortmund}\newline
+  Mehrsprachigkeit im Schulalltag: Inwiefern beziehen Lehrkraefte die Erstsprache von Schuelerinnen und Schuelern im deutsch-sprachigen (Fach-)Unterricht mit ein? (Multilingualism in schools: To what extent do teachers use students' L1 in the classroom?)\par%
+  \empty%
+\vspace{\parsep}}\\
+2020 & \parbox[t]{0.85\textwidth}{%
+\textbf{Nina Schuster}\hfill{\footnotesize TU Dortmund}\newline
+  Phonotaktische Segmentierung der L2: Wie wirken L1-Merkmale deutscher Muttersprachler auf die Segmentierung des Sprachflusses und die Worterkennung in der L2 Englisch ein?. (Phonotactic segmentation in the L2: How do L1 characteristics influence the segmentation and word recognition of the the L2 English speech stream in L1 German learners)\par%
+  \empty%
+\vspace{\parsep}}\\
+2013 & \parbox[t]{0.85\textwidth}{%
+\textbf{Fabienne Kremer}\hfill{\footnotesize Georg-August-Universitaet Goettingen}\newline
+  Associating a language with a speaker: Bilingual production is influenced by speaker language\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{internships-and-project-assistantships}{%
+\subsection{Internships and project
+assistantships}\label{internships-and-project-assistantships}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+2018-2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{A fast note about slow rate in IDS: Maternal speech rate to preverbal infants facilitates early language development}\hfill{\footnotesize University of Maryland}\newline
+  Sara Cusick, Mary Murphy, Kayla Whitlock, Jennifer Zuhl, Julia Grable, Alexia Proctor\par%
+  \empty%
+\vspace{\parsep}}\\
+2018-2019 & \parbox[t]{0.85\textwidth}{%
+\textbf{Utterance alignment of a large, longitudinal corpus in CLAN/CHAT}\hfill{\footnotesize University of Maryland}\newline
+  Heather Wibberley, Taylor Trent, Jillian Doherty, Maggie Roman, Dominique Jenkins, Jessica Mooney\par%
+  \empty%
+\vspace{\parsep}}\\
+2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{French-learning infants' adaptation to a novel accent: The role of consonant/vowel asymmetry}\hfill{\footnotesize Universite Paris Descartes}\newline
+  Rosalie Delille\par%
+  \empty%
+\vspace{\parsep}}\\
+2014-2017 & \parbox[t]{0.85\textwidth}{%
+\textbf{Consonant and vowel processing in word form segmentation: An infant ERP study}\hfill{\footnotesize Universite Paris Descartes}\newline
+  Sofia Carrion, Elisa Moulin, Jeanne Charoy, Marion Lafargue\par%
+  \empty%
+\vspace{\parsep}}\\
+2014-2016 & \parbox[t]{0.85\textwidth}{%
+\textbf{Emergence of the C-bias during the first year of life: New evidence from own name recognition}\hfill{\footnotesize Universite Paris Descartes}\newline
+  Safyya Larinouna, Henry Cheng\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\end{document}

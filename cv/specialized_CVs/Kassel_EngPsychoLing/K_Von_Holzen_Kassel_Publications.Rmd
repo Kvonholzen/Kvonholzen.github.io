@@ -1,0 +1,155 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Publications List"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+# Published peer-reviewed papers
+
+**Average Impact Factor of 3.4**
+
+```{r}
+
+# apostrophe's need to be given as $'$
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal") %>%
+  filter(id != "MB5" & id != "AdultIDSADS") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+# Manuscripts under revision or review (peer-reviewed)
+
+```{r}
+
+
+
+bibliography_entries("data/Publications.bib")%>%
+   #filter(type %in% "article-journal") %>%
+     filter(type %in% "article-journal" & id %in% "MB5" | type %in% "article-journal" & id %in% "AdultIDSADS")
+
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "Unpublished") %>%
+#   arrange(desc(issued), author)
+```
+
+# Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
+# Chapters in Books
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
+
+```
+
+# Open Data
+
+```{r}
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(id %in% "VonHolzen2021" | id %in% "VonHolzen2022") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+# Preregistrations
+
+* Ini-Seg: Phonotactics
+    + https://osf.io/58bhv/?view_only=d48e6184241f4c77b5cb1ce20c98e2d7
+* Ini-Seg: Lexical Transparency
+    + https://osf.io/dsg57/?view_only=b0ee304b3b0941ffa6e64ce0abc3b193
+* The influence of sentence frames in an online (remote) word comprehension experiment
+    + https://osf.io/7dpqg/?view_only=620d69ba96d24e4892bcfe351dc3a406
+* The role of speech register in foreign word learning
+    + https://osf.io/5g2bz/?view_only=5ed0e404a83746cd906a4720232e3d3e
+
+
+# PhD Thesis
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "thesis") %>%
+  arrange(desc(issued), author)
+
+```
+
+```{r}
+# 
+## Manuscripts accepted pending minor revisions
+
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# print(bib)
+
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(id %in% "CVaccent")
+
+
+# bib <- bibliography_entries("data/Publications.bib")
+# 
+# 
+# 
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(issued %in% "accepted pending minor revisions") %>%
+#   arrange(desc(issued), author)
+
+```
+
+```{r}
+## Manuscripts accepted for publication
+# bibliography_entries("Publications.bib") %>%
+#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
+#   arrange(desc(issued), author)
+
+```
+
+
+

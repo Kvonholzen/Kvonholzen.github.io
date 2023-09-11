@@ -1,0 +1,763 @@
+%% Template for a CV
+%% Author: Rob J Hyndman
+
+\documentclass[10pt,a4paper,]{article}
+\usepackage[scaled=0.86]{DejaVuSansMono}
+%\usepackage[sfdefault,lf,t]{carlito}
+
+% Change color to blue
+\usepackage{color,xcolor}
+\definecolor{headcolor}{HTML}{990000}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true,hidelinks]{hyperref}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{geometry}
+\geometry{left=1.75cm,right=1.75cm,top=2.2cm,bottom=2cm}
+
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\date{September 2023}
+
+
+\usepackage{paralist,ragged2e,datetime}
+\usepackage[hyphens]{url}
+\usepackage{fancyhdr,enumitem,pifont}
+\usepackage[compact,small,sf,bf]{titlesec}
+
+\RaggedRight
+\sloppy
+
+% Header and footer
+\pagestyle{fancy}
+\makeatletter
+\lhead{\sf\textcolor[gray]{0.4}{Research Experience: \@name}}
+\rhead{\sf\textcolor[gray]{0.4}{\thepage}}
+\cfoot{}
+\def\headrule{{\color[gray]{0.4}\hrule\@height\headrulewidth\@width\headwidth \vskip-\headrulewidth}}
+\makeatother
+
+% Header box
+\usepackage{tabularx}
+
+\makeatletter
+\def\name#1{\def\@name{#1}}
+\def\info#1{\def\@info{#1}}
+\makeatother
+\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
+
+\usepackage{calc}
+\newlength{\headerboxwidth}
+\setlength{\headerboxwidth}{\textwidth}
+%\addtolength{\headerboxwidth}{0.2cm}
+\makeatletter
+\def\maketitle{
+\thispagestyle{plain}
+\vspace*{-1.4cm}
+\shadebox[0.9]{\headerboxwidth}{\sf\color{headcolor}\hfil
+\hbox to 0.98\textwidth{\begin{tabular}{l}
+\\[-0.3cm]
+\LARGE\textbf{\@name}
+\\[0.1cm]\large Lecturer and Researcher\\[0.6cm]
+\normalsize\textbf{Research Experience}\\
+\normalsize September 2023
+\end{tabular}
+\hfill\hbox{\fontsize{9}{12}\sf
+\begin{tabular}{@{}rl@{}}
+\@info
+\end{tabular}}}\hfil
+}
+\vspace*{0.2cm}}
+\makeatother
+
+% Section headings
+\titlelabel{}
+\titlespacing{\section}{0pt}{1.5ex}{0.5ex}
+\titleformat*{\section}{\color{headcolor}\large\sf\bfseries}
+\titleformat*{\subsection}{\color{headcolor}\sf\bfseries}
+\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
+
+% Miscellaneous dimensions
+\setlength{\parskip}{0ex}
+\setlength{\parindent}{0em}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{0.15cm}
+\clubpenalty = 10000
+\widowpenalty = 10000
+\setlist{itemsep=1pt}
+\setdescription{labelwidth=1.2cm,leftmargin=1.5cm,labelindent=1.5cm,font=\rm}
+
+% Make nicer bullets
+\renewcommand{\labelitemi}{\ding{228}}
+
+\usepackage{booktabs,fontawesome5}
+%\usepackage[t1,scale=0.86]{sourcecodepro}
+
+\name{Katie Von Holzen}
+\def\imagetop#1{\vtop{\null\hbox{#1}}}
+\info{%
+\raisebox{-0.05cm}{\imagetop{\faIcon{map-marker-alt}}} &  \imagetop{\begin{tabular}{@{}l@{}}Hagenring
+22, 38106 Braunschweig, Germany\end{tabular}}\\ %
+\faIcon{home} & \href{http://Kvonholzen.github.io}{Kvonholzen.github.io}\\% %
+%
+%
+\faIcon{envelope} & \href{mailto:katie.m.vonholzen@gmail.com}{\nolinkurl{katie.m.vonholzen@gmail.com}}\\%
+\faIcon{twitter} & \href{https://twitter.com/KatieVonHolzen}{@KatieVonHolzen}\\%
+\faIcon{github} & \href{https://github.com/Kvonholzen}{Kvonholzen}\\%
+%
+%
+%
+%
+}
+
+
+%\usepackage{inconsolata}
+
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\hfill #1~}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \cslhangindent - \csllabelwidth}{#1}\vspace{0.8ex}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+\def\endfirstpage{\newpage}
+
+\begin{document}
+\maketitle
+
+
+\hypertarget{research-program}{%
+\section{Research Program}\label{research-program}}
+
+\hypertarget{program-i-how-do-learners-break-into-word-segmentation}{%
+\subsection{Program I: How do learners break into word
+segmentation?}\label{program-i-how-do-learners-break-into-word-segmentation}}
+
+In the context of globalization, language competence is key for
+effective communication and cultural understanding. As a result, great
+importance is given to language instruction, for example in the
+instruction of foreign languages such as English, which is considered
+the \emph{lingua franca} in many EU member states. Although policy
+decisions about the starting age of FL instruction seek to maximize
+student-learning outcomes, these decisions are often based upon research
+done with adult language learners in immersion contexts or young foreign
+language learners with several years of experience. Although certainly
+useful, a focus on later outcomes is often blurred by effects of later
+instruction, and cannot clarify the underlying mechanisms that drive
+different developmental outcomes. \linebreak
+
+This research program examines the early steps to process and learn from
+foreign language by studying both young, early L2 learners as well as
+more experienced L2 learners. It is divided into 3 themes: 1) The role
+of speech modifications for foreign language learners; 2) Phonotactic
+cues in foreign speech segmentation; and 3) Top-down lexical knowledge
+in foreign speech segmentation. These themes focus on one of the first
+tasks facing the language learner: identifying words in the incoming
+speech signal, known as word segmentation. Yet, this first task presents
+a challenge to the learner, as speech does not contain any ostensive
+pauses between words which would signal a word boundary. My goal is to
+clarify the capacities and constraints of FL and L2 learning that adult
+and child learners possess, especially in regards to word segmentation,
+which lay the foundations for long-term achievement.
+
+\hypertarget{program-ii-building-equity-in-develpmental-science}{%
+\subsection{Program II: Building equity in develpmental
+science}\label{program-ii-building-equity-in-develpmental-science}}
+
+Research on human behavior is often conducted by WEIRD (Western,
+educated, industrialized, rich, democratic) researchers studying WEIRD
+participants, who only make up 12\% of the global population. The
+resulting questions asked as well as the theories developed therefore
+don't necessarily apply to the majority of the world's population.
+Initiatives such as ManyBabies, a community of members focused on
+replication and best practices in developmental science, as well as the
+flexibility of testing psycholinguistic research remotely in
+participants' own homes have the potential to reach more diverse
+populations as well as provide scientists around the world with the
+tools they need to conduct robust developmental research. \linebreak
+
+This research program is centered around the ManyBabies-AtHome (MBAH)
+project, which is a consortium of developmental researchers working
+together to produce a resource-friendly, open-source and accessible
+approach to make it possible for online studies live up to their promise
+of increasing diversity. We have four aims: 1) Provide tools for online
+data collection and processing, 2) Realize global accessibility of
+remote testing platforms beyond English-speaking areas, 3) Establish
+open protocols for ethical data collection, sharing, and protection, and
+4) Create a research network to study diverse populations. I am a member
+of the leadership committee of the MBAH project, as well as the project
+manager of the Looking-While-Listening sub-project of MBAH. The
+Looking-While Listening sub-project applies the aims of the full MBAH
+project in their examination of early infant word recognition using
+online-methods, in addition to the goal of creating a multilingual and
+multicultural study with comparable stimuli across many different
+language contexts (10+ languages).
+
+\hypertarget{research-areas}{%
+\section{Research Areas}\label{research-areas}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+Phonology & \parbox[t]{0.85\textwidth}{%
+\textbf{Phonotactics; Consonant-vowel asymmetry; Cross-linguistic similarity}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+Lexical Processing & \parbox[t]{0.85\textwidth}{%
+\textbf{Phono-lexical interface; Word recognition; Word segmentation}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+Language acquisition & \parbox[t]{0.85\textwidth}{%
+\textbf{Second-language; Foreign-language; Bilingual; First-language}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+Methodology & \parbox[t]{0.85\textwidth}{%
+\textbf{Event-Related Potentials (ERPs); Eyetracking (gaze); Time-course analyses; Longitudinal studies}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+Open Scholarship & \parbox[t]{0.85\textwidth}{%
+\textbf{Large-scale collaborations (Many Babies); Accessibility and diversity; Open and reproducible approaches}\hfill{\footnotesize }\newline
+  \empty%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\pagebreak
+
+\hypertarget{invited-talks-and-conference-activity}{%
+\section{Invited Talks and Conference
+Activity}\label{invited-talks-and-conference-activity}}
+
+\hypertarget{invited-talks}{%
+\subsection{Invited Talks}\label{invited-talks}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2023a}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K. (2023). \emph{Studying speech
+segmentation online using behavioral, eye-tracking, and
+electrophysiological methods}. Presented at the Ringvorlesung {``Recent
+Advances in Linguistic Methods,''} Ludwig Maximilian University of
+Munich, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2022d}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K. (2022). \emph{Doyouunderstandwhatimsaying
+: How learners break into speech stream segmentation}. Presented at the
+HaBilNet2 Workshop, Frankfurt, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2022c}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Von Holzen, K. (2022). \emph{Using cluster-based
+permutation tests to analyse eye-tracking data}. Presented at the CLaS
+Eye-tracking Workshop 2, Macquarie University, Australia.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2022b}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Von Holzen, K. (2022).
+\emph{DoyouunderstandwhatIamsaying? How learners break into speech
+segmentation}. Presented at the LinguisTisch Seminar Series,
+Sociolinguistics Lab, Universität Duisburg-Essen, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2022a}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Von Holzen, K. (2022).
+\emph{DoyouunderstandwhatIamsaying? How learners break into speech
+segmentation}. Presented at the Linguistics Colloquium, TU Braunschweig,
+Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2021}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Von Holzen, K. (2021). \emph{Babies know words, even
+when they're mispronounced: An introduction to meta-analyses}. Presented
+at the German Seminar Colloquium, Albert-Ludwigs Universitaet Freiburg,
+Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2020}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Von Holzen, K. (2020). \emph{Babies know words, even
+when they're mispronounced: A meta-analysis of mispronunciation
+sensitivity studies}. Presented at the Team Meeting of the Language and
+Cognition Group, The Institute of Neuroscience and Cognition, Paris
+Descartes Universite, Paris, France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2019b}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Von Holzen, K. (2019). \emph{On the road to
+bilingualism: Foreign speech processing at first exposure in early
+childhood}. Presented at the Psychology Institute Colloquium, Johannes
+Gutenberg Universitaet Mainz, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2019a}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Von Holzen, K. (2019). \emph{Babies know words, even
+when they're mispronounced: A meta-analysis of mispronunciation
+sensitivity}. Presented at the Linguistics Department, City University
+of New York, USA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2018}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Von Holzen, K. (2018). \emph{On the road to
+bilingualism: The role of age in foreign speech processing}. Presented
+at the Team Meeting of the Language and Cognition Group, The Institute
+of Neuroscience and Cognition, Paris Descartes Universite, Paris,
+France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2016b}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Von Holzen, K. (2016). \emph{Phonological and lexical
+processing in first language and multilingual acquisition}. Presented at
+the Linguistics Faculty, Potsdam, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2016a}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Von Holzen, K., \& Nazzi, T. (2016). \emph{Origine de
+l'asymetrie consonne/voyelle lors du traitement lexical}. Presented at
+the Agence nationale de la recherche meeting of the grant funding
+programme BLANC 2013, Paris, France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2014}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Von Holzen, K. (2014). \emph{Segmentation of infant- and
+adult-directed speech in 12-month-olds: An ERP study}. Presented at the
+Concordia Infant Research Laboratory Team Meeting, Montreal, Canada.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2012a}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Von Holzen, K. (2012). \emph{The cognate facilitation
+effect in bilingual and monolingual toddlers}. Presented at the Workshop
+on Monolingual and Bilingual Word Recognition and Learning in Infants
+and Adults, Basque Center on Cognition, Brain, and Language, San
+Sebastian, Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2012b}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Von Holzen, K. (2012). \emph{Learning phonemes from
+faces: The role of speaker identity in non-native phoneme
+discrimination}. Presented at the Workshop on Monolingual and Bilingual
+Word Recognition and Learning in Infants and Adults, Basque Center on
+Cognition, Brain, and Language, San Sebastian, Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-iVH2012c}{}}%
+\CSLLeftMargin{16. }%
+\CSLRightInline{Von Holzen, K. (2012). \emph{Mechanisms underlying
+lexicalprocessing in monolingual and bilingual toddlers}. In L. Polka
+(Chair), Comparing monolingual and bilingual language acquisition during
+infancy. Invited symposium conducted at the XVIIIth Biennial
+International Conference on Infant Studies, Minneapolis, MN.}
+
+\hypertarget{conference-talks}{%
+\subsection{Conference Talks}\label{conference-talks}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-tW2023}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Wulfert, S., Von Holzen, K., Schnieders, M., \& Hopp, H.
+(2023). \emph{Use of L1 phonotactics in initial foreign-language speech
+segmentation}. Presented at EuroSLA 32, Birmingham, UK.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tV2022a}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K., Bergmann, C., \&
+ManyBabies-AtHome-Consortium. (2022). \emph{ManyBabies-AtHome looking
+while listening: Constructing an online, cross-linguistic investigation
+of word recognition}. Presented at the 52nd Congress of the German
+Psychological Society, Hildesheim, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tV2022b}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Von Holzen, K., \& ManyBabies-AtHome-Consortium. (2022).
+\emph{ManyBabies-AtHome}. Presented at the 2022 Big Team Science
+Conference, Virtual Conference.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tS2021}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Schlage, F., \& Von Holzen, K. (2021). \emph{From boomer
+to digital native: The influence of anglicisms in german social media
+language on language processing}. Presented at the 2021 Conference
+Architectures and Mechanisms for Language Processing (AMLaP), Paris,
+France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tB2021}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Boveleth, J., \& Von Holzen, K. (2021). \emph{The
+difference in the vocabulary size of children with und without down
+syndrome: A meta analysis}. Presented at the Muenster Conference
+Linguistic Representtions and Language Processing, Muenster, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2021}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Von Holzen, K., Harnischmacher, V., \& Schuster, N.
+(2021). \emph{Phonetic cues in L2 speech segmentation}. Presented at the
+2021 Conference Architectures and Mechanisms for Language Processing
+(AMLaP), Paris, France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2019}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2019). \emph{Can a tog
+be a dog? A meta-analysis of experimental factors influencing infants'
+mispronunciation sensitivity}. In Gonzalez-Gomez, N. (Chair), Big ideas
+to tackle small samples. Presented at the Biennial Meeting of the
+Society for Research in Child Development, Baltimore, USA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2018b}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2018). \emph{A
+meta-analysis of infants' mispronunciation sensitivity development}.
+Presented at the 40th Annual Meeting of the Cognitive Science Society,
+Madison, WI, USA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2018a}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Von Holzen, K., \& Newman, R. (2018). \emph{On the road
+to bilingualism: The role of native language knowledge in foreign speech
+processing}. In Koostra, G. J. and Bosma, E. (Chairs), Cross-language
+activation in bilingual children. Presented at the Conference on
+Multilingualism, Ghent, Belgium.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2017}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Von Holzen, K., Nishibayashi, L.-L., \& Nazzi, T.
+(2017). \emph{An ERP study of consonant and vowel processing of newly
+segmented word forms.} Presented at the Workshop on Infant Language
+Development, Bilbao, Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2015}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Von Holzen, K., \& Nazzi, T. (2015). \emph{The role of
+consonants and vowels in 5- and 8-month-old own name recognition:
+Implications for lexical development}. Presented at the second Workshop
+on Infant Language Development, 2015, Stockholm, Sweden.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2014}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Von Holzen, K., Wolff, D., \& Mani, N. (2014).
+\emph{Segmentation of infant- and adult-directed speech in
+12-month-olds: An ERP study}. In K. Von Holzen (Chair), Segmenting words
+from continuous speech: Examining varied input sources for infants.
+Symposium conducted at the XIXth Biennial International Conference on
+Infant Studies, Berlin, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2013}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Von Holzen, K., Wolff, D., \& Mani, N. (2013).
+\emph{Segmentierungsfähigkeit von infant- und adult-directed speech bei
+12 monate alten kindern (segmentation of infant- and adult-directed
+speech in 12-month-old infants)}. Presented at the 22nd Deutsches EEG/EP
+Mapping Meeting, Giessen, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2012a}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2012). \emph{Learning
+phonemes from faces: The role of speaker identity in non-native phoneme
+discrimination}. In K. Von Holzen (Chair), Infant phonetic learning in
+context: The influence of faces, objects, and words. Symposium conducted
+at the XVIIIth Biennial International Conference on Infant Studies,
+Minneapolis, MN.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2012b}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2012). \emph{The cognate
+facilitation effect in bilingual toddlers}. Presented at the
+International Workshop Bilingual and Multilingual Interaction, Bangor,
+Wales.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2012c}{}}%
+\CSLLeftMargin{16. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2012). \emph{Language
+non-selective lexical access in bilingual toddlers}. Presented at the
+International Workshop Bilingual and Multilingual Interaction, Bangor,
+Wales.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tVH2011}{}}%
+\CSLLeftMargin{17. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2011). \emph{Bilingual
+phonological priming: An ERP study investigating interconnectivity of
+activation in the bilinguals two lexicons at different points in
+development.} In J. Mayor (Chair), The emergence of lexical networks in
+the second year of life. Symposium conducted at the 17th Meeting of the
+European Society for Cognitive Psychology, San Sebastian, Spain.}
+
+\hypertarget{conference-posters}{%
+\subsection{Conference Posters}\label{conference-posters}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2023b}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Von Holzen, K., Schnieders, M., \& Hopp, H. (2023).
+\emph{Use of L1 lexical overlap in initial foreign-language speech
+segmentation}. Presented at the 2023 Conference Architectures and
+Mechanisms for Language Processing (AMLaP), San Sebastian, Spain.
+\url{https://doi.org/10.6084/m9.figshare.24041904}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2023d}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Von Holzen, K., Schnieders, M., Wulfert, S., \& Hopp, H.
+(2023). \emph{Foreign-language speech segmentation in ab initio child
+learners: The roles of sublexical and lexical L2 overlap and
+phonological awareness}. Accepted for presentation at the 2023 Boston
+University Conference on Language Development, Boston, MA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2023a}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Von Holzen, K., Schnieders, M., Wulfert, S., \& Hopp, H.
+(2023). \emph{Lexical overlap in foreign language speech segmentation in
+primary-level students}. Presented at EuroSLA 32, Birmingham, UK.
+\url{https://doi.org/10.6084/m9.figshare.24041883}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2023c}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Von Holzen, K., Wulfert, S., \& Hopp, H. (2023).
+\emph{Use of L1 phonotactics in initial foreign-language speech
+segmentation}. Presented at the 2023 Conference Architectures and
+Mechanisms for Language Processing (AMLaP), San Sebastian, Spain.
+\url{https://doi.org/10.6084/m9.figshare.24041928}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pF2023a}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Flohr, M.-C., Von Holzen, K., \& Schimke, S. (2023).
+\emph{Exploring the boundaries of statistical learning: Word
+segmentation in a natural language}. Presented at Psycholinguistics in
+Flanders (PiF) 2023, Ghent, Belgium.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pF2023b}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Flohr, M.-C., Von Holzen, K., \& Schimke, S. (2023).
+\emph{Exploring the boundaries of statistical learning: Word
+segmentation in a natural language}. Presented at the 2023 Conference
+Architectures and Mechanisms for Language Processing (AMLaP), San
+Sebastian, Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2022b}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Von Holzen, K. (2022). \emph{The role of speech
+modifications in ab inito learners' initial speech segmentation}. 4th
+International Symposium on Bilingual and L2 Processing in Adults and
+Children, Tromso, Norway.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2022a}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Von Holzen, K., Bergmann, C., \&
+ManyBabies-AtHome-Consortium. (2022). \emph{ManyBabies-AtHome looking
+while listening: Constructing an online, cross-linguistic investigation
+of word recognition}. Presented at the 2022 Workshop on Infant Language
+Development, San Sebastian, Spain.
+\url{https://doi.org/10.6084/m9.figshare.20012729.v2}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2021}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Von Holzen, K., \& Newman, R. (2021). \emph{The
+recognition of foreign words at first exposure in early language
+development: The role of phonological similarity}. Presented at the
+Biennial Meeting of the Society for Research in Child Development,
+Virtual Conference.
+\url{https://doi.org/10.6084/m9.figshare.14381984.v1}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2018a}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2018). \emph{A
+meta-analysis of mispronunciation sensitivity in infancy}. Presented at
+the XXIth Biennial International Conference on Infant Studies,
+Philadelphia, PA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2018b}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Von Holzen, K., Van Ommen, S., White, K., \& Nazzi, T.
+(2018). \emph{French-learning infants' adaptation to a novel accent: The
+role of consonant/vowel asymmetry}. Presented at the XXIth Biennial
+International Conference on Infant Studies, Philadelphia, PA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2017c}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Von Holzen, K., \& Bergmann, C. (2017). \emph{Babies
+know words, even when they are mispronounced: A meta-analytic view}.
+Presented at the Workshop on Infant Language Development, Bilbao, Spain.
+\url{https://doi.org/10.6084/m9.figshare.5492464.v1}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2017b}{}}%
+\CSLLeftMargin{13. }%
+\CSLRightInline{Von Holzen, K., Rider, D., \& Nazzi, T. (2017).
+\emph{Consonant and vowel processing in 5-, 8-, and 11-month-olds own
+name recognition: The role of acoustic/phonetic and lexical factors}.
+Presented at the Congress of the International Association for the Study
+of Child Language, Lyon, France.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2017a}{}}%
+\CSLLeftMargin{14. }%
+\CSLRightInline{Von Holzen, K., Nishibayashi, L.-L., \& Nazzi, T.
+(2017). \emph{Neural bases of phonological processing of newly segmented
+word forms}. Presented at the 2017 Boston University Conference on
+Language Development, Boston, MA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2014}{}}%
+\CSLLeftMargin{15. }%
+\CSLRightInline{Von Holzen, K., Fennell, C. T., \& Mani, N. (2014).
+\emph{The cognate facilitation effect in bilingual and monolingual
+toddlers}. Presented at the XIXth Biennial International Conference on
+Infant Studies, Berlin, Germany.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2013b}{}}%
+\CSLLeftMargin{16. }%
+\CSLRightInline{Von Holzen, K., Wolff, D., \& Mani, N. (2013).
+\emph{Segmentation of IDS and ADS in 12-month-olds: An ERP study}.
+Presented at the Workshop on Infant Language Development, San Sebastian,
+Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2013c}{}}%
+\CSLLeftMargin{17. }%
+\CSLRightInline{Von Holzen, K., Kremer, F., \& Mani, N. (2013).
+\emph{Associating a language with a speaker: Bilingual production is
+influenced by speaker language}. Presented at the International Workshop
+on Bilingualism and Cognitive Control, Krakow, Poland.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2013a}{}}%
+\CSLLeftMargin{18. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2013). \emph{Native and
+non-native phoneme perception in bilingual toddlers: A longitudinal
+study}. Presented at the Workshop on Infant Language Development, San
+Sebastian, Spain.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2011a}{}}%
+\CSLLeftMargin{19. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2011). \emph{Learning
+phonemes from faces: The role of speaker identity in non-native phoneme
+discrimination}. Presented at the 2011 Boston University Conference on
+Language Development, Boston, MA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2011b}{}}%
+\CSLLeftMargin{20. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2011). \emph{Word-word
+relationships between languages and across development}. Presented at
+the 2011 CNS Annual Meeting, San Fransicso, CA.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pVH2010}{}}%
+\CSLLeftMargin{21. }%
+\CSLRightInline{Von Holzen, K., \& Mani, N. (2010). \emph{Phonological
+priming across language borders: No passport required?} Presented at the
+Donostia Workshop on Neurobilingualsim, Donostia-San Sebastian, Spain.}
+
+\pagebreak
+
+\hypertarget{research-skills}{%
+\section{Research Skills}\label{research-skills}}
+
+\hypertarget{experiment-programming-experience}{%
+\subsection{Experiment Programming
+Experience}\label{experiment-programming-experience}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+Open Sesame/Python & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Designing experiments, including lexical decision (adults), visual world paradigm (with and without an eye-tracker) and preferential listening (infants); Experience advising colleagues on experimental design; Conducting tutorials with colleagues and students; Launching experiments online; Used to promote Open Science practices\par%
+  \empty%
+\vspace{\parsep}}\\
+Presentation & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise (lapsed)}\hfill{\footnotesize }\newline
+  Designing experiments, including EEG experiments\par%
+  \empty%
+\vspace{\parsep}}\\
+Eprime & \parbox[t]{0.85\textwidth}{%
+\textbf{Beginner expertise}\hfill{\footnotesize }\newline
+  Designing experiments, including EEG experiments\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\hypertarget{statisticaldata-analysis-experience}{%
+\subsection{Statistical/Data Analysis
+Experience}\label{statisticaldata-analysis-experience}}
+
+\begin{longtable}{@{\extracolsep{\fill}}ll}
+R & \parbox[t]{0.85\textwidth}{%
+\textbf{Proficient expertise}\hfill{\footnotesize }\newline
+  Advising colleagues on statistical analysis, data wrangling; Conducting tutorials; Growth growth curve modeling (lmer package); Mixed effects models (lmer package); ANOVA analyses (ez package); Producing beautiful graphics (ggplot2 package); Analyzing vocabulary data corpora (wordbankr package); Power analysis (pwr package); Creating RMarkdown files to promote collaboration and accuracy; Used to promote Open Science practices\par%
+  \empty%
+\vspace{\parsep}}\\
+Praat & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Scripting to automatically analyze sounds (pitch, duration, intensity); Stimuli creation; Interfacing with CLAN output to analyze corpora; Interfacing with a forced aligner (Easy Align); Used to promote Open Science practices\par%
+  \empty%
+\vspace{\parsep}}\\
+CHAT/CLAN & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Analyzing length of utterance; Time-locking transcripts to audio recordings; Interfacing with Praat\par%
+  \empty%
+\vspace{\parsep}}\\
+EEG/ERPlab & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise}\hfill{\footnotesize }\newline
+  Preprocessing EEG data; Conducting tutorials; Related MATLAB scripting to automatically analyze EEG/ERP data\par%
+  \empty%
+\vspace{\parsep}}\\
+SPSS & \parbox[t]{0.85\textwidth}{%
+\textbf{Intermediate expertise (lapsed)}\hfill{\footnotesize }\newline
+  ANOVA analyses\par%
+  \empty%
+\vspace{\parsep}}\\
+\end{longtable}
+
+\end{document}

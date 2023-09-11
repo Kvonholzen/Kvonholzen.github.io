@@ -111,11 +111,10 @@ research_area %>%
 
 # apostrophe's need to be given as $'$
 
-`%!in%` <- Negate(`%in%`)
-
 bibliography_entries("data/Publications.bib")%>%
    #filter(type %in% "article-journal") %>%
-     filter(type %in% "article-journal" & id %!in% "MB5") %>%
+     filter(type %in% "article-journal") %>%
+  filter(id != "MB5" & id != "AdultIDSADS") %>%
   arrange(desc(issued), author)
 
 
@@ -198,13 +197,14 @@ bibliography_entries("data/Publications.bib") %>%
 
 bibliography_entries("data/Publications.bib")%>%
    #filter(type %in% "article-journal") %>%
-     filter(type %in% "article-journal" & id %in% "MB5")
+     filter(type %in% "article-journal" & id %in% "MB5" | type %in% "article-journal" & id %in% "AdultIDSADS")
 
 # bibliography_entries("Publications.bib") %>%
 #   filter(type %in% "Unpublished") %>%
 #   arrange(desc(issued), author)
 ```
 
+\pagebreak
 
 # Grants
 
@@ -249,11 +249,7 @@ awards_data %>%
 
 
 
-# Teaching and Mentorship
-
-
-## Courses Taught
-
+# Teaching
 
 ```{r}
 
@@ -269,7 +265,7 @@ teaching_data <- as.data.frame(teaching_data)
 ```
 
 
-### Seminars
+## Seminars
 
 
 ```{r}
@@ -289,7 +285,7 @@ seminar_data %>%
 ```
 
 
-### Lecture-based Courses
+## Lecture-based Courses
 
 ```{r}
 
@@ -307,7 +303,7 @@ lecture_data %>%
 ```
 
 
-### Tutorials
+## Tutorials
 
 *I've written a suite of Tutorials available on my website (https://kvonholzen.github.io/Tutorials.html) for creating experiments in Open Sesame, analyzing data in R, working in Praat, and preprocessing EEG/ERP data in EEGlab/ERPlab. I've also created a tutorial for analyzing eyetracking data with R (https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/)*
 
@@ -327,12 +323,26 @@ tutorial_data %>%
 
 ```
 
-## PhD examination committees
+# External PhD examination committees
 
-I will serve as a member of the reading committee for Mareike Sahling's PhD thesis entitled “Effects of Otitis Media with Effusion on Speech Perception and Production in Preschoolers” at the University of Macquarie, Australia in Spring 2023 and as an external examiner for Paul Ratnage's PhD viva at the University of Plymouth, UK in Summer 2023.
+```{r}
 
+committee_data <- read.csv(file = "data/phd_committees.csv", header = T)
+committee_data <- as.data.frame(committee_data)
 
-## Supervision/Mentorship
+committee_data %>%
+  detailed_entries(
+    what = Person,
+    when = Year,
+    where = Title,
+    with = Institution
+  )
+
+```
+
+\pagebreak
+
+# Supervision/Mentorship
 
 
 ```{r}
@@ -346,7 +356,7 @@ student_data <- as.data.frame(student_data)
 
 ```
 
-### Postdoctoral researchers
+## Postdoctoral researchers
 
 ```{r}
 
@@ -364,7 +374,7 @@ postdoc_data %>%
 
 ```
 
-### Doctoral students
+## Doctoral students
 
 ```{r}
 
@@ -382,7 +392,7 @@ phd_data %>%
 
 ```
 
-### Master students
+## Master students
 
 ```{r}
 
@@ -401,7 +411,7 @@ master_data %>%
 ```
 
 
-### Bachelor students
+## Bachelor students
 
 ```{r}
 
@@ -418,7 +428,7 @@ bachelor_data %>%
 
 ```
 
-### Internships and project assistantships
+## Internships and project assistantships
 
 ```{r}
 
@@ -607,8 +617,7 @@ prof_member %>%
 
 - English, native
 - German, fluent (C1)
-- French, beginner (A2)
-- Dutch, beginner (A1)
+- French, proficient (B1)
 - Greek, beginner (A1)
 
 

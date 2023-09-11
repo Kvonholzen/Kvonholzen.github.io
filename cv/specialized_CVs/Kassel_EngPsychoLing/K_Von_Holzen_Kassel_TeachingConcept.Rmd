@@ -1,0 +1,53 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Teaching Concept"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+As a teacher, I understand my role to be that of a guide. I know the goal (learning outcome) and I know at least one way to get there (my own way), but it is my job to accompany the students as they find their individual ways through their learning process. In this regard, I especially focus on the student as an individual and understand that each student comes to my class with their own needs, wants, skills, and interests. I therefore try to create my courses such that all learners can be successful, integrating sections where I give information, sections that encourage discussion or interaction amongst the students, and sections where students need to apply what they’ve learned to a task. I have come to this teaching approach through my years of teaching in the United States and Germany as well as through the NRW Teaching Certificate Program “Professionelle Lehrkompetenz für die Hochschule”.
+\linebreak
+
+In my courses, I encourage students to be critical thinkers. For example, I design my advanced seminar courses to be led by students in a structured discussion. For each class, students read a scientific article or book chapter and prepare a brief summary of the topic, their remaining questions, and information they found surprising or interesting. To ensure students come to class prepared, a few students are randomly chosen to present their prepared materials and the entire class is invited to add their summaries and questions. I then guide the class discussion around the points that the students presented. This teaches students how to critique and think critically through dialogue with their peers, while demonstrating a deep understanding of the material, which will be an essential skill in their scholarly and professional lives.
+\linebreak
+
+I place great importance on scientific literacy in my teaching. I use the QALMRI method (Brosowsky & Parshina, 2017) to teach students how to identify the questions being asked in a scientific article, as well as how those questions are answered and the consequences of those answers. I’ve used this method in both a first semester class on brain and behavioral research, investigating topics such as the “bilingual advantage” from both the perspective of popular media and from primary scientific articles, as well as more traditional master’s seminars on language processing and bilingualism research. Reading and understanding scientific articles can be daunting for students, but I’ve found that when I guide my students using a scaffold for approaching and processing scientific articles, our discussions of those articles reflect a deep level of learning.
+\linebreak
+
+Through the NRW Teaching Certificate Program I’ve learned several strategies for effective teaching. One central insight is how to design assignments for students that support their ability to apply their knowledge to real-world situations. For example, in my seminar “Introduction to Linguistics” at the TU Dortmund, I introduced students to the basic concepts of Linguistics through the eyes of a young child learning their first language. In their assignments, students tested their own hypothesis about how vocabulary develops in children using the Wordbank database (http://wordbank.stanford.edu/) or analyzed a child’s stage in the acquisition of morpho-syntax using the CHILDES database (https://childes.talkbank.org/). 
+\linebreak
+
+I look forward to applying my teaching approach at the University of Kassel by taking over existing classes or developing new classes within the Institute for English and American Studies. The BA, MA, and teacher training specializations in English and American Studies offer classes that I am qualified for and excited to teach, ranging from content courses (e.g. Introduction to Linguistics) to methods and statistics (e.g. Processing Sentences: Experimental Methods in Linguistics). I would also be interested in developing new courses, such as *Exploring Psycholinguistics through Open Science*, as well as adapting my existing seminars, such as *Listening in the L1 and L2, Word Segmentation: Findings from Psycho- and Neurolinguistics*, or *Two Languages, One Mind: Bilingualism and its Consequences*. I would also be interested in contributing to and supporting the organization of the lecture series “Linguistik U Kassel”.

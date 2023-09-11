@@ -1,0 +1,173 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Research Experience"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+# Research Program
+
+## Program I: How do learners break into word segmentation?
+
+In the context of globalization, language competence is key for effective communication and cultural understanding. As a result, great importance is given to language instruction, for example in the instruction of foreign languages such as English, which is considered the *lingua franca* in many EU member states. Although policy decisions about the starting age of FL instruction seek to maximize student-learning outcomes, these decisions are often based upon research done with adult language learners in immersion contexts or young foreign language learners with several years of experience. Although certainly useful, a focus on later outcomes is often blurred by effects of later instruction, and cannot clarify the underlying mechanisms that drive different developmental outcomes. 
+\linebreak
+
+This research program examines the early steps to process and learn from foreign language by studying both young, early L2 learners as well as more experienced L2 learners. It is divided into 3 themes: 1) The role of speech modifications for foreign language learners; 2) Phonotactic cues in foreign speech segmentation; and 3) Top-down lexical knowledge in foreign speech segmentation. These themes focus on one of the first tasks facing the language learner: identifying words in the incoming speech signal, known as word segmentation. Yet, this first task presents a challenge to the learner, as speech does not contain any ostensive pauses between words which would signal a word boundary. My goal is to clarify the capacities and constraints of FL and L2 learning that adult and child learners possess, especially in regards to word segmentation, which lay the foundations for long-term achievement.
+
+## Program II: Building equity in develpmental science
+
+Research on human behavior is often conducted by WEIRD (Western, educated, industrialized, rich, democratic) researchers studying WEIRD participants, who only make up 12% of the global population. The resulting questions asked as well as the theories developed therefore don’t necessarily apply to the majority of the world’s population. Initiatives such as ManyBabies, a community of members focused on replication and best practices in developmental science, as well as the flexibility of testing psycholinguistic research remotely in participants' own homes have the potential to reach more diverse populations as well as provide scientists around the world with the tools they need to conduct robust developmental research.
+\linebreak
+
+This research program is centered around the ManyBabies-AtHome (MBAH) project, which is a consortium of developmental researchers working together to produce a resource-friendly, open-source and accessible approach to make it possible for online studies live up to their promise of increasing diversity. We have four aims: 1) Provide tools for online data collection and processing, 2) Realize global accessibility of remote testing platforms beyond English-speaking areas, 3) Establish open protocols for ethical data collection, sharing, and protection, and 4) Create a research network to study diverse populations. I am a member of the leadership committee of the MBAH project, as well as the project manager of the Looking-While-Listening sub-project of MBAH. The Looking-While Listening sub-project applies the aims of the full MBAH project in their examination of early infant word recognition using online-methods, in addition to the goal of creating a multilingual and multicultural study with comparable stimuli across many different language contexts (10+ languages). 
+
+# Research Areas
+
+
+```{r}
+
+research_area <- read.csv(file = "data/research_areas_EngLing.csv", header = T)
+
+research_area <- research_area %>%
+  group_by(area) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+research_area <- unique(research_area[,c("area", "detail_list")])
+
+
+research_area %>%
+  detailed_entries(
+    what = detail_list,
+    when = area
+  )
+
+
+
+```
+
+\pagebreak
+
+# Invited Talks and Conference Activity
+
+## Invited Talks
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^i"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+## Conference Talks
+
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^t"))%>%
+  arrange(desc(issued), author)
+```
+
+
+
+## Conference Posters
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^p"))%>%
+  arrange(desc(issued), author)
+
+```
+
+\pagebreak
+
+# Research Skills
+
+## Experiment Programming Experience
+
+```{r}
+
+experiment_prog <- read.csv(file = "data/skills.csv", header = T)
+
+experiment_prog <- subset(experiment_prog, skill == "experiment_programming")
+
+experiment_prog <- experiment_prog %>%
+  group_by(program) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+experiment_prog <- unique(experiment_prog[,c("program", "expertise", "detail_list")])
+
+
+experiment_prog %>%
+  detailed_entries(
+    what = expertise,
+    when = program,
+    where = detail_list,
+    with = ""
+  )
+
+
+```
+
+
+## Statistical/Data Analysis Experience
+
+```{r}
+
+stats_an <- read.csv(file = "data/skills.csv", header = T)
+
+stats_an <- subset(stats_an, skill == "stats_analysis")
+
+stats_an <- stats_an %>%
+  group_by(program) %>%
+  dplyr::mutate(detail_list = paste0(detail, collapse = "; "))
+
+stats_an <- unique(stats_an[,c("program", "expertise", "detail_list")])
+
+
+stats_an %>%
+  detailed_entries(
+    what = expertise,
+    when = program,
+    where = detail_list,
+    with = ""
+  )
+
+
+```

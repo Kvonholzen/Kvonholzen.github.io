@@ -1,0 +1,191 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Curriculum Vitae"
+output:
+  vitae::hyndman:
+    latex_engine: lualatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+# Education
+
+```{r}
+
+# needed to add " to get special characters to read in properly
+edu_data <- read.csv(file = "data/education.csv", header = T)
+#edu_data <- read.csv(file = "data/education.csv", header = T)
+
+edu_data %>%
+  detailed_entries(
+    what = Degree,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+
+# Employment
+
+```{r}
+
+
+employ_data <- read.csv(file = "data/employment.csv", header = T)
+
+
+employ_data %>%
+  detailed_entries(
+    what = Position,
+    when = glue::glue("{Start_Year} - {End_Year}"),
+    where = Institution,
+    with = Supervisor
+  )
+
+```
+
+
+
+# Awards
+
+```{r}
+
+awards_data <- read.csv(file = "data/awards.csv", header = T)
+
+awards_data %>%
+  detailed_entries(
+    what = Name,
+    when = Year,
+    where = Desc,
+    with = Amount
+  )
+
+```
+
+
+\pagebreak
+
+# Service
+
+## Institutional Service
+
+```{r}
+
+inst_service <- read.csv(file = "data/service.csv", header = T)
+
+inst_service <- sapply(inst_service, as.character)
+inst_service[is.na(inst_service)] <- " "
+
+inst_service <- as.data.frame(inst_service)
+
+
+inst_service %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+## Professional Service
+
+For a complete record of my peer-review service, view my Web of Science Peer Review Profile (https://www.webofscience.com/wos/author/record/1483321)
+
+
+```{r}
+### Conference Review
+# 
+# - International Congress of Infant Studies (ICIS) Conference (2020), Glasgow, UK
+# - International Association for the Study of Child Language (IASCL) Conference (2020), Philadelphia, PA, USA
+# - CCERBAL Conference: Bilingual from Birth: Process, Pedagogy and Policy (2016). Ottawa, Canada
+# - International Workshop on Bilingualism and Cognitive Control (2013). Jagiellonian University, Krakow, Poland
+# - International Workshop: “Bilingual and Multilingual Interaction” ESRC Centre for Research on Bilingualism (2012), Bangor, Wales
+
+```
+
+
+
+# Professional Memberships
+
+```{r}
+
+prof_member <- read.csv(file = "data/memberships.csv", header = T)
+
+prof_member %>%
+  brief_entries(
+    what = Name,
+    when = glue::glue("{Start_Year} - {End_Year}"))
+
+
+```
+
+
+# Languages
+
+- English, native
+- German, fluent (C1)
+- French, proficient (B1)
+- Greek, beginner (A1)
+
+
+# Community Involvement/Outreach
+
+```{r}
+
+community <- read.csv(file = "data/community.csv", header = T)
+
+community <- sapply(community, as.character)
+community[is.na(community)] <- " "
+
+community <- as.data.frame(community)
+
+community %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Role,
+    with = ""
+  )
+
+```
+
+
+
+
+
+
