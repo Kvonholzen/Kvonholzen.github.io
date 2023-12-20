@@ -136,6 +136,7 @@ library(stringr)
 pubs <- bibliography_entries("cv/data/Publications.bib") %>%
    filter(type %in% "article-journal") %>%
   filter(id != "MB5") %>%
+  filter(id != "AdultIDSADS") %>%
   arrange(desc(issued), author)
 
 #unique(pubs$id)

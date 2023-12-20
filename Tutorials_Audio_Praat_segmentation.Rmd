@@ -62,7 +62,7 @@ knitr::include_graphics("Tutorials/Audio/pictures/noise_3.png")
 ```
 
 
-## Step 3: Create and open a TextGrid file
+## Step 5: Create and open a TextGrid file
 
 Select the Sound Object "Sound example_recording_denoised" and click Annotate -> To TextGrid... and then press ok. An object called "TextGrid example_recording" should appear in your list of Objects. Select both this TextGrid object and the object "Sound example_recording_denoised" and click "View & Edit". This will open both files in a viewer, which should look something like this picture:
 
@@ -72,7 +72,7 @@ knitr::include_graphics("Tutorials/Audio/pictures/textgrid_1.png")
 
 ```
 
-## Step 4: Edit the TextGrid and select a sound
+## Step 6: Edit the TextGrid and select a sound
 
 Select the first nonesense word in the recording "zorkwall" by clicking somewhere near the beginning of the sound and dragging the selection until the end of the sound. Once you have the sound selected, press Enter. This should create a boundary at the beginning and end of the sound on the selected tier in the Textgrid (whichever one is highlighted). With this selection highlighted, give it the name "zorkwall". You can click on this selection and play it, and only this selection will play. It should look something like this picture:
 
@@ -82,14 +82,14 @@ knitr::include_graphics("Tutorials/Audio/pictures/textgrid_2.png")
 
 ```
 
-## Step 5: Adjust the selection
+## Step 7: Adjust the selection
 
 Zoom in on the "zorkwall" selection by going to View -> Zoom in until only this selection fills your screen. You can adjust the boundaries of this selection by clicking on them and dragging them back and forth. Adjust the boundary such that it starts when the sound begins and ends. You will get a feel for this after practice. Use the visual information from the sound wave and spectrogram to guide you. Play the selection several times to ensure that a key piece of sound information is not being cut off.
 
 If the stimuli will be used for a time-sensitive experiment (i.e. where reaction time or eye-movements will be measured), it is essential to take extra care in ensuring that the onset and offset of the selection are accurate.
 
 
-## Step 6: Repeat selection and adjustment
+## Step 8: Repeat selection and adjustment
 
 Now repeat Steps 4 and 5 for the second sound in this recording, "foomlong". This sound starts with a fricative, so make sure you adjust the beginning to include all parts of the sound. Your window should now look something like this:
 
@@ -100,13 +100,13 @@ knitr::include_graphics("Tutorials/Audio/pictures/textgrid_3.png")
 ```
 
 
-## Step 7: Adjust boundaries to zero crossing using a Praat script
+## Step 9: Adjust boundaries to zero crossing using a Praat script
 
 Close out your Editing window and return to your Praat Objects window. Make sure both your Sound and TextGrid objects are selected. Click Praat -> Open Praat Script and select the Praat script "boundary_2_zero_crossing", which is included in the [Praat_wavs.zip](Tutorials/Audio/Praat_wavs.zip) folder. This script was given to me (Katie Von Holzen) by Prof. Dr. Nicole Altvater-Mackensen a long time ago, it was originally written by Dennis Pasveer in 2004. This script takes the boundaries we set in the previous steps and adjusts them to the nearest zero crossing to ensure that the beginning and end of the sound occur in silence and don't cut in in the middle of a soundwave.
 
 In this script file, click Run -> Run and then OK. You will likely get an error message, just click OK. The boundaries in the TextGrid are now adjusted. We will want to save this TextGrid file now, so go to  File -> Save as TextGrid text file. Name it "example_recording_denoised.TextGrid" and click Save. You can close this Editing window, as well as the Praat Info and "Run script: Overwrite original TextGrid files or create new ones" windows. 
 
-## Step 8: Save selected sounds using a Praat script
+## Step 10: Save selected sounds using a Praat script
 
 Make sure both your Sound and TextGrid objects are selected. Click Praat -> Open Praat Script and select the Praat script "save_wavs", which is included in the [Praat_wavs.zip](Tutorials/Audio/Praat_wavs.zip) folder. This script was given to me (Katie Von Holzen) by Prof. Dr. Nicole Altvater-Mackensen a long time ago, I am no longer sure of the original author. This script takes the boundaries we selected which have text in them (zorkwall and foomlong) and saves each of them as an individual wav file in the folder of your choice.
 
