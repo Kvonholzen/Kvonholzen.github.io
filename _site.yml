@@ -38,6 +38,9 @@ navbar:
         - text: "EEG and ERPs"
         - text: "Analyzing EEG data using EEGlab"
           href: Tutorials_eeg_erp_EEGlab_guide.html 
+        - text: "Meta-science"
+        - text: "Introduction to Meta-analyses: Mispronunciation Sensitivity"
+          href: Tutorials_Intro_to_Meta_Analysis.html
     - text: "Media"
       href: Media.html      
 output_dir: "."
