@@ -17,6 +17,7 @@ library(scholar)
 library(papaja)
 library(tibble)
 library(stringr)
+library(dplyr)
 ```
 
 
@@ -25,6 +26,9 @@ library(stringr)
 <div class = "row">
   
 <div class = "col-sm-2">
+<br>in progress
+<br>
+<br>
 <br>2013
 <br>
 <br>
@@ -33,6 +37,9 @@ library(stringr)
 </div>
   
 <div class = "col-lg-6">
+<br>Habilitation English Linguistics
+<br>TU Braunschweig, Germany
+<br>
 <br>Dr. rer. nat. Psychology, magna cum laude
 <br>Georg-August-Universität Göttingen, Germany
 <br>
@@ -90,26 +97,49 @@ library(stringr)
 
 # Research Areas
 
- * Language acquisition (bilingual and monolingual)
+ * First, second and foreign-language acquisition
+ * Individual learner variation
+ * Accessibility and diversity
+ * Open and reproducible approaches
+ * Large-scale collaborations (Many Babies)
+ * Cross-linguistic similarity algorithms
  * Developmental language outcomes
- * Event-Related Potentials (ERPs)
- * Word/wordform recognition
+ * Supportive aspects of the input
+ * Cross-linguistic similarity algorithms
+ * Acoustic corpus analyses
  * Speech segmentation
  * Phono-lexical processing
  * Foreign speech processing
+ * Word/wordform recognition
+ * Consonant bias in lexical processing
  * Bilingual lexical access
  * Mispronunciation sensitivity
- * Consonant bias in lexical processing
+ * Event-Related Potentials (ERPs) 
+
+
+
 
 # Peer-reviewed papers
 
 ```{r}
+
+# apostrophe's need to be given as $'$
+# remove papers that are under review, revision, or accepted
+notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
+                 "SarahLWLpilot",
+                 "ChineseWordLearning",
+                 "AdultIDSADS",
+                 "ROFFS",
+                 "MB5")
+
+
 #easily get the keys for my published articles
 pubs <- bibliography_entries("cv/data/Publications.bib") %>%
-   filter(type %in% "article-journal") %>%
-  filter(id != "MB5") %>%
-  filter(id != "AdultIDSADS") %>%
+  filter(type %in% "article-journal") %>%
+  filter(!id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
   arrange(desc(issued), author)
+
 
 #unique(pubs$id)
 

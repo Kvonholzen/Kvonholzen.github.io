@@ -642,8 +642,7 @@ picture:</p>
 <p><img src="Tutorials/Lexical_Decision/pictures/run_selected_text.png" width="75%" style="display: block; margin: auto;" /></p>
 <p>The code should appear in the Debug window. Type “word_response” into
 the Debug Window. You should get the following output:</p>
-<pre class="python"><code>
-word_response</code></pre>
+<pre class="python"><code>word_response</code></pre>
 <pre><code>## &#39;z&#39;</code></pre>
 <p>If this worked correctly, congratulations, you’ve just edited python
 code! If you want to learn more about editing python code and inline
@@ -680,8 +679,7 @@ dm.category = &#39;word&#39;, &#39;nonword&#39;, &#39;word&#39;, &#39;nonword&#3
 #print(dm)</code></pre>
 <p>When you type “print(dm)” into the Debug window, you should get the
 following output:</p>
-<pre class="python"><code>
-print(dm)</code></pre>
+<pre class="python"><code>print(dm)</code></pre>
 <pre><code>## +---+----------+--------+
 ## | # | category | target |
 ## +---+----------+--------+
@@ -717,8 +715,7 @@ correct_response to that of the word_response variable</li>
 <p>This should produce the following DataMatrix when we type “print(dm)”
 in the Debug window. As you can see, the correct response button for our
 “odd” numbered participant (999) are correctly assigned.</p>
-<pre class="python"><code>
-print(dm)</code></pre>
+<pre class="python"><code>print(dm)</code></pre>
 <pre><code>## +---+----------+------------------+--------+
 ## | # | category | correct_response | target |
 ## +---+----------+------------------+--------+
@@ -741,8 +738,7 @@ can double the trials by typing the following and running the code:</p>
 dc = dm &lt;&lt; dm</code></pre>
 <p>Now, when we display the contents of “dc” (type dc or print(dc) into
 the Debug window), our new object, we see that we have 12 trials.</p>
-<pre class="python"><code>
-print(dc)</code></pre>
+<pre class="python"><code>print(dc)</code></pre>
 <pre><code>## +----+----------+------------------+--------+
 ## | #  | category | correct_response | target |
 ## +----+----------+------------------+--------+
@@ -805,23 +801,22 @@ saves the resulting DataMatrix object to “dm2”.</li>
 </ul>
 <p>When we inspect the resulting dm2, we can check whether our
 constraints were met. They were!</p>
-<pre class="python"><code>
-print(dm2)</code></pre>
+<pre class="python"><code>print(dm2)</code></pre>
 <pre><code>## +----+----------+------------------+--------+
 ## | #  | category | correct_response | target |
 ## +----+----------+------------------+--------+
-## | 9  |   word   |        z         | turtle |
-## | 8  |   word   |        z         | apple  |
-## | 0  | nonword  |        m         | ourtel |
-## | 2  |   word   |        z         | magic  |
-## | 11 | nonword  |        m         | mogac  |
 ## | 6  | nonword  |        m         | ipple  |
+## | 10 | nonword  |        m         | mogac  |
+## | 5  |   word   |        z         | magic  |
+## | 11 | nonword  |        m         | ourtel |
+## | 8  |   word   |        z         | turtle |
 ## | 7  |   word   |        z         | apple  |
-## | 1  | nonword  |        m         | ourtel |
-## | 10 |   word   |        z         | turtle |
-## | 3  |   word   |        z         | magic  |
-## | 4  | nonword  |        m         | ipple  |
-## | 5  | nonword  |        m         | mogac  |
+## | 3  | nonword  |        m         | mogac  |
+## | 4  |   word   |        z         | magic  |
+## | 1  | nonword  |        m         | ipple  |
+## | 2  |   word   |        z         | turtle |
+## | 9  | nonword  |        m         | ourtel |
+## | 0  |   word   |        z         | apple  |
 ## +----+----------+------------------+--------+</code></pre>
 </div>
 <div

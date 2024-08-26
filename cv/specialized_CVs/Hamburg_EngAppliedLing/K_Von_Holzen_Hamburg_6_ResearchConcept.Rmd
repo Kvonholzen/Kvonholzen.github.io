@@ -1,0 +1,64 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+pronouns: she/her
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+phone: +49 172 52 86 485
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Research Concept"
+output:
+  vitae::hyndman:
+    latex_engine: xelatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+# Research Program
+
+## Program I: How do learners break into word segmentation?
+
+In the context of globalization, language competence is key for effective communication and cultural understanding. As a result, great importance is given to language instruction, for example in the instruction of foreign languages such as English, which is considered the *lingua franca* in many EU member states. Although policy decisions about the starting age of FL instruction seek to maximize student-learning outcomes, these decisions are often based upon research done with adult language learners in immersion contexts or young foreign language learners with several years of experience. Although certainly useful, a focus on later outcomes is often blurred by effects of later instruction, and cannot clarify the underlying mechanisms that drive different developmental outcomes. 
+\linebreak
+
+This research program underlies my Habilitation project. It examines the early steps to process and learn from foreign language by studying both young, early L2 learners as well as more experienced L2 learners. It is divided into 3 themes: 1) The role of speech modifications for foreign language learners (Von Holzen & Newman, under review; Von Holzen, in preparation); 2) Phonotactic cues in foreign speech segmentation (Von Holzen, Wulfert, Schnieders, & Hopp, in preparation); and 3) Top-down lexical knowledge in foreign speech segmentation (Von Holzen & Newman, under review). These themes focus on one of the first tasks facing the language learner: identifying words in the incoming speech signal, known as word segmentation. Yet, this first task presents a challenge to the learner, as speech does not contain any ostensive pauses between words which would signal a word boundary. My goal is to clarify the capacities and constraints of FL and L2 learning that adult and child learners possess, especially in regards to word segmentation, which lay the foundations for long-term achievement.
+
+## Program II: How do the characteristics of the input shape langauge acquisition?
+
+The environment in which we learn language shapes the language learning process. My work on the role of consonants and vowels in early lexical acquisition investigated how the acoustic-phonetic and distributional characteristics of consonants and vowels in speech shape the word learning and recognition skills of infants (Nazzi, Poltrock, & Von Holzen, 2016; Von Holzen et al., 2018, 2023; Von Holzen & Nazzi, 2020). But, the learner can also shape the language input that they receive. For example, speech rate modifications are one characteristic of infant-directed speech thought to facilitate language acquisition in infancy, but caregivers also modify these characteristics as their infant gains linguistic maturity (Raneri, Von Holzen, Newman, & Bernstein Ratner, 2020).
+\linebreak
+
+This research program examines the relationship between language input and language learning, with the goal of better supporting the language acquisition process. It consists of two funding lines that I am currently pursuing. In the first, a joint-grant proposal to the NIH in the USA with colleagues from the University of Maryland and the University of California - Los Angeles, we aim to study how noise in the home environment shapes infants' and children's phonological and lexical acquisition. We will create a large-scale corpus of home audio recordings with the goal of quantifying the relationship between noise and speech in the child's home as well as how this translates to their linguistic milestones. In the second, I am writing a proposal to study the prosodic, phonological, and lexical properties of speech used in foreign-language classrooms in Germany and how this relates to learners academic outcomes. The builds off of my own work on the function of infant- and foreigner-directed speech (Von Holzen & Newman, under review) as well as mentorships of students in studying the properties of infant- and foreigner-directed speech (BA Thesis Lareen Rochow; Internships Sara Cusick, Mary Murphy, Kayla Whitlock, Jennifer Zuhl, Julia Grable, Alexia Proctor).
+
+## Program III: Building equity in language acquisition
+
+Research on human behavior is often conducted by WEIRD (Western, educated, industrialized, rich, democratic) researchers studying WEIRD participants, who only make up 12% of the global population. The resulting questions asked as well as the theories developed therefore don’t necessarily apply to the majority of the world’s population. Initiatives such as ManyBabies, a community of members focused on replication and best practices in developmental science, as well as the flexibility of testing research remotely in participants' own homes have the potential to reach more diverse populations as well as provide scientists around the world with the tools they need to conduct robust developmental research.
+\linebreak
+
+As a WEIRD scholar, I am aware of how privileged I am and I use this privilege to provide support and access to resources for other researchers. This research program is centered around the ManyBabies-AtHome (MBAH) project, which is a consortium of developmental researchers working together to produce a resource-friendly, open-source and accessible approach to make it possible for remote studies live up to their promise of increasing diversity. In this project, we aim to: 1) Provide tools for remote data collection and processing, 2) Realize global accessibility of remote testing platforms beyond English-speaking areas, 3) Establish open protocols for ethical data collection, sharing, and protection, and 4) Create a research network to study diverse populations. I am a member of the leadership committee of the MBAH project, as well as the project manager of the Looking-While-Listening sub-project of MBAH. My own work within the project focuses on studying infant comprehension via remote data collection, in addition to the goal of creating a multilingual and multicultural study with comparable stimuli across many different language contexts (10+ languages). 
+

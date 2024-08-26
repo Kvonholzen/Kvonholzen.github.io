@@ -1,0 +1,247 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+pronouns: she/her
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+phone: +49 172 52 86 485
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Classes Taught and Theses Supervised"
+output:
+  vitae::hyndman:
+    latex_engine: xelatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+# Teaching
+
+```{r}
+
+teaching_data <- read.csv(file = "data/teaching.csv", header = T)
+
+
+teaching_data <- sapply(teaching_data, as.character)
+teaching_data[is.na(teaching_data)] <- " "
+
+teaching_data <- as.data.frame(teaching_data)
+
+
+```
+
+
+## Seminars
+
+
+```{r}
+
+seminar_data <- subset(teaching_data, Type == "Seminar")
+
+
+seminar_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Desc,
+    with = "",
+    why = Evaluation
+  )
+
+```
+
+
+## Lecture-based Courses
+
+```{r}
+
+lecture_data <- subset(teaching_data, Type == "Lecture")
+
+lecture_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Desc,
+    with = "",
+    why = Evaluation
+  )
+
+```
+
+
+## Tutorials
+
+*I've written a suite of Tutorials available on my website (https://kvonholzen.github.io/Tutorials.html) for creating experiments in Open Sesame, analyzing data in R, working in Praat, and preprocessing EEG/ERP data in EEGlab/ERPlab. I've also created a tutorial for analyzing eyetracking data with R (https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/)*
+
+```{r}
+
+tutorial_data <- subset(teaching_data, Type == "Tutorial")
+
+tutorial_data$End_Year <- ""
+
+tutorial_data %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    with = "",
+    why = Desc
+  )
+
+```
+
+# External PhD examination committees
+
+```{r}
+
+committee_data <- read.csv(file = "data/phd_committees.csv", header = T)
+committee_data <- as.data.frame(committee_data)
+
+committee_data %>%
+  detailed_entries(
+    what = Person,
+    when = Year,
+    where = Title,
+    with = Institution
+  )
+
+```
+
+# Supervision/Mentorship
+
+```{r}
+
+student_data <- read.csv(file = "data/students_ger.csv", header = T)
+
+student_data <- sapply(student_data, as.character)
+student_data[is.na(student_data)] <- " "
+
+student_data <- as.data.frame(student_data)
+
+```
+
+## Postdoctoral researchers
+
+```{r}
+
+postdoc_data <- subset(student_data, Type == "Postdoctoral Researcher")
+
+
+postdoc_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+## Doctoral students
+
+```{r}
+
+phd_data <- subset(student_data, Type == "PhD")
+
+
+phd_data %>%
+  detailed_entries(
+    what = Person,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Title,
+    with = Institution
+  )
+
+
+```
+
+## Master students
+
+```{r}
+
+master_data <- subset(student_data, Type == "Master")
+
+
+master_data %>%
+  detailed_entries(
+    what = Title,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+
+```
+
+
+## Bachelor students
+
+```{r}
+
+bachelor_data <- subset(student_data, Type == "Bachelor")
+
+
+bachelor_data %>%
+  detailed_entries(
+    what = Title,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Institution,
+    with = ""
+  )
+
+```
+
+## Internships and project assistantships
+
+```{r}
+
+intern_data <- subset(student_data, Type == "Intern")
+
+intern_data %>%
+  detailed_entries(
+    what = Title,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Person,
+    with = Institution
+  )
+
+
+# - Sofia Carrion, 2017
+# - Elisa Moulin, 2015-2016
+# - Jeanne Charoy, 2015
+# - Marion Lafargue, 2014-2015 
+
+# - Safyya Larinouna, 2016
+# - Henry Cheng, 2014 
+
+
+# *Spoken word perception in L1 and L2: An ERP study of the influence of speaker, gender, frequency, and repetition*, Georg-August-Universität Göttingen, 2012
+# - Agniezska Leszczynska
+
+```
+

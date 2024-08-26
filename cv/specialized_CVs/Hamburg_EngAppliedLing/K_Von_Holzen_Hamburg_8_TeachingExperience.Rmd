@@ -1,0 +1,52 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+pronouns: she/her
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+phone: +49 172 52 86 485
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Teaching and Supervision Experience"
+output:
+  vitae::hyndman:
+    latex_engine: xelatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+As a teacher, I understand my role to be that of a guide. I know the goal (learning outcome) and I know at least one way to get there (my own way), but it is my job to accompany the students as they find their individual ways through their learning process. I therefore try to create my courses such that all learners can be successful, integrating sections where I give information, sections that encourage discussion or interaction amongst the students, and sections where students need to apply what they’ve learned to a task. This means I am continuously looking for ways to connect my teaching content with students' professional needs and interests and thereby have a real impact on their lives. Having this attitude about teaching helps me keep a fresh outlook on each semester, even when I am teaching a course I've taught several times. I have come to this teaching approach through my 6 years of classroom teaching experience in the United States and Germany as well as through the NRW Teaching Certificate Program “Professionelle Lehrkompetenz für die Hochschule”.
+\linebreak
+
+Although I have been invited to give one-off statistical and methodological tutorials and workshops around the world for almost a decade now, my main teaching experience comes from teaching seminars. While at the University of Maryland, I co-designed a course focusing on training first-year students' critical thinking skills and providing them a framework for reading scientific texts. I designed and taught 3 different seminars during my time at the TU Dortmund, one was an introductory seminar in German Linguistics and the other two were research-methods focused master-level seminars. I have now taught for five semesters at the TU Braunschweig, were my seminar courses have covered all module levels for our bachelor students. Every semester, I teach a section of our introductory seminar in English Linguistics and alternate between a advanced courses in Phonetics and Phonology or First Language Acquisition. I have also designed my own research-methods focused seminars focusing on Listening in the L1 and L2 as well as Sociolinguistics. In addition to teaching classes I have designed myself as well as in concert with other colleagues, I have extensive experience in designing examinations, from written and oral exams to data analyses, term papers, and student theses. A complete list of the courses I have taught as well as the students I have supervised can be found in the "Classes Taught and Theses Supervised" section.
+\linebreak
+
+I have also supervised dozens of students, from internships, to bachelor, master, and doctoral theses. Focusing on the internships, my role was to define the scope of their work and teach them the tools necessary to complete it. It is here that I discovered my love of writing out tutorials and How-To guides (some of which can be found on my website: https://kvonholzen.github.io/Tutorials.html), which I continue to use to support the students I work with. While at both the TU Dortmund and the TU Braunschweig I have supervised mostly bachelor and master theses focusing on empirical work, ranging from corpus analysis to online processing (e.g. self-paced reading, lexical decision), but I have also supervised theoretical theses. I am also currently supervising two doctoral students and one post-doctoral researcher. My approach to supervision is to offer students regular meetings and like in my classroom teaching, guide them through their own learning process. Typically a student thesis is integrated into one of my ongoing projects, but I always work with students to find a topic that suits their interests as well as my skill-set.
+\linebreak
+
+At the end of the day, my goal in my teaching is to give my students the skills they need to succeed professionally. But, I do find that students are more motivated to learn when they also enjoy their learning experience. As I've gained teaching experience, I've also become more confident in my teaching abilities. Its therefore very rewarding to me as a teacher-scholar when I can see this increasingly reflected in my student evaluations, as in this example: "Dr. Von Holzen ist eine der motiviertesten und kompetentesten Dozent/innen die ich bisher hatte. Sie macht die komplexen Inhalte verständlich und in ihrer Vorlesung zu sitzen, macht einfach Spaß. Durch ihre Erklärungen ist es mir möglich, auch komplizierten Inhalten zu folgen (was ja gerade bei Linguistics essenziell ist). :)". 
+

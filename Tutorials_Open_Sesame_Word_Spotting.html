@@ -65,6 +65,7 @@ if (window.hljs) {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -624,10 +625,7 @@ using an inline script and convert it into a DataMatrix file. Drag an
 inline script into the beginning of the experiment. It is very important
 that you edit this code to contain the folder that your Open Sesame
 experiment is located in! Type in the following in the Run tab:</p>
-<pre class="python"><code>
-
-
-# Comment out the following line until we&#39;re ready to run the experiment. This line takes the typed in subject number and converts it to a &quot;var.&quot; variable to be used in the Open Sesame environment. We don&#39;t want to use that yet, because we won&#39;t be able to run our code!
+<pre class="python"><code># Comment out the following line until we&#39;re ready to run the experiment. This line takes the typed in subject number and converts it to a &quot;var.&quot; variable to be used in the Open Sesame environment. We don&#39;t want to use that yet, because we won&#39;t be able to run our code!
 #sub_num = str(var.subject_nr)
 sub_num = 999
 
@@ -678,8 +676,7 @@ make during the experiment (they can’t all be called default!).</p>
 dm.recording = dm.wav_file</code></pre>
 <p>Also, we need to tell Open Sesame that our wav_file column contains
 files with a .wav extension.</p>
-<pre class="python"><code>
-dm.wav_file = dm.wav_file + &quot;.wav&quot;
+<pre class="python"><code>dm.wav_file = dm.wav_file + &quot;.wav&quot;
 
 print(dm)</code></pre>
 <pre><code>## +----+----------+-----------------------+---------------------------+
@@ -721,16 +718,14 @@ participant</h1>
 have a folder of their recordings afterwards, so that we can analyze
 them. In order to do that, we need to write some code to create a new
 folder every time a new participant is run. Type the following:</p>
+<pre class="python"><code># this is the current path (wherever you have the experiment saved)
+path</code></pre>
+<pre><code>## &#39;C:\\Users\\KatieVH\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&#39;</code></pre>
 <pre class="python"><code>
 
-# this is the current path (wherever you have the experiment saved)
-path
 
-
-
-# now, we want to create a new folder for this subject within the current folder</code></pre>
-<pre><code>## &#39;C:\\Users\\KatieVH\\Documents\\Github\\Kvonholzen.github.io\\Tutorials\\Word_Spotting\\Word_Spotting_Tutorial\\&#39;</code></pre>
-<pre class="python"><code>sub_path = path + &quot;\subject_&quot; + str(sub_num)
+# now, we want to create a new folder for this subject within the current folder
+sub_path = path + &quot;\subject_&quot; + str(sub_num)
 
 # create the folder if it doesn&#39;t exist
 
@@ -852,7 +847,7 @@ touches.</p>
 <div id="references" class="section level1 unnumbered">
 <h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent"
-line-spacing="2">
+entry-spacing="0" line-spacing="2">
 <div id="ref-McQueen1996" class="csl-entry">
 McQueen, J. (1996). <span class="nocase">Word spotting</span>.
 <em>Language and Cognitive Processes</em>, <em>11</em>(6), 695–699. <a

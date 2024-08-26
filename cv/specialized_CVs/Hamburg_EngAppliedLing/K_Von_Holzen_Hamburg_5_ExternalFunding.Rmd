@@ -1,0 +1,152 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+pronouns: she/her
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+phone: +49 172 52 86 485
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "External Funding"
+output:
+  vitae::hyndman:
+    latex_engine: xelatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+
+```{r}
+
+grant_data <- read.csv(file = "data/grants.csv", header = T)
+
+grant_data <- sapply(grant_data, as.character)
+grant_data[is.na(grant_data)] <- " "
+
+grant_data <- as.data.frame(grant_data)
+
+
+
+```
+
+# Personal third-party funding
+
+
+```{r IniSeg}
+
+grant_data %>%
+  filter(Code == "IniSeg") %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+
+```
+
+Primary school-aged children in Germany are required to learn English, but the age at which instruction should start remains a topic of debate. This project seeks to understand the underlying mechanisms driving developmental differences in foreign language learning by studying the child learner’s readiness to process and learn from foreign speech before they have received instruction in that language. It focuses on German-learning school-aged children at two ages when English instruction begins in the German school system (6-7 and 9-10 years) and their application of linguistic knowledge from their first language, German, while listening to speech in English. The preliminary results of this project have been presented at several prominent, international conferences (e.g. BUCLD, EuroSLA, IASCL) and a first publication focusing on the use of German phonotactic cues is currently in preparation (Von Holzen, Wulfert, Schnieders, & Hopp, in preparation). 
+
+```{r UMDtraining}
+
+grant_data %>%
+  filter(Code == "UMDtraining") %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+
+```
+
+Speakers modify their speech when addressing language learners, whether infants learning their first language or adults learning a foreign language. During my postdoctoral project at the University of Maryland, I investigated whether these speech modifications can support language acquisition in adult and child learners, focusing specifically on speech segmentation. Two publications resulting from this work are currently under review, one focusing on adults (Von Holzen & Newman, under review, *Ab initio word segmentation in infant- and adult-directed speech.*) and one focusing on preschool-aged children (Von Holzen & Newman, under review, *Children's foreign word recognition at first exposure: The role of phonological similarity and utterance position.*). 
+
+# Third-party funding in preparation or under review
+
+```{r UMDnoise}
+
+grant_data %>%
+  filter(Code == "UMDnoise") %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+
+```
+
+Although we have known for decades that noise interferes with children’s learning in school, we know almost nothing about how noise in the home impacts development. This research grant seeks to understand the real-world impact of noise on development by linking children's linguistic skills with the linguistic and sound-landscape of their everyday home experiences. My role in this project is study design and planning, analysis of the data, and dissemination through international, peer-reviewed publications. This project is in collaboration with researchers from the United States (University of Maryland and University of California - Los Angeles) and builds upon collaborative work that I waas involved in examining speech perception in noise (Newman, Kirby, Von Holzen, & Redcay, 2021) and lexical processing in young children (O'Fallon, Von Holzen, & Newman, 2020; Von Holzen, Van Ommen, White, & Nazzi, 2023). It is currently under review for funding within the R01 grant scheme at the National Institute of Health in the United States.
+
+\pagebreak
+
+```{r FDSclassroom}
+
+grant_data %>%
+  filter(Code == "FDSclassroom") %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+
+```
+
+When speaking with learners, we change all aspects of our speech, from sentence structure to acoustic pitch contours. We do this for both infants learning their first language as well as those learning a foreign language. Much is known about the characteristics of infant-directed speech and the role it may play in language acquisition. In contrast, although the characteristics of so-called foreigner- or non-native-directed speech have been studied, their direct influence on foreign language acquisition remains unknown. In this grant proposal, I am to study the acoustic and linguistic characteristics of foreign language teaching in natural classroom settings as well as how variation in these characteristics impact student learners' outcomes in foreign language learning. This proposal is currently in preparation, but I am to submit it for review for a DFG Research Grant by early 2025.
+
+
+# Associated third-party funded projects
+
+```{r Paris}
+
+grant_data %>%
+  filter(Code == "Paris") %>%
+  detailed_entries(
+    what = Name,
+    when = glue::glue("{Start_Year}{End_Year}"),
+    where = Funding_Body,
+    with = Amount,
+    why = Role
+  )
+
+
+```
+
+More weight is often given to consonants than vowels during lexical processing, which has been found to be shaped by early linguistic experience. This research grant was awarded to Dr. Thierry Nazzi and I was brought on as the postdoctoral researcher to conduct the studies. My work focused on the acoustic/phonetic and lexical factors that drive this assymmetry between consonants and vowels during early language acquisition in French-learning infants. During the completion of these studies, my role was to conceptualize, test, analyze, and report the results. Our findings favor an interpretation of C-bias emergence guided by acoustic/phonetic factors, but show that early sensitivity to both consonants and vowels is related to general lexical development over the first two years of life. This project has produced four peer-reviewed publications (Nazzi, Poltrock, & Von Holzen, 2016; Von Holzen et al., 2018, 2023; Von Holzen & Nazzi, 2020).
+
+
+

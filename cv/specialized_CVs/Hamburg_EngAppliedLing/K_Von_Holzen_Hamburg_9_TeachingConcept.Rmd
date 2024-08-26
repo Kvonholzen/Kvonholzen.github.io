@@ -1,0 +1,57 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+pronouns: she/her
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+phone: +49 172 52 86 485
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Teaching Concept"
+output:
+  vitae::hyndman:
+    latex_engine: xelatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+As a professor of Applied Linguistics at the University of Hamburg, I would be qualified to teach in several different areas of linguistics. I could therefore cover existing courses within the Institut für Anglistik und Amerikanistik such as the lecture or seminars for Introduction to English Linguistics and English Linguistics (Grundschule) as well as Experimental Linguistics and Methods of Linguistics. Several of my existing courses would fit well as Seminar II options, including those focusing on core areas of linguistics (e.g. Phonetics and Phonology; First Language Acquisition) as well as their application to specific populations (e.g. Two Languages, One Mind: Bilingualism and Its Consequences). In my time at the TU Braunschweig, I've benefited immensely from our Research Methods course, which accompanies students as they complete their bachelor's thesis in Linguistics. I would be very keen to discuss the possibility of adapting this course to the needs of the IAA, as I find it useful to keep students on track as they complete their thesis and to also reduce the supervisor's workload. 
+\linebreak
+
+As an Excellence University, the University of Hamburg places an emphasis on interdisciplinary research. I would like to bring a more interdisciplinary emphasis to its teaching. As an interdisciplinary scholar of Psychology and Linguistics studying the mind and the environment in which it develops, my work often falls under the umbrella of Cognitive Science. Cognitive Science spans not only Psychology and Linguistics, but also Philosophy, Anthropology, Artificial Intelligence, and Neuroscience. All of these aspects are already studied and researched at the University of Hamburg. I envision a new program of study focused on Cognitive Science, which would prepare students for traditional careers in these fields as well as more specialized positions in human-machine interfaces, IT, and medicine. I 
+\linebreak
+
+The majority of my teaching experience has come from students training to become teachers, but I would look forward to the opportunity of working with more students who are interested in other career paths, as I believe linguistics has much to offer students as they become citizens of the world. This is why I am especially excited about the Master program "English as a World Language". Just as my work with the ManyBabies-AtHome project has allowed me to widen my research context beyond the Global North, contributing to the ENGAGE program of study would allow me to widen the focus on my teaching as well. As a teacher of linguistics, I feel that I often have to undo language prejudices put in place by wider society and this would allow me to work towards changing this attitude. 
+\linebreak
+
+I am not only interested in what I could gain by teaching in the ENGAGE program, but also in what I could contribute to the program.  For example, I would bring my global network connections, which could be explored for student exchange and field research opportunities. In my work at the  Media Coordinator for the IASCL (International Association for the Study of Child Language), I am actively seeking to support researchers who are working with understudied languages. This is perhaps best exemplified by two interviews I have conducted. In my interview with Dr. Shanley Allen, we discuss the Acquisition Sketch Project, which seeks to provide a framework for researchers to document the acquisition trajectory of children learning languages that are understudied (https://youtu.be/cBmg9nV3RoE?feature=shared&t=287). In my interview with Dr. Rowena Garcia, we discuss how we can tackle issues of diversity in language acquisition research through scientific knowledge (https://youtu.be/XPfkguSLL9Q?feature=shared&t=1124). I envision incorporating these ideas in my classroom as well as in student projects.
+\linebreak
+
+Finally, the duties of this professor include direction of the "Sprachpraxis". As someone who teaches in linguistics and who researches acquisition, I see this as a great opportunity. There is potential for overlap between the content taught in linguistics-focused courses and in language-skills focused courses. Ensuring that content is not doubled but instead complementary opens up more space to apply students' theoretical knowledge gained in linguistics to the development of their own skills and the skills of their own future students. Furthermore, with many different sections of the same course, it is important that the content is coordinated while still ensuring that lecturers have the freedom to teach content in a way that best suits their teaching approach. I would look forward to working together with my "Sprachpraxis" colleagues to identify areas that they already feel are working successfully as well as those areas that need improvement.
+
+
+

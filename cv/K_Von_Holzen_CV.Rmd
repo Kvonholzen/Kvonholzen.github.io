@@ -105,20 +105,74 @@ research_area %>%
 
 ## Published peer-reviewed papers
 
-**Average Impact Factor of 3.4**
-
 ```{r}
 
 # apostrophe's need to be given as $'$
+# remove papers that are under review, revision, or accepted
+notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
+                 "SarahLWLpilot",
+                 "ChineseWordLearning",
+                 "AdultIDSADS",
+                 "ROFFS",
+                 "MB5")
 
-bibliography_entries("data/Publications.bib")%>%
-   #filter(type %in% "article-journal") %>%
-     filter(type %in% "article-journal") %>%
-  filter(id != "MB5" & id != "AdultIDSADS") %>%
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(!id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
   arrange(desc(issued), author)
 
 
 ```
+
+## Manuscripts accepted
+
+```{r}
+# 
+
+
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(id == "MB5") %>%
+  arrange(author)
+
+```
+
+
+## Manuscripts under revision or review
+
+```{r}
+
+notpublished = c("AdultIDSADS",
+                 "ROFFS")
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
+  arrange(author)
+
+```
+## Manuscripts in preparation
+
+```{r}
+
+# apostrophe's need to be given as $'$
+# remove papers that are under review, revision, or accepted
+notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
+                 "SarahLWLpilot",
+                 "ChineseWordLearning")
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
+  arrange(author)
+
+
+```
+
 
 ## Chapters in Books
 
@@ -139,11 +193,13 @@ bibliography_entries("data/Publications.bib") %>%
 
 ## Open Data
 
+The entire set of materials, data, and analysis scripts for these manuscripts are hosted by the Open Science Framework.
+
 ```{r}
 
 bibliography_entries("data/Publications.bib") %>%
-  filter(id %in% "VonHolzen2021" | id %in% "VonHolzen2022") %>%
-  arrange(desc(issued), author)
+  filter(id %in% "VonHolzen2021" | id %in% "VonHolzen2022" | id %in% "AdultIDSADS" | id %in% "CVaccent" | id %in% "ROFFS") %>%
+  arrange(author)
 
 
 ```
@@ -157,54 +213,6 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```
 
-```{r}
-# 
-## Manuscripts accepted pending minor revisions
-
-
-
-# bib <- bibliography_entries("data/Publications.bib")
-# 
-# print(bib)
-
-# bibliography_entries("data/Publications.bib") %>%
-#   filter(id %in% "CVaccent")
-
-
-# bib <- bibliography_entries("data/Publications.bib")
-# 
-# 
-# 
-# bibliography_entries("data/Publications.bib") %>%
-#   filter(issued %in% "accepted pending minor revisions") %>%
-#   arrange(desc(issued), author)
-
-```
-
-```{r}
-## Manuscripts accepted for publication
-# bibliography_entries("Publications.bib") %>%
-#   filter(type %in% "article-journal" & issued %in% "accepted") %>%
-#   arrange(desc(issued), author)
-
-```
-
-## Manuscripts under revision or review
-
-```{r}
-
-
-
-bibliography_entries("data/Publications.bib")%>%
-   #filter(type %in% "article-journal") %>%
-     filter(type %in% "article-journal" & id %in% "MB5" | type %in% "article-journal" & id %in% "AdultIDSADS")
-
-# bibliography_entries("Publications.bib") %>%
-#   filter(type %in% "Unpublished") %>%
-#   arrange(desc(issued), author)
-```
-
-\pagebreak
 
 # Grants
 
@@ -340,7 +348,6 @@ committee_data %>%
 
 ```
 
-\pagebreak
 
 # Supervision/Mentorship
 
@@ -401,10 +408,10 @@ master_data <- subset(student_data, Type == "Master")
 
 master_data %>%
   detailed_entries(
-    what = Person,
+    what = Title,
     when = glue::glue("{Start_Year}{End_Year}"),
-    where = Title,
-    with = Institution
+    where = Institution,
+    with = ""
   )
 
 
@@ -420,10 +427,10 @@ bachelor_data <- subset(student_data, Type == "Bachelor")
 
 bachelor_data %>%
   detailed_entries(
-    what = Person,
+    what = Title,
     when = glue::glue("{Start_Year}{End_Year}"),
-    where = Title,
-    with = Institution
+    where = Institution,
+    with = ""
   )
 
 ```

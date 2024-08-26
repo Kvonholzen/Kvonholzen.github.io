@@ -1,0 +1,188 @@
+---
+name: Katie
+surname: Von Holzen
+position: "Lecturer and Researcher"
+address: "Hagenring 22, 38106 Braunschweig, Germany"
+profilepic: "./img/katie_headshot.jpg"
+pronouns: she/her
+www: Kvonholzen.github.io
+email: katie.m.vonholzen@gmail.com
+phone: +49 172 52 86 485
+github: Kvonholzen
+twitter: KatieVonHolzen
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Publication List"
+output:
+  vitae::hyndman:
+    latex_engine: xelatex
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, tidy = TRUE, message = FALSE, error = FALSE)
+
+# hyndman
+
+library(vitae)
+library(scholar)
+library(papaja)
+library(tibble)
+library(stringr)
+library(tidyverse)
+library(grid)
+library(gridExtra)
+library(gtable)
+#library(RefManageR)
+
+# bib <- ReadBib("Publications.bib")
+# print(bib)
+
+```
+
+# Published peer-reviewed papers
+
+```{r}
+
+# apostrophe's need to be given as $'$
+# remove papers that are under review, revision, or accepted
+notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
+                 "SarahLWLpilot",
+                 "ChineseWordLearning",
+                 "AdultIDSADS",
+                 "ROFFS",
+                 "MB5")
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(!id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
+  arrange(desc(issued), author)
+
+
+```
+
+# Manuscripts accepted
+
+```{r}
+# 
+
+
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(id == "MB5") %>%
+  arrange(author)
+
+```
+
+
+# Manuscripts under revision or review
+
+```{r}
+
+notpublished = c("AdultIDSADS",
+                 "ROFFS")
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
+  arrange(author)
+
+```
+
+# Manuscripts in preparation
+
+```{r}
+
+# apostrophe's need to be given as $'$
+# remove papers that are under review, revision, or accepted
+notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
+                 "SarahLWLpilot",
+                 "ChineseWordLearning")
+
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "article-journal") %>%
+  filter(id %in% notpublished) %>%
+  #filter(id != "MB5" & id != "AdultIDSADS") %>%
+  arrange(author)
+
+
+```
+
+
+# Chapters in Books
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "chapter") %>%
+  arrange(desc(issued), author)
+
+```
+
+# Peer-Reviewed Conference Proceedings
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "paper-conference") %>%
+  arrange(desc(issued), author)
+```
+
+# Open Data
+
+The entire set of materials, data, and analysis scripts for these manuscripts are hosted by the Open Science Framework.
+
+```{r}
+
+be <- bibliography_entries("data/Publications.bib") %>%
+  filter(id %in% "VonHolzen2021" | id %in% "AdultIDSADS" | id %in% "CVaccent" | id %in% "ROFFS") %>%
+  arrange(author)
+
+
+```
+
+# PhD Thesis
+
+```{r}
+bibliography_entries("data/Publications.bib") %>%
+  filter(type %in% "thesis") %>%
+  arrange(desc(issued), author)
+
+```
+
+
+# Invited Talks and Conference Activity
+
+## Invited Talks
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^i"))%>%
+  arrange(desc(issued), author)
+
+```
+
+
+## Conference Talks
+
+
+```{r}
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^t"))%>%
+  arrange(desc(issued), author)
+```
+
+
+
+## Conference Posters
+
+
+```{r}
+
+bibliography_entries("data/Presentations.bib") %>%
+  filter(str_detect(id, "^p"))%>%
+  arrange(desc(issued), author)
+
+```
