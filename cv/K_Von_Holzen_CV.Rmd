@@ -109,12 +109,14 @@ research_area %>%
 
 # apostrophe's need to be given as $'$
 # remove papers that are under review, revision, or accepted
-notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
+notpublished = c("DoppeltDass",
                  "SarahLWLpilot",
                  "ChineseWordLearning",
+                 "SpanishFrenchTPs",
+                 "IniSegLexTransparency",
                  "AdultIDSADS",
-                 "ROFFS",
-                 "MB5")
+                 "MB5"
+                 )
 
 bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "article-journal") %>%
@@ -134,7 +136,7 @@ bibliography_entries("data/Publications.bib") %>%
 
 bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "article-journal") %>%
-  filter(id == "MB5") %>%
+  filter(id == "MB5" | id == "AdultIDSADS") %>%
   arrange(author)
 
 ```
@@ -144,8 +146,8 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```{r}
 
-notpublished = c("AdultIDSADS",
-                 "ROFFS")
+notpublished = c("IniSegLexTransparency",
+                 "SpanishFrenchTPs")
 
 bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "article-journal") %>%
@@ -160,15 +162,16 @@ bibliography_entries("data/Publications.bib") %>%
 
 # apostrophe's need to be given as $'$
 # remove papers that are under review, revision, or accepted
-notpublished = c("IniSegPhonotactics", "IniSegLexTransparency",
-                 "SarahLWLpilot",
-                 "ChineseWordLearning")
+notpublished = c("SarahLWLpilot",
+                 "ChineseWordLearning",
+                 "DoppeltDass")
 
 bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "article-journal") %>%
   filter(id %in% notpublished) %>%
   #filter(id != "MB5" & id != "AdultIDSADS") %>%
   arrange(author)
+
 
 
 ```
@@ -198,8 +201,9 @@ The entire set of materials, data, and analysis scripts for these manuscripts ar
 ```{r}
 
 bibliography_entries("data/Publications.bib") %>%
-  filter(id %in% "VonHolzen2021" | id %in% "VonHolzen2022" | id %in% "AdultIDSADS" | id %in% "CVaccent" | id %in% "ROFFS") %>%
+  filter(id %in% "VonHolzen2021" | id %in% "AdultIDSADS" | id %in% "CVaccent" | id %in% "ROFFS" | id %in% "IniSegPhonotactics" | id %in% "IniSegLexTransparency") %>%
   arrange(author)
+
 
 
 ```
@@ -331,7 +335,7 @@ tutorial_data %>%
 
 ```
 
-# External PhD examination committees
+# PhD examination committees
 
 ```{r}
 
@@ -589,7 +593,7 @@ inst_service %>%
 
 ## Professional Service
 
-For a complete record of my peer-review service, view my Publons Peer Review Profile (https://www.webofscience.com/wos/author/record/1483321)
+For a complete record of my peer-review service, view my Web of Science Peer Review Profile (https://www.webofscience.com/wos/author/record/1483321)
 
 
 ```{r}
@@ -625,10 +629,6 @@ prof_member %>%
 - English, native
 - German, fluent (C1)
 - French, proficient (B1)
-- Greek, beginner (A1)
-
-
-
 
 
 
