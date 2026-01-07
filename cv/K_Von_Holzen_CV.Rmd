@@ -114,7 +114,6 @@ notpublished = c("DoppeltDass",
                  "ChineseWordLearning",
                  "SpanishFrenchTPs",
                  "IniSegLexTransparency",
-                 "AdultIDSADS",
                  "MB5"
                  )
 
@@ -136,7 +135,7 @@ bibliography_entries("data/Publications.bib") %>%
 
 bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "article-journal") %>%
-  filter(id == "MB5" | id == "AdultIDSADS") %>%
+  filter(id == "MB5") %>%
   arrange(author)
 
 ```
@@ -317,7 +316,7 @@ lecture_data %>%
 
 ## Tutorials
 
-*I've written a suite of Tutorials available on my website (https://kvonholzen.github.io/Tutorials.html) for creating experiments in Open Sesame, analyzing data in R, working in Praat, and preprocessing EEG/ERP data in EEGlab/ERPlab. I've also created a tutorial for analyzing eyetracking data with R (https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/)*
+*I've written a suite of Tutorials available on my website (https://kvonholzen.github.io/Tutorials.html) for creating experiments in Open Sesame, analyzing data in R, working in Praat, and preprocessing EEG/ERP data in EEGlab/ERPlab.*
 
 ```{r}
 

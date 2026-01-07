@@ -4,7 +4,7 @@ title: "Tutorials"
 
 ----
 
-I've put together several tutorials for creating experiments in Open Sesame and for analyzing Eye-tracking and EEG data. At the moment, the Open Sesame tutorials are the most complete (thank you COVID-19!). My hope is to someday write these other tutorials out as fully autonomous guides, but for now, there are a few less comprehensive files.
+I've put together several tutorials for creating experiments in Open Sesame and for analyzing Eye-tracking and EEG data. At the moment, the Open Sesame tutorials are the most complete (thank you COVID-19!).
 
 
 ## Open Sesame
@@ -18,15 +18,9 @@ If you are completing a thesis with Dr. Von Holzen, she will tell you which tuto
 3. [Word Spotting Tutorial](Tutorials_Open_Sesame_Word_Spotting.html)
 4. [Lexical Decision Experiment in OSWeb Tutorial](Tutorials_Open_Sesame_Lexical_decision_OSWeb.html)
 
-**coming soon, Visual World with Eyetracking tutorial**
-
 These tutorials were written and tested on a Windows 10 system running OpenSesame 3.3.3. Issues may arise when the operating system and Open Sesame version vary.
 
 ## Eye-tracking Analyses
-
-### Eyetracking Statistical Analysis Tutorial
-
-Tutorial guide for how to load data recorded with an Eyelink eyetracker into R, clean the data, and then analyse it. You can access the tutorial [here](https://bookdown.org/katie_m_vonholzen/Eyetracking_Statistical_Analysis_Tutorial/).
 
 ### Cluster-based Permutation Analysis
 
