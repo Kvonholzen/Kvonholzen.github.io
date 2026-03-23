@@ -2,10 +2,10 @@
 name: Katie
 surname: Von Holzen
 position: "Lecturer and Researcher"
-address: "Bienroder Weg 80, 38106 Braunschweig, Germany"
+address: "Kaete-Hamburger-Weg 3, 37073 Goettingen"
 profilepic: "./img/katie_headshot.jpg"
 www: Kvonholzen.github.io
-email: k.von-holzen@tu-braunschweig.de
+email: katie.m.vonholzen@gmail.com
 github: Kvonholzen
 twitter: KatieVonHolzen
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -113,8 +113,8 @@ notpublished = c("DoppeltDass",
                  "SarahLWLpilot",
                  "ChineseWordLearning",
                  "SpanishFrenchTPs",
-                 "IniSegLexTransparency",
-                 "MB5"
+                 "SpanishFrenchTPsProsody",
+                 "IniSegLexTransparencyLearning"
                  )
 
 bibliography_entries("data/Publications.bib") %>%
@@ -126,17 +126,17 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```
 
-## Manuscripts accepted
 
 ```{r}
 # 
+## Manuscripts accepted
 
-
-
-bibliography_entries("data/Publications.bib") %>%
-  filter(type %in% "article-journal") %>%
-  filter(id == "MB5") %>%
-  arrange(author)
+# 
+# 
+# bibliography_entries("data/Publications.bib") %>%
+#   filter(type %in% "article-journal") %>%
+#   filter(id == "MB5" & id = "") %>%
+#   arrange(author)
 
 ```
 
@@ -145,7 +145,7 @@ bibliography_entries("data/Publications.bib") %>%
 
 ```{r}
 
-notpublished = c("IniSegLexTransparency",
+notpublished = c("IniSegLexTransparencyLearning",
                  "SpanishFrenchTPs")
 
 bibliography_entries("data/Publications.bib") %>%
@@ -163,7 +163,8 @@ bibliography_entries("data/Publications.bib") %>%
 # remove papers that are under review, revision, or accepted
 notpublished = c("SarahLWLpilot",
                  "ChineseWordLearning",
-                 "DoppeltDass")
+                 "DoppeltDass", 
+                 "SpanishFrenchTPsProsody")
 
 bibliography_entries("data/Publications.bib") %>%
   filter(type %in% "article-journal") %>%
